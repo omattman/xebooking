@@ -1,0 +1,19 @@
+{
+  "name": "voteApp",
+  "description": "none",
+  "main": "main_bower",
+  "authors": [
+    "Andreas Nuppenau <Andreasnuppenau@hotmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/puddinglover/voteApp",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {}
+}
