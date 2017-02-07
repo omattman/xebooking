@@ -24,7 +24,7 @@ var	config = {
 
 //Distination paths.
 var dist = {
-    css: build + '/css',
+    css: build,
     js: build + '/js',
     font: build + '/fonts',
     img: build + '/img',
@@ -72,7 +72,7 @@ gulp.task('php', function(){
 
 //SASS/css function. Defines path where our sass is, for our main.scss to locate them via import.
 gulp.task('css', function() {
-    return sass(config.sassPath + '/main.scss', {
+    return sass(config.sassPath + '/style.scss', {
         precision: 6,
         stopOnError: true,
         cacheLocation: '../../cache',
@@ -104,7 +104,7 @@ gulp.task('js', function(){
 gulp.task('watch', ['default'], function() {
 
 		browserSync.init({
-			proxy: "http://localhost/soundUni/dist"
+			proxy: "http://localhost/xebooking/"
 		});
 
     gulp.watch('*.php', ['php']);
