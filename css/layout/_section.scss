@@ -1,0 +1,93 @@
+.section, .section.section__no-scale {
+    padding: 60px 0
+}
+
+@media (max-width: 1024px) {
+    .section {
+        padding: 55px 0
+    }
+}
+
+@media (max-width: 767px) {
+    .section {
+        padding: 40px 0
+    }
+}
+
+@media (max-width: 480px) {
+    .section {
+        padding: 30px 0
+    }
+}
+
+.section__larger {
+    padding: 80px 0
+}
+
+@media (max-width: 1024px) {
+    .section__larger {
+        padding: 70px 0
+    }
+}
+
+@media (max-width: 767px) {
+    .section__larger {
+        padding: 55px 0
+    }
+}
+
+@media (max-width: 480px) {
+    .section__larger {
+        padding: 45px 0
+    }
+}
+
+.section__large {
+    padding: 115px 0
+}
+
+@media (max-width: 1024px) {
+    .section__large {
+        padding: 90px 0
+    }
+}
+
+@media (max-width: 767px) {
+    .section__large {
+        padding: 70px 0
+    }
+}
+
+.section__xlarge {
+    padding: 150px 0
+}
+
+@media (max-width: 1024px) {
+    .section__xlarge {
+        padding: 120px 0
+    }
+}
+
+@media (max-width: 767px) {
+    .section__xlarge {
+        padding: 100px 0
+    }
+}
+
+@media (max-width: 767px) {
+    .section__xlarge {
+        padding: 80px 0
+    }
+}
+
+.section__top {
+    padding-top: 0
+}
+
+.section__bottom {
+    padding-bottom: 0
+}
+
+.section__last-item {
+    margin-bottom: 0 !important
+}

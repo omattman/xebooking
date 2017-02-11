@@ -1,0 +1,294 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+
+.btn {
+    font-family: "Akkurat Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    display: inline-block;
+    font-weight: 500;
+    letter-spacing: .01em;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid #edf5fc;
+    font-size: 16px;
+    padding: 14px 30px;
+    margin: 0;
+    outline: none;
+    text-transform: capitalize;
+    text-decoration: none;
+    border-radius: 6px;
+    position: relative;
+    height: 52px;
+    line-height: 1.4;
+    box-shadow: none;
+    color: white;
+    background: transparent
+}
+
+.btn button {
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: inherit;
+    font-size: 16px;
+    font-weight: 500;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none
+}
+
+.btn.loading, .btn.disabled, .btn:disabled {
+    pointer-events: none;
+    cursor: default
+}
+
+.btn.disabled, .btn:disabled {
+    opacity: .65;
+    cursor: not-allowed
+}
+
+.btn.hover, .btn:hover {
+    border-color: #b9dcfa
+}
+
+.btn.loading {
+    color: transparent !important
+}
+
+.btn.loading:after {
+    content: ' ';
+    display: block;
+    border: 2px solid #fff;
+    border-left-color: rgba(255, 255, 255, 0.2);
+    border-right-color: rgba(255, 255, 255, 0.2);
+    border-bottom-color: rgba(255, 255, 255, 0.2);
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -15px;
+    margin-top: -15px;
+    -webkit-animation: rotate 2s linear infinite;
+    animation: rotate 2s linear infinite
+}
+
+.btn__small {
+    padding: 6px 10px;
+    font-size: 14px;
+    height: 32px;
+    border-radius: 4px
+}
+
+.btn__small.loading:after {
+    height: 20px;
+    width: 20px;
+    margin-left: -10px;
+    margin-top: -10px
+}
+
+.btn__small-wide {
+    padding-left: 30px;
+    padding-right: 30px
+}
+
+.btn__smallest {
+    font-size: 12px;
+    padding: 2px 8px 0;
+    height: 26px;
+    border-radius: 3px
+}
+
+.btn__smallest.loading:after {
+    height: 20px;
+    width: 20px;
+    margin-left: -10px;
+    margin-top: -10px
+}
+
+.btn__primary {
+    background: -webkit-linear-gradient(top, #1f8ded 0%, #1985e3 100%);
+    background: linear-gradient(to bottom, #1f8ded 0%, #1985e3 100%);
+    border-color: #1271c4;
+    color: white
+}
+
+.btn__primary.hover, .btn__primary:hover {
+    border-color: #1271c4;
+    background: -webkit-linear-gradient(top, #1280e0 0%, #0675d6 100%);
+    background: linear-gradient(to bottom, #1280e0 0%, #0675d6 100%)
+}
+
+.btn__cta-mint {
+    background: -webkit-linear-gradient(top, #6ce4b3 0%, #41dc9d 100%);
+    background: linear-gradient(to bottom, #6ce4b3 0%, #41dc9d 100%);
+    border-color: #73b79a;
+    color: white
+}
+
+.btn__cta-mint.hover, .btn__cta-mint:hover {
+    border-color: #73b79a;
+    background: -webkit-linear-gradient(top, #41dc9d 0%, #2bd892 100%);
+    background: linear-gradient(to bottom, #41dc9d 0%, #2bd892 100%)
+}
+
+.btn__cta-green {
+    background: -webkit-linear-gradient(top, #32cd80 0%, #2db973 100%);
+    background: linear-gradient(to bottom, #32cd80 0%, #2db973 100%);
+    border-color: #2db973;
+    color: white
+}
+
+.btn__cta-green.hover, .btn__cta-green:hover {
+    border-color: #2db973;
+    background: #2db973
+}
+
+.btn__secondary {
+    border-color: #1f8ceb;
+    color: #1f8ceb
+}
+
+.btn__secondary.hover, .btn__secondary:hover {
+    border-color: #1271c4;
+    color: #1271c4
+}
+
+@-webkit-keyframes rotate {
+    0% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0)
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg)
+    }
+}
+
+@keyframes rotate {
+    0% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0)
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg)
+    }
+}
+
+.btn__triangle-right:after {
+    border: 5px transparent solid;
+    border-left-color: white;
+    border-left-width: 7px;
+    content: ' ';
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    left: 5px;
+    margin-left: 5px
+}
+
+.btn__secondary.btn__triangle-right:after {
+    border-left-color: #1f8ceb
+}
+
+.btn__secondary.btn__triangle-right:hover:after {
+    border-left-color: #1271c4
+}
+
+.btn__play {
+    padding-left: 20px;
+    padding-right: 20px
+}
+
+.btn__play span {
+    padding-left: 15px;
+    display: inline-block;
+    position: relative
+}
+
+.btn__play span:after {
+    content: ' ';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    display: block;
+    border: 6px transparent solid;
+    border-left-color: white;
+    border-left-width: 8px;
+    margin: -8px 0 0
+}
+
+.btn__white {
+    border-color: white;
+    color: white
+}
+
+.btn__white-alt {
+    border: 2px solid #001ce8;
+    background-color: white;
+    color: #001ce8;
+    -webkit-transition: background .2s;
+    transition: background .2s
+}
+
+.btn__white-alt:hover {
+    border-color: #001ce8;
+    background-color: rgba(255, 255, 255, 0.9)
+}
+
+.btn__blue-alt {
+    border: 2px solid #001ce8;
+    background-color: #001ce8;
+    color: white
+}
+
+.btn__blue-alt:hover {
+    border-color: #001ce8;
+    background-color: rgba(0, 28, 232, 0.9)
+}
+
+.btn__white {
+    border: 2px solid white;
+    background-color: white;
+    color: #2e2e7f;
+    border-width: 2px
+}
+
+.btn__white:hover {
+    border-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.9)
+}
+
+.btn__white.loading {
+    color: transparent !important
+}
+
+.btn__white.loading:after {
+    border: 2px solid #2e2e7f;
+    border-left-color: rgba(46, 46, 127, 0.2);
+    border-right-color: rgba(46, 46, 127, 0.2);
+    border-bottom-color: rgba(46, 46, 127, 0.2)
+}
+
+@media (max-width: 480px) {
+    .btn__long-text {
+        padding-left: 15px;
+        padding-right: 15px;
+        font-size: 14px;
+        line-height: 1.7
+    }
+}

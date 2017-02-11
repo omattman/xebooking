@@ -1,0 +1,168 @@
+.hero {
+    padding-top: 145px
+}
+
+@media (max-width: 767px) {
+    .hero {
+        padding-top: 120px
+    }
+}
+
+.hero__close {
+    padding-top: 80px
+}
+
+.hero__headline {
+    max-width: 380px;
+    margin-bottom: 0
+}
+
+.hero__image {
+    position: relative
+}
+
+@media (max-width: 1024px) {
+    .hero__image {
+        top: 0
+    }
+}
+
+@media (max-width: 767px) {
+    .hero__image {
+        margin-bottom: 40px
+    }
+}
+
+.hero__play {
+    margin-top: 30px;
+    z-index: 2
+}
+
+@media (max-width: 767px) {
+    .hero__play {
+        margin-bottom: 40px
+    }
+}
+
+.hero__icons-svg {
+    height: 90px
+}
+
+.hero__h3 {
+    max-width: 650px;
+    margin-top: 0;
+    margin-bottom: 0
+}
+
+.hero__logo-icon {
+    text-align: center
+}
+
+.hero__logo-icon svg {
+    width: 130px
+}
+
+.hero__icons {
+    margin: 70px auto 135px;
+    max-width: 780px;
+    position: relative;
+    bottom: -5px
+}
+
+@media (max-width: 767px) {
+    .hero__icons {
+        margin-bottom: 110px
+    }
+}
+
+@media (max-width: 480px) {
+    .hero__icons {
+        margin-bottom: 90px
+    }
+}
+
+.hero__icons-1 svg {
+    width: 95px
+}
+
+.hero__icons-2 svg {
+    width: 100px
+}
+
+.hero__icons-3 svg {
+    width: 58px
+}
+
+.hero__icons-4 svg {
+    width: 65px
+}
+
+.hero__icons-desc {
+    margin-top: 20px
+}
+
+.hero__icons-line {
+    height: 150%;
+    position: absolute;
+    top: -25%;
+    right: 0
+}
+
+@media (max-width: 480px) {
+    .hero__icons-line {
+        overflow: hidden;
+        display: inline-block;
+        background: url(https://marketing.intercomassets.com/assets/_svg/line-horizontal-11f7c933776eb500e44f07f668fa7986c5d96ee2d952796b6765a8e4f0ccbf71.svg) repeat-x center top;
+        background-size: 100px 3px;
+        max-width: 100%;
+        height: 4px;
+        margin: 30px 0;
+        position: static;
+        height: 4px;
+        width: 250px
+    }
+}
+
+@media (max-width: 767px) {
+    .hero__icons-line-md {
+        overflow: hidden;
+        display: inline-block;
+        background: url(https://marketing.intercomassets.com/assets/_svg/line-horizontal-11f7c933776eb500e44f07f668fa7986c5d96ee2d952796b6765a8e4f0ccbf71.svg) repeat-x center top;
+        background-size: 100px 3px;
+        max-width: 100%;
+        height: 4px;
+        margin: 30px 0;
+        position: static;
+        height: 4px;
+        width: 250px
+    }
+}
+
+.hero__icons-boxes {
+    max-width: 860px;
+    margin: 0 auto
+}
+
+.hero__icons-box {
+    padding: 20px 30px;
+    background: #f1f8fe;
+    border-radius: 5px;
+    display: block;
+    text-decoration: none;
+    -webkit-transition: opacity .2s;
+    transition: opacity .2s
+}
+
+@media (max-height: 700px) and (min-width: 768px) {
+    .hero__icons-box {
+        padding: 10px 20px
+    }
+}
+
+.hero__icons-boxes:hover .hero__icons-box {
+    opacity: .44
+}
+
+.hero__icons-boxes:hover .hero__icons-box:hover {
+    opacity: 1
+}
