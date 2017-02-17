@@ -27,26 +27,27 @@
   }
 
   &__h1, &__h1-bigger, &__h1-big {
-      color: #1f8ceb;
-      font-weight: 300;
-      font-size: 40px;
-      text-align: center;
-      line-height: 1.3;
-      letter-spacing: -.015em;
-      margin: -10px auto 17px;
+    color: #1f8ceb;
+    font-weight: 300;
+    font-size: 40px;
+    text-align: center;
+    line-height: 1.3;
+    letter-spacing: -.015em;
+    margin: -10px auto 17px;
 
-      @include mq($screen-1024) {
-        font-size: 36px;
-      }
-      @include mq($screen-767) {
-        font-size: 34px;
-      }
-      @include mq($screen-480) {
-        font-size: 30px;
-      }
+    @include mq($screen-1024) {
+      font-size: 36px;
+    }
+    @include mq($screen-767) {
+      font-size: 34px;
+    }
+    @include mq($screen-480) {
+      font-size: 30px;
+    }
   }
 
-  &__h1-bigger {
+  &__h1 {
+    &-bigger {
       font-size: 50px;
 
       @include mq($screen-1024) {
@@ -58,9 +59,9 @@
       @include mq($screen-480) {
         font-size: 36px;
       }
-  }
+    }
 
-  &__h1-big {
+    &-big {
       font-size: 55px;
 
       @include mq($screen-1024) {
@@ -72,9 +73,9 @@
       @include mq($screen-480) {
         font-size: 46px;
       }
-  }
+    }
 
-  &__h1-small {
+    &-small {
       color: #1f8ceb;
       font-weight: 300;
       font-size: 36px;
@@ -92,192 +93,163 @@
       @include mq($screen-480) {
         font-size: 28px;
       }
+    }
   }
 
   &__h2 {
-      font-size: 30px;
-      font-weight: 300;
-      margin-bottom: 20px;
-      letter-spacing: -.015em;
-      line-height: 1.3;
+    font-size: 30px;
+    font-weight: 300;
+    margin-bottom: 20px;
+    letter-spacing: -.015em;
+    line-height: 1.3;
 
-      @include mq($screen-1024) {
-        font-size: 27px;
-      }
-      @include mq($screen-767) {
-        font-size: 25px;
-      }
-      @include mq($screen-480) {
-        font-size: 22px;
-      }
+    @include mq($screen-1024) {
+      font-size: 27px;
+    }
+    @include mq($screen-767) {
+      font-size: 25px;
+    }
+    @include mq($screen-480) {
+      font-size: 22px;
+    }
   }
 
   &__h3 {
-      font-weight: 300;
-      font-size: 26px;
-      text-align: center;
-      line-height: 1.5;
-      letter-spacing: -.01em;
-      margin: 0 auto 20px;
+    font-weight: 300;
+    font-size: 26px;
+    text-align: center;
+    line-height: 1.5;
+    letter-spacing: -.01em;
+    margin: 0 auto 20px;
 
-      @include mq($screen-767) {
-        font-size: 23px;
-      }
-      @include mq($screen-480) {
-        font-size: 20px;
-      }
+    @include mq($screen-767) {
+      font-size: 23px;
+    }
+    @include mq($screen-480) {
+      font-size: 20px;
+    }
   }
 
   &__h4 {
-      font-weight: 300;
-      font-size: 24px;
-      text-align: center;
-      line-height: 1.5;
-      letter-spacing: -.01em;
-      margin: 0 auto 20px;
-      color: #96a2b0;
+    font-weight: 300;
+    font-size: 24px;
+    text-align: center;
+    line-height: 1.5;
+    letter-spacing: -.01em;
+    margin: 0 auto 20px;
+    color: #96a2b0;
 
-      @include mq($screen-767) {
-        font-size: 21px;
-      }
-      @include mq($screen-480) {
-        font-size: 18px;
-      }
+    @include mq($screen-767) {
+      font-size: 21px;
+    }
+    @include mq($screen-480) {
+      font-size: 18px;
+    }
   }
 
   &__h5 {
-      font-weight: 300;
-      font-size: 20px;
-      text-align: center;
-      margin: 0 auto 20px;
-      max-width: 650px;
-      letter-spacing: -.01em;
+    font-weight: 300;
+    font-size: 20px;
+    text-align: center;
+    margin: 0 auto 20px;
+    max-width: 650px;
+    letter-spacing: -.01em;
 
-      @include mq($screen-767) {
-        font-size: 18px;
-      }
-      @include mq($screen-480) {
-        font-size: 17px;
-      }
-  }
+    @include mq($screen-767) {
+      font-size: 18px;
+    }
+    @include mq($screen-480) {
+      font-size: 17px;
+    }
 
-  &__h5-small {
+    &-small {
       font-size: 18px;
 
       @include mq($screen-767) {
         font-size: 17px;
       }
+    }
   }
 
   &__h6 {
-      text-transform: uppercase;
-      color: #e04e50;
-      letter-spacing: .1em;
-      font-size: 13px;
-      font-weight: 500;
-      margin: 0
+    text-transform: uppercase;
+    color: #e04e50;
+    letter-spacing: .1em;
+    font-size: 13px;
+    font-weight: 500;
+    margin: 0;
   }
 
-  &__screen-1024 {
-      font-size: 18px
+  &__screen {
+    &-1024 {
+      font-size: 18px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    &__larger--sm {
+        font-size: 18px;
+    }
+  }
+  @media (min-width: 481px) and (max-width: 767px) {
+    &__larger--md {
+        font-size: 18px;
+    }
+  }
+  @media (min-width: 768px) and (max-width: 1024px) {
+    &__larger--lg {
+        font-size: 18px;
+    }
+  }
+  @media (min-width: 1025px) {
+    &__larger--xlg {
+        font-size: 18px;
+    }
+  }
+  @media (min-width: 1025px) {
+    &__larger--xlg {
+        font-size: 18px;
+    }
   }
 }
 
-
-@media (max-width: 480px) {
-    .t__larger--sm {
-        font-size: 18px
-    }
-}
-
-@media (min-width: 481px) and (max-width: 767px) {
-    .t__larger--md {
-        font-size: 18px
-    }
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-    .t__larger--lg {
-        font-size: 18px
-    }
-}
-
-@media (min-width: 1025px) {
-    .t__larger--xlg {
-        font-size: 18px
-    }
-}
 
 .t__regular {
-    font-size: 16px
+  font-size: 16px;
 }
 
 .t__smaller {
-    font-size: 15px
+  font-size: 15px;
 }
 
 .t__small {
-    font-size: 14px
+  font-size: 14px;
 }
 
 .t__smallest {
-    font-size: 12px
+  font-size: 12px;
 }
 
 @media (max-width: 480px) {
-    .t__smallest--sm {
-        font-size: 12px
-    }
+  .t__smallest--sm {
+      font-size: 12px;
+  }
 }
 
 @media (min-width: 481px) and (max-width: 767px) {
-    .t__smallest--md {
-        font-size: 12px
-    }
+  .t__smallest--md {
+      font-size: 12px;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
-    .t__smallest--lg {
-        font-size: 12px
-    }
+  .t__smallest--lg {
+      font-size: 12px;
+  }
 }
 
 @media (min-width: 1025px) {
-    .t__smallest--xlg {
-        font-size: 12px
-    }
-}
-
-.t__i-h1 {
-    font-family: "intercom-headline", Helvetica, Arial, sans-serif;
-    text-transform: uppercase;
-    color: #2e2e7f;
-    font-size: 64px;
-    font-weight: 400;
-    letter-spacing: 5px;
-    margin: 0 0 20px
-}
-
-@media (max-width: 1024px) {
-    .t__i-h1 {
-        font-size: 60px
-    }
-}
-
-@media (max-width: 767px) {
-    .t__i-h1 {
-        font-size: 48px
-    }
-}
-
-@media (max-width: 480px) {
-    .t__i-h1 {
-        font-size: 35px
-    }
-}
-
-.t__intercom-small {
-    font-family: "intercom-small", Helvetica, Arial, sans-serif;
-    font-weight: 400;
-    font-size: 24px
+  .t__smallest--xlg {
+      font-size: 12px;
+  }
 }
