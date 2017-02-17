@@ -10,5 +10,9 @@ Version: 3.0.10.1485700306
 Updated: 2017-01-29 14:31:46
 
 */
-
-@import "font-face", "base", "typography", "colors", "swiper"
+@import "abstracts/partials.scss";
+@import "base/partials.scss";
+@import "components/partials.scss";
+@import "layout/partials.scss";
+@import "pages/partials.scss";
+@import "utilities/partials.scss";

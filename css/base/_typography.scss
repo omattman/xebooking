@@ -2,276 +2,187 @@
  * Basic typography style for copy text
  */
 
-.t__h0 {
+.t {
+
+  &__h0 {
     font-weight: 300;
     font-size: 100px;
     text-align: center;
     line-height: 1.3;
     letter-spacing: -.015em;
-    margin: -20px auto 17px
-}
+    margin: -20px auto 17px;
 
-@media (max-width: 1024px) {
-    .t__h0 {
-        font-size: 80px
+    @include mq($screen-1024) {
+      font-size: 80px;
     }
-}
-
-@media (max-width: 767px) {
-    .t__h0 {
-        font-size: 60px
+    @include mq($screen-767) {
+      font-size: 40px;
     }
-}
-
-@media (max-width: 480px) {
-    .t__h0 {
-        font-size: 40px
+    @include mq($screen-480) {
+      font-size: 30px;
     }
-}
-
-@media (max-width: 380px) {
-    .t__h0 {
-        font-size: 30px
+    @include mq($screen-380) {
+      font-size: 30px;
     }
+  }
+
+  &__h1, &__h1-bigger, &__h1-big {
+      color: #1f8ceb;
+      font-weight: 300;
+      font-size: 40px;
+      text-align: center;
+      line-height: 1.3;
+      letter-spacing: -.015em;
+      margin: -10px auto 17px;
+
+      @include mq($screen-1024) {
+        font-size: 36px;
+      }
+      @include mq($screen-767) {
+        font-size: 34px;
+      }
+      @include mq($screen-480) {
+        font-size: 30px;
+      }
+  }
+
+  &__h1-bigger {
+      font-size: 50px;
+
+      @include mq($screen-1024) {
+        font-size: 45px;
+      }
+      @include mq($screen-767) {
+        font-size: 40px;
+      }
+      @include mq($screen-480) {
+        font-size: 36px;
+      }
+  }
+
+  &__h1-big {
+      font-size: 55px;
+
+      @include mq($screen-1024) {
+        font-size: 50px;
+      }
+      @include mq($screen-767) {
+        font-size: 48px;
+      }
+      @include mq($screen-480) {
+        font-size: 46px;
+      }
+  }
+
+  &__h1-small {
+      color: #1f8ceb;
+      font-weight: 300;
+      font-size: 36px;
+      text-align: center;
+      line-height: 1.3;
+      letter-spacing: -.015em;
+      margin: -10px auto 12px;
+
+      @include mq($screen-1024) {
+        font-size: 32px;
+      }
+      @include mq($screen-767) {
+        font-size: 30px;
+      }
+      @include mq($screen-480) {
+        font-size: 28px;
+      }
+  }
+
+  &__h2 {
+      font-size: 30px;
+      font-weight: 300;
+      margin-bottom: 20px;
+      letter-spacing: -.015em;
+      line-height: 1.3;
+
+      @include mq($screen-1024) {
+        font-size: 27px;
+      }
+      @include mq($screen-767) {
+        font-size: 25px;
+      }
+      @include mq($screen-480) {
+        font-size: 22px;
+      }
+  }
+
+  &__h3 {
+      font-weight: 300;
+      font-size: 26px;
+      text-align: center;
+      line-height: 1.5;
+      letter-spacing: -.01em;
+      margin: 0 auto 20px;
+
+      @include mq($screen-767) {
+        font-size: 23px;
+      }
+      @include mq($screen-480) {
+        font-size: 20px;
+      }
+  }
+
+  &__h4 {
+      font-weight: 300;
+      font-size: 24px;
+      text-align: center;
+      line-height: 1.5;
+      letter-spacing: -.01em;
+      margin: 0 auto 20px;
+      color: #96a2b0;
+
+      @include mq($screen-767) {
+        font-size: 21px;
+      }
+      @include mq($screen-480) {
+        font-size: 18px;
+      }
+  }
+
+  &__h5 {
+      font-weight: 300;
+      font-size: 20px;
+      text-align: center;
+      margin: 0 auto 20px;
+      max-width: 650px;
+      letter-spacing: -.01em;
+
+      @include mq($screen-767) {
+        font-size: 18px;
+      }
+      @include mq($screen-480) {
+        font-size: 17px;
+      }
+  }
+
+  &__h5-small {
+      font-size: 18px;
+
+      @include mq($screen-767) {
+        font-size: 17px;
+      }
+  }
+
+  &__h6 {
+      text-transform: uppercase;
+      color: #e04e50;
+      letter-spacing: .1em;
+      font-size: 13px;
+      font-weight: 500;
+      margin: 0
+  }
+
+  &__screen-1024 {
+      font-size: 18px
+  }
 }
 
-.t__h1, .t__h1-bigger, .t__h1-big {
-    color: #1f8ceb;
-    font-weight: 300;
-    font-size: 40px;
-    text-align: center;
-    line-height: 1.3;
-    letter-spacing: -.015em;
-    margin: -10px auto 17px
-}
-
-@media (max-width: 1024px) {
-    .t__h1, .t__h1-bigger, .t__h1-big {
-        font-size: 36px
-    }
-}
-
-@media (max-width: 767px) {
-    .t__h1, .t__h1-bigger, .t__h1-big {
-        font-size: 34px
-    }
-}
-
-@media (max-width: 480px) {
-    .t__h1, .t__h1-bigger, .t__h1-big {
-        font-size: 30px
-    }
-}
-
-@media (max-height: 900px) and (min-width: 768px) {
-    .t__h1-vert {
-        font-size: 4vh;
-        margin: -5px auto 10px
-    }
-}
-
-@media (max-height: 600px) and (min-width: 768px) {
-    .t__h1-vert {
-        font-size: 24px
-    }
-}
-
-.t__h1-bigger {
-    font-size: 50px
-}
-
-@media (max-width: 1024px) {
-    .t__h1-bigger {
-        font-size: 45px
-    }
-}
-
-@media (max-width: 767px) {
-    .t__h1-bigger {
-        font-size: 40px
-    }
-}
-
-@media (max-width: 480px) {
-    .t__h1-bigger {
-        font-size: 36px
-    }
-}
-
-.t__h1-big {
-    font-size: 55px
-}
-
-@media (max-width: 1024px) {
-    .t__h1-big {
-        font-size: 50px
-    }
-}
-
-@media (max-width: 767px) {
-    .t__h1-big {
-        font-size: 48px
-    }
-}
-
-@media (max-width: 480px) {
-    .t__h1-big {
-        font-size: 46px
-    }
-}
-
-.t__h1-small {
-    color: #1f8ceb;
-    font-weight: 300;
-    font-size: 36px;
-    text-align: center;
-    line-height: 1.3;
-    letter-spacing: -.015em;
-    margin: -10px auto 12px
-}
-
-@media (max-width: 1024px) {
-    .t__h1-small {
-        font-size: 32px
-    }
-}
-
-@media (max-width: 767px) {
-    .t__h1-small {
-        font-size: 30px
-    }
-}
-
-@media (max-width: 480px) {
-    .t__h1-small {
-        font-size: 28px
-    }
-}
-
-.t__h2 {
-    font-size: 30px;
-    font-weight: 300;
-    margin-bottom: 20px;
-    letter-spacing: -.015em;
-    line-height: 1.3
-}
-
-@media (max-width: 1024px) {
-    .t__h2 {
-        font-size: 27px
-    }
-}
-
-@media (max-width: 767px) {
-    .t__h2 {
-        font-size: 25px
-    }
-}
-
-@media (max-width: 480px) {
-    .t__h2 {
-        font-size: 22px
-    }
-}
-
-@media (max-height: 900px) and (min-width: 768px) {
-    .t__h2-vert {
-        font-size: 3.5vh
-    }
-}
-
-@media (max-height: 600px) and (min-width: 768px) {
-    .t__h2-vert {
-        font-size: 22px
-    }
-}
-
-.t__h3 {
-    font-weight: 300;
-    font-size: 26px;
-    text-align: center;
-    line-height: 1.5;
-    letter-spacing: -.01em;
-    margin: 0 auto 20px
-}
-
-@media (max-width: 767px) {
-    .t__h3 {
-        font-size: 23px
-    }
-}
-
-@media (max-width: 480px) {
-    .t__h3 {
-        font-size: 20px
-    }
-}
-
-.t__h4 {
-    font-weight: 300;
-    font-size: 24px;
-    text-align: center;
-    line-height: 1.5;
-    letter-spacing: -.01em;
-    margin: 0 auto 20px;
-    color: #96a2b0
-}
-
-@media (max-width: 767px) {
-    .t__h4 {
-        font-size: 21px
-    }
-}
-
-@media (max-width: 480px) {
-    .t__h4 {
-        font-size: 18px
-    }
-}
-
-.t__h5 {
-    font-weight: 300;
-    font-size: 20px;
-    text-align: center;
-    margin: 0 auto 20px;
-    max-width: 650px;
-    letter-spacing: -.01em
-}
-
-@media (max-width: 767px) {
-    .t__h5 {
-        font-size: 18px
-    }
-}
-
-@media (max-width: 480px) {
-    .t__h5 {
-        font-size: 17px
-    }
-}
-
-.t__h5-small {
-    font-size: 18px
-}
-
-@media (max-width: 767px) {
-    .t__h5-small {
-        font-size: 17px
-    }
-}
-
-.t__h6 {
-    text-transform: uppercase;
-    color: #e04e50;
-    letter-spacing: .1em;
-    font-size: 13px;
-    font-weight: 500;
-    margin: 0
-}
-
-.t__larger {
-    font-size: 18px
-}
 
 @media (max-width: 480px) {
     .t__larger--sm {
