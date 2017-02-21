@@ -9,6 +9,7 @@ var imagemin = require('gulp-imagemin');
 var pngquant = require('imagemin-pngquant');
 var uglify = require('gulp-uglify');
 var browserSync = require('browser-sync').create();
+var sassdoc = require('sassdoc');
 
 //build path. Change to server location
 var build = './dist';
@@ -16,10 +17,10 @@ var build = './dist';
 //Config paths.
 var	config = {
 	bowerDir: './bower_components',
-    sassPath: './css',
-    javaPath: './js',
-    imgPath: './img',
-    fontPath: './font'
+  sassPath: './css',
+  javaPath: './js',
+  imgPath: './img',
+  fontPath: './font'
 };
 
 //Distination paths.
@@ -126,11 +127,32 @@ gulp.task('compress-js', ['js'], function() {
     .pipe(gulp.dest(dist.js));
 });
 
+// SassDoc for documentation
+// http://localhost:3000/xebooking/wp-content/themes/divi-child/dist/docs/
+gulp.task('sassdoc', function () {
+  var options = {
+    dest: 'dist/docs',
+    verbose: true,
+    display: {
+      access: ['public', 'private'],
+      alias: true,
+      watermark: true,
+    },
+    groups: {
+      'Abstracts': 'Abstracts',
+
+    },
+    basePath: 'https://github.com/omattman/xebooking/tree/master/css',
+  };
+
+  return gulp.src('css/**/*.scss')
+    .pipe(sassdoc(options));
+});
 
 gulp.task('compress', ['compress-css', 'compress-js']);
 
 //Default task. No compressing
-gulp.task('default', ['bower', 'icons', 'css', 'php', 'js', 'fonts']);
+gulp.task('default', ['bower', 'icons', 'css', 'php', 'js', 'fonts', 'sassdoc']);
 
 //Production task. Use before using on live site.
 gulp.task('production',['default', 'compress','img']);
