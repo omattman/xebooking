@@ -2,6 +2,7 @@
  * Basic typography style for copy text
  */
 
+
 .t {
 
   &__h0 {
@@ -180,76 +181,82 @@
     margin: 0;
   }
 
+}
+
+
+.t {
+
   &__screen {
     &-1024 {
       font-size: 18px;
     }
   }
 
-  @media (max-width: 480px) {
-    &__larger--sm {
-        font-size: 18px;
+  &__larger {
+    @media (max-width: 480px) {
+      &--sm {
+          font-size: 18px;
+      }
+    }
+    @media (min-width: 481px) and (max-width: 767px) {
+      &--md {
+          font-size: 18px;
+      }
+    }
+    @media (min-width: 768px) and (max-width: 1024px) {
+      &--lg {
+          font-size: 18px;
+      }
+    }
+    @media (min-width: 1025px) {
+      &--xlg {
+          font-size: 18px;
+      }
+    }
+    @media (min-width: 1025px) {
+      &--xlg {
+          font-size: 18px;
+      }
     }
   }
-  @media (min-width: 481px) and (max-width: 767px) {
-    &__larger--md {
-        font-size: 18px;
+
+  &__regular {
+    font-size: 16px;
+  }
+
+  &__smaller {
+    font-size: 15px;
+  }
+
+  &__small {
+    font-size: 14px;
+  }
+
+  &__smallest {
+    font-size: 12px;
+
+    @media (max-width: 480px) {
+      &--sm {
+          font-size: 12px;
+      }
     }
-  }
-  @media (min-width: 768px) and (max-width: 1024px) {
-    &__larger--lg {
-        font-size: 18px;
+
+    @media (min-width: 481px) and (max-width: 767px) {
+      &--md {
+          font-size: 12px;
+      }
     }
-  }
-  @media (min-width: 1025px) {
-    &__larger--xlg {
-        font-size: 18px;
+
+    @media (min-width: 768px) and (max-width: 1024px) {
+      &--lg {
+          font-size: 12px;
+      }
     }
-  }
-  @media (min-width: 1025px) {
-    &__larger--xlg {
-        font-size: 18px;
+
+    @media (min-width: 1025px) {
+      &--xlg {
+          font-size: 12px;
+      }
     }
-  }
-}
-
-
-.t__regular {
-  font-size: 16px;
-}
-
-.t__smaller {
-  font-size: 15px;
-}
-
-.t__small {
-  font-size: 14px;
-}
-
-.t__smallest {
-  font-size: 12px;
-}
-
-@media (max-width: 480px) {
-  .t__smallest--sm {
-      font-size: 12px;
-  }
-}
-
-@media (min-width: 481px) and (max-width: 767px) {
-  .t__smallest--md {
-      font-size: 12px;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-  .t__smallest--lg {
-      font-size: 12px;
-  }
-}
-
-@media (min-width: 1025px) {
-  .t__smallest--xlg {
-      font-size: 12px;
   }
 }
