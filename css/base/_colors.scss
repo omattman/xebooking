@@ -1,25 +1,132 @@
 
-// Blue
-$bright-blue: #001ce8;
-$dark-blue:   #2e2e7f;
-$blue:        #1f8ceb;
-$cs2-blue:    #35cfff;
-$sky-blue:    #b1d2ef;
-$light-blue:  #b9dcfa;
+.c {
 
-// Grey tones
-$dark-grey:   #344358;
-$hazy-grey:   #556474;
-$grey:        #637280;
-$light-fog:   #96a2b0;
-$light-grey:  #8da2b5;
-$gray-mist:   #f9fafb;
+    /* `Blue Tones`
+       ========================================================================== */
+    &__bright-blue {
+        color: $bright-blue;
+    }
+    &__dark-blue {
+        color: $dark-blue;
 
-// whites
-$mon-jeans:   #f6fafd;
-$white:       #fff;
+        @media (max-width: 480px) {
+            &--sm {
+                color: $dark-blue;
+            }
+        }
+        @media (min-width: 481px) and (max-width: 767px) {
+            &--md {
+                color: $dark-blue;
+            }
+        }
+        @media (min-width: 768px) and (max-width: 1024px) {
+            &--lg {
+                color: $dark-blue;
+            }
+        }
+        @media (min-width: 1025px) {
+            &--xlg {
+                color: $dark-blue;
+            }
+        }
+    }
+    &__blue {
+        color: $blue;
 
-// Other colors
-$red:         #e04e50;
-$purple:      #051666;
-$light-green: #0ff2bc;
+        @media (max-width: 480px) {
+            &--sm {
+                color: $blue;
+            }
+        }
+        @media (min-width: 481px) and (max-width: 767px) {
+            &--md {
+                color: $blue;
+            }
+        }
+        @media (min-width: 768px) and (max-width: 1024px) {
+            &--lg {
+                color: $blue;
+            }
+        }
+        @media (min-width: 1025px) {
+            &--xlg {
+                color: $blue;
+            }
+        }
+    }
+    &__cs2-blue {
+        color: $cs2-blue;
+    }
+    &__sky-blue {
+        color: $sky-blue;
+    }
+    &__light-blue {
+        color: $light-blue;
+    }
+
+
+    /* `Grey Tones`
+       ========================================================================== */
+    &__dark-grey {
+        color: #344358;
+    }
+    &__hazy-grey {
+        color: #556474;
+    }
+    &__grey {
+        color: #637280;
+    }
+    &__light-fog {
+        color: #96a2b0;
+    }
+    &__light-grey {
+        color: #8da2b5;
+    }
+    &__gray-mist {
+        color: #f9fafb;
+    }
+
+
+    /* `Whites`
+       ========================================================================== */
+    &__mon-jeans {
+        color: #f6fafd;
+    }
+    &__white {
+        color: #fff;
+    }
+
+
+    /* `Other Colors`
+       ========================================================================== */
+    &__red {
+        color: #e04e50;
+    }
+    &__purple {
+        color: #051666;
+
+        @media (max-width: 480px) {
+            &--sm {
+                color: $purple;
+            }
+        }
+        @media (min-width: 481px) and (max-width: 767px) {
+            &--md {
+                color: $purple;
+            }
+        }
+        @media (min-width: 768px) and (max-width: 1024px) {
+            &--lg {
+                color: $purple;
+            }
+        }
+        @media (min-width: 1025px) {
+            &--xlg {
+                color: $purple;
+            }
+        }
+    }
+    &__light-green {
+        color: #0ff2bc;
+    }
+}
