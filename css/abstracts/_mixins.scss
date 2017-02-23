@@ -1,5 +1,0 @@
-@mixin mq($media) {
-    @media only screen and #{$media} {
-        @content;
-    }
-}
