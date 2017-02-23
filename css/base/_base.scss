@@ -2,21 +2,20 @@
 // This file contains very basic styles.
 // -----------------------------------------------------------------------------
 
-
 html {
     color: #222;
     font-size: 1em;
-    line-height: 1.4
+    line-height: 1.4;
 }
 
 ::-moz-selection {
     background: #b3d4fc;
-    text-shadow: none
+    text-shadow: none;
 }
 
 ::selection {
     background: #b3d4fc;
-    text-shadow: none
+    text-shadow: none;
 }
 
 hr {
@@ -25,24 +24,27 @@ hr {
     border: 0;
     border-top: 1px solid #ccc;
     margin: 1em 0;
-    padding: 0
+    padding: 0;
 }
 
-audio, canvas, iframe, img, svg, video {
-    vertical-align: middle
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
 }
 
 fieldset {
     border: 0;
     margin: 0;
-    padding: 0
+    padding: 0;
 }
 
 textarea {
-    resize: vertical
+    resize: vertical;
 }
-
-
 /**
  * Set up a decent box model on the root element
  */
@@ -53,17 +55,18 @@ html {
     box-sizing: border-box;
     height: 100%;
     min-height: 100%;
-    -ms-overflow-x: hidden
+    -ms-overflow-x: hidden;
 }
-
 /**
  * Make all elements from the DOM inherit from the parent box-sizing
  * Since `*` has a specificity of 0, it does not override the `html` value
  * making all elements inheriting from the root box-sizing value
  * See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
  */
-html *, html *:before, html *:after {
-    box-sizing: inherit
+html *,
+html *:after,
+html *:before {
+    box-sizing: inherit;
 }
 
 body {
@@ -78,32 +81,32 @@ body {
     -moz-osx-font-smoothing: grayscale;
     margin: 0;
     height: 100%;
-    min-height: 100%
+    min-height: 100%;
 }
 
-img, svg {
-    max-width: 100%
+img,
+svg {
+    max-width: 100%;
 }
 
 .svg {
-    height: auto
+    height: auto;
 }
 
 .video {
-    max-width: 100%
+    max-width: 100%;
 }
 
 img[src*="assets/blank"] {
-    height: 1px
+    height: 1px;
 }
-
 /**
  * Basic styles for links
  */
 a {
-    color: inherit
+    color: inherit;
 }
 
 a:hover {
-    text-decoration: none
+    text-decoration: none;
 }
