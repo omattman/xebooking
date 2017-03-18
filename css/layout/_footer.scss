@@ -1,7 +1,7 @@
 .footer__wrap {
     background-color: white;
     padding: 55px 0;
-    color: #1f8ceb;
+    color: $blue;
     font-size: 15px;
     overflow: hidden
 }
@@ -46,7 +46,7 @@
 }
 
 .footer__addon:hover, .footer__link:hover {
-    color: #1f8ceb
+    color: $blue
 }
 
 .footer__addons {

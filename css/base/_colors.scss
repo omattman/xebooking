@@ -1,30 +1,30 @@
-
+@include max-screen(480px)
 .c {
 
-    /* `Blue Tones`
-       ========================================================================== */
+    // `Blue Tones`
+    // ==========================================================================
     &__bright-blue {
         color: $bright-blue;
     }
     &__dark-blue {
         color: $dark-blue;
 
-        @media (max-width: 480px) {
+        @include max-screen(480px) {
             &--sm {
                 color: $dark-blue;
             }
         }
-        @media (min-width: 481px) and (max-width: 767px) {
+        @include screen(481px, 767px) {
             &--md {
                 color: $dark-blue;
             }
         }
-        @media (min-width: 768px) and (max-width: 1024px) {
+        @include ipad {
             &--lg {
                 color: $dark-blue;
             }
         }
-        @media (min-width: 1025px) {
+        @include min-screen(1025px) {
             &--xlg {
                 color: $dark-blue;
             }
@@ -33,17 +33,17 @@
     &__blue {
         color: $blue;
 
-        @media (max-width: 480px) {
+        @include max-screen(480px) {
             &--sm {
                 color: $blue;
             }
         }
-        @media (min-width: 481px) and (max-width: 767px) {
+        @include screen(481px, 767px) {
             &--md {
                 color: $blue;
             }
         }
-        @media (min-width: 768px) and (max-width: 1024px) {
+        @include ipad {
             &--lg {
                 color: $blue;
             }
@@ -65,52 +65,52 @@
     }
 
 
-    /* `Grey Tones`
-       ========================================================================== */
+    // `Grey Tones`
+    // ==========================================================================
     &__dark-grey {
-        color: #344358;
+        color: $dark-grey;
     }
     &__hazy-grey {
-        color: #556474;
+        color: $hazy-grey;
     }
     &__grey {
-        color: #637280;
+        color: $grey;
     }
     &__light-fog {
-        color: #96a2b0;
+        color: $light-fog;
     }
     &__light-grey {
-        color: #8da2b5;
+        color: $light-grey;
     }
     &__gray-mist {
-        color: #f9fafb;
+        color: $gray-mist;
     }
 
 
-    /* `Whites`
-       ========================================================================== */
-    &__mon-jeans {
-        color: #f6fafd;
+    // `White Tones`
+    // ==========================================================================
+    &__mom-jeans {
+        color: $mom-jeans;
     }
     &__white {
-        color: #fff;
+        color: $white;
     }
 
 
-    /* `Other Colors`
-       ========================================================================== */
+    // `White Tones`
+    // ==========================================================================
     &__red {
-        color: #e04e50;
+        color: $red;
     }
     &__purple {
-        color: #051666;
+        color: $purple;
 
         @media (max-width: 480px) {
             &--sm {
                 color: $purple;
             }
         }
-        @media (min-width: 481px) and (max-width: 767px) {
+        @include screen(481px, 767px) {
             &--md {
                 color: $purple;
             }
@@ -127,6 +127,6 @@
         }
     }
     &__light-green {
-        color: #0ff2bc;
+        color: $light-green;
     }
 }

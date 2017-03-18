@@ -1,7 +1,7 @@
 [type="text"], [type="email"], [type="number"], textarea {
     font-family: "Akkurat Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
     background: #fafbfc;
-    color: #8da2b5;
+    color: $light-grey;
     border: 1px solid #dde5ed;
     font-size: 16px;
     padding: 16px 15px 14px;
@@ -13,50 +13,50 @@
 }
 
 [type="text"].bright-blue, [type="email"].bright-blue, [type="number"].bright-blue, textarea.bright-blue {
-    color: #001ce8;
-    border-color: #001ce8;
+    color: $bright-blue;
+    border-color: $bright-blue;
     border-width: 2px
 }
 
 [type="text"].bright-blue::-webkit-input-placeholder, [type="email"].bright-blue::-webkit-input-placeholder, [type="number"].bright-blue::-webkit-input-placeholder, textarea.bright-blue::-webkit-input-placeholder {
-    color: rgba(0, 28, 232, 0.7)
+    color: rgba($bright-blue, 0.7)
 }
 
 [type="text"].bright-blue::-moz-placeholder, [type="email"].bright-blue::-moz-placeholder, [type="number"].bright-blue::-moz-placeholder, textarea.bright-blue::-moz-placeholder {
-    color: rgba(0, 28, 232, 0.7)
+    color: rgba($bright-blue, 0.7)
 }
 
 [type="text"].bright-blue:-ms-input-placeholder, [type="email"].bright-blue:-ms-input-placeholder, [type="number"].bright-blue:-ms-input-placeholder, textarea.bright-blue:-ms-input-placeholder {
-    color: rgba(0, 28, 232, 0.7)
+    color: rgba($bright-blue, 0.7)
 }
 
 [type="text"].bright-blue::placeholder, [type="email"].bright-blue::placeholder, [type="number"].bright-blue::placeholder, textarea.bright-blue::placeholder {
-    color: rgba(0, 28, 232, 0.7)
+    color: rgba($bright-blue, 0.7)
 }
 
 [type="text"].error, [type="email"].error, [type="number"].error, textarea.error {
-    border-color: #e04e50
+    border-color: $red;
 }
 
 select {
     font-family: "Akkurat Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color: #637280
+    color: $grey;
 }
 
 ::-webkit-input-placeholder {
-    color: #8da2b5
+    color: $light-grey;
 }
 
 :-moz-placeholder {
-    color: #8da2b5
+    color: $light-grey;
 }
 
 ::-moz-placeholder {
-    color: #8da2b5
+    color: $light-grey;
 }
 
 :-ms-input-placeholder {
-    color: #8da2b5
+    color: $light-grey;
 }
 
 .input__small {
@@ -93,5 +93,5 @@ select {
 }
 
 .input__label.c__bright-blue {
-    color: #001ce8
+    color: $bright-blue
 }

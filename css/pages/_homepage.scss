@@ -260,14 +260,14 @@
 }
 
 .homepage__product-box-bg {
-    color: #1f8ceb;
+    color: $blue;
     padding: 35px 50px;
     background: #f1f8fe;
     border-radius: 3px
 }
 
 .homepage__product-box-bg.o__white {
-    background: #fff
+    background: $white;
 }
 
 @media (max-width: 767px) {

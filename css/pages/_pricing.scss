@@ -143,7 +143,7 @@
 }
 
 .bundle__view__pricing__wrapper>p {
-    color: #8da2b5;
+    color: $light-grey;
     display: inline-block;
     margin: 0;
     line-height: 32px
@@ -190,7 +190,7 @@
 .pricing__from__price {
     display: inline-block;
     padding: 0 18px;
-    background-color: #fff
+    background-color: $white;
 }
 
 .pricing__cell__left {

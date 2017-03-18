@@ -39,12 +39,12 @@
 }
 
 .overlay__box-label.active, .overlay__box-label:hover {
-    background: #f6fafd;
+    background: $mom-jeans;
     opacity: 1
 }
 
 .overlay__box-label.active .overlay__label {
-    color: #1f8ceb
+    color: $blue;
 }
 
 .overlay__box-link {
@@ -52,7 +52,7 @@
 }
 
 .overlay__res-label.active .overlay__label, [data-class="1"] .overlay__label-1, [data-class="2"] .overlay__label-2, [data-class="3"] .overlay__label-3, [data-class="4"] .overlay__label-4 {
-    color: #1f8ceb
+    color: $blue;
 }
 
 .overlay__res-label.active .overlay__label:after, [data-class="1"] .overlay__label-1:after, [data-class="2"] .overlay__label-2:after, [data-class="3"] .overlay__label-3:after, [data-class="4"] .overlay__label-4:after {
@@ -109,6 +109,6 @@
         background: none
     }
     .overlay__res-label.active .overlay__label, .overlay__box-label.active .overlay__label, .overlay__label-1.overlay__label-1, .overlay__label-2.overlay__label-2, .overlay__label-3.overlay__label-3, .overlay__label-4.overlay__label-4 {
-        color: #8da2b5
+        color: $light-grey;
     }
 }

@@ -27,7 +27,7 @@
 }
 
 .customer__hero-text {
-    background: #1f8ceb;
+    background: $blue;
     color: white;
     width: 47%;
     padding: 40px 115px;
@@ -122,7 +122,7 @@
 
 .customer__stats {
     padding: 50px 0;
-    background: #f6fafd
+    background: $mom-jeans
 }
 
 .customer__stats-number {
@@ -182,7 +182,7 @@
 }
 
 .customer__article-h3 {
-    color: #1f8ceb;
+    color: $blue;
     margin: 60px 0 15px;
     text-align: left
 }
@@ -581,7 +581,7 @@
 }
 
 .customers__quote-control-prev, .customers__quote-control-next {
-    color: #8da2b5;
+    color: $light-grey;
     font-size: 50px
 }
 

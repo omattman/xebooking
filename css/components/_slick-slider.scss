@@ -116,11 +116,11 @@
 }
 
 .slick-prev:before, .slick-next:before {
-    color: #8da2b5
+    color: $light-grey;
 }
 
 .slick-prev:hover:before, .slick-next:hover:before {
-    color: #637280
+    color: $grey
 }
 
 .slick-prev.slick-disabled:before, .slick-next.slick-disabled:before {

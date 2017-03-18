@@ -3,7 +3,7 @@
 // -----------------------------------------------------------------------------
 
 .btn {
-    font-family: "Akkurat Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     display: inline-block;
     font-weight: 500;
     letter-spacing: .01em;
@@ -60,7 +60,7 @@
 }
 
 .btn.hover, .btn:hover {
-    border-color: #b9dcfa
+    border-color: $light-blue;
 }
 
 .btn.loading {
@@ -70,10 +70,10 @@
 .btn.loading:after {
     content: ' ';
     display: block;
-    border: 2px solid #fff;
-    border-left-color: rgba(255, 255, 255, 0.2);
-    border-right-color: rgba(255, 255, 255, 0.2);
-    border-bottom-color: rgba(255, 255, 255, 0.2);
+    border: 2px solid $white;
+    border-left-color: rgba($white, 0.2);
+    border-right-color: rgba($white, 0.2);
+    border-bottom-color: rgba($white, 0.2);
     height: 30px;
     width: 30px;
     border-radius: 50%;
@@ -122,12 +122,12 @@
 .btn__primary {
     background: -webkit-linear-gradient(top, #1f8ded 0%, #1985e3 100%);
     background: linear-gradient(to bottom, #1f8ded 0%, #1985e3 100%);
-    border-color: #1271c4;
+    border-color: $mist-blue;;
     color: white
 }
 
 .btn__primary.hover, .btn__primary:hover {
-    border-color: #1271c4;
+    border-color: $mist-blue;
     background: -webkit-linear-gradient(top, #1280e0 0%, #0675d6 100%);
     background: linear-gradient(to bottom, #1280e0 0%, #0675d6 100%)
 }
@@ -135,12 +135,12 @@
 .btn__cta-mint {
     background: -webkit-linear-gradient(top, #6ce4b3 0%, #41dc9d 100%);
     background: linear-gradient(to bottom, #6ce4b3 0%, #41dc9d 100%);
-    border-color: #73b79a;
+    border-color: $green-mist;
     color: white
 }
 
 .btn__cta-mint.hover, .btn__cta-mint:hover {
-    border-color: #73b79a;
+    border-color: $green-mist;
     background: -webkit-linear-gradient(top, #41dc9d 0%, #2bd892 100%);
     background: linear-gradient(to bottom, #41dc9d 0%, #2bd892 100%)
 }
@@ -148,23 +148,23 @@
 .btn__cta-green {
     background: -webkit-linear-gradient(top, #32cd80 0%, #2db973 100%);
     background: linear-gradient(to bottom, #32cd80 0%, #2db973 100%);
-    border-color: #2db973;
+    border-color: $green;
     color: white
 }
 
 .btn__cta-green.hover, .btn__cta-green:hover {
-    border-color: #2db973;
-    background: #2db973
+    border-color: $green;
+    background: $green;
 }
 
 .btn__secondary {
-    border-color: #1f8ceb;
-    color: #1f8ceb
+    border-color: $blue;
+    color: $blue;
 }
 
 .btn__secondary.hover, .btn__secondary:hover {
-    border-color: #1271c4;
-    color: #1271c4
+    border-color: $mist-blue;
+    color: $mist-blue;
 }
 
 @-webkit-keyframes rotate {
@@ -238,27 +238,27 @@
 }
 
 .btn__white-alt {
-    border: 2px solid #001ce8;
+    border: 2px solid $bright-blue;
     background-color: white;
-    color: #001ce8;
+    color: $bright-blue;
     -webkit-transition: background .2s;
     transition: background .2s
 }
 
 .btn__white-alt:hover {
-    border-color: #001ce8;
-    background-color: rgba(255, 255, 255, 0.9)
+    border-color: $bright-blue;
+    background-color: rgba($white, 0.9)
 }
 
 .btn__blue-alt {
-    border: 2px solid #001ce8;
-    background-color: #001ce8;
+    border: 2px solid $bright-blue;
+    background-color: $bright-blue;
     color: white
 }
 
 .btn__blue-alt:hover {
-    border-color: #001ce8;
-    background-color: rgba(0, 28, 232, 0.9)
+    border-color: $bright-blue;
+    background-color: rgba($bright-blue, 0.9)
 }
 
 .btn__white {
@@ -269,8 +269,8 @@
 }
 
 .btn__white:hover {
-    border-color: rgba(255, 255, 255, 0.9);
-    background-color: rgba(255, 255, 255, 0.9)
+    border-color: rgba($white, 0.9);
+    background-color: rgba($white, 0.9)
 }
 
 .btn__white.loading {
@@ -278,7 +278,7 @@
 }
 
 .btn__white.loading:after {
-    border: 2px solid #2e2e7f;
+    border: 2px solid $dark-blue;
     border-left-color: rgba(46, 46, 127, 0.2);
     border-right-color: rgba(46, 46, 127, 0.2);
     border-bottom-color: rgba(46, 46, 127, 0.2)

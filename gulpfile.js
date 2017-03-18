@@ -10,6 +10,7 @@ var pngquant = require('imagemin-pngquant');
 var uglify = require('gulp-uglify');
 var browserSync = require('browser-sync').create();
 var sassdoc = require('sassdoc');
+var strip = require('gulp-strip-comments');
 
 //build path. Change to server location
 var build = './dist';
@@ -79,13 +80,13 @@ gulp.task('css', function() {
         cacheLocation: '../../cache',
         loadPath: [
             './css/sass'
-					]
+			]
         })
         .on("error", notify.onError(function (error) {
            return "Error: " + error.message;
         }))
         .pipe(gulp.dest(dist.css))
-				.pipe(browserSync.stream());
+			.pipe(browserSync.stream());
 });
 
 //Locations of our javascripts files.
@@ -98,7 +99,7 @@ gulp.task('js', function(){
     return gulp.src(javascript)
         .pipe(concat('main.js'))
         .pipe(gulp.dest(dist.js))
-				.pipe(browserSync.stream());;
+		.pipe(browserSync.stream());;
 });
 
 // Rerun the task when a file changes
@@ -139,8 +140,7 @@ gulp.task('sassdoc', function () {
       watermark: true,
     },
     groups: {
-      'Abstracts': 'Abstracts',
-
+      colors: 'Colors',
     },
     basePath: 'https://github.com/omattman/xebooking/tree/master/css',
   };

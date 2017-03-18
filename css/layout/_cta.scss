@@ -81,7 +81,7 @@
 .cta__up {
     font-size: 12px;
     font-weight: 400;
-    color: #8da2b5;
+    color: $light-grey;
     margin: 0 auto 28px
 }
 
@@ -103,7 +103,7 @@
 }
 
 .cta__desc-item {
-    color: #8da2b5;
+    color: $light-grey;
     font-size: 12px;
     padding: 0 5px;
     font-weight: 400
@@ -149,7 +149,7 @@
 .cta__heading-out .t__h1, .cta__heading-out .t__h1-bigger, .cta__heading-out .t__h1-big {
     font-size: 70px;
     margin-top: -100px;
-    color: #637280
+    color: $grey;
 }
 
 @media (max-width: 1024px) {

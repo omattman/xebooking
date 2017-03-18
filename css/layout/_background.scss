@@ -1,53 +1,53 @@
 .bg {
     &__sky-blue {
-        background-color: #b1d2ef;
+        background-color: $sky-blue;
     }
 
     &__light-blue {
-        background-color: #b9dcfa;
+        background-color: $light-blue;
     }
 
     &__blue {
-        background-color: #1f8ceb;
+        background-color: $blue;
     }
 
     &__dark-blue {
-        background-color: #2e2e7f;
+        background-color: $dark-blue;
     }
 
     &__grey {
-        background-color: #637280;
+        background-color: $grey;
     }
 
     &__light-grey {
-        background-color: #8da2b5;
+        background-color: $light-grey;
     }
 
     &__dark-grey {
-        background-color: #344358;
+        background-color: $dark-grey;
     }
 
     &__red {
-        background-color: #e04e50;
+        background-color: $red;
     }
 
     &__white {
-        background-color: #fff;
+        background-color: $white;
     }
 
     &__hazy-grey {
-        background-color: #556474;
+        background-color: $hazy-grey;
     }
 
     &__light-fog {
-        background-color: #96a2b0;
+        background-color: $light-grey;
     }
 
     &__gray-mist {
-        background-color: #f9fafb;
+        background-color: $gray-mist;
     }
 
     &__mom-jeans {
-        background-color: #f6fafd;
+        background-color: $mom-jeans;
     }
 }
