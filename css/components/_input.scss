@@ -1,4 +1,8 @@
-[type="text"], [type="email"], [type="number"], textarea {
+
+[type="text"],
+[type="email"],
+[type="number"],
+textarea {
     font-family: "Akkurat Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
     background: #fafbfc;
     color: $light-grey;
@@ -9,34 +13,24 @@
     border-radius: 6px;
     outline: none;
     height: 52px;
-    box-shadow: none
+    box-shadow: none;
+
+    &.bright-blue {
+        color: $bright-blue;
+        border-color: $bright-blue;
+        border-width: 2px;
+
+        &::-webkit-input-placeholder { color: rgba($bright-blue, 0.7); }
+        &:-ms-input-placeholder { color: rgba($bright-blue, 0.7); }
+        &::placeholder { color: rgba($bright-blue, 0.7); }
+    }
+
+    &.error {
+        border-color: $red;
+    }
 }
 
-[type="text"].bright-blue, [type="email"].bright-blue, [type="number"].bright-blue, textarea.bright-blue {
-    color: $bright-blue;
-    border-color: $bright-blue;
-    border-width: 2px
-}
 
-[type="text"].bright-blue::-webkit-input-placeholder, [type="email"].bright-blue::-webkit-input-placeholder, [type="number"].bright-blue::-webkit-input-placeholder, textarea.bright-blue::-webkit-input-placeholder {
-    color: rgba($bright-blue, 0.7)
-}
-
-[type="text"].bright-blue::-moz-placeholder, [type="email"].bright-blue::-moz-placeholder, [type="number"].bright-blue::-moz-placeholder, textarea.bright-blue::-moz-placeholder {
-    color: rgba($bright-blue, 0.7)
-}
-
-[type="text"].bright-blue:-ms-input-placeholder, [type="email"].bright-blue:-ms-input-placeholder, [type="number"].bright-blue:-ms-input-placeholder, textarea.bright-blue:-ms-input-placeholder {
-    color: rgba($bright-blue, 0.7)
-}
-
-[type="text"].bright-blue::placeholder, [type="email"].bright-blue::placeholder, [type="number"].bright-blue::placeholder, textarea.bright-blue::placeholder {
-    color: rgba($bright-blue, 0.7)
-}
-
-[type="text"].error, [type="email"].error, [type="number"].error, textarea.error {
-    border-color: $red;
-}
 
 select {
     font-family: "Akkurat Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -59,39 +53,41 @@ select {
     color: $light-grey;
 }
 
-.input__small {
-    padding: 8px 10px 6px;
-    height: 32px;
-    border-radius: 4px;
-    font-size: 12px
-}
+.input {
+    &__small {
+        padding: 8px 10px 6px;
+        height: 32px;
+        border-radius: 4px;
+        font-size: 12px;
+    }
 
-.input__no-radius-right {
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0
-}
+    &__no {
+        &-radius-right {
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0
+        }
+        &-radius-left {
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0
+        }
 
-.input__no-radius-left {
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0
-}
+        &-border-right {
+            border-right: 0;
+        }
+        &-border-left {
+            border-left: 0;
+        }
+    }
 
-.input__no-border-right {
-    border-right: 0
-}
+    &__label {
+        font-size: 12px;
+        text-transform: uppercase;
+        padding-bottom: 7px;
+        letter-spacing: .1em;
+        color: #919ca8;
 
-.input__no-border-left {
-    border-left: 0
-}
-
-.input__label {
-    font-size: 12px;
-    text-transform: uppercase;
-    padding-bottom: 7px;
-    letter-spacing: .1em;
-    color: #919ca8
-}
-
-.input__label.c__bright-blue {
-    color: $bright-blue
+        &.c__bright-blue {
+            color: $bright-blue
+        }
+    }
 }
