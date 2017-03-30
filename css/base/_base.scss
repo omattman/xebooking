@@ -73,7 +73,7 @@ body {
     font-family: "Akkurat Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: mq-px2em($mq-base-font-size);
     line-height: 1.6;
-    color: #637280;
+    color: $grey;
     font-weight: 400;
     background: white;
     -webkit-font-smoothing: antialiased;
