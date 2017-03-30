@@ -4,7 +4,7 @@
 
 html {
     color: #222;
-    font-size: 1em;
+    font-size: mq-px2em($mq-base-font-size);
     line-height: 1.4;
 }
 
@@ -71,7 +71,7 @@ html *:before {
 
 body {
     font-family: "Akkurat Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 16px;
+    font-size: mq-px2em($mq-base-font-size);
     line-height: 1.6;
     color: #637280;
     font-weight: 400;

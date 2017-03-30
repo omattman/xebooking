@@ -9,22 +9,22 @@
     &__dark-blue {
         color: $dark-blue;
 
-        @include max-screen(480px) {
+        @include mq($until: mobile) {
             &--sm {
                 color: $dark-blue;
             }
         }
-        @include screen(481px, 767px) {
+        @include mq($from: mobile, $until: tablet) {
             &--md {
                 color: $dark-blue;
             }
         }
-        @include ipad {
+        @include mq($from: tablet, $until: desktop) {
             &--lg {
                 color: $dark-blue;
             }
         }
-        @include min-screen(1025px) {
+        @include mq($from: wide) {
             &--xlg {
                 color: $dark-blue;
             }
@@ -33,22 +33,22 @@
     &__blue {
         color: $blue;
 
-        @include max-screen(480px) {
+        @include mq($until: mobile) {
             &--sm {
                 color: $blue;
             }
         }
-        @include screen(481px, 767px) {
+        @include mq($from: mobile, $until: tablet) {
             &--md {
                 color: $blue;
             }
         }
-        @include ipad {
+        @include mq($from: tablet, $until: desktop) {
             &--lg {
                 color: $blue;
             }
         }
-        @media (min-width: 1025px) {
+        @include mq($from: wide) {
             &--xlg {
                 color: $blue;
             }
@@ -105,22 +105,22 @@
     &__purple {
         color: $purple;
 
-        @media (max-width: 480px) {
+        @include mq($until: mobile) {
             &--sm {
                 color: $purple;
             }
         }
-        @include screen(481px, 767px) {
+        @include mq($from: mobile, $until: tablet) {
             &--md {
                 color: $purple;
             }
         }
-        @media (min-width: 768px) and (max-width: 1024px) {
+        @include mq($from: tablet, $until: desktop) {
             &--lg {
                 color: $purple;
             }
         }
-        @media (min-width: 1025px) {
+        @include mq($from: wide) {
             &--xlg {
                 color: $purple;
             }
