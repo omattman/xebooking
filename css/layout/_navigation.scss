@@ -103,7 +103,7 @@
     &__hamburger {
       display: none;
       margin-left: auto;
-      height: 30px
+      height: 30px;
       width: 25px;
       position: relative;
 
@@ -121,7 +121,7 @@
         display: -ms-flexbox;
         display: flex;
         @include flexbox;
-        @include aign-items(center);
+        @include align-items(center);
       }
 
       svg {

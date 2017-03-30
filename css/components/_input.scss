@@ -20,9 +20,9 @@ textarea {
         border-color: $bright-blue;
         border-width: 2px;
 
-        &::-webkit-input-placeholder { color: rgba($bright-blue, 0.7); }
-        &:-ms-input-placeholder { color: rgba($bright-blue, 0.7); }
-        &::placeholder { color: rgba($bright-blue, 0.7); }
+        @include placeholder {
+            color: rgba($bright-blue, 0.7);
+        }
     }
 
     &.error {

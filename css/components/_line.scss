@@ -26,8 +26,7 @@
             background: url(https://marketing.intercomassets.com/assets/_svg/line-vertical-4e7ae45f3bece42571bfb1430b9bae0aabda0a7cd7acb238ad0dd0173f1e6a59.svg) repeat-y left top;
             background-size: 3px 100px;
             width: 4px;
-            -webkit-transform-origin: 0 100%;
-            transform-origin: 0 100%;
+            @include prefix(transform-origin, 0 100%, webkit);
             position: absolute;
             height: 15px;
             bottom: 0;
@@ -35,13 +34,11 @@
         }
 
         &-before {
-            -webkit-transform: rotate(45deg);
-            transform: rotate(45deg)
+            @include prefix(transform, rotate(45deg), webkit);
         }
 
         &-after {
-            -webkit-transform: rotate(-45deg);
-            transform: rotate(-45deg);
+            @include prefix(transform, rotate(-45deg), webkit);
             height: 14px;
             bottom: -1px
         }
@@ -85,13 +82,11 @@
         }
 
         &-arrow:before {
-            -webkit-transform: rotate(-45deg);
-            transform: rotate(-45deg)
+            @include prefix(transform, rotate(-45deg), webkit);
         }
 
         &-arrow:after {
-            -webkit-transform: rotate(45deg);
-            transform: rotate(45deg);
+            @include prefix(transform, rotate(45deg), webkit);
             width: 14px;
             right: -1px
         }
