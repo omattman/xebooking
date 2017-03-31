@@ -1,182 +1,193 @@
-.f__center {
-    text-align: center
-}
+// -----------------------------------------------------------------------------
+// This file contains all application-wide typography styling and manipulation.
+//
+// 1. text-align: center, right, left
+// 2. display/hide text-decoration and styling
+// 3. font-weight, no-wrap, quote, shrink, hover
+// -----------------------------------------------------------------------------
 
-@media (max-width: 480px) {
-    .f__center--sm {
-        text-align: center !important
+// Text-align: center, right, left
+.f {
+    &__center {
+        text-align: center;
+
+        @include mq($until: mobile) {
+            &--sm {
+                text-align: center !important
+            }
+        }
+        @include mq($from: mobile, $until: tablet) {
+            &--md {
+                text-align: center !important
+            }
+        }
+        @include mq($from: tablet, $until: desktop) {
+            &--lg {
+                text-align: center !important
+            }
+        }
+        @include mq($from: wide) {
+            &--xlg {
+                text-align: center !important
+            }
+        }
+    }
+
+    &__right {
+        text-align: right;
+
+        @include mq($until: mobile) {
+            &--sm {
+                text-align: right !important
+            }
+        }
+        @include mq($from: mobile, $until: tablet) {
+            &--md {
+                text-align: right !important
+            }
+        }
+        @include mq($from: tablet, $until: desktop) {
+            &--lg {
+                text-align: right !important
+            }
+        }
+        @include mq($from: wide) {
+            &--xlg {
+                text-align: right !important
+            }
+        }
+    }
+
+    &__left {
+        text-align: left;
+
+        @include mq($until: mobile) {
+            &--sm {
+                text-align: left !important
+            }
+        }
+        @include mq($from: mobile, $until: tablet) {
+            &--md {
+                text-align: left !important
+            }
+        }
+        @include mq($from: tablet, $until: desktop) {
+            &--lg {
+                text-align: left !important
+            }
+        }
+        @include mq($from: wide) {
+            &--xlg {
+                text-align: left !important
+            }
+        }
     }
 }
 
-@media (min-width: 481px) and (max-width: 767px) {
-    .f__center--md {
-        text-align: center !important
+
+// Display/hide text-decoration and styling
+.f {
+    &__up {
+        text-transform: uppercase;
+        letter-spacing: .1em
+    }
+
+    &__und {
+        text-decoration: underline;
+
+        &:hover {
+            text-decoration: none
+        }
+    }
+
+    &__no-und-always, .f__no-und {
+        text-decoration: none
+    }
+
+    &__no-und {
+        &:hover {
+            text-decoration: underline
+        }
     }
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
-    .f__center--lg {
-        text-align: center !important
+
+// Font-weight, no-wrap, quote, shrink, hover
+.f {
+    &__light {
+        font-weight: 300
     }
-}
 
-@media (min-width: 1025px) {
-    .f__center--xlg {
-        text-align: center !important
+    &__regular {
+        font-weight: 400
     }
-}
 
-.f__right {
-    text-align: right
-}
-
-@media (max-width: 480px) {
-    .f__right--sm {
-        text-align: right !important
+    &__bold {
+        font-weight: 500
     }
-}
 
-@media (min-width: 481px) and (max-width: 767px) {
-    .f__right--md {
-        text-align: right !important
+    &__lower {
+        text-transform: lowercase
     }
-}
 
-@media (min-width: 768px) and (max-width: 1024px) {
-    .f__right--lg {
-        text-align: right !important
+    &__no-wrap {
+        white-space: nowrap;
+
+        @include mq($until: mobile) {
+            &--sm {
+                white-space: nowrap !important
+            }
+        }
+        @include mq($from: mobile, $until: tablet) {
+            &--md {
+                white-space: nowrap !important
+            }
+        }
+        @include mq($from: tablet, $until: desktop) {
+            &--lg {
+                white-space: nowrap !important
+            }
+        }
+        @include mq($from: wide) {
+            &--xlg {
+                white-space: nowrap !important
+            }
+        }
     }
-}
 
-@media (min-width: 1025px) {
-    .f__right--xlg {
-        text-align: right !important
+    &__quote {
+        position: relative;
+
+        &:before {
+            position: absolute;
+            content: '“';
+            left: -9px
+        }
+
+        &:after {
+            position: absolute;
+            content: '”';
+            margin-left: 2px
+        }
     }
-}
 
-.f__left {
-    text-align: left
-}
+    &__intercom {
+        &-small {
+            font-family: "intercom-small", Helvetica, Arial, sans-serif;
+            font-weight: 400
+        }
 
-@media (max-width: 480px) {
-    .f__left--sm {
-        text-align: left !important
+        &-headline {
+            font-family: "intercom-headline", Helvetica, Arial, sans-serif;
+            font-weight: 400
+        }
     }
-}
 
-@media (min-width: 481px) and (max-width: 767px) {
-    .f__left--md {
-        text-align: left !important
+    &__shrink {
+        line-height: 1
     }
-}
 
-@media (min-width: 768px) and (max-width: 1024px) {
-    .f__left--lg {
-        text-align: left !important
+    &__hover {
+        cursor: pointer
     }
-}
-
-@media (min-width: 1025px) {
-    .f__left--xlg {
-        text-align: left !important
-    }
-}
-
-.f__up {
-    text-transform: uppercase;
-    letter-spacing: .1em
-}
-
-.f__und {
-    text-decoration: underline
-}
-
-a.f__und:hover {
-    text-decoration: none
-}
-
-.f__no-und-always, .f__no-und {
-    text-decoration: none
-}
-
-a.f__no-und:hover {
-    text-decoration: underline
-}
-
-.f__light {
-    font-weight: 300
-}
-
-.f__regular {
-    font-weight: 400
-}
-
-.f__bold {
-    font-weight: 500
-}
-
-.f__lower {
-    text-transform: lowercase
-}
-
-.f__no-wrap {
-    white-space: nowrap
-}
-
-@media (max-width: 480px) {
-    .f__no-wrap--sm {
-        white-space: nowrap !important
-    }
-}
-
-@media (min-width: 481px) and (max-width: 767px) {
-    .f__no-wrap--md {
-        white-space: nowrap !important
-    }
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-    .f__no-wrap--lg {
-        white-space: nowrap !important
-    }
-}
-
-@media (min-width: 1025px) {
-    .f__no-wrap--xlg {
-        white-space: nowrap !important
-    }
-}
-
-.f__quote {
-    position: relative
-}
-
-.f__quote:before {
-    position: absolute;
-    content: '“';
-    left: -9px
-}
-
-.f__quote:after {
-    position: absolute;
-    content: '”';
-    margin-left: 2px
-}
-
-.f__intercom-small {
-    font-family: "intercom-small", Helvetica, Arial, sans-serif;
-    font-weight: 400
-}
-
-.f__intercom-headline {
-    font-family: "intercom-headline", Helvetica, Arial, sans-serif;
-    font-weight: 400
-}
-
-.f__shrink {
-    line-height: 1
-}
-
-.f__hover {
-    cursor: pointer
 }

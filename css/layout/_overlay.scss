@@ -1,114 +1,128 @@
-.overlay__labels {
-    margin: 0 auto;
-    max-width: 650px
-}
-
-.overlay__desc {
-    max-width: 250px
-}
-
-.overlay__desc-wider {
-    max-width: 280px
-}
-
-.overlay__bg {
-    -webkit-transition: all .3s;
-    transition: all .3s;
-    position: absolute;
-    box-shadow: 0 0 0 1000px rgba(0, 0, 0, 0.6);
-    border-radius: 3px;
-    z-index: 10;
-    width: 101%;
-    height: 101%;
-    top: 0;
-    left: 0
-}
-
-.overlay__res-label .overlay__label, .overlay__label-1, .overlay__label-2, .overlay__label-3, .overlay__label-4 {
-    -webkit-transition: color .3s;
-    transition: color .3s
-}
-
-.overlay__box-label {
-    padding: 20px;
-    outline: none;
-    border-radius: 8px;
-    opacity: .7;
-    -webkit-transition: opacity .3s, background .3s;
-    transition: opacity .3s, background .3s
-}
-
-.overlay__box-label.active, .overlay__box-label:hover {
-    background: $mom-jeans;
-    opacity: 1
-}
-
-.overlay__box-label.active .overlay__label {
-    color: $blue;
-}
-
-.overlay__box-link {
-    padding-left: 20px
-}
-
-.overlay__res-label.active .overlay__label, [data-class="1"] .overlay__label-1, [data-class="2"] .overlay__label-2, [data-class="3"] .overlay__label-3, [data-class="4"] .overlay__label-4 {
-    color: $blue;
-}
-
-.overlay__res-label.active .overlay__label:after, [data-class="1"] .overlay__label-1:after, [data-class="2"] .overlay__label-2:after, [data-class="3"] .overlay__label-3:after, [data-class="4"] .overlay__label-4:after {
-    opacity: 1
-}
-
-.overlay__img-2, .overlay__img-3, .overlay__img-4 {
-    opacity: 0;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 0;
-    -webkit-transition: opacity .3s;
-    transition: opacity .3s
-}
-
-[data-class="2"] .overlay__img-2, [data-class="3"] .overlay__img-2, [data-class="3"] .overlay__img-3, [data-class="4"] .overlay__img-2, [data-class="4"] .overlay__img-3, [data-class="4"] .overlay__img-4 {
-    opacity: 1
-}
-
-@media (min-width: 1025px) {
-    .overlay__browser {
-        width: 68%
+.overlay {
+    &__labels {
+        margin: 0 auto;
+        max-width: 650px
     }
-    .overlay__content {
-        width: 32%
-    }
-}
 
-@media (max-width: 1024px) {
-    .overlay__item {
-        width: 50%;
-        float: left;
-        padding: 0 20px
-    }
-}
+    &__desc {
+        max-width: 250px;
 
-@media (max-width: 767px) {
-    .overlay__labels {
-        max-width: none
+        &-wider {
+            max-width: 280px
+        }
     }
-    .overlay__desc {
-        margin-left: auto;
-        margin-right: auto;
-        max-width: 400px
+
+    &__bg {
+        @include prefix(transition, all .3s, webkit);
+        position: absolute;
+        box-shadow: 0 0 0 1000px rgba(0, 0, 0, 0.6);
+        border-radius: 3px;
+        z-index: 10;
+        width: 101%;
+        height: 101%;
+        top: 0;
+        left: 0
     }
-    .overlay__box-label {
-        padding: 0;
-        border-radius: 0;
-        opacity: 1
+
+    &__res-label .overlay__label,
+    &__label-1,
+    &__label-2,
+    &__label-3,
+    &__label-4 {
+        @include prefix(transition, all .3s, webkit);
     }
-    .overlay__box-label.active, .overlay__box-label:hover {
-        background: none
+
+    &__box {
+        &-label {
+            padding: 20px;
+            outline: none;
+            border-radius: 8px;
+            opacity: .7;
+            @include prefix(transition, opacity .3s, webkit);
+            @include prefix(transition, background .3s, webkit);
+
+            &.active, &:hover {
+                background: $mom-jeans;
+                opacity: 1
+            }
+
+            &.active .overlay__label {
+                color: $blue;
+            }
+        }
+
+        &-link {
+            padding-left: 20px
+        }
     }
-    .overlay__res-label.active .overlay__label, .overlay__box-label.active .overlay__label, .overlay__label-1.overlay__label-1, .overlay__label-2.overlay__label-2, .overlay__label-3.overlay__label-3, .overlay__label-4.overlay__label-4 {
-        color: $light-grey;
+
+    &__res-label.active &__label,
+    [data-class="1"] &__label-1,
+    [data-class="2"] &__label-2,
+    [data-class="3"] &__label-3,
+    [data-class="4"] &__label-4 {
+        color: $blue;
+
+        &:after {
+            opacity: 1;
+        }
+    }
+
+    &__img-2,
+    &__img-3,
+    &__img-4 {
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 0;
+        @include prefix(transition, opacity .3s, webkit);
+
+        // [data-class="2"] &,
+        // [data-class="3"] &,
+        // [data-class="4"] & {
+        //     opacity: 1;
+        // }
+    }
+
+    @include mq($from: wide) {
+        &__browser {
+            width: 68%
+        }
+
+        &__content {
+            width: 32%
+        }
+    }
+
+    @include mq($until: desktop) {
+        &__item {
+            width: 50%;
+            float: left;
+            padding: 0 20px
+        }
+    }
+
+    @include mq($until: tablet) {
+        &__labels {
+            max-width: none
+        }
+
+        &__desc {
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 400px
+        }
+
+        &__box-label {
+            padding: 0;
+            border-radius: 0;
+            opacity: 1;
+
+            &.active, :hover {
+                background: none;
+            }
+        }
     }
 }

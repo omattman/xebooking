@@ -85,100 +85,96 @@
             position: relative;
             vertical-align: middle;
             left: 5px;
+
+            @at-root .t__h6#{&} {
+                margin-top: -2px;
+            }
+
+            @at-root .t__smallest#{&} {
+                border: 4px transparent solid;
+                border-left-color: inherit;
+                border-left-width: 6px;
+                margin-top: -1px
+            }
         }
     }
-}
 
+    &__slide {
+        color: white;
+        font-weight: 500;
+        letter-spacing: .04em;
+        padding-right: 30px;
+        position: relative;
+        display: inline-block;
 
-.t__h6.link__triangle-right:after {
-    margin-top: -2px
-}
+        &:before, &:after {
+            content: ' ';
+            position: absolute;
+            top: 50%;
+            right: 0;
+            display: block
+        }
 
-.t__smallest.link__triangle-right:after {
-    border: 4px transparent solid;
-    border-left-color: inherit;
-    border-left-width: 6px;
-    margin-top: -1px
-}
+        &:before {
+            border: 1px solid white;
+            background: white;
+            border-radius: 50%;
+            width: 22px;
+            height: 22px;
+            margin-top: -12px
+        }
 
-.link__slide {
-    color: white;
-    font-weight: 500;
-    letter-spacing: .04em;
-    padding-right: 30px;
-    position: relative;
-    display: inline-block
-}
+        &:after {
+            border: 5px transparent solid;
+            border-top-color: $blue;
+            border-top-width: 8px;
+            margin: -4px 6px 0 0
+        }
+    }
 
-.link__slide:before, .link__slide:after {
-    content: ' ';
-    position: absolute;
-    top: 50%;
-    right: 0;
-    display: block
-}
+    &__hamburger {
+        position: relative;
+        display: inline-block;
+        width: 25px;
+        height: 2px;
+        border-top: 2px solid $blue;
+        -webkit-transition: border-color .1s;
+        transition: border-color .1s;
 
-.link__slide:before {
-    border: 1px solid white;
-    background: white;
-    border-radius: 50%;
-    width: 22px;
-    height: 22px;
-    margin-top: -12px
-}
+        &:after, &:before {
+            content: ' ';
+            position: absolute;
+            border-top: 2px solid $blue;
+            height: 0;
+            left: 0;
+            right: 0;
+            @include prefix(transition, transform .2s, webkit);
+        }
 
-.link__slide:after {
-    border: 5px transparent solid;
-    border-top-color: $blue;
-    border-top-width: 8px;
-    margin: -4px 6px 0 0
-}
+        &:before {
+            top: -8px
+        }
 
-.link__hamburger {
-    position: relative;
-    display: inline-block;
-    width: 25px;
-    height: 2px;
-    border-top: 2px solid $blue;
-    -webkit-transition: border-color .1s;
-    transition: border-color .1s
-}
+        &:after {
+            bottom: -6px
+        }
+    }
 
-.link__hamburger:after, .link__hamburger:before {
-    content: ' ';
-    position: absolute;
-    border-top: 2px solid $blue;
-    height: 0;
-    left: 0;
-    right: 0;
-    -webkit-transition: -webkit-transform .2s;
-    transition: -webkit-transform .2s;
-    transition: transform .2s;
-    transition: transform .2s, -webkit-transform .2s
-}
+    &.link__hamburger-grey {
+        border-top: 2px solid #dde5ed;
 
-.link__hamburger:before {
-    top: -8px
-}
+        &:after, &:before {
+            border-top: 2px solid #dde5ed
+        }
+    }
 
-.link__hamburger:after {
-    bottom: -6px
-}
+    &.link__hamburger-dark-grey {
+        border-top: 2px solid #b3c1ce;
 
-.link__hamburger.link__hamburger-grey {
-    border-top: 2px solid #dde5ed
-}
-
-.link__hamburger.link__hamburger-grey:after, .link__hamburger.link__hamburger-grey:before {
-    border-top: 2px solid #dde5ed
-}
-
-.link__hamburger.link__hamburger-dark-grey {
-    border-top: 2px solid #b3c1ce
-}
-
-.link__hamburger.link__hamburger-dark-grey:after, .link__hamburger.link__hamburger-dark-grey:before {
-    border-top: 2px solid #b3c1ce
+        &:after, &:before {
+            border-top: 2px solid #b3c1ce
+        }
+    }
 }
 
 .link__hamburger-close.link__hamburger-close, .nav__hamburger.active .link__hamburger {

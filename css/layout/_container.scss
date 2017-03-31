@@ -6,7 +6,7 @@
     &__space {
         padding-left: 40px;
         padding-right: 40px;
-        @media (max-width: 1024px) {
+        @include mq($until: desktop) {
             &__space {
                 padding-left: 20px;
                 padding-right: 20px;
@@ -21,7 +21,7 @@
         max-width: 1300px;
         width: 100%;
         position: static;
-        @media (max-width: 1024px) {
+        @include mq($until: desktop) {
             &__microsite {
                 padding-left: 20px;
                 padding-right: 20px;

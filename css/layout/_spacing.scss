@@ -1,1151 +1,1215 @@
-.sp__1 {
-    display: block;
-    height: 10px
-}
-
-.sp__2 {
-    display: block;
-    height: 20px
-}
-
-.sp__3 {
-    display: block;
-    height: 30px
-}
-
-.sp__4 {
-    display: block;
-    height: 40px
-}
-
-.sp__5 {
-    display: block;
-    height: 50px
-}
-
-.sp__6 {
-    display: block;
-    height: 60px
-}
-
-.sp__7 {
-    display: block;
-    height: 70px
-}
-
-.sp__8 {
-    display: block;
-    height: 80px
-}
-
-.sp__9 {
-    display: block;
-    height: 90px
-}
-
-.sp__10 {
-    display: block;
-    height: 100px
-}
-
-.sp__11 {
-    display: block;
-    height: 110px
-}
-
-.sp__12 {
-    display: block;
-    height: 120px
-}
-
-.sp__13 {
-    display: block;
-    height: 130px
-}
-
-.sp__14 {
-    display: block;
-    height: 140px
-}
-
-.sp__15 {
-    display: block;
-    height: 150px
-}
-
-.sp__16 {
-    display: block;
-    height: 160px
-}
-
-.sp__17 {
-    display: block;
-    height: 170px
-}
-
-.sp__18 {
-    display: block;
-    height: 180px
-}
-
-.sp__19 {
-    display: block;
-    height: 190px
-}
-
-.sp__20 {
-    display: block;
-    height: 200px
-}
-
-@media (max-width: 480px) {
-    .sp__1--sm {
-        display: block;
-        height: 10px
-    }
-}
-
-@media (min-width: 481px) and (max-width: 767px) {
-    .sp__1--md {
-        display: block;
-        height: 10px
-    }
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-    .sp__1--lg {
-        display: block;
-        height: 10px
-    }
-}
-
-@media (min-width: 1025px) {
-    .sp__1--xlg {
-        display: block;
-        height: 10px
-    }
-}
-
-@media (max-width: 480px) {
-    .sp__2--sm {
-        display: block;
-        height: 20px
-    }
-}
-
-@media (min-width: 481px) and (max-width: 767px) {
-    .sp__2--md {
-        display: block;
-        height: 20px
-    }
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-    .sp__2--lg {
-        display: block;
-        height: 20px
-    }
-}
-
-@media (min-width: 1025px) {
-    .sp__2--xlg {
-        display: block;
-        height: 20px
-    }
-}
-
-@media (max-width: 480px) {
-    .sp__3--sm {
-        display: block;
-        height: 30px
-    }
-}
-
-@media (min-width: 481px) and (max-width: 767px) {
-    .sp__3--md {
-        display: block;
-        height: 30px
-    }
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-    .sp__3--lg {
-        display: block;
-        height: 30px
-    }
-}
-
-@media (min-width: 1025px) {
-    .sp__3--xlg {
-        display: block;
-        height: 30px
-    }
-}
-
-@media (max-width: 480px) {
-    .sp__4--sm {
-        display: block;
-        height: 40px
-    }
-}
-
-@media (min-width: 481px) and (max-width: 767px) {
-    .sp__4--md {
-        display: block;
-        height: 40px
-    }
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-    .sp__4--lg {
-        display: block;
-        height: 40px
-    }
-}
-
-@media (min-width: 1025px) {
-    .sp__4--xlg {
-        display: block;
-        height: 40px
-    }
-}
-
-@media (max-width: 480px) {
-    .sp__5--sm {
-        display: block;
-        height: 50px
-    }
-}
-
-@media (min-width: 481px) and (max-width: 767px) {
-    .sp__5--md {
-        display: block;
-        height: 50px
-    }
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-    .sp__5--lg {
-        display: block;
-        height: 50px
-    }
-}
-
-@media (min-width: 1025px) {
-    .sp__5--xlg {
-        display: block;
-        height: 50px
-    }
-}
-
-@media (max-width: 480px) {
-    .sp__6--sm {
-        display: block;
-        height: 60px
-    }
-}
-
-@media (min-width: 481px) and (max-width: 767px) {
-    .sp__6--md {
-        display: block;
-        height: 60px
-    }
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-    .sp__6--lg {
-        display: block;
-        height: 60px
-    }
-}
-
-@media (min-width: 1025px) {
-    .sp__6--xlg {
-        display: block;
-        height: 60px
-    }
-}
-
-@media (max-width: 480px) {
-    .sp__7--sm {
-        display: block;
-        height: 70px
-    }
-}
-
-@media (min-width: 481px) and (max-width: 767px) {
-    .sp__7--md {
-        display: block;
-        height: 70px
-    }
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-    .sp__7--lg {
-        display: block;
-        height: 70px
-    }
-}
-
-@media (min-width: 1025px) {
-    .sp__7--xlg {
-        display: block;
-        height: 70px
-    }
-}
-
-@media (max-width: 480px) {
-    .sp__8--sm {
-        display: block;
-        height: 80px
-    }
-}
-
-@media (min-width: 481px) and (max-width: 767px) {
-    .sp__8--md {
-        display: block;
-        height: 80px
-    }
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-    .sp__8--lg {
-        display: block;
-        height: 80px
-    }
-}
-
-@media (min-width: 1025px) {
-    .sp__8--xlg {
-        display: block;
-        height: 80px
-    }
-}
-
-@media (max-width: 480px) {
-    .sp__9--sm {
-        display: block;
-        height: 90px
-    }
-}
-
-@media (min-width: 481px) and (max-width: 767px) {
-    .sp__9--md {
-        display: block;
-        height: 90px
-    }
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-    .sp__9--lg {
-        display: block;
-        height: 90px
-    }
-}
-
-@media (min-width: 1025px) {
-    .sp__9--xlg {
-        display: block;
-        height: 90px
-    }
-}
-
-@media (max-width: 480px) {
-    .sp__10--sm {
-        display: block;
-        height: 100px
-    }
-}
-
-@media (min-width: 481px) and (max-width: 767px) {
-    .sp__10--md {
-        display: block;
-        height: 100px
-    }
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-    .sp__10--lg {
-        display: block;
-        height: 100px
-    }
-}
-
-@media (min-width: 1025px) {
-    .sp__10--xlg {
-        display: block;
-        height: 100px
-    }
-}
-
-@media (max-width: 480px) {
-    .sp__11--sm {
-        display: block;
-        height: 110px
-    }
-}
-
-@media (min-width: 481px) and (max-width: 767px) {
-    .sp__11--md {
-        display: block;
-        height: 110px
-    }
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-    .sp__11--lg {
-        display: block;
-        height: 110px
-    }
-}
-
-@media (min-width: 1025px) {
-    .sp__11--xlg {
-        display: block;
-        height: 110px
-    }
-}
-
-@media (max-width: 480px) {
-    .sp__12--sm {
-        display: block;
-        height: 120px
-    }
-}
-
-@media (min-width: 481px) and (max-width: 767px) {
-    .sp__12--md {
-        display: block;
-        height: 120px
-    }
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-    .sp__12--lg {
-        display: block;
-        height: 120px
-    }
-}
-
-@media (min-width: 1025px) {
-    .sp__12--xlg {
-        display: block;
-        height: 120px
-    }
-}
-
-@media (max-width: 480px) {
-    .sp__13--sm {
-        display: block;
-        height: 130px
-    }
-}
-
-@media (min-width: 481px) and (max-width: 767px) {
-    .sp__13--md {
-        display: block;
-        height: 130px
-    }
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-    .sp__13--lg {
-        display: block;
-        height: 130px
-    }
-}
-
-@media (min-width: 1025px) {
-    .sp__13--xlg {
-        display: block;
-        height: 130px
-    }
-}
-
-@media (max-width: 480px) {
-    .sp__14--sm {
-        display: block;
-        height: 140px
-    }
-}
-
-@media (min-width: 481px) and (max-width: 767px) {
-    .sp__14--md {
-        display: block;
-        height: 140px
-    }
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-    .sp__14--lg {
-        display: block;
-        height: 140px
-    }
-}
-
-@media (min-width: 1025px) {
-    .sp__14--xlg {
-        display: block;
-        height: 140px
-    }
-}
-
-@media (max-width: 480px) {
-    .sp__15--sm {
-        display: block;
-        height: 150px
-    }
-}
-
-@media (min-width: 481px) and (max-width: 767px) {
-    .sp__15--md {
-        display: block;
-        height: 150px
-    }
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-    .sp__15--lg {
-        display: block;
-        height: 150px
-    }
-}
-
-@media (min-width: 1025px) {
-    .sp__15--xlg {
-        display: block;
-        height: 150px
-    }
-}
-
-@media (max-width: 480px) {
-    .sp__16--sm {
-        display: block;
-        height: 160px
-    }
-}
-
-@media (min-width: 481px) and (max-width: 767px) {
-    .sp__16--md {
-        display: block;
-        height: 160px
-    }
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-    .sp__16--lg {
-        display: block;
-        height: 160px
-    }
-}
-
-@media (min-width: 1025px) {
-    .sp__16--xlg {
-        display: block;
-        height: 160px
-    }
-}
-
-@media (max-width: 480px) {
-    .sp__17--sm {
-        display: block;
-        height: 170px
-    }
-}
-
-@media (min-width: 481px) and (max-width: 767px) {
-    .sp__17--md {
-        display: block;
-        height: 170px
-    }
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-    .sp__17--lg {
-        display: block;
-        height: 170px
-    }
-}
-
-@media (min-width: 1025px) {
-    .sp__17--xlg {
-        display: block;
-        height: 170px
-    }
-}
-
-@media (max-width: 480px) {
-    .sp__18--sm {
-        display: block;
-        height: 180px
-    }
-}
-
-@media (min-width: 481px) and (max-width: 767px) {
-    .sp__18--md {
-        display: block;
-        height: 180px
-    }
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-    .sp__18--lg {
-        display: block;
-        height: 180px
-    }
-}
-
-@media (min-width: 1025px) {
-    .sp__18--xlg {
-        display: block;
-        height: 180px
-    }
-}
-
-@media (max-width: 480px) {
-    .sp__19--sm {
-        display: block;
-        height: 190px
-    }
-}
-
-@media (min-width: 481px) and (max-width: 767px) {
-    .sp__19--md {
-        display: block;
-        height: 190px
-    }
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-    .sp__19--lg {
-        display: block;
-        height: 190px
-    }
-}
-
-@media (min-width: 1025px) {
-    .sp__19--xlg {
-        display: block;
-        height: 190px
-    }
-}
-
-@media (max-width: 480px) {
-    .sp__20--sm {
-        display: block;
-        height: 200px
-    }
-}
-
-@media (min-width: 481px) and (max-width: 767px) {
-    .sp__20--md {
-        display: block;
-        height: 200px
-    }
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-    .sp__20--lg {
-        display: block;
-        height: 200px
-    }
-}
-
-@media (min-width: 1025px) {
-    .sp__20--xlg {
-        display: block;
-        height: 200px
-    }
-}
-
-.sp__01 {
-    display: block;
-    height: 1px
-}
-
-.sp__02 {
-    display: block;
-    height: 2px
-}
-
-.sp__03 {
-    display: block;
-    height: 3px
-}
-
-.sp__04 {
-    display: block;
-    height: 4px
-}
-
-.sp__05 {
-    display: block;
-    height: 5px
-}
-
-.sp__06 {
-    display: block;
-    height: 6px
-}
-
-.sp__07 {
-    display: block;
-    height: 7px
-}
-
-.sp__08 {
-    display: block;
-    height: 8px
-}
-
-.sp__09 {
-    display: block;
-    height: 9px
-}
-
-.sp__010 {
-    display: block;
-    height: 10px
-}
-
-@media (max-width: 480px) {
-    .sp__01--sm {
-        display: block;
-        height: 1px
-    }
-}
-
-@media (min-width: 481px) and (max-width: 767px) {
-    .sp__01--md {
-        display: block;
-        height: 1px
-    }
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-    .sp__01--lg {
-        display: block;
-        height: 1px
-    }
-}
-
-@media (min-width: 1025px) {
-    .sp__01--xlg {
-        display: block;
-        height: 1px
-    }
-}
-
-@media (max-width: 480px) {
-    .sp__02--sm {
-        display: block;
-        height: 2px
-    }
-}
-
-@media (min-width: 481px) and (max-width: 767px) {
-    .sp__02--md {
-        display: block;
-        height: 2px
-    }
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-    .sp__02--lg {
-        display: block;
-        height: 2px
-    }
-}
-
-@media (min-width: 1025px) {
-    .sp__02--xlg {
-        display: block;
-        height: 2px
-    }
-}
-
-@media (max-width: 480px) {
-    .sp__03--sm {
-        display: block;
-        height: 3px
-    }
-}
-
-@media (min-width: 481px) and (max-width: 767px) {
-    .sp__03--md {
-        display: block;
-        height: 3px
-    }
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-    .sp__03--lg {
-        display: block;
-        height: 3px
-    }
-}
-
-@media (min-width: 1025px) {
-    .sp__03--xlg {
-        display: block;
-        height: 3px
-    }
-}
-
-@media (max-width: 480px) {
-    .sp__04--sm {
-        display: block;
-        height: 4px
-    }
-}
-
-@media (min-width: 481px) and (max-width: 767px) {
-    .sp__04--md {
-        display: block;
-        height: 4px
-    }
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-    .sp__04--lg {
-        display: block;
-        height: 4px
-    }
-}
-
-@media (min-width: 1025px) {
-    .sp__04--xlg {
-        display: block;
-        height: 4px
-    }
-}
-
-@media (max-width: 480px) {
-    .sp__05--sm {
-        display: block;
-        height: 5px
-    }
-}
-
-@media (min-width: 481px) and (max-width: 767px) {
-    .sp__05--md {
-        display: block;
-        height: 5px
-    }
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-    .sp__05--lg {
-        display: block;
-        height: 5px
-    }
-}
-
-@media (min-width: 1025px) {
-    .sp__05--xlg {
-        display: block;
-        height: 5px
-    }
-}
-
-@media (max-width: 480px) {
-    .sp__06--sm {
-        display: block;
-        height: 6px
-    }
-}
-
-@media (min-width: 481px) and (max-width: 767px) {
-    .sp__06--md {
-        display: block;
-        height: 6px
-    }
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-    .sp__06--lg {
-        display: block;
-        height: 6px
-    }
-}
-
-@media (min-width: 1025px) {
-    .sp__06--xlg {
-        display: block;
-        height: 6px
-    }
-}
-
-@media (max-width: 480px) {
-    .sp__07--sm {
-        display: block;
-        height: 7px
-    }
-}
-
-@media (min-width: 481px) and (max-width: 767px) {
-    .sp__07--md {
-        display: block;
-        height: 7px
-    }
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-    .sp__07--lg {
-        display: block;
-        height: 7px
-    }
-}
-
-@media (min-width: 1025px) {
-    .sp__07--xlg {
-        display: block;
-        height: 7px
+// -----------------------------------------------------------------------------
+// This file contains all application-wide spacing classes.
+//
+// 1. Spacing in intervals of 10 units pr. block
+// 2. Spacing in intervals of 1 unit pr. block
+// 3. Spacing bottom of headline class
+// 4. Spacing left – padding left on elements: 3, 5, 10, 20, 40, 80
+// 5. Spacing right – padding right on elements: 3, 5, 10, 20, 40, 80
+// -----------------------------------------------------------------------------
+
+
+// Spacing in intervals of 10 units pr. block
+.sp {
+    &__1 {
+        display: block;
+        height: 10px;
+
+        @include mq($until: mobile) {
+            &--sm {
+                display: block;
+                height: 10px;
+            }
+        }
+        @include mq($from: mobile, $until: tablet) {
+            &--md {
+                display: block;
+                height: 10px;
+            }
+        }
+        @include mq($from: tablet, $until: desktop) {
+            &--lg {
+                display: block;
+                height: 10px;
+            }
+        }
+        @include mq($from: wide) {
+            &--xlg {
+                display: block;
+                height: 10px;
+            }
+        }
+    }
+
+    &__2 {
+        display: block;
+        height: 20px;
+
+        @include mq($until: mobile) {
+            &--sm {
+                display: block;
+                height: 20px;
+            }
+        }
+        @include mq($from: mobile, $until: tablet) {
+            &--md {
+                display: block;
+                height: 20px;
+            }
+        }
+        @include mq($from: tablet, $until: desktop) {
+            &--lg {
+                display: block;
+                height: 20px;
+            }
+        }
+        @include mq($from: wide) {
+            &--xlg {
+                display: block;
+                height: 20px;
+            }
+        }
+    }
+
+    &__3 {
+        display: block;
+        height: 30px;
+
+        @include mq($until: mobile) {
+            &--sm {
+                display: block;
+                height: 30px;
+            }
+        }
+        @include mq($from: mobile, $until: tablet) {
+            &--md {
+                display: block;
+                height: 30px;
+            }
+        }
+        @include mq($from: tablet, $until: desktop) {
+            &--lg {
+                display: block;
+                height: 30px;
+            }
+        }
+        @include mq($from: wide) {
+            &--xlg {
+                display: block;
+                height: 30px;
+            }
+        }
+    }
+
+    &__4 {
+        display: block;
+        height: 40px;
+
+        @include mq($until: mobile) {
+            &--sm {
+                display: block;
+                height: 40px;
+            }
+        }
+        @include mq($from: mobile, $until: tablet) {
+            &--md {
+                display: block;
+                height: 40px;
+            }
+        }
+        @include mq($from: tablet, $until: desktop) {
+            &--lg {
+                display: block;
+                height: 40px;
+            }
+        }
+        @include mq($from: wide) {
+            &--xlg {
+                display: block;
+                height: 40px;
+            }
+        }
+    }
+
+    &__5 {
+        display: block;
+        height: 50px;
+
+        @include mq($until: mobile) {
+            &--sm {
+                display: block;
+                height: 50px;
+            }
+        }
+        @include mq($from: mobile, $until: tablet) {
+            &--md {
+                display: block;
+                height: 50px;
+            }
+        }
+        @include mq($from: tablet, $until: desktop) {
+            &--lg {
+                display: block;
+                height: 50px;
+            }
+        }
+        @include mq($from: wide) {
+            &--xlg {
+                display: block;
+                height: 50px;
+            }
+        }
+    }
+
+    &__6 {
+        display: block;
+        height: 60px;
+
+        @include mq($until: mobile) {
+            &--sm {
+                display: block;
+                height: 60px;
+            }
+        }
+        @include mq($from: mobile, $until: tablet) {
+            &--md {
+                display: block;
+                height: 60px;
+            }
+        }
+        @include mq($from: tablet, $until: desktop) {
+            &--lg {
+                display: block;
+                height: 60px;
+            }
+        }
+        @include mq($from: wide) {
+            &--xlg {
+                display: block;
+                height: 60px;
+            }
+        }
+    }
+
+    &__7 {
+        display: block;
+        height: 70px;
+
+        @include mq($until: mobile) {
+            &--sm {
+                display: block;
+                height: 70px;
+            }
+        }
+        @include mq($from: mobile, $until: tablet) {
+            &--md {
+                display: block;
+                height: 70px;
+            }
+        }
+        @include mq($from: tablet, $until: desktop) {
+            &--lg {
+                display: block;
+                height: 70px;
+            }
+        }
+        @include mq($from: wide) {
+            &--xlg {
+                display: block;
+                height: 70px;
+            }
+        }
+    }
+
+    &__8 {
+        display: block;
+        height: 80px;
+
+        @include mq($until: mobile) {
+            &--sm {
+                display: block;
+                height: 80px;
+            }
+        }
+        @include mq($from: mobile, $until: tablet) {
+            &--md {
+                display: block;
+                height: 80px;
+            }
+        }
+        @include mq($from: tablet, $until: desktop) {
+            &--lg {
+                display: block;
+                height: 80px;
+            }
+        }
+        @include mq($from: wide) {
+            &--xlg {
+                display: block;
+                height: 80px;
+            }
+        }
+    }
+
+    &__9 {
+        display: block;
+        height: 90px;
+
+        @include mq($until: mobile) {
+            &--sm {
+                display: block;
+                height: 90px;
+            }
+        }
+        @include mq($from: mobile, $until: tablet) {
+            &--md {
+                display: block;
+                height: 90px;
+            }
+        }
+        @include mq($from: tablet, $until: desktop) {
+            &--lg {
+                display: block;
+                height: 90px;
+            }
+        }
+        @include mq($from: wide) {
+            &--xlg {
+                display: block;
+                height: 90px;
+            }
+        }
+    }
+
+    &__10 {
+        display: block;
+        height: 100px;
+
+        @include mq($until: mobile) {
+            &--sm {
+                display: block;
+                height: 100px;
+            }
+        }
+        @include mq($from: mobile, $until: tablet) {
+            &--md {
+                display: block;
+                height: 100px;
+            }
+        }
+        @include mq($from: tablet, $until: desktop) {
+            &--lg {
+                display: block;
+                height: 100px;
+            }
+        }
+        @include mq($from: wide) {
+            &--xlg {
+                display: block;
+                height: 100px;
+            }
+        }
+    }
+
+    &__11 {
+        display: block;
+        height: 110px;
+
+        @include mq($until: mobile) {
+            &--sm {
+                display: block;
+                height: 110px;
+            }
+        }
+        @include mq($from: mobile, $until: tablet) {
+            &--md {
+                display: block;
+                height: 110px;
+            }
+        }
+        @include mq($from: tablet, $until: desktop) {
+            &--lg {
+                display: block;
+                height: 110px;
+            }
+        }
+        @include mq($from: wide) {
+            &--xlg {
+                display: block;
+                height: 110px;
+            }
+        }
+    }
+
+    &__12 {
+        display: block;
+        height: 120px;
+
+        @include mq($until: mobile) {
+            &--sm {
+                display: block;
+                height: 120px;
+            }
+        }
+        @include mq($from: mobile, $until: tablet) {
+            &--md {
+                display: block;
+                height: 120px;
+            }
+        }
+        @include mq($from: tablet, $until: desktop) {
+            &--lg {
+                display: block;
+                height: 120px;
+            }
+        }
+        @include mq($from: wide) {
+            &--xlg {
+                display: block;
+                height: 120px;
+            }
+        }
+    }
+
+    &__13 {
+        display: block;
+        height: 130px;
+
+        @include mq($until: mobile) {
+            &--sm {
+                display: block;
+                height: 130px;
+            }
+        }
+        @include mq($from: mobile, $until: tablet) {
+            &--md {
+                display: block;
+                height: 130px;
+            }
+        }
+        @include mq($from: tablet, $until: desktop) {
+            &--lg {
+                display: block;
+                height: 130px;
+            }
+        }
+        @include mq($from: wide) {
+            &--xlg {
+                display: block;
+                height: 130px;
+            }
+        }
+    }
+
+    &__14 {
+        display: block;
+        height: 140px;
+
+        @include mq($until: mobile) {
+            &--sm {
+                display: block;
+                height: 140px;
+            }
+        }
+        @include mq($from: mobile, $until: tablet) {
+            &--md {
+                display: block;
+                height: 140px;
+            }
+        }
+        @include mq($from: tablet, $until: desktop) {
+            &--lg {
+                display: block;
+                height: 140px;
+            }
+        }
+        @include mq($from: wide) {
+            &--xlg {
+                display: block;
+                height: 140px;
+            }
+        }
+    }
+
+    &__15 {
+        display: block;
+        height: 150px;
+
+        @include mq($until: mobile) {
+            &--sm {
+                display: block;
+                height: 150px;
+            }
+        }
+        @include mq($from: mobile, $until: tablet) {
+            &--md {
+                display: block;
+                height: 150px;
+            }
+        }
+        @include mq($from: tablet, $until: desktop) {
+            &--lg {
+                display: block;
+                height: 150px;
+            }
+        }
+        @include mq($from: wide) {
+            &--xlg {
+                display: block;
+                height: 150px;
+            }
+        }
+    }
+
+    &__16 {
+        display: block;
+        height: 160px;
+
+        @include mq($until: mobile) {
+            &--sm {
+                display: block;
+                height: 160px;
+            }
+        }
+        @include mq($from: mobile, $until: tablet) {
+            &--md {
+                display: block;
+                height: 160px;
+            }
+        }
+        @include mq($from: tablet, $until: desktop) {
+            &--lg {
+                display: block;
+                height: 160px;
+            }
+        }
+        @include mq($from: wide) {
+            &--xlg {
+                display: block;
+                height: 160px;
+            }
+        }
+    }
+
+    &__17 {
+        display: block;
+        height: 170px;
+
+        @include mq($until: mobile) {
+            &--sm {
+                display: block;
+                height: 170px;
+            }
+        }
+        @include mq($from: mobile, $until: tablet) {
+            &--md {
+                display: block;
+                height: 170px;
+            }
+        }
+        @include mq($from: tablet, $until: desktop) {
+            &--lg {
+                display: block;
+                height: 170px;
+            }
+        }
+        @include mq($from: wide) {
+            &--xlg {
+                display: block;
+                height: 170px;
+            }
+        }
+    }
+
+    &__18 {
+        display: block;
+        height: 180px;
+
+        @include mq($until: mobile) {
+            &--sm {
+                display: block;
+                height: 180px;
+            }
+        }
+        @include mq($from: mobile, $until: tablet) {
+            &--md {
+                display: block;
+                height: 180px;
+            }
+        }
+        @include mq($from: tablet, $until: desktop) {
+            &--lg {
+                display: block;
+                height: 180px;
+            }
+        }
+        @include mq($from: wide) {
+            &--xlg {
+                display: block;
+                height: 180px;
+            }
+        }
+    }
+
+    &__19 {
+        display: block;
+        height: 190px;
+
+        @include mq($until: mobile) {
+            &--sm {
+                display: block;
+                height: 190px;
+            }
+        }
+        @include mq($from: mobile, $until: tablet) {
+            &--md {
+                display: block;
+                height: 190px;
+            }
+        }
+        @include mq($from: tablet, $until: desktop) {
+            &--lg {
+                display: block;
+                height: 190px;
+            }
+        }
+        @include mq($from: wide) {
+            &--xlg {
+                display: block;
+                height: 190px;
+            }
+        }
+    }
+
+    &__20 {
+        display: block;
+        height: 200px;
+
+        @include mq($until: mobile) {
+            &--sm {
+                display: block;
+                height: 200px;
+            }
+        }
+        @include mq($from: mobile, $until: tablet) {
+            &--md {
+                display: block;
+                height: 200px;
+            }
+        }
+        @include mq($from: tablet, $until: desktop) {
+            &--lg {
+                display: block;
+                height: 200px;
+            }
+        }
+        @include mq($from: wide) {
+            &--xlg {
+                display: block;
+                height: 200px;
+            }
+        }
+    }
+}
+
+
+// Spacing in intervals of 1 unit pr. block
+.sp {
+    &__01 {
+        display: block;
+        height: 1px;
+
+        @include mq($until: mobile) {
+            &--sm {
+                display: block;
+                height: 1px;
+            }
+        }
+        @include mq($from: mobile, $until: tablet) {
+            &--md {
+                display: block;
+                height: 1px;
+            }
+        }
+        @include mq($from: tablet, $until: desktop) {
+            &--lg {
+                display: block;
+                height: 1px;
+            }
+        }
+        @include mq($from: wide) {
+            &--xlg {
+                display: block;
+                height: 1px;
+            }
+        }
+    }
+
+    &__02 {
+        display: block;
+        height: 2px;
+
+        @include mq($until: mobile) {
+            &--sm {
+                display: block;
+                height: 2px;
+            }
+        }
+        @include mq($from: mobile, $until: tablet) {
+            &--md {
+                display: block;
+                height: 2px;
+            }
+        }
+        @include mq($from: tablet, $until: desktop) {
+            &--lg {
+                display: block;
+                height: 2px;
+            }
+        }
+        @include mq($from: wide) {
+            &--xlg {
+                display: block;
+                height: 2px;
+            }
+        }
+    }
+
+    &__03 {
+        display: block;
+        height: 3px;
+
+        @include mq($until: mobile) {
+            &--sm {
+                display: block;
+                height: 3px;
+            }
+        }
+        @include mq($from: mobile, $until: tablet) {
+            &--md {
+                display: block;
+                height: 3px;
+            }
+        }
+        @include mq($from: tablet, $until: desktop) {
+            &--lg {
+                display: block;
+                height: 3px;
+            }
+        }
+        @include mq($from: wide) {
+            &--xlg {
+                display: block;
+                height: 3px;
+            }
+        }
+    }
+
+    &__04 {
+        display: block;
+        height: 4px;
+
+        @include mq($until: mobile) {
+            &--sm {
+                display: block;
+                height: 4px;
+            }
+        }
+        @include mq($from: mobile, $until: tablet) {
+            &--md {
+                display: block;
+                height: 4px;
+            }
+        }
+        @include mq($from: tablet, $until: desktop) {
+            &--lg {
+                display: block;
+                height: 4px;
+            }
+        }
+        @include mq($from: wide) {
+            &--xlg {
+                display: block;
+                height: 4px;
+            }
+        }
+    }
+
+    &__05 {
+        display: block;
+        height: 5px;
+
+        @include mq($until: mobile) {
+            &--sm {
+                display: block;
+                height: 5px;
+            }
+        }
+        @include mq($from: mobile, $until: tablet) {
+            &--md {
+                display: block;
+                height: 5px;
+            }
+        }
+        @include mq($from: tablet, $until: desktop) {
+            &--lg {
+                display: block;
+                height: 5px;
+            }
+        }
+        @include mq($from: wide) {
+            &--xlg {
+                display: block;
+                height: 5px;
+            }
+        }
+    }
+
+    &__06 {
+        display: block;
+        height: 6px;
+
+        @include mq($until: mobile) {
+            &--sm {
+                display: block;
+                height: 6px;
+            }
+        }
+        @include mq($from: mobile, $until: tablet) {
+            &--md {
+                display: block;
+                height: 6px;
+            }
+        }
+        @include mq($from: tablet, $until: desktop) {
+            &--lg {
+                display: block;
+                height: 6px;
+            }
+        }
+        @include mq($from: wide) {
+            &--xlg {
+                display: block;
+                height: 6px;
+            }
+        }
+    }
+
+    &__07 {
+        display: block;
+        height: 7px;
+
+        @include mq($until: mobile) {
+            &--sm {
+                display: block;
+                height: 7px;
+            }
+        }
+        @include mq($from: mobile, $until: tablet) {
+            &--md {
+                display: block;
+                height: 7px;
+            }
+        }
+        @include mq($from: tablet, $until: desktop) {
+            &--lg {
+                display: block;
+                height: 7px;
+            }
+        }
+        @include mq($from: wide) {
+            &--xlg {
+                display: block;
+                height: 7px;
+            }
+        }
+    }
+
+    &__08 {
+        display: block;
+        height: 8px;
+
+        @include mq($until: mobile) {
+            &--sm {
+                display: block;
+                height: 8px;
+            }
+        }
+        @include mq($from: mobile, $until: tablet) {
+            &--md {
+                display: block;
+                height: 8px;
+            }
+        }
+        @include mq($from: tablet, $until: desktop) {
+            &--lg {
+                display: block;
+                height: 8px;
+            }
+        }
+        @include mq($from: wide) {
+            &--xlg {
+                display: block;
+                height: 8px;
+            }
+        }
+    }
+
+    &__09 {
+        display: block;
+        height: 9px;
+
+        @include mq($until: mobile) {
+            &--sm {
+                display: block;
+                height: 9px;
+            }
+        }
+        @include mq($from: mobile, $until: tablet) {
+            &--md {
+                display: block;
+                height: 9px;
+            }
+        }
+        @include mq($from: tablet, $until: desktop) {
+            &--lg {
+                display: block;
+                height: 9px;
+            }
+        }
+        @include mq($from: wide) {
+            &--xlg {
+                display: block;
+                height: 9px;
+            }
+        }
+    }
+}
+
+
+
+// Spacing bottom of headline class
+.sp {
+    &__headline {
+        margin-bottom: 110px;
+
+        @include mq($until: desktop) {
+            margin-bottom: 90px
+        }
+        @include mq($until: tablet) {
+            margin-bottom: 65px
+        }
+        @include mq($until: mobile) {
+            margin-bottom: 65px
+        }
+    }
+}
+
+
+// Spacing left – padding left on elements: 3, 5, 10, 20, 40, 80
+.sp {
+    &__left-03 {
+        padding-left: 3px;
+
+        @include mq($until: mobile) {
+            &--sm {
+                padding-left: 3px
+            }
+        }
+        @include mq($from: mobile, $until: tablet) {
+            &--md {
+                padding-left: 3px
+            }
+        }
+        @include mq($from: tablet, $until: desktop) {
+            &--lg {
+                padding-left: 3px
+            }
+        }
+        @include mq($from: wide) {
+            &--xlg {
+                padding-left: 3px
+            }
+        }
+    }
+
+    &__left-05 {
+        padding-left: 5px;
+
+        @include mq($until: mobile) {
+            &--sm {
+                padding-left: 5px
+            }
+        }
+        @include mq($from: mobile, $until: tablet) {
+            &--md {
+                padding-left: 5px
+            }
+        }
+        @include mq($from: tablet, $until: desktop) {
+            &--lg {
+                padding-left: 5px
+            }
+        }
+        @include mq($from: wide) {
+            &--xlg {
+                padding-left: 5px
+            }
+        }
+    }
+
+    &__left-1 {
+        padding-left: 10px;
+
+        @include mq($until: mobile) {
+            &--sm {
+                padding-left: 10px
+            }
+        }
+        @include mq($from: mobile, $until: tablet) {
+            &--md {
+                padding-left: 10px
+            }
+        }
+        @include mq($from: tablet, $until: desktop) {
+            &--lg {
+                padding-left: 10px
+            }
+        }
+        @include mq($from: wide) {
+            &--xlg {
+                padding-left: 10px
+            }
+        }
+    }
+
+    &__left-2 {
+        padding-left: 20px;
+
+        @include mq($until: mobile) {
+            &--sm {
+                padding-left: 20px
+            }
+        }
+        @include mq($from: mobile, $until: tablet) {
+            &--md {
+                padding-left: 20px
+            }
+        }
+        @include mq($from: tablet, $until: desktop) {
+            &--lg {
+                padding-left: 20px
+            }
+        }
+        @include mq($from: wide) {
+            &--xlg {
+                padding-left: 20px
+            }
+        }
+    }
+
+    &__left-4 {
+        padding-left: 40px;
+
+        @include mq($until: mobile) {
+            &--sm {
+                padding-left: 40px
+            }
+        }
+        @include mq($from: mobile, $until: tablet) {
+            &--md {
+                padding-left: 40px
+            }
+        }
+        @include mq($from: tablet, $until: desktop) {
+            &--lg {
+                padding-left: 40px
+            }
+        }
+        @include mq($from: wide) {
+            &--xlg {
+                padding-left: 40px
+            }
+        }
+    }
+
+    &__left-8 {
+        padding-left: 80px;
+
+        @include mq($until: mobile) {
+            &--sm {
+                padding-left: 80px
+            }
+        }
+        @include mq($from: mobile, $until: tablet) {
+            &--md {
+                padding-left: 80px
+            }
+        }
+        @include mq($from: tablet, $until: desktop) {
+            &--lg {
+                padding-left: 80px
+            }
+        }
+        @include mq($from: wide) {
+            &--xlg {
+                padding-left: 80px
+            }
+        }
+    }
+}
+
+
+
+// Spacing right – padding right on elements: 3, 5, 10, 20, 40, 80
+.sp {
+    &__right-03 {
+        padding-left: 3px;
+
+        @include mq($until: mobile) {
+            &--sm {
+                padding-left: 3px
+            }
+        }
+        @include mq($from: mobile, $until: tablet) {
+            &--md {
+                padding-left: 3px
+            }
+        }
+        @include mq($from: tablet, $until: desktop) {
+            &--lg {
+                padding-left: 3px
+            }
+        }
+        @include mq($from: wide) {
+            &--xlg {
+                padding-left: 3px
+            }
+        }
+    }
+
+    &__right-05 {
+        padding-left: 5px;
+
+        @include mq($until: mobile) {
+            &--sm {
+                padding-left: 5px
+            }
+        }
+        @include mq($from: mobile, $until: tablet) {
+            &--md {
+                padding-left: 5px
+            }
+        }
+        @include mq($from: tablet, $until: desktop) {
+            &--lg {
+                padding-left: 5px
+            }
+        }
+        @include mq($from: wide) {
+            &--xlg {
+                padding-left: 5px
+            }
+        }
+    }
+
+    &__right-1 {
+        padding-left: 10px;
+
+        @include mq($until: mobile) {
+            &--sm {
+                padding-left: 10px
+            }
+        }
+        @include mq($from: mobile, $until: tablet) {
+            &--md {
+                padding-left: 10px
+            }
+        }
+        @include mq($from: tablet, $until: desktop) {
+            &--lg {
+                padding-left: 10px
+            }
+        }
+        @include mq($from: wide) {
+            &--xlg {
+                padding-left: 10px
+            }
+        }
+    }
+
+    &__right-2 {
+        padding-left: 20px;
+
+        @include mq($until: mobile) {
+            &--sm {
+                padding-left: 20px
+            }
+        }
+        @include mq($from: mobile, $until: tablet) {
+            &--md {
+                padding-left: 20px
+            }
+        }
+        @include mq($from: tablet, $until: desktop) {
+            &--lg {
+                padding-left: 20px
+            }
+        }
+        @include mq($from: wide) {
+            &--xlg {
+                padding-left: 20px
+            }
+        }
+    }
+
+    &__right-4 {
+        padding-left: 40px;
+
+        @include mq($until: mobile) {
+            &--sm {
+                padding-left: 40px
+            }
+        }
+        @include mq($from: mobile, $until: tablet) {
+            &--md {
+                padding-left: 40px
+            }
+        }
+        @include mq($from: tablet, $until: desktop) {
+            &--lg {
+                padding-left: 40px
+            }
+        }
+        @include mq($from: wide) {
+            &--xlg {
+                padding-left: 40px
+            }
+        }
+    }
+
+    &__right-8 {
+        padding-left: 80px;
+
+        @include mq($until: mobile) {
+            &--sm {
+                padding-left: 80px
+            }
+        }
+        @include mq($from: mobile, $until: tablet) {
+            &--md {
+                padding-left: 80px
+            }
+        }
+        @include mq($from: tablet, $until: desktop) {
+            &--lg {
+                padding-left: 80px
+            }
+        }
+        @include mq($from: wide) {
+            &--xlg {
+                padding-left: 80px
+            }
+        }
     }
-}
-
-@media (max-width: 480px) {
-    .sp__08--sm {
-        display: block;
-        height: 8px
-    }
-}
-
-@media (min-width: 481px) and (max-width: 767px) {
-    .sp__08--md {
-        display: block;
-        height: 8px
-    }
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-    .sp__08--lg {
-        display: block;
-        height: 8px
-    }
-}
-
-@media (min-width: 1025px) {
-    .sp__08--xlg {
-        display: block;
-        height: 8px
-    }
-}
-
-@media (max-width: 480px) {
-    .sp__09--sm {
-        display: block;
-        height: 9px
-    }
-}
-
-@media (min-width: 481px) and (max-width: 767px) {
-    .sp__09--md {
-        display: block;
-        height: 9px
-    }
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-    .sp__09--lg {
-        display: block;
-        height: 9px
-    }
-}
-
-@media (min-width: 1025px) {
-    .sp__09--xlg {
-        display: block;
-        height: 9px
-    }
-}
-
-@media (max-width: 480px) {
-    .sp__010--sm {
-        display: block;
-        height: 10px
-    }
-}
-
-@media (min-width: 481px) and (max-width: 767px) {
-    .sp__010--md {
-        display: block;
-        height: 10px
-    }
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-    .sp__010--lg {
-        display: block;
-        height: 10px
-    }
-}
-
-@media (min-width: 1025px) {
-    .sp__010--xlg {
-        display: block;
-        height: 10px
-    }
-}
-
-.sp__headline {
-    margin-bottom: 110px
-}
-
-@media (max-width: 1024px) {
-    .sp__headline {
-        margin-bottom: 90px
-    }
-}
-
-@media (max-width: 767px) {
-    .sp__headline {
-        margin-bottom: 65px
-    }
-}
-
-@media (max-width: 480px) {
-    .sp__headline {
-        margin-bottom: 45px
-    }
-}
-
-.sp__left-05 {
-    padding-left: 5px
-}
-
-@media (max-width: 480px) {
-    .sp__left-05--sm {
-        padding-left: 5px
-    }
-}
-
-@media (min-width: 481px) and (max-width: 767px) {
-    .sp__left-05--md {
-        padding-left: 5px
-    }
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-    .sp__left-05--lg {
-        padding-left: 5px
-    }
-}
-
-@media (min-width: 1025px) {
-    .sp__left-05--xlg {
-        padding-left: 5px
-    }
-}
-
-.sp__left-03 {
-    padding-left: 3px
-}
-
-.sp__left-1 {
-    padding-left: 10px
-}
-
-@media (max-width: 480px) {
-    .sp__left-1--sm {
-        padding-left: 10px
-    }
-}
-
-@media (min-width: 481px) and (max-width: 767px) {
-    .sp__left-1--md {
-        padding-left: 10px
-    }
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-    .sp__left-1--lg {
-        padding-left: 10px
-    }
-}
-
-@media (min-width: 1025px) {
-    .sp__left-1--xlg {
-        padding-left: 10px
-    }
-}
-
-.sp__left-2 {
-    padding-left: 20px
-}
-
-@media (max-width: 480px) {
-    .sp__left-2--sm {
-        padding-left: 20px
-    }
-}
-
-@media (min-width: 481px) and (max-width: 767px) {
-    .sp__left-2--md {
-        padding-left: 20px
-    }
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-    .sp__left-2--lg {
-        padding-left: 20px
-    }
-}
-
-@media (min-width: 1025px) {
-    .sp__left-2--xlg {
-        padding-left: 20px
-    }
-}
-
-.sp__left-4 {
-    padding-left: 40px
-}
-
-@media (max-width: 480px) {
-    .sp__left-4--sm {
-        padding-left: 40px
-    }
-}
-
-@media (min-width: 481px) and (max-width: 767px) {
-    .sp__left-4--md {
-        padding-left: 40px
-    }
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-    .sp__left-4--lg {
-        padding-left: 40px
-    }
-}
-
-@media (min-width: 1025px) {
-    .sp__left-4--xlg {
-        padding-left: 40px
-    }
-}
-
-.sp__right-03 {
-    padding-right: 3px
-}
-
-.sp__right-05 {
-    padding-right: 5px
-}
-
-.sp__right-1 {
-    padding-right: 10px
-}
-
-.sp__right-2 {
-    padding-right: 20px
-}
-
-.sp__left-8 {
-    padding-left: 80px
-}
-
-.sp__right-8 {
-    padding-right: 80px
 }

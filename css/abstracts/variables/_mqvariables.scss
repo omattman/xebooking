@@ -37,7 +37,10 @@ $mq-breakpoints: (
     mobile:  480px,
     tablet:  767px,
     desktop: 1024px,
-    wide:    1025px
+    wide:    1025px,
+
+    // Tweakpoints
+    footerAd: 850px
 ) !default;
 
 // @include mq($until: mobile)
@@ -119,7 +122,7 @@ $mq-media-type: all !default;
 ///
 /// @requires $mq-base-font-size
 /// @returns {Number}
-@function px2em($px, $base-font-size: $mq-base-font-size) {
+@function mq-px2em($px, $base-font-size: $mq-base-font-size) {
   @if unitless($px) {
       @warn "Assuming #{$px} to be in pixels, attempting to convert it into pixels.";
       @return px2em($px * 1px, $base-font-size);
