@@ -1,55 +1,51 @@
-.u__left {
-    float: left
-}
+.u {
+    &__left {
+        float: left;
 
-@media (max-width: 480px) {
-    .u__left--sm {
-        float: left
+        @include mq($until: mobile) {
+            &--sm {
+                float: left;
+            }
+        }
+        @include mq($from: mobile, $until: tablet) {
+            &--md {
+                float: left;
+            }
+        }
+        @include mq($from: tablet, $until: desktop) {
+            &--lg {
+                float: left;
+            }
+        }
+        @include mq($from: wide) {
+            &--xlg {
+                float: left;
+            }
+        }
     }
-}
 
-@media (min-width: 481px) and (max-width: 767px) {
-    .u__left--md {
-        float: left
-    }
-}
+    &__right {
+        float: right;
 
-@media (min-width: 768px) and (max-width: 1024px) {
-    .u__left--lg {
-        float: left
-    }
-}
-
-@media (min-width: 1025px) {
-    .u__left--xlg {
-        float: left
-    }
-}
-
-.u__right {
-    float: right
-}
-
-@media (max-width: 480px) {
-    .u__right--sm {
-        float: right
-    }
-}
-
-@media (min-width: 481px) and (max-width: 767px) {
-    .u__right--md {
-        float: right
-    }
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-    .u__right--lg {
-        float: right
-    }
-}
-
-@media (min-width: 1025px) {
-    .u__right--xlg {
-        float: right
+        @include mq($until: mobile) {
+            &--sm {
+                float: right;
+            }
+        }
+        @include mq($from: mobile, $until: tablet) {
+            &--md {
+                float: right;
+            }
+        }
+        @include mq($from: tablet, $until: desktop) {
+            &--lg {
+                float: right;
+            }
+        }
+        @include mq($from: wide) {
+            &--xlg {
+                float: right;
+            }
+        }
     }
 }

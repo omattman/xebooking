@@ -1,68 +1,64 @@
-.u__hidden {
-    display: none !important
-}
+.u {
+    &__hidden {
+        display: none !important;
 
-@media (max-width: 480px) {
-    .u__hidden--sm {
-        display: none !important
+        @include mq($until: mobile) {
+            &--sm {
+                display: none !important
+            }
+        }
+        @include mq($from: mobile, $until: tablet) {
+            &--md {
+                display: none !important
+            }
+        }
+        @include mq($from: tablet, $until: desktop) {
+            &--lg {
+                display: none !important
+            }
+        }
+        @include mq($from: wide) {
+            &--xlg {
+                display: none !important
+            }
+        }
     }
-}
 
-@media (min-width: 481px) and (max-width: 767px) {
-    .u__hidden--md {
-        display: none !important
-    }
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-    .u__hidden--lg {
-        display: none !important
-    }
-}
-
-@media (min-width: 1025px) {
-    .u__hidden--xlg {
-        display: none !important
-    }
-}
-
-.u__visible {
-    display: block !important;
-    opacity: 1 !important
-}
-
-@media (max-width: 480px) {
-    .u__visible--sm {
+    &__visible {
         display: block !important;
-        opacity: 1 !important
+        opacity: 1 !important;
+
+        @include mq($until: mobile) {
+            &--sm {
+                display: block !important;
+                opacity: 1 !important
+            }
+        }
+        @include mq($from: mobile, $until: tablet) {
+            &--md {
+                display: block !important;
+                opacity: 1 !important
+            }
+        }
+        @include mq($from: tablet, $until: desktop) {
+            &--lg {
+                display: block !important;
+                opacity: 1 !important
+            }
+        }
+        @include mq($from: wide) {
+            &--xlg {
+                display: block !important;
+                opacity: 1 !important
+            }
+        }
     }
-}
 
-@media (min-width: 481px) and (max-width: 767px) {
-    .u__visible--md {
-        display: block !important;
-        opacity: 1 !important
+    &__invisible {
+        visibility: hidden
     }
-}
 
-@media (min-width: 768px) and (max-width: 1024px) {
-    .u__visible--lg {
-        display: block !important;
-        opacity: 1 !important
+    &__hide {
+        display: none
     }
-}
-
-@media (min-width: 1025px) {
-    .u__visible--xlg {
-        display: block !important;
-        opacity: 1 !important
-    }
-}
-
-.u__invisible {
-    visibility: hidden
-}
-
-.u__hide {
-    display: none
 }

@@ -1,214 +1,187 @@
-.pricing__container {
-    max-width: 1128px;
-    padding-left: 0;
-    padding-right: 0
-}
+.pricing {
+    &__container {
+        max-width: 1128px;
+        padding-left: 0;
+        padding-right: 0;
 
-@media (max-width: 767px) {
-    .pricing__container {
-        padding: 0 40px
+        @include mq($until: tablet) {
+            padding: 0 40px
+        }
+        @include mq($until: mobile) {
+            padding: 0 20px
+        }
     }
-}
 
-@media (max-width: 480px) {
-    .pricing__container {
-        padding: 0 20px
+    &__row {
+        margin-left: -12px;
+        margin-right: -12px;
+
+        @include mq($until: desktop) {
+            margin-left: -40px;
+            margin-right: -40px
+        }
+        @include mq($until: mobile) {
+            margin-left: -20px;
+            margin-right: -20px
+        }
     }
-}
 
-.pricing__row {
-    margin-left: -12px;
-    margin-right: -12px
-}
-
-@media (max-width: 1024px) {
-    .pricing__row {
-        margin-left: -40px;
-        margin-right: -40px
-    }
-}
-
-@media (max-width: 480px) {
-    .pricing__row {
-        margin-left: -20px;
-        margin-right: -20px
-    }
-}
-
-.pricing__column {
-    padding-left: 20px;
-    padding-right: 20px
-}
-
-@media (max-width: 767px) {
-    .pricing__column {
-        padding-left: 40px;
-        padding-right: 40px
-    }
-}
-
-@media (max-width: 480px) {
-    .pricing__column {
+    &__column {
         padding-left: 20px;
-        padding-right: 20px
+        padding-right: 20px;
+
+        @include mq($until: tablet) {
+            margin-left: 40px;
+            margin-right: 40px
+        }
+        @include mq($until: mobile) {
+            margin-left: 20px;
+            margin-right: 20px
+        }
     }
-}
 
-.pricing__option {
-    background-color: white;
-    border: 1px solid #dde5ed;
-    border-radius: 6px;
-    display: block;
-    padding: 24px
-}
-
-.pricing__product__hero__wrapper {
-    max-height: 240px
-}
-
-.pricing__option__bundle {
-    background-position: bottom right;
-    background-position-x: 94%;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-image: url(https://marketing.intercomassets.com/assets/pricing/pricing_suite-37d13b220b22667c333e315993146b29b6b3805e08531cedce1e49a2b9027d5e.png);
-    overflow: hidden;
-    padding: 36px;
-    height: 284px;
-    max-width: 792px;
-    margin-left: auto;
-    margin-right: auto
-}
-
-@media (max-width: 767px) {
-    .pricing__option__bundle {
-        background-size: 75%;
-        height: 300px;
+    &__option {
+        background-color: white;
+        border: 1px solid #dde5ed;
+        border-radius: 6px;
+        display: block;
         padding: 24px
     }
-}
 
-@media (max-width: 480px) {
-    .pricing__option__bundle {
+    &__product__hero__wrapper {
+        max-height: 240px
+    }
+
+    &__option__bundle {
+        background-position: bottom right;
+        background-position-x: 94%;
+        background-repeat: no-repeat;
         background-size: contain;
-        padding: 24px
+        background-image: url(https://marketing.intercomassets.com/assets/pricing/pricing_suite-37d13b220b22667c333e315993146b29b6b3805e08531cedce1e49a2b9027d5e.png);
+        overflow: hidden;
+        padding: 36px;
+        height: 284px;
+        max-width: 792px;
+        margin-left: auto;
+        margin-right: auto;
+
+        @include mq($until: tablet) {
+            background-size: 75%;
+            height: 300px;
+            padding: 24px
+        }
+        @include mq($until: mobile) {
+            background-size: contain;
+            padding: 24px
+        }
+    }
+
+    &__support {
+        &-solution-bundle {
+            background-image: url(https://marketing.intercomassets.com/assets/pricing/pricing_support_solution-c3cadb1c83ef3df1348325030f5c34e097de2b7332ff0b6fc92e70a06f6cd14f.png)
+        }
+    }
+
+    @include mq($until: mobile) {
+        &__bundle__branding {
+            -webkit-box-pack: start;
+            -ms-flex-pack: start;
+            justify-content: flex-start;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            @include flex-direction(column);
+            -webkit-box-align: start;
+            -ms-flex-align: start;
+            -ms-grid-row-align: flex-start;
+            align-items: flex-start
+        }
+    }
+
+    &__product__hero {
+        position: relative;
+        display: block
+    }
+
+    &__product__illustration {
+        display: inline-block
+    }
+
+    &__product__description {
+        display: inline-block;
+        max-width: 360px
+    }
+
+    &__all-products-icon {
+        display: inline-block;
+        margin-right: 10px
     }
 }
 
-.pricing__support-solution-bundle {
-    background-image: url(https://marketing.intercomassets.com/assets/pricing/pricing_support_solution-c3cadb1c83ef3df1348325030f5c34e097de2b7332ff0b6fc92e70a06f6cd14f.png)
-}
+.bundle {
+    &__view__pricing__wrapper {
+        vertical-align: middle
+    }
 
-@media (max-width: 480px) {
-    .pricing__bundle__branding {
-        -webkit-box-pack: start;
-        -ms-flex-pack: start;
-        justify-content: flex-start;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        -webkit-box-align: start;
-        -ms-flex-align: start;
-        -ms-grid-row-align: flex-start;
-        align-items: flex-start
+    &__view__pricing__wrapper>button {
+        margin-right: 10px
+    }
+
+    &__view__pricing__wrapper>p {
+        color: $light-grey;
+        display: inline-block;
+        margin: 0;
+        line-height: 32px
+    }
+
+    &__view__pricing__wrapper span.strike_out {
+        text-decoration: line-through
     }
 }
 
-.pricing__product__hero {
-    position: relative;
-    display: block
-}
+.product {
+    &__pricing__button {
+        margin-right: 40px;
 
-.pricing__product__illustration {
-    display: inline-block
-}
-
-.pricing__product__description {
-    display: inline-block;
-    max-width: 360px
-}
-
-.pricing__all-products-icon {
-    display: inline-block;
-    margin-right: 10px
-}
-
-.bundle__view__pricing__wrapper {
-    vertical-align: middle
-}
-
-.bundle__view__pricing__wrapper>button {
-    margin-right: 10px
-}
-
-.bundle__view__pricing__wrapper>p {
-    color: $light-grey;
-    display: inline-block;
-    margin: 0;
-    line-height: 32px
-}
-
-.bundle__view__pricing__wrapper span.strike_out {
-    text-decoration: line-through
-}
-
-.product__pricing__button {
-    margin-right: 40px
-}
-
-@media (max-width: 1100px) {
-    .product__pricing__button {
-        margin-right: 11px
+        @include mq($until: desktop) {
+            margin-right: 11px
+        }
+        @include mq($from: tablet) {
+            margin-right: 0
+        }
     }
 }
 
-@media (max-width: 910px) {
-    .product__pricing__button {
-        margin-right: 0
+
+.pricing {
+    &__bg {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 360px;
+        height: 100%;
+        z-index: 0;
+        background: url(https://marketing.intercomassets.com/assets/platform/bg/bg-2-035de37638ff5dedbf93b5b0b13396a7cddf9233397258ee591a1165e5052135.jpg) no-repeat center top;
+        background-size: 2450px
     }
-}
 
-.pricing__bg {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 360px;
-    height: 100%;
-    z-index: 0;
-    background: url(https://marketing.intercomassets.com/assets/platform/bg/bg-2-035de37638ff5dedbf93b5b0b13396a7cddf9233397258ee591a1165e5052135.jpg) no-repeat center top;
-    background-size: 2450px
-}
-
-.pricing__platform_cta {
-    font-size: 16px;
-    max-width: 792px;
-    margin-left: auto;
-    margin-right: auto
-}
-
-.pricing__from__price {
-    display: inline-block;
-    padding: 0 18px;
-    background-color: $white;
-}
-
-.pricing__cell__left {
-    margin-left: 12px
-}
-
-@media (max-width: 910px) {
-    .pricing__cell__left {
-        margin-left: auto
-    }
-}
-
-.pricing__cell__right {
-    margin-right: 12px
-}
-
-@media (max-width: 910px) {
-    .pricing__cell__right {
+    &__platform_cta {
+        font-size: 16px;
+        max-width: 792px;
+        margin-left: auto;
         margin-right: auto
+    }
+
+    &__from__price {
+        display: inline-block;
+        padding: 0 18px;
+        background-color: $white;
+    }
+
+    &__cell__left {
+        margin-left: 12px
+    }
+
+    &__cell__right {
+        margin-right: 12px
     }
 }

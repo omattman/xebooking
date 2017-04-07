@@ -1,25 +1,28 @@
-.u__fading-out, .u__fading-in {
-    -webkit-transition: opacity .2s linear;
-    transition: opacity .2s linear
-}
+.u {
+    &__fading {
+        &-out, &-in {
+            @include prefix(transition, opacity .2s linear, webkit);
+        }
 
-.u__fading-out {
-    opacity: 0
-}
+        &-out {
+            opacity: 0;
+        }
 
-.u__fading-in {
-    opacity: 1
-}
+        &-in {
+            opacity: 1
+        }
+    }
 
-.u__circle {
-    border-radius: 50%
-}
+    &__circle {
+        border-radius: 50%
+    }
 
-.u__zfix {
-    position: relative;
-    z-index: 2
-}
+    &__zfix {
+        position: relative;
+        z-index: 2
+    }
 
-.u__clear-last>*:last-child {
-    margin-right: 0 !important
+    &__clear-last>*:last-child {
+        margin-right: 0 !important
+    }
 }

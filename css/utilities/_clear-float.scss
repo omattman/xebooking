@@ -1,76 +1,77 @@
-.u__cf:before, .u__cf:after {
-    content: ' ';
-    display: table
-}
+.u {
+    &__cf {
+        &:before, &:after {
+            content: ' ';
+            display: table;
+        }
 
-.u__cf:after {
-    clear: both
-}
+        &:after {
+            clear: both;
+        }
 
-@media (max-width: 480px) {
-    .u__cf--sm:before, .u__cf--sm:after {
-        content: ' ';
-        display: table
-    }
-    .u__cf--sm:after {
-        clear: both
-    }
-}
-
-@media (min-width: 481px) and (max-width: 767px) {
-    .u__cf--md:before, .u__cf--md:after {
-        content: ' ';
-        display: table
-    }
-    .u__cf--md:after {
-        clear: both
-    }
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-    .u__cf--lg:before, .u__cf--lg:after {
-        content: ' ';
-        display: table
-    }
-    .u__cf--lg:after {
-        clear: both
-    }
-}
-
-@media (min-width: 1025px) {
-    .u__cf--xlg:before, .u__cf--xlg:after {
-        content: ' ';
-        display: table
-    }
-    .u__cf--xlg:after {
-        clear: both
-    }
-}
-
-.u__clear {
-    clear: both
-}
-
-@media (max-width: 480px) {
-    .u__clear--sm {
-        clear: both
+        @include mq($until: mobile) {
+            &--sm:before, &--sm:after {
+                content: ' ';
+                display: table
+            }
+            &--sm:after {
+                clear: both;
+            }
+        }
+        @include mq($from: mobile, $until: tablet) {
+            &--md:before, &--md:after {
+                content: ' ';
+                display: table
+            }
+            &--md:after {
+                clear: both;
+            }
+        }
+        @include mq($from: tablet, $until: desktop) {
+            &--lg:before, &--lg:after {
+                content: ' ';
+                display: table
+            }
+            &--lg:after {
+                clear: both;
+            }
+        }
+        @include mq($from: wide) {
+            &--xlg:before, &--xlg:after {
+                content: ' ';
+                display: table
+            }
+            &--xlg:after {
+                clear: both;
+            }
+        }
     }
 }
 
-@media (min-width: 481px) and (max-width: 767px) {
-    .u__clear--md {
-        clear: both
-    }
-}
 
-@media (min-width: 768px) and (max-width: 1024px) {
-    .u__clear--lg {
-        clear: both
-    }
-}
+.u {
+    &__clear {
+        clear: both;
 
-@media (min-width: 1025px) {
-    .u__clear--xlg {
-        clear: both
+        @include mq($until: mobile) {
+            &--sm {
+                clear: both
+            }
+        }
+        @include mq($from: mobile, $until: tablet) {
+            &--md {
+                clear: both
+            }
+        }
+        @include mq($from: tablet, $until: desktop) {
+            &--lg {
+                clear: both
+            }
+        }
+        @include mq($from: wide) {
+            &--xlg {
+                clear: both
+            }
+        }
     }
 }

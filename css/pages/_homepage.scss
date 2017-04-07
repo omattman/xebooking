@@ -1,440 +1,428 @@
-.homepage__hero-item {
-    max-width: 1200px;
-    padding: 0 20px;
-    margin: 30px auto;
-    min-height: 430px
-}
+.homepage {
+    &__hero {
+        &-item {
+            max-width: 1200px;
+            padding: 0 20px;
+            margin: 30px auto;
+            min-height: 430px
+        }
 
-.homepage__hero-desc {
-    position: relative;
-    z-index: 2;
-    top: -50px
-}
+        &-desc {
+            position: relative;
+            z-index: 2;
+            top: -50px;
 
-.homepage__hero-headline {
-    max-width: 450px;
-    margin-left: 0;
-    text-align: left
-}
+            &-right {
+                -webkit-box-ordinal-group: 3;
+                -ms-flex-order: 2;
+                order: 2;
+                max-width: 450px;
+                padding-left: 40px
+            }
+        }
 
-.homepage__hero-headline-1 {
-    max-width: 480px;
-    padding: 0 0 0 50px;
-    margin-right: -50px
-}
+        &-headline {
+            max-width: 450px;
+            margin-left: 0;
+            text-align: left;
 
-.homepage__hero-headline-2 {
-    max-width: 480px
-}
+            &-1 {
+                max-width: 480px;
+                padding: 0 0 0 50px;
+                margin-right: -50px
+            }
 
-.homepage__hero-desc-right {
-    -webkit-box-ordinal-group: 3;
-    -ms-flex-order: 2;
-    order: 2;
-    max-width: 450px;
-    padding-left: 40px
-}
+            &-2 {
+                max-width: 480px
+            }
+        }
 
-.homepage__hero-bg {
-    position: absolute;
-    z-index: 0
-}
+        &-bg {
+            position: absolute;
+            z-index: 0;
 
-.homepage__hero-bg-1 {
-    background: url(https://marketing.intercomassets.com/assets/homepage/hero/bg-hero-1-7a3d25e26e785b1a32c6e5f7e3b9eea0d5317144363d19fb9865405239becc1a.jpg) no-repeat left top;
-    background-size: 1372px 100%;
-    position: absolute;
-    z-index: 0;
-    height: 510px;
-    width: 53%;
-    left: 0;
-    right: 47%;
-    margin-top: 170px
-}
+            &-1 {
+                background: url(https://marketing.intercomassets.com/assets/homepage/hero/bg-hero-1-7a3d25e26e785b1a32c6e5f7e3b9eea0d5317144363d19fb9865405239becc1a.jpg) no-repeat left top;
+                background-size: 1372px 100%;
+                position: absolute;
+                z-index: 0;
+                height: 510px;
+                width: 53%;
+                left: 0;
+                right: 47%;
+                margin-top: 170px
+            }
 
-.homepage__hero-bg-1a {
-    background-image: url(https://marketing.intercomassets.com/assets/homepage/hero/bg-hero-3-35dbf7cac33671124f70651d7987982c423e40e1b408097c726ac878eaa0eb9b.jpg);
-    background-size: 1310px 100%;
-    background-position: right top;
-    border-top-right-radius: 310px
-}
+            &-1a {
+                background-image: url(https://marketing.intercomassets.com/assets/homepage/hero/bg-hero-3-35dbf7cac33671124f70651d7987982c423e40e1b408097c726ac878eaa0eb9b.jpg);
+                background-size: 1310px 100%;
+                background-position: right top;
+                border-top-right-radius: 310px
+            }
 
-.homepage__hero-bg-1b {
-    background: url(https://marketing.intercomassets.com/assets/homepage/hero/bg-hero-1-7a3d25e26e785b1a32c6e5f7e3b9eea0d5317144363d19fb9865405239becc1a.jpg) no-repeat left top;
-    background-size: 1372px 100%;
-    margin-top: -5%;
-    left: 50%;
-    width: 50%;
-    height: 410px
-}
+            &-1b {
+                background: url(https://marketing.intercomassets.com/assets/homepage/hero/bg-hero-1-7a3d25e26e785b1a32c6e5f7e3b9eea0d5317144363d19fb9865405239becc1a.jpg) no-repeat left top;
+                background-size: 1372px 100%;
+                margin-top: -5%;
+                left: 50%;
+                width: 50%;
+                height: 410px
+            }
 
-.homepage__hero-bg-2 {
-    background: url(https://marketing.intercomassets.com/assets/homepage/hero/bg-hero-2-9ebb826b701c109705fffb96797c23b0828208cddc1d9ccdb4258426b5e664e3.jpg) no-repeat center top;
-    background-size: 1000px 100%;
-    position: absolute;
-    z-index: 0;
-    width: 100%;
-    height: 380px;
-    border-top-right-radius: 30%
-}
+            &-2 {
+                background: url(https://marketing.intercomassets.com/assets/homepage/hero/bg-hero-2-9ebb826b701c109705fffb96797c23b0828208cddc1d9ccdb4258426b5e664e3.jpg) no-repeat center top;
+                background-size: 1000px 100%;
+                position: absolute;
+                z-index: 0;
+                width: 100%;
+                height: 380px;
+                border-top-right-radius: 30%
+            }
+        }
 
-.homepage__cta-form {
-    margin: 20px 0 15px
-}
+        &-right {
+            padding-left: 120px;
+            margin-top: -30px
+        }
 
-.homepage__cta__desc {
-    margin-left: 0
-}
+        &-illustration {
+            position: relative;
+            display: inline-block;
+            height: 0;
+            padding: 0;
+            overflow: hidden;
+            width: 100%;
 
-.homepage__hero-right {
-    padding-left: 120px;
-    margin-top: -30px
-}
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                height: 100%;
+                width: 100%;
+                border: 0
+            }
 
-.homepage__hero-illustration {
-    position: relative;
-    display: inline-block;
-    height: 0;
-    padding: 0;
-    overflow: hidden;
-    width: 100%
-}
+            &-1 {
+                padding-bottom: 78.2%
+            }
 
-.homepage__hero-illustration img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    height: 100%;
-    width: 100%;
-    border: 0
-}
+            &-2 {
+                padding-bottom: 67.5%
+            }
+        }
 
-.homepage__hero-illustration-1 {
-    padding-bottom: 78.2%
-}
+        &__cta {
+            &-form {
+                margin: 20px 0 15px
+            }
+        }
 
-.homepage__hero-illustration-2 {
-    padding-bottom: 67.5%
-}
+        &__cta__desc {
+            margin-left: 0
+        }
 
-@media (min-width: 1260px) {
-    .homepage__hero-desc {
-        left: -50px
+        @include mq($from: wide) {
+            &-desc {
+                left: -50px
+            }
+        }
+        @include mq($until: desktop) {
+            &-item-2 {
+                margin-top: 30px
+            }
+            &-bg-1a {
+                margin-top: 13%
+            }
+            &-item {
+                min-height: 330px
+            }
+            &-headline-1, &-headline-2 {
+                padding: 0
+            }
+            &__cta__desc {
+                margin-left: 0
+            }
+            &__cta-form {
+                margin-left: 0;
+                margin-right: 0
+            }
+            &__hero-right {
+                padding-left: 40px
+            }
+        }
+        @include mq($until: tablet) {
+            &-desc {
+                max-width: none;
+                text-align: center;
+                padding: 0 20px;
+                margin: 0 auto;
+                top: 0;
+                float: none
+            }
+            &-headline {
+                margin-left: auto;
+                text-align: center
+            }
+            &-headline-1, &-headline-2 {
+                max-width: 420px
+            }
+            &-bg {
+                left: 0;
+                right: 0;
+                width: 100%;
+                margin-top: 0;
+                bottom: -20px;
+                background-size: 1000px 100%;
+                background-position: center bottom
+            }
+            &-bg-2 {
+                border-top-right-radius: 0;
+                height: 350px;
+                bottom: -20px
+            }
+            &-headline {
+                margin-left: auto;
+                margin-right: auto
+            }
+            &-right {
+                padding-left: 0;
+                margin-top: 0
+            }
+        }
+        @include mq($until: mobile) {
+            &-headline-1 {
+                max-width: 370px;
+                padding: 0;
+                margin: 0
+            }
+            &-bg {
+                background-size: 250%;
+                margin-top: 0
+            }
+            &-bg-1 {
+                background-size: 255% 70%;
+                bottom: -35px
+            }
+            &-bg-2 {
+                background-size: 200% 90%
+            }
+            &-item-2 {
+                margin-bottom: 0;
+                min-height: 0
+            }
+        }
     }
-}
 
-@media (max-width: 1200px) {
-    .homepage__hero-desc {
-        top: -40px
-    }
-}
-
-@media (max-width: 1024px) {
-    .homepage__hero-item-2 {
-        margin-top: 30px
-    }
-    .homepage__hero-bg-1a {
-        margin-top: 13%
-    }
-    .homepage__hero-item {
-        min-height: 330px
-    }
-    .homepage__hero-headline-1, .homepage__hero-headline-2 {
-        padding: 0
-    }
-    .homepage__cta__desc {
-        margin-left: 0
-    }
-    .homepage__cta-form {
-        margin-left: 0;
-        margin-right: 0
-    }
-    .homepage__hero-right {
-        padding-left: 40px
-    }
-}
-
-@media (max-width: 767px) {
-    .homepage__hero-desc {
-        max-width: none;
-        text-align: center;
+    &__product {
+        max-width: 1070px;
         padding: 0 20px;
-        margin: 0 auto;
-        top: 0;
-        float: none
-    }
-    .homepage__hero-headline {
-        margin-left: auto;
-        text-align: center
-    }
-    .homepage__hero-headline-1, .homepage__hero-headline-2 {
-        max-width: 420px
-    }
-    .homepage__hero-bg {
-        left: 0;
-        right: 0;
-        width: 100%;
-        margin-top: 0;
-        bottom: -20px;
-        background-size: 1000px 100%;
-        background-position: center bottom
-    }
-    .homepage__hero-bg-2 {
-        border-top-right-radius: 0;
-        height: 350px;
-        bottom: -20px
-    }
-    .homepage__cta-form {
-        margin-top: 0;
-        margin-left: auto;
-        margin-right: auto
-    }
-    .homepage__hero-headline {
-        margin-left: auto;
-        margin-right: auto
-    }
-    .homepage__hero-right {
-        padding-left: 0;
-        margin-top: 0
-    }
-}
+        margin: 30px auto;
 
-@media (max-width: 480px) {
-    .homepage__hero-headline-1 {
-        max-width: 370px;
-        padding: 0;
-        margin: 0
+        &-desc {
+            max-width: 380px;
+            position: relative;
+            z-index: 2
+        }
+
+        &-platform {
+            max-width: 860px
+        }
+
+        &-box {
+            position: relative;
+            padding: 35px 0 0 110px;
+            font-size: 14px;
+            text-align: left;
+
+            &-image {
+                position: absolute;
+                z-index: 0;
+                top: 0;
+                left: 0
+            }
+
+            &-bg {
+                color: $blue;
+                padding: 35px 50px;
+                background: #f1f8fe;
+                border-radius: 3px
+            }
+
+            &-bg.o__white {
+                background: $white;
+            }
+        }
+
+        @include mq($until: tablet) {
+            overflow: hidden;
+
+            &-desc {
+                max-width: 500px;
+                margin-left: auto;
+                margin-right: auto;
+                float: none
+            }
+        }
+        @include mq($until: mobile) {
+            &-box {
+                padding: 40px 0 0;
+
+                &-image {
+                    left: 50%;
+                    @include prefix(transform, translate(-50%, 0), webkit);
+                }
+            }
+        }
     }
-    .homepage__hero-bg {
-        background-size: 250%;
-        margin-top: 0
+
+    &__prod {
+        &-container {
+            max-width: 1250px
+        }
+
+        &-desc {
+            margin: 10px auto;
+            max-width: 350px;
+
+            &-resolve {
+                max-width: 400px
+            }
+        }
+
+        &-hover {
+            &-item {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                opacity: 0;
+                @include prefix(transition, opacity .3s, webkit);
+            }
+
+            &:hover &-item {
+                opacity: 1;
+            }
+
+            @include mq($until: tablet) {
+                & &-item, &:hover &-item {
+                    display: none;
+                }
+            }
+        }
     }
-    .homepage__hero-bg-1 {
-        background-size: 255% 70%;
-        bottom: -35px
+
+    &__cta {
+        padding-bottom: 0;
+
+        &-bg {
+            position: absolute;
+            left: 0;
+            right: 0;
+            z-index: 0;
+            margin-top: 100px;
+            height: 1050px;
+            background: url(https://marketing.intercomassets.com/assets/platform/bg/bg-2-035de37638ff5dedbf93b5b0b13396a7cddf9233397258ee591a1165e5052135.jpg) no-repeat center top;
+            background-size: 2450px 100%;
+
+            @include mq($from: wide) {
+                &-bg {
+                    background-image: url(https://marketing.intercomassets.com/assets/platform/bg/bg-2-xlg-12b09fbac436d54d45d2cee75d22b32beb570514bda92a2d017186232475ee4b.jpg);
+                    background-size: 1400px 100%
+                }
+            }
+            @include mq($until: desktop) {
+                &-bg {
+                    background-image: url(https://marketing.intercomassets.com/assets/platform/bg/bg-2-lg-37b99d0d157f755ade8d8dc896fc797fe085dccccec0467e544f710db7ecae46.jpg);
+                    background-size: 1024px 100%
+                }
+            }
+            @include mq($until: tablet) {
+                &-bg {
+                    background-image: url(https://marketing.intercomassets.com/assets/platform/bg/bg-2-md-f01ea44590483623b7786de338eb2604f7f188eca042d42aaa2392b62d076bb9.jpg);
+                    background-size: 767px 100%
+                }
+            }
+            @include mq($until: mobile) {
+                &-bg {
+                    background-image: url(https://marketing.intercomassets.com/assets/platform/bg/bg-2-sm-b345561d6bcd686823105ec0cac153274785a99ddd38ae6c058f8a8913cfe98b.jpg);
+                    background-size: 480px 100%
+                }
+            }
+        }
     }
-    .homepage__hero-bg-2 {
-        background-size: 200% 90%
-    }
-    .homepage__hero-item-2 {
-        margin-bottom: 0;
-        min-height: 0
-    }
-}
 
-@media (max-width: 350px) {
-    .homepage__hero-bg-2 {
-        background-size: 150% 75%
-    }
-}
+    &__customers {
+        &-headline {
+            &:before {
+                background: url(https://marketing.intercomassets.com/assets/_svg/stars-3-81eefacc3f56242f00439f3b8edebb702a5729c5f3c843eeb994ba0b7d7c3469.svg) no-repeat 100% 100%;
+                left: -45px;
+                display: inline-block
+            }
 
-.homepage__product {
-    max-width: 1070px;
-    padding: 0 20px;
-    margin: 30px auto
-}
+            &:after {
+                position: relative;
+                background: url(https://marketing.intercomassets.com/assets/_svg/stars-4-77d3513a769711600c3b7641a6bd9f9c022c608d74b6101732a1db2a36f9697c.svg) no-repeat 100% 100%;
+                right: auto;
+                top: 5px;
+                left: -14px;
+                display: inline-block
+            }
 
-.homepage__product-desc {
-    max-width: 380px;
-    position: relative;
-    z-index: 2
-}
+            &-content {
+                margin-top: 0
+            }
+        }
 
-.homepage__product-platform {
-    max-width: 860px
-}
 
-.homepage__product-box {
-    position: relative;
-    padding: 35px 0 0 110px;
-    font-size: 14px;
-    text-align: left
-}
+        @include mq($from: wide) {
+            padding-left: 20px;
+            padding-right: 20px;
 
-.homepage__product-box-image {
-    position: absolute;
-    z-index: 0;
-    top: 0;
-    left: 0
-}
+            &-sidebar {
+                width: 38%
+            }
 
-.homepage__product-box-bg {
-    color: $blue;
-    padding: 35px 50px;
-    background: #f1f8fe;
-    border-radius: 3px
-}
+            &-content {
+                width: 62%
+            }
 
-.homepage__product-box-bg.o__white {
-    background: $white;
-}
+            &-headline {
+                max-width: 350px
+            }
 
-@media (max-width: 767px) {
-    .homepage__product {
-        overflow: hidden
-    }
-    .homepage__product-desc {
-        max-width: 500px;
-        margin-left: auto;
-        margin-right: auto;
-        float: none
-    }
-}
+            &-subheadline {
+                max-width: 300px
+            }
+        }
+        @include mq($until: desktop) {
+            &-headline:before {
+                position: relative;
+                top: auto;
+                left: auto;
+                margin-right: 5px
+            }
 
-@media (max-width: 600px) {
-    .homepage__product-box-bg {
-        padding: 30px
-    }
-}
+            &-sidebar {
+                padding: 0;
+                margin-bottom: 30px;
+                text-align: center
+            }
 
-@media (max-width: 480px) {
-    .homepage__product-box {
-        padding: 40px 0 0
-    }
-    .homepage__product-box-image {
-        left: 50%;
-        -webkit-transform: translate(-50%, 0);
-        transform: translate(-50%, 0)
-    }
-}
+            &-subheadline {
+                text-align: center
+            }
 
-.homepage__prod-container {
-    max-width: 1250px
-}
-
-.homepage__prod-desc {
-    margin: 10px auto;
-    max-width: 350px
-}
-
-.homepage__prod-desc-resolve {
-    max-width: 400px
-}
-
-.homepage__prod-hover-item {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    opacity: 0;
-    -webkit-transition: opacity .3s;
-    transition: opacity .3s
-}
-
-.homepage__prod-hover:hover .homepage__prod-hover-item {
-    opacity: 1
-}
-
-@media (max-width: 767px) {
-    .homepage__prod-hover .homepage__prod-hover-item, .homepage__prod-hover:hover .homepage__prod-hover-item {
-        display: none
-    }
-}
-
-.homepage__cta {
-    padding-bottom: 0
-}
-
-.homepage__cta-bg {
-    position: absolute;
-    left: 0;
-    right: 0;
-    z-index: 0;
-    margin-top: 100px;
-    height: 1050px;
-    background: url(https://marketing.intercomassets.com/assets/platform/bg/bg-2-035de37638ff5dedbf93b5b0b13396a7cddf9233397258ee591a1165e5052135.jpg) no-repeat center top;
-    background-size: 2450px 100%
-}
-
-@media (max-width: 1400px) {
-    .homepage__cta-bg {
-        background-image: url(https://marketing.intercomassets.com/assets/platform/bg/bg-2-xlg-12b09fbac436d54d45d2cee75d22b32beb570514bda92a2d017186232475ee4b.jpg);
-        background-size: 1400px 100%
-    }
-}
-
-@media (max-width: 1024px) {
-    .homepage__cta-bg {
-        background-image: url(https://marketing.intercomassets.com/assets/platform/bg/bg-2-lg-37b99d0d157f755ade8d8dc896fc797fe085dccccec0467e544f710db7ecae46.jpg);
-        background-size: 1024px 100%
-    }
-}
-
-@media (max-width: 767px) {
-    .homepage__cta-bg {
-        background-image: url(https://marketing.intercomassets.com/assets/platform/bg/bg-2-md-f01ea44590483623b7786de338eb2604f7f188eca042d42aaa2392b62d076bb9.jpg);
-        background-size: 767px 100%
-    }
-}
-
-@media (max-width: 480px) {
-    .homepage__cta-bg {
-        background-image: url(https://marketing.intercomassets.com/assets/platform/bg/bg-2-sm-b345561d6bcd686823105ec0cac153274785a99ddd38ae6c058f8a8913cfe98b.jpg);
-        background-size: 480px 100%
-    }
-}
-
-.homepage__customers-headline:before {
-    background: url(https://marketing.intercomassets.com/assets/_svg/stars-3-81eefacc3f56242f00439f3b8edebb702a5729c5f3c843eeb994ba0b7d7c3469.svg) no-repeat 100% 100%;
-    left: -45px;
-    display: inline-block
-}
-
-.homepage__customers-headline:after {
-    position: relative;
-    background: url(https://marketing.intercomassets.com/assets/_svg/stars-4-77d3513a769711600c3b7641a6bd9f9c022c608d74b6101732a1db2a36f9697c.svg) no-repeat 100% 100%;
-    right: auto;
-    top: 5px;
-    left: -14px;
-    display: inline-block
-}
-
-.homepage__customers-content {
-    margin-top: 0
-}
-
-@media (max-width: 1024px) {
-    .homepage__customers-headline:before {
-        position: relative;
-        top: auto;
-        left: auto;
-        margin-right: 5px
-    }
-    .homepage__customers-sidebar {
-        padding: 0;
-        margin-bottom: 30px;
-        text-align: center
-    }
-    .homepage__customers-subheadline {
-        text-align: center
-    }
-    .homepage__customers-content {
-        text-align: center
-    }
-}
-
-@media (max-width: 767px) {
-    .homepage__customers-headline:before, .homepage__customers-headline:after {
-        display: none
-    }
-}
-
-@media (min-width: 1025px) {
-    .homepage__customers {
-        padding-left: 20px;
-        padding-right: 20px
-    }
-    .homepage__customers-sidebar {
-        width: 38%
-    }
-    .homepage__customers-content {
-        width: 62%
-    }
-    .homepage__customers-headline {
-        max-width: 350px
-    }
-    .homepage__customers-subheadline {
-        max-width: 300px
+            &-content {
+                text-align: center
+            }
+        }
+        @include mq($until: tablet) {
+            &-headline {
+                &:before, &:after {
+                    display: none
+                }
+            }
+        }
     }
 }

@@ -1,16 +1,18 @@
-.u__relative {
-    position: relative
-}
+.u {
+    &__relative {
+        position: relative;
+    }
 
-.u__static {
-    position: static
-}
+    &__static {
+        position: static
+    }
 
-.u__absolute {
-    position: absolute
-}
+    &__absolute {
+        position: absolute;
 
-.u__absolute-center {
-    left: 0;
-    right: 0
+        &-center {
+            left: 0;
+            right: 0
+        }
+    }
 }

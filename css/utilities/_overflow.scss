@@ -1,27 +1,26 @@
-.u__o-hidden {
-    overflow: hidden
-}
+.u {
+    &__o-hidden {
+        overflow: hidden;
 
-@media (max-width: 480px) {
-    .u__o-hidden--sm {
-        overflow: hidden
-    }
-}
-
-@media (min-width: 481px) and (max-width: 767px) {
-    .u__o-hidden--md {
-        overflow: hidden
-    }
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-    .u__o-hidden--lg {
-        overflow: hidden
-    }
-}
-
-@media (min-width: 1025px) {
-    .u__o-hidden--xlg {
-        overflow: hidden
+        @include mq($until: mobile) {
+            &--sm {
+                overflow: hidden
+            }
+        }
+        @include mq($from: mobile, $until: tablet) {
+            &--md {
+                overflow: hidden
+            }
+        }
+        @include mq($from: tablet, $until: desktop) {
+            &--lg {
+                overflow: hidden
+            }
+        }
+        @include mq($from: wide) {
+            &--xlg {
+                overflow: hidden
+            }
+        }
     }
 }

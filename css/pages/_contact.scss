@@ -1,45 +1,49 @@
-.contact__hero-textarea {
-    height: 100px
-}
+.contact {
+    &__hero {
+        &-textarea {
+            height: 100px;
+        }
 
-.contact__hero-subheadline {
-    max-width: 300px;
-    margin-left: 0;
-    margin-right: 0
-}
+        &-subheadline {
+            max-width: 300px;
+            margin-left: 0;
+            margin-right: 0
+        }
 
-.contact__hero-error {
-    margin-bottom: 30px
-}
+        &-error {
+            margin-bottom: 30px
+        }
 
-.contact__hero-illustration {
-    margin: -20px -150px 0 0;
-    position: relative;
-    z-index: 1
-}
+        &-illustration {
+            margin: -20px -150px 0 0;
+            position: relative;
+            z-index: 1
+        }
 
-.contact__hero-bg {
-    position: absolute;
-    left: 27%;
-    top: 17%;
-    max-width: none
-}
+        &-bg {
+            position: absolute;
+            left: 27%;
+            top: 17%;
+            max-width: none
+        }
 
-@media (max-width: 1024px) {
-    .contact__hero-illustration {
-        margin-right: 0
-    }
-    .contact__hero-bg {
-        left: 11%;
-        top: 28%;
-        max-width: 100%
-    }
-}
+        @include mq($until: tablet) {
+            &-subheadline {
+                max-width: 450px;
+                margin-left: auto;
+                margin-right: auto
+            }
+        }
+        @include mq($until: desktop) {
+            &-illustration {
+                margin-right: 0
+            }
 
-@media (max-width: 767px) {
-    .contact__hero-subheadline {
-        max-width: 450px;
-        margin-left: auto;
-        margin-right: auto
+            &-bg {
+                left: 11%;
+                top: 28%;
+                max-width: 100%
+            }
+        }
     }
 }
