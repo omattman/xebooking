@@ -91,7 +91,7 @@ gulp.task('css', function() {
 
 //Locations of our javascripts files.
 var javascript = [
-    config.javaPath + '/functions.js'
+    config.javaPath + '/**.*'
     ]
 
 //Javascript task
@@ -106,7 +106,10 @@ gulp.task('js', function(){
 gulp.task('watch', ['default'], function() {
 
 		browserSync.init({
-			proxy: "http://localhost/xebooking/"
+			notify: false,
+			snippetOptions: {
+				ignorePaths: "wp-admin/**"
+			}
 		});
 
     gulp.watch('*.php', ['php']);
