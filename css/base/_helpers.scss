@@ -13,5 +13,14 @@
     z-index: 2;
     padding-left: 20px;
     padding-right: 20px;
-    max-width: 1404px
+    max-width: 1404;
+    width: 100%;
+}
+
+.narrow {
+    max-width: 1200px;
+}
+
+#main-content .container {
+    padding-top: 0px;
 }
