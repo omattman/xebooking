@@ -2,8 +2,8 @@
     background: white;
     border: 1px solid #dde5ed;
     border-radius: 6px;
-    padding: 48px 50px;
-    max-width: 875px;
+    padding: 48px 50px !important;
+    max-width: 875px !important;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
@@ -83,19 +83,19 @@
 
     &__email {
         float: left;
-        width: 60%;
-        border-right-width: 0;
-        border-top-right-radius: 0;
-        border-bottom-right-radius: 0
+        width: 60% !important;
+        border-right-width: 0 !important;
+        border-top-right-radius: 0 !important;
+        border-bottom-right-radius: 0 !important
     }
 
     &__submit {
         float: left;
-        width: 40%;
-        border-top-left-radius: 0;
-        border-bottom-left-radius: 0;
-        padding-left: 0;
-        padding-right: 0
+        width: 40% !important;
+        border-top-left-radius: 0 !important;
+        border-bottom-left-radius: 0 !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important
     }
 
     &__desc-item {

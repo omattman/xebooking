@@ -1,12 +1,12 @@
 // -----------------------------------------------------------------------------
 // This file contains all application-wide typography styling and manipulation.
 //
-// 1. text-align: center, right, left
+// 1. text-align: center, right, left, auto
 // 2. display/hide text-decoration and styling
 // 3. font-weight, no-wrap, quote, shrink, hover
 // -----------------------------------------------------------------------------
 
-// Text-align: center, right, left
+// Text-align: center, right, left, auto
 .f {
     &__center {
         text-align: center;
@@ -81,6 +81,10 @@
                 text-align: left !important
             }
         }
+    }
+
+    &__auto {
+        margin: 0 auto;
     }
 }
 

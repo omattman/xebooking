@@ -1,10 +1,4 @@
 .nav {
-    position: absolute;
-    @include prefix(transform, translate3d(0,0,0), webkit);
-    z-index: 100;
-    left: 0;
-    right: 0;
-    line-height: 1.4;
 
     .container {
         padding: 0;
@@ -141,5 +135,11 @@
             font-size: 14px;
             padding: 2px 0 0 6px;
         }
+    }
+}
+
+.dropdown {
+    &__desc > a {
+        font-size: 12px !important;
     }
 }
