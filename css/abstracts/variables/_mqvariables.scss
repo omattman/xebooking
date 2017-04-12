@@ -40,7 +40,10 @@ $mq-breakpoints: (
     wide:    1025px,
 
     // Tweakpoints
-    footerAd: 850px
+    footerAd: 850px,
+    slicker-lg: 850px,
+    slicker-md: 700px,
+    slicker-sm: 450px
 ) !default;
 
 // @include mq($until: mobile)
