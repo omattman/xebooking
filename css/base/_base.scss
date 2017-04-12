@@ -70,7 +70,7 @@ html *:before {
 }
 
 body {
-    font-family: "Akkurat Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: mq-px2em($mq-base-font-size);
     line-height: 1.6;
     color: $grey;
@@ -82,6 +82,19 @@ body {
     margin: 0;
     height: 100%;
     min-height: 100%;
+    overflow-x: hidden;
+}
+
+p { padding-bottom: 0px; }
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    color: inherit;
+    line-height: inherit;
+    padding-bottom: 0px;
 }
 
 img,
