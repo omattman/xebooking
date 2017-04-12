@@ -1,36 +1,36 @@
 //Gulp requirements
-var	gulp = require('gulp');
-var sass = require('gulp-ruby-sass');
-var notify = require("gulp-notify");
-var nano = require("gulp-cssnano");
-var bower = require('gulp-bower');
-var concat = require('gulp-concat');
-var imagemin = require('gulp-imagemin');
-var pngquant = require('imagemin-pngquant');
-var uglify = require('gulp-uglify');
+var	gulp 		= require('gulp');
+var sass 		= require('gulp-ruby-sass');
+var notify 		= require("gulp-notify");
+var nano 		= require("gulp-cssnano");
+var bower 		= require('gulp-bower');
+var concat 		= require('gulp-concat');
+var imagemin 	= require('gulp-imagemin');
+var pngquant 	= require('imagemin-pngquant');
+var uglify 		= require('gulp-uglify');
 var browserSync = require('browser-sync').create();
-var sassdoc = require('sassdoc');
-var strip = require('gulp-strip-comments');
+var sassdoc 	= require('sassdoc');
+var strip 		= require('gulp-strip-comments');
 
 //build path. Change to server location
 var build = './dist';
 
 //Config paths.
 var	config = {
-	bowerDir: './bower_components',
-  sassPath: './css',
-  javaPath: './js',
-  imgPath: './img',
-  fontPath: './font'
+	bowerDir: 	'./bower_components',
+  	sassPath: 	'./css',
+  	javaPath: 	'./js',
+  	imgPath: 	'./img',
+  	fontPath: 	'./font'
 };
 
 //Distination paths.
 var dist = {
-    css: build,
-    js: build + '/js',
-    font: build + '/fonts',
-    img: build + '/img',
-    php: build
+    css: 	build,
+    js: 	build + '/js',
+    font: 	build + '/fonts',
+    img: 	build + '/img',
+    php: 	build
 }
 
 //Run Bower task
@@ -105,12 +105,13 @@ gulp.task('js', function(){
 // Rerun the task when a file changes
 gulp.task('watch', ['default'], function() {
 
-		browserSync.init({
-			notify: false,
-			snippetOptions: {
-				ignorePaths: "wp-admin/**"
-			}
-		});
+	browserSync.init({
+		notify: false,
+		// proxy: "http://localhost/xe/",
+		snippetOptions: {
+			ignorePaths: "wp-admin/**"
+		}
+	});
 
     gulp.watch('*.php', ['php']);
     gulp.watch(config.sassPath + '/**/*.scss', ['css']);
@@ -126,36 +127,37 @@ gulp.task('compress-css', ['css'], function(){
 
 //compress javascript. Uses gulpuglify. Runs Javascript task before executing
 gulp.task('compress-js', ['js'], function() {
-  return gulp.src(dist.js + '*.js')
-    .pipe(uglify())
-    .pipe(gulp.dest(dist.js));
+	return gulp.src(dist.js + '*.js')
+	    .pipe(uglify())
+	    .pipe(gulp.dest(dist.js));
 });
 
 // SassDoc for documentation
 // http://localhost:3000/xebooking/wp-content/themes/divi-child/dist/docs/
-gulp.task('sassdoc', function () {
-  var options = {
-    dest: 'dist/docs',
-    verbose: true,
-    display: {
-      access: ['public', 'private'],
-      alias: true,
-      watermark: true,
-    },
-    groups: {
-      colors: 'Colors',
-    },
-    basePath: 'https://github.com/omattman/xebooking/tree/master/css',
-  };
-
-  return gulp.src('css/**/*.scss')
-    .pipe(sassdoc(options));
-});
+// gulp.task('sassdoc', function () {
+// 	var options = {
+// 	    dest: 'dist/docs',
+// 	    verbose: true,
+// 	    display: {
+// 	    	access: ['public', 'private'],
+// 	      	alias: true,
+// 	      	watermark: true,
+// 	    },
+// 	    groups: {
+// 	      	colors: 'Colors',
+// 	    },
+// 	    basePath: 'https://github.com/omattman/xebooking/tree/master/css',
+//   };
+//
+//   	return gulp.src('css/**/*.scss')
+//     	.pipe(sassdoc(options));
+// });
 
 gulp.task('compress', ['compress-css', 'compress-js']);
 
-//Default task. No compressing
-gulp.task('default', ['bower', 'icons', 'css', 'php', 'js', 'fonts', 'sassdoc']);
+// Default task. No compressing
+// input 'sassdoc' for later documentation
+gulp.task('default', ['bower', 'icons', 'css', 'php', 'js', 'fonts']);
 
 //Production task. Use before using on live site.
 gulp.task('production',['default', 'compress','img']);
