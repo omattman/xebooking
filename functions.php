@@ -12,4 +12,21 @@ if ( !function_exists( 'chld_thm_cfg_parent_css' ) ):
 endif;
 add_action( 'wp_enqueue_scripts', 'chld_thm_cfg_parent_css', 10 );
 
+// Add readmore_script to server to fold text on profiles
+function add_main_js() {
+    wp_enqueue_script(
+        'main-js',
+        get_stylesheet_directory_uri() . '/js/main.js',
+        array( 'jquery' )
+    );
+}
+add_action( 'wp_enqueue_scripts', 'add_main_js' );
+
+
+// Ignore styling of Easy Forms to style Opt-In forms
+if( ! defined( YIKES_MAILCHIMP_EXCLUDE_STYLES ) ) {
+   define( YIKES_MAILCHIMP_EXCLUDE_STYLES, true );
+}
+
+
 // END ENQUEUE PARENT ACTION
