@@ -135,8 +135,8 @@
 // applies to: flex containers
 // flex-start | flex-end | center | baseline | stretch
 @mixin align-items($align) {
-  -webkit-align-items: $align;
-      -ms-align-items: $align;
+    -webkit-box-align: $align;
+       -ms-flex-items: $align;
           align-items: $align;
 }
 
