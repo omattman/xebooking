@@ -11,542 +11,32 @@
 
 // Spacing in intervals of 10 units pr. block
 .sp {
-    &__1 {
+    &__20 {
         display: block;
-        height: 10px;
+        height: 200px;
 
         @include mq($until: mobile) {
             &--sm {
                 display: block;
-                height: 10px;
+                height: 200px;
             }
         }
         @include mq($from: mobile, $until: tablet) {
             &--md {
                 display: block;
-                height: 10px;
+                height: 200px;
             }
         }
         @include mq($from: tablet, $until: desktop) {
             &--lg {
                 display: block;
-                height: 10px;
+                height: 200px;
             }
         }
         @include mq($from: wide) {
             &--xlg {
                 display: block;
-                height: 10px;
-            }
-        }
-    }
-
-    &__2 {
-        display: block;
-        height: 20px;
-
-        @include mq($until: mobile) {
-            &--sm {
-                display: block;
-                height: 20px;
-            }
-        }
-        @include mq($from: mobile, $until: tablet) {
-            &--md {
-                display: block;
-                height: 20px;
-            }
-        }
-        @include mq($from: tablet, $until: desktop) {
-            &--lg {
-                display: block;
-                height: 20px;
-            }
-        }
-        @include mq($from: wide) {
-            &--xlg {
-                display: block;
-                height: 20px;
-            }
-        }
-    }
-
-    &__3 {
-        display: block;
-        height: 30px;
-
-        @include mq($until: mobile) {
-            &--sm {
-                display: block;
-                height: 30px;
-            }
-        }
-        @include mq($from: mobile, $until: tablet) {
-            &--md {
-                display: block;
-                height: 30px;
-            }
-        }
-        @include mq($from: tablet, $until: desktop) {
-            &--lg {
-                display: block;
-                height: 30px;
-            }
-        }
-        @include mq($from: wide) {
-            &--xlg {
-                display: block;
-                height: 30px;
-            }
-        }
-    }
-
-    &__4 {
-        display: block;
-        height: 40px;
-
-        @include mq($until: mobile) {
-            &--sm {
-                display: block;
-                height: 40px;
-            }
-        }
-        @include mq($from: mobile, $until: tablet) {
-            &--md {
-                display: block;
-                height: 40px;
-            }
-        }
-        @include mq($from: tablet, $until: desktop) {
-            &--lg {
-                display: block;
-                height: 40px;
-            }
-        }
-        @include mq($from: wide) {
-            &--xlg {
-                display: block;
-                height: 40px;
-            }
-        }
-    }
-
-    &__5 {
-        display: block;
-        height: 50px;
-
-        @include mq($until: mobile) {
-            &--sm {
-                display: block;
-                height: 50px;
-            }
-        }
-        @include mq($from: mobile, $until: tablet) {
-            &--md {
-                display: block;
-                height: 50px;
-            }
-        }
-        @include mq($from: tablet, $until: desktop) {
-            &--lg {
-                display: block;
-                height: 50px;
-            }
-        }
-        @include mq($from: wide) {
-            &--xlg {
-                display: block;
-                height: 50px;
-            }
-        }
-    }
-
-    &__6 {
-        display: block;
-        height: 60px;
-
-        @include mq($until: mobile) {
-            &--sm {
-                display: block;
-                height: 60px;
-            }
-        }
-        @include mq($from: mobile, $until: tablet) {
-            &--md {
-                display: block;
-                height: 60px;
-            }
-        }
-        @include mq($from: tablet, $until: desktop) {
-            &--lg {
-                display: block;
-                height: 60px;
-            }
-        }
-        @include mq($from: wide) {
-            &--xlg {
-                display: block;
-                height: 60px;
-            }
-        }
-    }
-
-    &__7 {
-        display: block;
-        height: 70px;
-
-        @include mq($until: mobile) {
-            &--sm {
-                display: block;
-                height: 70px;
-            }
-        }
-        @include mq($from: mobile, $until: tablet) {
-            &--md {
-                display: block;
-                height: 70px;
-            }
-        }
-        @include mq($from: tablet, $until: desktop) {
-            &--lg {
-                display: block;
-                height: 70px;
-            }
-        }
-        @include mq($from: wide) {
-            &--xlg {
-                display: block;
-                height: 70px;
-            }
-        }
-    }
-
-    &__8 {
-        display: block;
-        height: 80px;
-
-        @include mq($until: mobile) {
-            &--sm {
-                display: block;
-                height: 80px;
-            }
-        }
-        @include mq($from: mobile, $until: tablet) {
-            &--md {
-                display: block;
-                height: 80px;
-            }
-        }
-        @include mq($from: tablet, $until: desktop) {
-            &--lg {
-                display: block;
-                height: 80px;
-            }
-        }
-        @include mq($from: wide) {
-            &--xlg {
-                display: block;
-                height: 80px;
-            }
-        }
-    }
-
-    &__9 {
-        display: block;
-        height: 90px;
-
-        @include mq($until: mobile) {
-            &--sm {
-                display: block;
-                height: 90px;
-            }
-        }
-        @include mq($from: mobile, $until: tablet) {
-            &--md {
-                display: block;
-                height: 90px;
-            }
-        }
-        @include mq($from: tablet, $until: desktop) {
-            &--lg {
-                display: block;
-                height: 90px;
-            }
-        }
-        @include mq($from: wide) {
-            &--xlg {
-                display: block;
-                height: 90px;
-            }
-        }
-    }
-
-    &__10 {
-        display: block;
-        height: 100px;
-
-        @include mq($until: mobile) {
-            &--sm {
-                display: block;
-                height: 100px;
-            }
-        }
-        @include mq($from: mobile, $until: tablet) {
-            &--md {
-                display: block;
-                height: 100px;
-            }
-        }
-        @include mq($from: tablet, $until: desktop) {
-            &--lg {
-                display: block;
-                height: 100px;
-            }
-        }
-        @include mq($from: wide) {
-            &--xlg {
-                display: block;
-                height: 100px;
-            }
-        }
-    }
-
-    &__11 {
-        display: block;
-        height: 110px;
-
-        @include mq($until: mobile) {
-            &--sm {
-                display: block;
-                height: 110px;
-            }
-        }
-        @include mq($from: mobile, $until: tablet) {
-            &--md {
-                display: block;
-                height: 110px;
-            }
-        }
-        @include mq($from: tablet, $until: desktop) {
-            &--lg {
-                display: block;
-                height: 110px;
-            }
-        }
-        @include mq($from: wide) {
-            &--xlg {
-                display: block;
-                height: 110px;
-            }
-        }
-    }
-
-    &__12 {
-        display: block;
-        height: 120px;
-
-        @include mq($until: mobile) {
-            &--sm {
-                display: block;
-                height: 120px;
-            }
-        }
-        @include mq($from: mobile, $until: tablet) {
-            &--md {
-                display: block;
-                height: 120px;
-            }
-        }
-        @include mq($from: tablet, $until: desktop) {
-            &--lg {
-                display: block;
-                height: 120px;
-            }
-        }
-        @include mq($from: wide) {
-            &--xlg {
-                display: block;
-                height: 120px;
-            }
-        }
-    }
-
-    &__13 {
-        display: block;
-        height: 130px;
-
-        @include mq($until: mobile) {
-            &--sm {
-                display: block;
-                height: 130px;
-            }
-        }
-        @include mq($from: mobile, $until: tablet) {
-            &--md {
-                display: block;
-                height: 130px;
-            }
-        }
-        @include mq($from: tablet, $until: desktop) {
-            &--lg {
-                display: block;
-                height: 130px;
-            }
-        }
-        @include mq($from: wide) {
-            &--xlg {
-                display: block;
-                height: 130px;
-            }
-        }
-    }
-
-    &__14 {
-        display: block;
-        height: 140px;
-
-        @include mq($until: mobile) {
-            &--sm {
-                display: block;
-                height: 140px;
-            }
-        }
-        @include mq($from: mobile, $until: tablet) {
-            &--md {
-                display: block;
-                height: 140px;
-            }
-        }
-        @include mq($from: tablet, $until: desktop) {
-            &--lg {
-                display: block;
-                height: 140px;
-            }
-        }
-        @include mq($from: wide) {
-            &--xlg {
-                display: block;
-                height: 140px;
-            }
-        }
-    }
-
-    &__15 {
-        display: block;
-        height: 150px;
-
-        @include mq($until: mobile) {
-            &--sm {
-                display: block;
-                height: 150px;
-            }
-        }
-        @include mq($from: mobile, $until: tablet) {
-            &--md {
-                display: block;
-                height: 150px;
-            }
-        }
-        @include mq($from: tablet, $until: desktop) {
-            &--lg {
-                display: block;
-                height: 150px;
-            }
-        }
-        @include mq($from: wide) {
-            &--xlg {
-                display: block;
-                height: 150px;
-            }
-        }
-    }
-
-    &__16 {
-        display: block;
-        height: 160px;
-
-        @include mq($until: mobile) {
-            &--sm {
-                display: block;
-                height: 160px;
-            }
-        }
-        @include mq($from: mobile, $until: tablet) {
-            &--md {
-                display: block;
-                height: 160px;
-            }
-        }
-        @include mq($from: tablet, $until: desktop) {
-            &--lg {
-                display: block;
-                height: 160px;
-            }
-        }
-        @include mq($from: wide) {
-            &--xlg {
-                display: block;
-                height: 160px;
-            }
-        }
-    }
-
-    &__17 {
-        display: block;
-        height: 170px;
-
-        @include mq($until: mobile) {
-            &--sm {
-                display: block;
-                height: 170px;
-            }
-        }
-        @include mq($from: mobile, $until: tablet) {
-            &--md {
-                display: block;
-                height: 170px;
-            }
-        }
-        @include mq($from: tablet, $until: desktop) {
-            &--lg {
-                display: block;
-                height: 170px;
-            }
-        }
-        @include mq($from: wide) {
-            &--xlg {
-                display: block;
-                height: 170px;
-            }
-        }
-    }
-
-    &__18 {
-        display: block;
-        height: 180px;
-
-        @include mq($until: mobile) {
-            &--sm {
-                display: block;
-                height: 180px;
-            }
-        }
-        @include mq($from: mobile, $until: tablet) {
-            &--md {
-                display: block;
-                height: 180px;
-            }
-        }
-        @include mq($from: tablet, $until: desktop) {
-            &--lg {
-                display: block;
-                height: 180px;
-            }
-        }
-        @include mq($from: wide) {
-            &--xlg {
-                display: block;
-                height: 180px;
+                height: 200px;
             }
         }
     }
@@ -581,32 +71,542 @@
         }
     }
 
-    &__20 {
+    &__18 {
         display: block;
-        height: 200px;
+        height: 180px;
 
         @include mq($until: mobile) {
             &--sm {
                 display: block;
-                height: 200px;
+                height: 180px;
             }
         }
         @include mq($from: mobile, $until: tablet) {
             &--md {
                 display: block;
-                height: 200px;
+                height: 180px;
             }
         }
         @include mq($from: tablet, $until: desktop) {
             &--lg {
                 display: block;
-                height: 200px;
+                height: 180px;
             }
         }
         @include mq($from: wide) {
             &--xlg {
                 display: block;
-                height: 200px;
+                height: 180px;
+            }
+        }
+    }
+
+    &__17 {
+        display: block;
+        height: 170px;
+
+        @include mq($until: mobile) {
+            &--sm {
+                display: block;
+                height: 170px;
+            }
+        }
+        @include mq($from: mobile, $until: tablet) {
+            &--md {
+                display: block;
+                height: 170px;
+            }
+        }
+        @include mq($from: tablet, $until: desktop) {
+            &--lg {
+                display: block;
+                height: 170px;
+            }
+        }
+        @include mq($from: wide) {
+            &--xlg {
+                display: block;
+                height: 170px;
+            }
+        }
+    }
+
+    &__16 {
+        display: block;
+        height: 160px;
+
+        @include mq($until: mobile) {
+            &--sm {
+                display: block;
+                height: 160px;
+            }
+        }
+        @include mq($from: mobile, $until: tablet) {
+            &--md {
+                display: block;
+                height: 160px;
+            }
+        }
+        @include mq($from: tablet, $until: desktop) {
+            &--lg {
+                display: block;
+                height: 160px;
+            }
+        }
+        @include mq($from: wide) {
+            &--xlg {
+                display: block;
+                height: 160px;
+            }
+        }
+    }
+
+    &__15 {
+        display: block;
+        height: 150px;
+
+        @include mq($until: mobile) {
+            &--sm {
+                display: block;
+                height: 150px;
+            }
+        }
+        @include mq($from: mobile, $until: tablet) {
+            &--md {
+                display: block;
+                height: 150px;
+            }
+        }
+        @include mq($from: tablet, $until: desktop) {
+            &--lg {
+                display: block;
+                height: 150px;
+            }
+        }
+        @include mq($from: wide) {
+            &--xlg {
+                display: block;
+                height: 150px;
+            }
+        }
+    }
+
+    &__14 {
+        display: block;
+        height: 140px;
+
+        @include mq($until: mobile) {
+            &--sm {
+                display: block;
+                height: 140px;
+            }
+        }
+        @include mq($from: mobile, $until: tablet) {
+            &--md {
+                display: block;
+                height: 140px;
+            }
+        }
+        @include mq($from: tablet, $until: desktop) {
+            &--lg {
+                display: block;
+                height: 140px;
+            }
+        }
+        @include mq($from: wide) {
+            &--xlg {
+                display: block;
+                height: 140px;
+            }
+        }
+    }
+
+    &__13 {
+        display: block;
+        height: 130px;
+
+        @include mq($until: mobile) {
+            &--sm {
+                display: block;
+                height: 130px;
+            }
+        }
+        @include mq($from: mobile, $until: tablet) {
+            &--md {
+                display: block;
+                height: 130px;
+            }
+        }
+        @include mq($from: tablet, $until: desktop) {
+            &--lg {
+                display: block;
+                height: 130px;
+            }
+        }
+        @include mq($from: wide) {
+            &--xlg {
+                display: block;
+                height: 130px;
+            }
+        }
+    }
+
+    &__12 {
+        display: block;
+        height: 120px;
+
+        @include mq($until: mobile) {
+            &--sm {
+                display: block;
+                height: 120px;
+            }
+        }
+        @include mq($from: mobile, $until: tablet) {
+            &--md {
+                display: block;
+                height: 120px;
+            }
+        }
+        @include mq($from: tablet, $until: desktop) {
+            &--lg {
+                display: block;
+                height: 120px;
+            }
+        }
+        @include mq($from: wide) {
+            &--xlg {
+                display: block;
+                height: 120px;
+            }
+        }
+    }
+
+    &__11 {
+        display: block;
+        height: 110px;
+
+        @include mq($until: mobile) {
+            &--sm {
+                display: block;
+                height: 110px;
+            }
+        }
+        @include mq($from: mobile, $until: tablet) {
+            &--md {
+                display: block;
+                height: 110px;
+            }
+        }
+        @include mq($from: tablet, $until: desktop) {
+            &--lg {
+                display: block;
+                height: 110px;
+            }
+        }
+        @include mq($from: wide) {
+            &--xlg {
+                display: block;
+                height: 110px;
+            }
+        }
+    }
+
+    &__10 {
+        display: block;
+        height: 100px;
+
+        @include mq($until: mobile) {
+            &--sm {
+                display: block;
+                height: 100px;
+            }
+        }
+        @include mq($from: mobile, $until: tablet) {
+            &--md {
+                display: block;
+                height: 100px;
+            }
+        }
+        @include mq($from: tablet, $until: desktop) {
+            &--lg {
+                display: block;
+                height: 100px;
+            }
+        }
+        @include mq($from: wide) {
+            &--xlg {
+                display: block;
+                height: 100px;
+            }
+        }
+    }
+
+    &__9 {
+        display: block;
+        height: 90px;
+
+        @include mq($until: mobile) {
+            &--sm {
+                display: block;
+                height: 90px;
+            }
+        }
+        @include mq($from: mobile, $until: tablet) {
+            &--md {
+                display: block;
+                height: 90px;
+            }
+        }
+        @include mq($from: tablet, $until: desktop) {
+            &--lg {
+                display: block;
+                height: 90px;
+            }
+        }
+        @include mq($from: wide) {
+            &--xlg {
+                display: block;
+                height: 90px;
+            }
+        }
+    }
+
+    &__8 {
+        display: block;
+        height: 80px;
+
+        @include mq($until: mobile) {
+            &--sm {
+                display: block;
+                height: 80px;
+            }
+        }
+        @include mq($from: mobile, $until: tablet) {
+            &--md {
+                display: block;
+                height: 80px;
+            }
+        }
+        @include mq($from: tablet, $until: desktop) {
+            &--lg {
+                display: block;
+                height: 80px;
+            }
+        }
+        @include mq($from: wide) {
+            &--xlg {
+                display: block;
+                height: 80px;
+            }
+        }
+    }
+
+    &__7 {
+        display: block;
+        height: 70px;
+
+        @include mq($until: mobile) {
+            &--sm {
+                display: block;
+                height: 70px;
+            }
+        }
+        @include mq($from: mobile, $until: tablet) {
+            &--md {
+                display: block;
+                height: 70px;
+            }
+        }
+        @include mq($from: tablet, $until: desktop) {
+            &--lg {
+                display: block;
+                height: 70px;
+            }
+        }
+        @include mq($from: wide) {
+            &--xlg {
+                display: block;
+                height: 70px;
+            }
+        }
+    }
+
+    &__6 {
+        display: block;
+        height: 60px;
+
+        @include mq($until: mobile) {
+            &--sm {
+                display: block;
+                height: 60px;
+            }
+        }
+        @include mq($from: mobile, $until: tablet) {
+            &--md {
+                display: block;
+                height: 60px;
+            }
+        }
+        @include mq($from: tablet, $until: desktop) {
+            &--lg {
+                display: block;
+                height: 60px;
+            }
+        }
+        @include mq($from: wide) {
+            &--xlg {
+                display: block;
+                height: 60px;
+            }
+        }
+    }
+
+    &__5 {
+        display: block;
+        height: 50px;
+
+        @include mq($until: mobile) {
+            &--sm {
+                display: block;
+                height: 50px;
+            }
+        }
+        @include mq($from: mobile, $until: tablet) {
+            &--md {
+                display: block;
+                height: 50px;
+            }
+        }
+        @include mq($from: tablet, $until: desktop) {
+            &--lg {
+                display: block;
+                height: 50px;
+            }
+        }
+        @include mq($from: wide) {
+            &--xlg {
+                display: block;
+                height: 50px;
+            }
+        }
+    }
+
+    &__4 {
+        display: block;
+        height: 40px;
+
+        @include mq($until: mobile) {
+            &--sm {
+                display: block;
+                height: 40px;
+            }
+        }
+        @include mq($from: mobile, $until: tablet) {
+            &--md {
+                display: block;
+                height: 40px;
+            }
+        }
+        @include mq($from: tablet, $until: desktop) {
+            &--lg {
+                display: block;
+                height: 40px;
+            }
+        }
+        @include mq($from: wide) {
+            &--xlg {
+                display: block;
+                height: 40px;
+            }
+        }
+    }
+
+    &__3 {
+        display: block;
+        height: 30px;
+
+        @include mq($until: mobile) {
+            &--sm {
+                display: block;
+                height: 30px;
+            }
+        }
+        @include mq($from: mobile, $until: tablet) {
+            &--md {
+                display: block;
+                height: 30px;
+            }
+        }
+        @include mq($from: tablet, $until: desktop) {
+            &--lg {
+                display: block;
+                height: 30px;
+            }
+        }
+        @include mq($from: wide) {
+            &--xlg {
+                display: block;
+                height: 30px;
+            }
+        }
+    }
+
+    &__2 {
+        display: block;
+        height: 20px;
+
+        @include mq($from: wide) {
+            &--xlg {
+                display: block;
+                height: 20px;
+            }
+        }
+        @include mq($from: tablet, $until: desktop) {
+            &--lg {
+                display: block;
+                height: 20px;
+            }
+        }
+        @include mq($from: mobile, $until: tablet) {
+            &--md {
+                display: block;
+                height: 20px;
+            }
+        }
+        @include mq($until: mobile) {
+            &--sm {
+                display: block;
+                height: 20px;
+            }
+        }
+    }
+
+    &__1 {
+        display: block;
+        height: 10px;
+
+        @include mq($until: mobile) {
+            &--sm {
+                display: block;
+                height: 10px;
+            }
+        }
+        @include mq($from: mobile, $until: tablet) {
+            &--md {
+                display: block;
+                height: 10px;
+            }
+        }
+        @include mq($from: tablet, $until: desktop) {
+            &--lg {
+                display: block;
+                height: 10px;
+            }
+        }
+        @include mq($from: wide) {
+            &--xlg {
+                display: block;
+                height: 10px;
             }
         }
     }
@@ -615,212 +615,32 @@
 
 // Spacing in intervals of 1 unit pr. block
 .sp {
-    &__01 {
+    &__09 {
         display: block;
-        height: 1px;
+        height: 9px;
 
         @include mq($until: mobile) {
             &--sm {
                 display: block;
-                height: 1px;
+                height: 9px;
             }
         }
         @include mq($from: mobile, $until: tablet) {
             &--md {
                 display: block;
-                height: 1px;
+                height: 9px;
             }
         }
         @include mq($from: tablet, $until: desktop) {
             &--lg {
                 display: block;
-                height: 1px;
+                height: 9px;
             }
         }
         @include mq($from: wide) {
             &--xlg {
                 display: block;
-                height: 1px;
-            }
-        }
-    }
-
-    &__02 {
-        display: block;
-        height: 2px;
-
-        @include mq($until: mobile) {
-            &--sm {
-                display: block;
-                height: 2px;
-            }
-        }
-        @include mq($from: mobile, $until: tablet) {
-            &--md {
-                display: block;
-                height: 2px;
-            }
-        }
-        @include mq($from: tablet, $until: desktop) {
-            &--lg {
-                display: block;
-                height: 2px;
-            }
-        }
-        @include mq($from: wide) {
-            &--xlg {
-                display: block;
-                height: 2px;
-            }
-        }
-    }
-
-    &__03 {
-        display: block;
-        height: 3px;
-
-        @include mq($until: mobile) {
-            &--sm {
-                display: block;
-                height: 3px;
-            }
-        }
-        @include mq($from: mobile, $until: tablet) {
-            &--md {
-                display: block;
-                height: 3px;
-            }
-        }
-        @include mq($from: tablet, $until: desktop) {
-            &--lg {
-                display: block;
-                height: 3px;
-            }
-        }
-        @include mq($from: wide) {
-            &--xlg {
-                display: block;
-                height: 3px;
-            }
-        }
-    }
-
-    &__04 {
-        display: block;
-        height: 4px;
-
-        @include mq($until: mobile) {
-            &--sm {
-                display: block;
-                height: 4px;
-            }
-        }
-        @include mq($from: mobile, $until: tablet) {
-            &--md {
-                display: block;
-                height: 4px;
-            }
-        }
-        @include mq($from: tablet, $until: desktop) {
-            &--lg {
-                display: block;
-                height: 4px;
-            }
-        }
-        @include mq($from: wide) {
-            &--xlg {
-                display: block;
-                height: 4px;
-            }
-        }
-    }
-
-    &__05 {
-        display: block;
-        height: 5px;
-
-        @include mq($until: mobile) {
-            &--sm {
-                display: block;
-                height: 5px;
-            }
-        }
-        @include mq($from: mobile, $until: tablet) {
-            &--md {
-                display: block;
-                height: 5px;
-            }
-        }
-        @include mq($from: tablet, $until: desktop) {
-            &--lg {
-                display: block;
-                height: 5px;
-            }
-        }
-        @include mq($from: wide) {
-            &--xlg {
-                display: block;
-                height: 5px;
-            }
-        }
-    }
-
-    &__06 {
-        display: block;
-        height: 6px;
-
-        @include mq($until: mobile) {
-            &--sm {
-                display: block;
-                height: 6px;
-            }
-        }
-        @include mq($from: mobile, $until: tablet) {
-            &--md {
-                display: block;
-                height: 6px;
-            }
-        }
-        @include mq($from: tablet, $until: desktop) {
-            &--lg {
-                display: block;
-                height: 6px;
-            }
-        }
-        @include mq($from: wide) {
-            &--xlg {
-                display: block;
-                height: 6px;
-            }
-        }
-    }
-
-    &__07 {
-        display: block;
-        height: 7px;
-
-        @include mq($until: mobile) {
-            &--sm {
-                display: block;
-                height: 7px;
-            }
-        }
-        @include mq($from: mobile, $until: tablet) {
-            &--md {
-                display: block;
-                height: 7px;
-            }
-        }
-        @include mq($from: tablet, $until: desktop) {
-            &--lg {
-                display: block;
-                height: 7px;
-            }
-        }
-        @include mq($from: wide) {
-            &--xlg {
-                display: block;
-                height: 7px;
+                height: 9px;
             }
         }
     }
@@ -855,32 +675,212 @@
         }
     }
 
-    &__09 {
+    &__07 {
         display: block;
-        height: 9px;
+        height: 7px;
 
         @include mq($until: mobile) {
             &--sm {
                 display: block;
-                height: 9px;
+                height: 7px;
             }
         }
         @include mq($from: mobile, $until: tablet) {
             &--md {
                 display: block;
-                height: 9px;
+                height: 7px;
             }
         }
         @include mq($from: tablet, $until: desktop) {
             &--lg {
                 display: block;
-                height: 9px;
+                height: 7px;
             }
         }
         @include mq($from: wide) {
             &--xlg {
                 display: block;
-                height: 9px;
+                height: 7px;
+            }
+        }
+    }
+
+    &__06 {
+        display: block;
+        height: 6px;
+
+        @include mq($until: mobile) {
+            &--sm {
+                display: block;
+                height: 6px;
+            }
+        }
+        @include mq($from: mobile, $until: tablet) {
+            &--md {
+                display: block;
+                height: 6px;
+            }
+        }
+        @include mq($from: tablet, $until: desktop) {
+            &--lg {
+                display: block;
+                height: 6px;
+            }
+        }
+        @include mq($from: wide) {
+            &--xlg {
+                display: block;
+                height: 6px;
+            }
+        }
+    }
+
+    &__05 {
+        display: block;
+        height: 5px;
+
+        @include mq($until: mobile) {
+            &--sm {
+                display: block;
+                height: 5px;
+            }
+        }
+        @include mq($from: mobile, $until: tablet) {
+            &--md {
+                display: block;
+                height: 5px;
+            }
+        }
+        @include mq($from: tablet, $until: desktop) {
+            &--lg {
+                display: block;
+                height: 5px;
+            }
+        }
+        @include mq($from: wide) {
+            &--xlg {
+                display: block;
+                height: 5px;
+            }
+        }
+    }
+
+    &__04 {
+        display: block;
+        height: 4px;
+
+        @include mq($until: mobile) {
+            &--sm {
+                display: block;
+                height: 4px;
+            }
+        }
+        @include mq($from: mobile, $until: tablet) {
+            &--md {
+                display: block;
+                height: 4px;
+            }
+        }
+        @include mq($from: tablet, $until: desktop) {
+            &--lg {
+                display: block;
+                height: 4px;
+            }
+        }
+        @include mq($from: wide) {
+            &--xlg {
+                display: block;
+                height: 4px;
+            }
+        }
+    }
+
+    &__03 {
+        display: block;
+        height: 3px;
+
+        @include mq($until: mobile) {
+            &--sm {
+                display: block;
+                height: 3px;
+            }
+        }
+        @include mq($from: mobile, $until: tablet) {
+            &--md {
+                display: block;
+                height: 3px;
+            }
+        }
+        @include mq($from: tablet, $until: desktop) {
+            &--lg {
+                display: block;
+                height: 3px;
+            }
+        }
+        @include mq($from: wide) {
+            &--xlg {
+                display: block;
+                height: 3px;
+            }
+        }
+    }
+
+    &__02 {
+        display: block;
+        height: 2px;
+
+        @include mq($until: mobile) {
+            &--sm {
+                display: block;
+                height: 2px;
+            }
+        }
+        @include mq($from: mobile, $until: tablet) {
+            &--md {
+                display: block;
+                height: 2px;
+            }
+        }
+        @include mq($from: tablet, $until: desktop) {
+            &--lg {
+                display: block;
+                height: 2px;
+            }
+        }
+        @include mq($from: wide) {
+            &--xlg {
+                display: block;
+                height: 2px;
+            }
+        }
+    }
+
+    &__01 {
+        display: block;
+        height: 1px;
+
+        @include mq($until: mobile) {
+            &--sm {
+                display: block;
+                height: 1px;
+            }
+        }
+        @include mq($from: mobile, $until: tablet) {
+            &--md {
+                display: block;
+                height: 1px;
+            }
+        }
+        @include mq($from: tablet, $until: desktop) {
+            &--lg {
+                display: block;
+                height: 1px;
+            }
+        }
+        @include mq($from: wide) {
+            &--xlg {
+                display: block;
+                height: 1px;
             }
         }
     }
@@ -1064,151 +1064,151 @@
 // Spacing right – padding right on elements: 3, 5, 10, 20, 40, 80
 .sp {
     &__right-03 {
-        padding-left: 3px;
+        padding-right: 3px;
 
         @include mq($until: mobile) {
             &--sm {
-                padding-left: 3px
+                padding-right: 3px
             }
         }
         @include mq($from: mobile, $until: tablet) {
             &--md {
-                padding-left: 3px
+                padding-right: 3px
             }
         }
         @include mq($from: tablet, $until: desktop) {
             &--lg {
-                padding-left: 3px
+                padding-right: 3px
             }
         }
         @include mq($from: wide) {
             &--xlg {
-                padding-left: 3px
+                padding-right: 3px
             }
         }
     }
 
     &__right-05 {
-        padding-left: 5px;
+        padding-right: 5px;
 
         @include mq($until: mobile) {
             &--sm {
-                padding-left: 5px
+                padding-right: 5px
             }
         }
         @include mq($from: mobile, $until: tablet) {
             &--md {
-                padding-left: 5px
+                padding-right: 5px
             }
         }
         @include mq($from: tablet, $until: desktop) {
             &--lg {
-                padding-left: 5px
+                padding-right: 5px
             }
         }
         @include mq($from: wide) {
             &--xlg {
-                padding-left: 5px
+                padding-right: 5px
             }
         }
     }
 
     &__right-1 {
-        padding-left: 10px;
+        padding-right: 10px;
 
         @include mq($until: mobile) {
             &--sm {
-                padding-left: 10px
+                padding-right: 10px
             }
         }
         @include mq($from: mobile, $until: tablet) {
             &--md {
-                padding-left: 10px
+                padding-right: 10px
             }
         }
         @include mq($from: tablet, $until: desktop) {
             &--lg {
-                padding-left: 10px
+                padding-right: 10px
             }
         }
         @include mq($from: wide) {
             &--xlg {
-                padding-left: 10px
+                padding-right: 10px
             }
         }
     }
 
     &__right-2 {
-        padding-left: 20px;
+        padding-right: 20px;
 
         @include mq($until: mobile) {
             &--sm {
-                padding-left: 20px
+                padding-right: 20px
             }
         }
         @include mq($from: mobile, $until: tablet) {
             &--md {
-                padding-left: 20px
+                padding-right: 20px
             }
         }
         @include mq($from: tablet, $until: desktop) {
             &--lg {
-                padding-left: 20px
+                padding-right: 20px
             }
         }
         @include mq($from: wide) {
             &--xlg {
-                padding-left: 20px
+                padding-right: 20px
             }
         }
     }
 
     &__right-4 {
-        padding-left: 40px;
+        padding-right: 40px;
 
         @include mq($until: mobile) {
             &--sm {
-                padding-left: 40px
+                padding-right: 40px
             }
         }
         @include mq($from: mobile, $until: tablet) {
             &--md {
-                padding-left: 40px
+                padding-right: 40px
             }
         }
         @include mq($from: tablet, $until: desktop) {
             &--lg {
-                padding-left: 40px
+                padding-right: 40px
             }
         }
         @include mq($from: wide) {
             &--xlg {
-                padding-left: 40px
+                padding-right: 40px
             }
         }
     }
 
     &__right-8 {
-        padding-left: 80px;
+        padding-right: 80px;
 
         @include mq($until: mobile) {
             &--sm {
-                padding-left: 80px
+                padding-right: 80px
             }
         }
         @include mq($from: mobile, $until: tablet) {
             &--md {
-                padding-left: 80px
+                padding-right: 80px
             }
         }
         @include mq($from: tablet, $until: desktop) {
             &--lg {
-                padding-left: 80px
+                padding-right: 80px
             }
         }
         @include mq($from: wide) {
             &--xlg {
-                padding-left: 80px
+                padding-right: 80px
             }
         }
     }
