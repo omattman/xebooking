@@ -2,8 +2,8 @@
     background: white;
     border: 1px solid #dde5ed;
     border-radius: 6px;
-    padding: 48px 50px !important;
-    max-width: 875px !important;
+    padding: 48px 50px;
+    max-width: 875px;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
@@ -213,7 +213,8 @@
         &__extra,
         &__submit,
         &__email {
-            width: 100%
+            width: 100% !important;
+            border-radius: 4px !important;
         }
 
         &__email {
@@ -224,7 +225,7 @@
 
         &__submit {
             border-radius: 4px;
-            margin-top: 14px
+            margin-top: 14px !important;
         }
     }
 }
