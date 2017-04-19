@@ -48,16 +48,21 @@
         padding: 24px
     }
 
+    &__option__packaging {
+        border-radius: 0;
+        padding: 30px;
+        min-height: 262px;
+        @include flexbox;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        @include flex-direction(column);
+    }
+
     &__product__hero__wrapper {
         max-height: 240px
     }
 
     &__option__bundle {
-        background-position: bottom right;
-        background-position-x: 94%;
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-image: url(https://marketing.intercomassets.com/assets/pricing/pricing_suite-37d13b220b22667c333e315993146b29b6b3805e08531cedce1e49a2b9027d5e.png);
         overflow: hidden;
         padding: 36px;
         height: 284px;
@@ -73,6 +78,13 @@
         @include mq($until: mobile) {
             background-size: contain;
             padding: 24px
+        }
+
+        &-packaging {
+            position: relative;
+            height: auto;
+            overflow: visible;
+            max-width: 560px;
         }
     }
 
@@ -136,6 +148,45 @@
     &__view__pricing__wrapper span.strike_out {
         text-decoration: line-through
     }
+
+    &__cta {
+        padding-top: 0;
+
+        &-bg {
+            position: absolute;
+            left: 0;
+            right: 0;
+            z-index: 0;
+            margin-top: -575px;
+            height: 1050px;
+            background: url(http://localhost/xe/wp-content/uploads/2017/04/bg-2-xlg.jpg) no-repeat center top;
+            background-size: 3500px 100%;
+
+            @include mq($until: desktop) {
+                background-image: url(http://localhost/xe/wp-content/uploads/2017/04/bg-2-lg.jpg);
+                background-size: 1024px 100%
+            }
+            @include mq($until: tablet) {
+                background-image: url(http://localhost/xe/wp-content/uploads/2017/04/bg-2-md.jpg);
+                background-size: 767px 100%
+            }
+            @include mq($until: mobile) {
+                background-image: url(http://localhost/xe/wp-content/uploads/2017/04/bg-2-sm.jpg);
+                background-size: 820px 100%
+            }
+        }
+
+        &-arrow {
+            position: absolute;
+            left: -160px;
+            right: 0;
+            z-index: 1;
+            margin-top: 145px;
+            height: 80px;
+            background: url(http://localhost/xe/wp-content/uploads/2017/04/pricing-arrow-right.svg) no-repeat center top;
+            background-size: 150px 50%;
+        }
+    }
 }
 
 .product {
@@ -147,6 +198,14 @@
         }
         @include mq($from: tablet) {
             margin-right: 0
+        }
+    }
+
+    &-icon__smaller {
+        margin-bottom: 2px;
+
+        polygon {
+            fill: #1f8ceb !important;
         }
     }
 }
@@ -184,4 +243,13 @@
     &__cell__right {
         margin-right: 12px
     }
+}
+
+.flip-vert {
+    -moz-transform: scaleY(-1);
+    -o-transform: scaleY(-1);
+    -webkit-transform: scaleY(-1);
+    transform: scaleY(-1);
+    filter: FlipV;
+    -ms-filter: "FlipV";
 }

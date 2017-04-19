@@ -332,22 +332,16 @@
 
 
             @include mq($until: desktop) {
-                &-bg {
-                    background-image: url(http://localhost/xe/wp-content/uploads/2017/04/bg-2-lg.jpg);
-                    background-size: 1024px 100%
-                }
+                background-image: url(http://localhost/xe/wp-content/uploads/2017/04/bg-2-lg.jpg);
+                background-size: 1024px 100%
             }
             @include mq($until: tablet) {
-                &-bg {
-                    background-image: url(http://localhost/xe/wp-content/uploads/2017/04/bg-2-md.jpg);
-                    background-size: 767px 100%
-                }
+                background-image: url(http://localhost/xe/wp-content/uploads/2017/04/bg-2-md.jpg);
+                background-size: 767px 100%
             }
             @include mq($until: mobile) {
-                &-bg {
-                    background-image: url(http://localhost/xe/wp-content/uploads/2017/04/bg-2-sm.jpg);
-                    background-size: 480px 100%
-                }
+                background-image: url(http://localhost/xe/wp-content/uploads/2017/04/bg-2-sm.jpg);
+                background-size: 820px 100%
             }
         }
     }
