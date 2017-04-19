@@ -1,0 +1,15 @@
+.wpcf7-form {
+    .wpcf7-not-valid-tip {
+        display:none;
+    }
+
+    .wpcf7-validation-errors,
+    .wpcf7-mail-sent-ok {
+        border: none;
+    }
+}
+
+div.wpcf7-response-output {
+    margin: 0 0 5px 0 !important;
+    padding: 0px;
+}
