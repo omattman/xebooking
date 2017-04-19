@@ -71,7 +71,11 @@
   font-weight: 400;
   font-size: 12px;
   padding-bottom: 5px;
-  width: 90px;
+    width: 100%;
+
+  @include mq($until: mobile) {
+      width: 90px;
+  }
 }
 
 
@@ -84,7 +88,7 @@
 
 
 .truncate {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
