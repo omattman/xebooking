@@ -43,40 +43,8 @@ $mq-breakpoints: (
     footerAd: 850px,
     slicker-lg: 850px,
     slicker-md: 700px,
-    slicker-sm: 450px
+    slicker-sm: 450px,
 ) !default;
-
-// @include mq($until: mobile)
-// @include mq($from: mobile, $until: tablet)
-// @include mq($from: tablet, $until: desktop)
-// @include mq($from: wide)
-
-///@example scss
-///  .element {
-///    @include mq($from: mobile) {
-///      color: red;
-///    }
-///    @include mq($until: tablet) {
-///      color: blue;
-///    }
-///    @include mq(mobile, tablet) {
-///      color: green;
-///    }
-///    @include mq($from: tablet, $and: '(orientation: landscape)') {
-///      color: teal;
-///    }
-///    @include mq(950px) {
-///      color: hotpink;
-///    }
-///    @include mq(tablet, $media-type: screen) {
-///      color: hotpink;
-///    }
-///    // Advanced use:
-///    $my-breakpoints: (L: 900px, XL: 1200px);
-///    @include mq(L, $breakpoints: $my-breakpoints, $static-breakpoint: L) {
-///      color: hotpink;
-///    }
-///  }
 
 /// Static breakpoint (for fixed-width layouts)
 ///
@@ -175,32 +143,6 @@ $mq-media-type: all !default;
 ///
 /// @link https://github.com/sass-mq/sass-mq#responsive-mode-on-default Full documentation and examples
 ///
-/// @example scss
-///  .element {
-///    @include mq($from: mobile) {
-///      color: red;
-///    }
-///    @include mq($until: tablet) {
-///      color: blue;
-///    }
-///    @include mq(mobile, tablet) {
-///      color: green;
-///    }
-///    @include mq($from: tablet, $and: '(orientation: landscape)') {
-///      color: teal;
-///    }
-///    @include mq(950px) {
-///      color: hotpink;
-///    }
-///    @include mq(tablet, $media-type: screen) {
-///      color: hotpink;
-///    }
-///    // Advanced use:
-///    $my-breakpoints: (L: 900px, XL: 1200px);
-///    @include mq(L, $breakpoints: $my-breakpoints, $static-breakpoint: L) {
-///      color: hotpink;
-///    }
-///  }
 @mixin mq(
     $from: false,
     $until: false,
@@ -266,62 +208,4 @@ $mq-media-type: all !default;
             @content;
         }
     }
-}
-
-/// Add a breakpoint
-///
-/// @param {String} $name - Name of the breakpoint
-/// @param {Number} $width - Width of the breakpoint
-///
-/// @requires {Variable} $mq-breakpoints
-///
-/// @example scss
-///  @include mq-add-breakpoint(tvscreen, 1920px);
-///  @include mq(tvscreen) {}
-@mixin mq-add-breakpoint($name, $width) {
-    $new-breakpoint: ($name: $width);
-    $mq-breakpoints: map-merge($mq-breakpoints, $new-breakpoint) !global;
-}
-
-/// Show the active breakpoint in the top right corner of the viewport
-/// @link https://github.com/sass-mq/sass-mq#seeing-the-currently-active-breakpoint
-///
-/// @param {List} $show-breakpoints ($mq-show-breakpoints) - List of breakpoints to show in the top right corner
-/// @param {Map} $breakpoints ($mq-breakpoints) - Breakpoint names and sizes
-///
-/// @requires {Variable} $mq-breakpoints
-/// @requires {Variable} $mq-show-breakpoints
-///
-/// @example scss
-///  // Show breakpoints using global settings
-///  @include mq-show-breakpoints;
-///
-///  // Show breakpoints using custom settings
-///  @include mq-show-breakpoints((L, XL), (S: 300px, L: 800px, XL: 1200px));
-@mixin mq-show-breakpoints($show-breakpoints: $mq-show-breakpoints, $breakpoints: $mq-breakpoints) {
-    body:before {
-        background-color: #FCF8E3;
-        border-bottom: 1px solid #FBEED5;
-        border-left: 1px solid #FBEED5;
-        color: #C09853;
-        font: small-caption;
-        padding: 3px 6px;
-        pointer-events: none;
-        position: fixed;
-        right: 0;
-        top: 0;
-        z-index: 100;
-
-        // Loop through the breakpoints that should be shown
-        @each $show-breakpoint in $show-breakpoints {
-            $width: mq-get-breakpoint-width($show-breakpoint, $breakpoints);
-            @include mq($show-breakpoint, $breakpoints: $breakpoints) {
-                content: "#{$show-breakpoint} ≥ #{$width} (#{mq-px2em($width)})";
-            }
-        }
-    }
-}
-
-@if length($mq-show-breakpoints) > 0 {
-    @include mq-show-breakpoints;
 }
