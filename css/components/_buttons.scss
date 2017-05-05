@@ -84,67 +84,6 @@
 }
 
 
-
-.btn {
-
-    &__small {
-        padding: 6px 10px;
-        font-size: 14px;
-        height: 32px;
-        border-radius: 4px;
-
-        &.loading:after {
-            height: 20px;
-            width: 20px;
-            margin-left: -10px;
-            margin-top: -10px
-        }
-
-        &-wide {
-            padding-left: 30px;
-            padding-right: 30px;
-        }
-    }
-
-    &__smallest {
-        font-size: 12px;
-        padding: 2px 8px 0;
-        height: 26px;
-        border-radius: 3px;
-
-        &.loading:after {
-            height: 20px;
-            width: 20px;
-            margin-left: -10px;
-            margin-top: -10px
-        }
-    }
-
-    &__primary {
-        background: -webkit-linear-gradient(top, #1f8ded 0%, #1985e3 100%);
-        background: linear-gradient(to bottom, #1f8ded 0%, #1985e3 100%);
-        border-color: $mist-blue;;
-        color: white;
-
-        &.hover, &:hover {
-            border-color: $mist-blue;
-            background: -webkit-linear-gradient(top, #1280e0 0%, #0675d6 100%);
-            background: linear-gradient(to bottom, #1280e0 0%, #0675d6 100%)
-        }
-    }
-
-    &__secondary {
-        border-color: $blue;
-        color: $blue;
-
-        &.hover, &:hover {
-            border-color: $mist-blue;
-            color: $mist-blue;
-        }
-    }
-}
-
-
 .btn {
     &__play {
         padding-left: 20px;
@@ -183,19 +122,6 @@
         &-alt:hover {
             border-color: $bright-blue;
             background-color: rgba($white, 0.9)
-        }
-    }
-
-    &__blue {
-        &-alt {
-            border: 2px solid $bright-blue;
-            background-color: $bright-blue;
-            color: white
-        }
-
-        &-alt:hover {
-            border-color: $bright-blue;
-            background-color: rgba($bright-blue, 0.9)
         }
     }
 
@@ -257,6 +183,20 @@
             margin-left: 5px;
         }
     }
+
+    &__equal-width {
+        display: flex;
+
+        a,
+        label {
+            flex: 1;
+            margin-right: 10px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
 }
 
 .btn__secondary.btn__triangle-right:after {
@@ -274,5 +214,103 @@
         padding-right: 15px;
         font-size: 14px;
         line-height: 1.7
+    }
+}
+
+
+.btn {
+
+    &__smaller {
+        padding: 11px 10px 13px;
+        height: 42px;
+        border-radius: 3px;
+        font-size: 14px;
+    }
+
+    &__small {
+        padding: 6px 10px;
+        font-size: 14px;
+        height: 32px;
+        border-radius: 4px;
+
+        &.loading:after {
+            height: 20px;
+            width: 20px;
+            margin-left: -10px;
+            margin-top: -10px
+        }
+
+        &-wide {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+    }
+
+    &__smallest {
+        font-size: 12px;
+        padding: 2px 8px 0;
+        height: 26px;
+        border-radius: 3px;
+
+        &.loading:after {
+            height: 20px;
+            width: 20px;
+            margin-left: -10px;
+            margin-top: -10px
+        }
+    }
+
+    &__full-width {
+        width: 100%;
+    }
+
+    &__primary {
+        background: -webkit-linear-gradient(top, #1f8ded 0%, #1985e3 100%);
+        background: linear-gradient(to bottom, #1f8ded 0%, #1985e3 100%);
+        border-color: $mist-blue;;
+        color: white;
+
+        &.hover, &:hover {
+            border-color: $mist-blue;
+            background: -webkit-linear-gradient(top, #1280e0 0%, #0675d6 100%);
+            background: linear-gradient(to bottom, #1280e0 0%, #0675d6 100%)
+        }
+    }
+
+    &__secondary {
+        border-color: $blue;
+        color: $blue;
+
+        &.hover, &:hover {
+            border-color: $mist-blue;
+            color: $mist-blue;
+        }
+
+        &-bigger {
+            height: 42px;
+        }
+    }
+
+    &__blue {
+        border: 2px solid $bright-blue;
+        background-color: $bright-blue;
+        color: white;
+
+        &.hover, &:hover {
+            border-color: #3f40ff;
+            background-color: #3f40ff;
+        }
+    }
+
+    &__grey {
+        text-transform: none;
+        border: 1px solid #E8E8E8;
+        background-color: lighten($grey, 60%);
+        color: $grey;
+
+        &.hover, &:hover {
+            background-color: lighten($grey, 50%);
+            border: 1px solid #E8E8E8;
+        }
     }
 }
