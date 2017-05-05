@@ -11,7 +11,20 @@
     position: relative;
 
     &__slim {
-        padding: 40px 40px 30px
+        padding: 25px 15px 15px
+    }
+
+    &__wrapper {
+        margin: 0 auto;
+        max-width: 670px;
+        padding: 30px 75px;
+
+        &-box {
+            background-color: #fff;
+            border: 1px solid #dde5ed;
+            box-shadow: 0 2px 1px #e6e5e5;
+            padding: 30px;
+        }
     }
 
     &__form {
@@ -36,9 +49,18 @@
         }
 
         &-small {
-            margin: 0;
+            margin: 15px 0;
             font-size: 14px;
             width: 280px;
+
+            .cta__email {
+                width: 55%
+            }
+        }
+
+        &-small-flex {
+            margin: 15px 0;
+            font-size: 14px;
 
             .cta__email {
                 width: 55%
@@ -173,7 +195,7 @@
         padding: 60px 20px 40px;
 
         &__slim {
-            padding: 40px 20px 30px
+            padding: 20px;
         }
 
         &__hr {

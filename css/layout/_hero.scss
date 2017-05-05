@@ -14,18 +14,6 @@
         margin-bottom: 0
     }
 
-    &__image {
-        position: relative;
-
-        @include mq($until: desktop) {
-            top: 0;
-        }
-
-        @include mq($until: tablet) {
-            margin-bottom: 40px
-        }
-    }
-
     &__play {
         margin-top: 30px;
         z-index: 2;
@@ -80,43 +68,6 @@
             width: 65px;
         }
 
-        &-desc {
-            margin-top: 20px
-        }
-
-        &-line {
-            height: 150%;
-            position: absolute;
-            top: -25%;
-            right: 0;
-
-            @include mq($until: mobile) {
-                overflow: hidden;
-                display: inline-block;
-                background: url(https://marketing.intercomassets.com/assets/_svg/line-horizontal-11f7c933776eb500e44f07f668fa7986c5d96ee2d952796b6765a8e4f0ccbf71.svg) repeat-x center top;
-                background-size: 100px 3px;
-                max-width: 100%;
-                height: 4px;
-                margin: 30px 0;
-                position: static;
-                height: 4px;
-                width: 250px
-            }
-
-            @include mq($until: tablet) {
-                overflow: hidden;
-                display: inline-block;
-                background: url(https://marketing.intercomassets.com/assets/_svg/line-horizontal-11f7c933776eb500e44f07f668fa7986c5d96ee2d952796b6765a8e4f0ccbf71.svg) repeat-x center top;
-                background-size: 100px 3px;
-                max-width: 100%;
-                height: 4px;
-                margin: 30px 0;
-                position: static;
-                height: 4px;
-                width: 250px
-            }
-        }
-
         &-boxes {
             max-width: 860px;
             margin: 0 auto
@@ -132,18 +83,3 @@
         }
     }
 }
-
-
-// @media (max-height: 700px) and (min-width: 768px) {
-//     .hero__icons-box {
-//         padding: 10px 20px
-//     }
-// }
-//
-// .hero__icons-boxes:hover .hero__icons-box {
-//     opacity: .44
-// }
-//
-// .hero__icons-boxes:hover .hero__icons-box:hover {
-//     opacity: 1
-// }
