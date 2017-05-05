@@ -4,6 +4,27 @@
     // ==========================================================================
     &__black {
         color: $black;
+
+        @include mq($until: mobile) {
+            &--sm {
+                color: $black;
+            }
+        }
+        @include mq($from: mobile, $until: tablet) {
+            &--md {
+                color: $black;
+            }
+        }
+        @include mq($from: tablet, $until: desktop) {
+            &--lg {
+                color: $black;
+            }
+        }
+        @include mq($from: wide) {
+            &--xlg {
+                color: $black;
+            }
+        }
     }
 
     &__dark-grey {

@@ -4,7 +4,7 @@
 
 html {
     color: #222;
-    font-size: mq-px2em($mq-base-font-size);
+    font-size: 15px;
     line-height: 1.4;
 }
 
@@ -34,6 +34,15 @@ img,
 svg,
 video {
     vertical-align: middle;
+}
+
+button,
+input,
+select,
+textarea {
+    font-size: 100%;
+    margin: 0;
+    vertical-align: baseline;
 }
 
 fieldset {
@@ -71,7 +80,7 @@ html *:before {
 
 body {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: mq-px2em($mq-base-font-size);
+    font-size: 15px;
     line-height: 1.6;
     color: $grey;
     font-weight: 400;
@@ -80,7 +89,7 @@ body {
     -webkit-text-size-adjust: 100%;
     -moz-osx-font-smoothing: grayscale;
     margin: 0;
-    height: 100%;
+    min-height: 100%;
     min-height: 100%;
     overflow-x: hidden;
 }
