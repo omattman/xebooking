@@ -1,0 +1,94 @@
+
+.slider .carousell-cell {
+    padding: 0.5% !important;
+
+    @include mq($from: footerAd, $until: desktop) {
+        padding: 2% 20%;
+    }
+}
+
+
+.carousell-cell {
+    width: 10%;
+
+    @include mq($until: desktop) {
+        width: 15%;
+    }
+
+    @include mq($from: slicker-md, $until: slicker-lg) {
+        width: 17%;
+    }
+
+    @include mq($from: slicker-sm, $until: slicker-md) {
+        width: 20%;
+    }
+
+    @include mq($until: slicker-sm) {
+        width: 40%;
+    }
+}
+
+.slider .carousell-cell-image {
+    padding-bottom: 80%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+}
+
+.carousell-cell-image {
+    margin: 0 auto 7px auto;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+}
+
+.slider__card {
+  background: white;
+  border: 1px solid $lightsky-blue;
+  box-shadow: 0px 1px 7px 0px rgba(204, 209, 217, .5);
+  border-radius: 2px;
+  @include prefix(transition, all 0.3s cubic-bezier(.25,.8,.25,1), webkit);
+}
+
+.slider__card:hover {
+    margin-top: -4px;
+    box-shadow: 0px 4px 12px 5px rgba(0,0,0,0.1);
+}
+
+.slider__info {
+  padding: 1% 7% 1% 7%;
+}
+
+.slider__category {
+  font-weight: 500;
+  font-size: 11px;
+  margin-bottom: 0px;
+}
+
+.slider__title {
+  font-weight: 400;
+  font-size: 12px;
+  padding-bottom: 5px;
+    width: 100%;
+
+  @include mq($until: mobile) {
+      width: 90px;
+  }
+}
+
+
+@include mq($until: mobile) {
+    .flickity-prev-next-button.previous,
+    .flickity-prev-next-button.next {
+        display: none;
+    }
+}
+
+
+.truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
