@@ -1,0 +1,11 @@
+.b {
+    &__top-radius {
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+
+        img {
+            border-top-left-radius: 7.5px;
+            border-top-right-radius: 7.5px;
+        }
+    }
+}
