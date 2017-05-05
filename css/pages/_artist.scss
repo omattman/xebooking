@@ -1,0 +1,95 @@
+.artist {
+    &__pricing,
+    &__recommendations {
+        &__container {
+            @include flexbox;
+            @include flex-wrap(nowrap);
+            @include align-items(center);
+
+            @include mq($until: mobile) {
+                @include flex-wrap(wrap);
+            }
+        }
+
+        &__option {
+            width: 50%;
+            padding-right: 40px;
+            border-right: 1px solid $lightsky-blue;
+
+            &:last-child {
+                margin-right: 0;
+                padding-right: 0px;
+                padding-left: 40px;
+                border-right: none;
+            }
+
+            @include mq($until: mobile) {
+                width: 100%;
+                margin-right: 0;
+                padding-right: 0;
+                border-right: none;
+            }
+        }
+    }
+
+    &__desc {
+        @include mq($until: mobile) {
+            padding: 10px;
+        }
+
+        &-category {
+            font-size: 20px;
+            font-weight: 300;
+
+            @include mq($until: mobile) {
+                font-size: 14px;
+            }
+        }
+    }
+
+    &__text-lead {
+        font-size: 18px;
+
+        @include mq($until: mobile) {
+            font-size: 16px;
+        }
+    }
+
+    &__btn-equal-width {
+        display: flex;
+
+        a {
+            flex: 1;
+            margin-right: 10px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+
+    &__cta {
+        padding-top: 0;
+        border: 1px solid #DDE5ED;
+        border-radius: 4px;
+
+        &-bg {
+            position: absolute;
+            left: -100px;
+            right: 0;
+            top: -50px;
+            z-index: 0;
+            // margin-top: -575px;
+            height: 200px;
+            background-image: url(http://localhost/xe/wp-content/uploads/2017/04/bg-2-sm.jpg);
+            background-size: 500px 100%
+        }
+    }
+}
+
+.truncator-link {
+    margin-top: 10px;
+    padding: 8px;
+    text-align: center;
+    border: 1px solid #DDE5ED;
+}
