@@ -42,20 +42,13 @@
         margin-top: 7px
     }
 
-    &__addon, &__link {
+    &__addon,
+    &__link {
         color: $grey;
 
         &:hover {
             color: $blue
         }
-    }
-
-    &__addons {
-        width: 70.4%
-    }
-
-    &__social {
-        width: 26%
     }
 
     &__hr {
@@ -73,6 +66,22 @@
         margin-left: 5px;
         font-weight: 600;
         letter-spacing: .05em
+    }
+
+    &__secondary {
+        display: block;
+        margin-left: -15px;
+        margin-right: -15px;
+
+    }
+
+    &__info {
+        width: 70.4%;
+    }
+
+    &__social {
+        display: flex;
+        width: 26%;
     }
 
     @include mq($until: footerAd) {
