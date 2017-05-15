@@ -270,14 +270,12 @@
 
     &__primary {
         border-color: $mist-blue;
-        background: -webkit-linear-gradient(top, #1f8ded 0%, #1985e3 100%);
         background: linear-gradient(to bottom, #1f8ded 0%, #1985e3 100%);
         color: white;
 
         &.hover,
         &:hover {
             border-color: $mist-blue;
-            background: -webkit-linear-gradient(top, #1280e0 0%, #0675d6 100%);
             background: linear-gradient(to bottom, #1280e0 0%, #0675d6 100%);
         }
     }
