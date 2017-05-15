@@ -35,6 +35,27 @@
     }
     &__grey {
         color: $grey;
+
+        @include mq($until: mobile) {
+            &--sm {
+                color: $grey;
+            }
+        }
+        @include mq($from: mobile, $until: tablet) {
+            &--md {
+                color: $grey;
+            }
+        }
+        @include mq($from: tablet, $until: desktop) {
+            &--lg {
+                color: $grey;
+            }
+        }
+        @include mq($from: wide) {
+            &--xlg {
+                color: $grey;
+            }
+        }
     }
     &__light-fog {
         color: $light-fog;
