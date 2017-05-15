@@ -1,131 +1,5 @@
 .homepage {
     &__hero {
-        &-item {
-            max-width: 1200px;
-            padding: 0 20px;
-            margin: 30px auto;
-            min-height: 430px
-        }
-
-        &-desc {
-            position: relative;
-            z-index: 2;
-            top: -50px;
-
-            &-right {
-                -webkit-box-ordinal-group: 3;
-                -ms-flex-order: 2;
-                order: 2;
-                max-width: 450px;
-                padding-left: 40px
-            }
-        }
-
-        &-headline {
-            max-width: 450px;
-            margin-left: 0;
-            text-align: left;
-
-            &-1 {
-                max-width: 480px;
-                padding: 0 0 0 50px;
-                margin-right: -50px
-            }
-
-            &-2 {
-                max-width: 480px
-            }
-        }
-
-        &-bg {
-            position: absolute;
-            z-index: 0;
-
-            &-1 {
-                background: url(https://marketing.intercomassets.com/assets/homepage/hero/bg-hero-1-7a3d25e26e785b1a32c6e5f7e3b9eea0d5317144363d19fb9865405239becc1a.jpg) no-repeat left top;
-                background-size: 1372px 100%;
-                position: absolute;
-                z-index: 0;
-                height: 510px;
-                width: 53%;
-                left: 0;
-                right: 47%;
-                margin-top: 170px
-            }
-
-            &-1a {
-                background-image: url(https://marketing.intercomassets.com/assets/homepage/hero/bg-hero-3-35dbf7cac33671124f70651d7987982c423e40e1b408097c726ac878eaa0eb9b.jpg);
-                background-size: 1310px 100%;
-                background-position: right top;
-                border-top-right-radius: 310px
-            }
-
-            &-1b {
-                background: url(https://marketing.intercomassets.com/assets/homepage/hero/bg-hero-1-7a3d25e26e785b1a32c6e5f7e3b9eea0d5317144363d19fb9865405239becc1a.jpg) no-repeat left top;
-                background-size: 1372px 100%;
-                margin-top: -5%;
-                left: 50%;
-                width: 50%;
-                height: 410px
-            }
-
-            &-2 {
-                background: url(https://marketing.intercomassets.com/assets/homepage/hero/bg-hero-2-9ebb826b701c109705fffb96797c23b0828208cddc1d9ccdb4258426b5e664e3.jpg) no-repeat center top;
-                background-size: 1000px 100%;
-                position: absolute;
-                z-index: 0;
-                width: 100%;
-                height: 380px;
-                border-top-right-radius: 30%
-            }
-        }
-
-        &-slider {
-            max-height: 430px;
-        }
-
-        &-right {
-            padding-left: 120px;
-            margin-top: -30px
-        }
-
-        &-illustration {
-            position: relative;
-            display: inline-block;
-            height: 0;
-            padding: 0;
-            overflow: hidden;
-            width: 100%;
-
-            img {
-                position: absolute;
-                top: 0;
-                left: 0;
-                bottom: 0;
-                height: 100%;
-                width: 100%;
-                border: 0
-            }
-
-            &-1 {
-                padding-bottom: 78.2%
-            }
-
-            &-2 {
-                padding-bottom: 67.5%
-            }
-        }
-
-        &__cta {
-            &-form {
-                margin: 20px 0 15px
-            }
-        }
-
-        &__cta__desc {
-            margin-left: 0
-        }
-
         @include mq($from: wide) {
             &-desc {
                 left: -50px
@@ -148,8 +22,8 @@
                 margin-left: 0
             }
             &__cta-form {
-                margin-left: 0;
                 margin-right: 0
+                margin-left: 0;
             }
             &__hero-right {
                 padding-left: 40px
@@ -157,12 +31,12 @@
         }
         @include mq($until: tablet) {
             &-desc {
-                max-width: none;
-                text-align: center;
-                padding: 0 20px;
-                margin: 0 auto;
                 top: 0;
                 float: none
+                margin: 0 auto;
+                padding: 0 20px;
+                max-width: none;
+                text-align: center;
             }
             &-headline {
                 margin-left: auto;
@@ -172,41 +46,41 @@
                 max-width: 420px
             }
             &-bg {
-                left: 0;
                 right: 0;
-                width: 100%;
-                margin-top: 0;
                 bottom: -20px;
-                background-size: 1000px 100%;
+                left: 0;
+                margin-top: 0;
+                width: 100%;
                 background-position: center bottom
+                background-size: 1000px 100%;
             }
             &-bg-2 {
-                border-top-right-radius: 0;
-                height: 350px;
                 bottom: -20px
+                height: 350px;
+                border-top-right-radius: 0;
             }
             &-headline {
-                margin-left: auto;
                 margin-right: auto
+                margin-left: auto;
             }
             &-right {
-                padding-left: 0;
                 margin-top: 0
+                padding-left: 0;
             }
         }
         @include mq($until: mobile) {
             &-headline-1 {
-                max-width: 370px;
-                padding: 0;
                 margin: 0
+                padding: 0;
+                max-width: 370px;
             }
             &-bg {
-                background-size: 250%;
                 margin-top: 0
+                background-size: 250%;
             }
             &-bg-1 {
-                background-size: 255% 70%;
                 bottom: -35px
+                background-size: 255% 70%;
             }
             &-bg-2 {
                 background-size: 200% 90%
@@ -216,17 +90,133 @@
                 min-height: 0
             }
         }
+        &-item {
+            margin: 30px auto;
+            padding: 0 20px;
+            min-height: 430px
+            max-width: 1200px;
+        }
+
+        &-desc {
+            position: relative;
+            top: -50px;
+            z-index: 2;
+
+            &-right {
+                -ms-flex-order: 2;
+                padding-left: 40px
+                max-width: 450px;
+
+                -webkit-box-ordinal-group: 3;
+                order: 2;
+            }
+        }
+
+        &-headline {
+            margin-left: 0;
+            max-width: 450px;
+            text-align: left;
+
+            &-1 {
+                margin-right: -50px
+                padding: 0 0 0 50px;
+                max-width: 480px;
+            }
+
+            &-2 {
+                max-width: 480px
+            }
+        }
+
+        &-categories {
+            display: flex;
+            margin-right: 1%;
+            margin-bottom: 1%;
+
+            flex-basis: 15%;
+            align-items: center;
+            justify-content: center;
+        }
+
+
+        &-slider {
+            max-height: 430px;
+        }
+
+        &-right {
+            margin-top: -30px
+            padding-left: 120px;
+        }
+
+        &-illustration {
+            position: relative;
+            display: inline-block;
+            overflow: hidden;
+            padding: 0;
+            width: 100%;
+            height: 0;
+
+            img {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border: 0
+            }
+
+            &-1 {
+                padding-bottom: 78.2%
+            }
+
+            &-2 {
+                padding-bottom: 67.5%
+            }
+        }
+
+        &__cta {
+            &-form {
+                margin: 20px 0 15px
+            }
+        }
+
+        &__cta__desc {
+            margin-left: 0
+        }
     }
 
     &__product {
-        max-width: 1070px;
-        padding: 0 20px;
         margin: 30px auto;
+        padding: 0 20px;
+        max-width: 1070px;
+
+        @include mq($until: tablet) {
+            overflow: hidden;
+
+            &-desc {
+                float: none
+                margin-right: auto;
+                margin-left: auto;
+                max-width: 500px;
+            }
+        }
+        @include mq($until: mobile) {
+            &-box {
+                padding: 40px 0 0;
+
+                &-image {
+                    left: 50%;
+
+                    @include prefix(transform, translate(-50%, 0), webkit);
+                }
+            }
+        }
 
         &-desc {
-            max-width: 380px;
             position: relative;
             z-index: 2
+            max-width: 380px;
         }
 
         &-platform {
@@ -236,54 +226,33 @@
         &-box {
             position: relative;
             padding: 35px 0 0 110px;
-            font-size: 14px;
             text-align: left;
+            font-size: 14px;
 
             &-image {
                 position: absolute;
-                z-index: 0;
                 top: 0;
                 left: 0
+                z-index: 0;
             }
 
             &-bg {
-                color: $blue;
                 padding: 35px 50px;
-                background: #f1f8fe;
                 border-radius: 3px
+                background: #f1f8fe;
+                color: $blue;
             }
 
             &-bg.o__white {
                 background: $white;
             }
         }
-
-        @include mq($until: tablet) {
-            overflow: hidden;
-
-            &-desc {
-                max-width: 500px;
-                margin-left: auto;
-                margin-right: auto;
-                float: none
-            }
-        }
-        @include mq($until: mobile) {
-            &-box {
-                padding: 40px 0 0;
-
-                &-image {
-                    left: 50%;
-                    @include prefix(transform, translate(-50%, 0), webkit);
-                }
-            }
-        }
     }
 
     &__prod {
         &-container {
-            max-width: 1280px !important;
             padding: 0 15px !important;
+            max-width: 1280px !important;
         }
 
         &-desc {
@@ -296,23 +265,23 @@
         }
 
         &-hover {
+            @include mq($until: tablet) {
+                & &-item, &:hover &-item {
+                    display: none;
+                }
+            }
             &-item {
                 position: absolute;
                 top: 0;
-                left: 0;
                 right: 0;
+                left: 0;
                 opacity: 0;
+
                 @include prefix(transition, opacity .3s, webkit);
             }
 
             &:hover &-item {
                 opacity: 1;
-            }
-
-            @include mq($until: tablet) {
-                & &-item, &:hover &-item {
-                    display: none;
-                }
             }
         }
     }
@@ -322,14 +291,13 @@
 
         &-bg {
             position: absolute;
-            left: 0;
             right: 0;
+            left: 0;
             z-index: 0;
             margin-top: 120px;
             height: 1050px;
             background: url(http://localhost/xe/wp-content/uploads/2017/04/bg-2-xlg.jpg) no-repeat center top;
             background-size: 2450px 100%;
-
 
             @include mq($until: desktop) {
                 background-image: url(http://localhost/xe/wp-content/uploads/2017/04/bg-2-lg.jpg);
@@ -347,31 +315,9 @@
     }
 
     &__customers {
-        &-headline {
-            &:before {
-                background: url(https://marketing.intercomassets.com/assets/_svg/stars-3-81eefacc3f56242f00439f3b8edebb702a5729c5f3c843eeb994ba0b7d7c3469.svg) no-repeat 100% 100%;
-                left: -45px;
-                display: inline-block
-            }
-
-            &:after {
-                position: relative;
-                background: url(https://marketing.intercomassets.com/assets/_svg/stars-4-77d3513a769711600c3b7641a6bd9f9c022c608d74b6101732a1db2a36f9697c.svg) no-repeat 100% 100%;
-                right: auto;
-                top: 5px;
-                left: -14px;
-                display: inline-block
-            }
-
-            &-content {
-                margin-top: 0
-            }
-        }
-
-
         @include mq($from: wide) {
-            padding-left: 20px;
             padding-right: 20px;
+            padding-left: 20px;
 
             &-sidebar {
                 width: 38%
@@ -398,8 +344,8 @@
             }
 
             &-sidebar {
-                padding: 0;
                 margin-bottom: 30px;
+                padding: 0;
                 text-align: center
             }
 
@@ -416,6 +362,11 @@
                 &:before, &:after {
                     display: none
                 }
+            }
+        }
+        &-headline {
+            &-content {
+                margin-top: 0
             }
         }
     }

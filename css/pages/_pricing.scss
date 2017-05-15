@@ -92,12 +92,6 @@
         }
     }
 
-    &__support {
-        &-solution-bundle {
-            background-image: url(https://marketing.intercomassets.com/assets/pricing/pricing_support_solution-c3cadb1c83ef3df1348325030f5c34e097de2b7332ff0b6fc92e70a06f6cd14f.png)
-        }
-    }
-
     @include mq($until: mobile) {
         &__bundle__branding {
             -webkit-box-pack: start;
@@ -105,7 +99,7 @@
             justify-content: flex-start;
             -webkit-box-orient: vertical;
             -webkit-box-direction: normal;
-            @include flex-direction(column);
+            flex-direction: column;
             -webkit-box-align: start;
             -ms-flex-align: start;
             -ms-grid-row-align: flex-start;
@@ -216,16 +210,6 @@
 
 
 .pricing {
-    &__bg {
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 360px;
-        height: 100%;
-        z-index: 0;
-        background: url(https://marketing.intercomassets.com/assets/platform/bg/bg-2-035de37638ff5dedbf93b5b0b13396a7cddf9233397258ee591a1165e5052135.jpg) no-repeat center top;
-        background-size: 2450px
-    }
 
     &__platform_cta {
         font-size: 16px;
@@ -247,26 +231,21 @@
     &__cell__right {
         margin-right: 12px
     }
-}
 
-.flip {
-    &-vert {
-        -moz-transform: scaleY(-1);
-        -o-transform: scaleY(-1);
-        -webkit-transform: scaleY(-1);
-        transform: scaleY(-1);
-        filter: FlipV;
-        -ms-filter: "FlipV";
-    }
+    &__system {
+        display: flex;
+        flex-wrap: wrap;
+        flex: 0 1 auto;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        flex-direction: row;
 
-    &-horizontal {
-        img {
-            -moz-transform: scaleX(-1);
-            -o-transform: scaleX(-1);
-            -webkit-transform: scaleX(-1);
-            transform: scaleX(-1);
-            filter: FlipH;
-            -ms-filter: "FlipH";
+        &-col {
+            display: flex;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+            flex-direction: row;
+            flex: 0 0 auto;
         }
     }
 }
