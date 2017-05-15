@@ -1,14 +1,14 @@
 .cta {
-    background: white;
-    border: 1px solid #dde5ed;
-    border-radius: 6px;
+    position: relative;
+    overflow: hidden;
+    margin-right: auto;
+    margin-left: auto;
     padding: 48px 50px;
     max-width: 875px;
-    margin-left: auto;
-    margin-right: auto;
+    border: 1px solid $lightsky-blue;
+    border-radius: 6px;
+    background: white;
     text-align: center;
-    overflow: hidden;
-    position: relative;
 
     &__slim {
         padding: 25px 15px 15px
@@ -16,24 +16,24 @@
 
     &__wrapper {
         margin: 0 auto;
-        max-width: 670px;
         padding: 30px 75px;
+        max-width: 670px;
 
         &-box {
-            background-color: #fff;
-            border: 1px solid #dde5ed;
-            box-shadow: 0 2px 1px #e6e5e5;
             padding: 30px;
+            border: 1px solid $lightsky-blue;
+            background-color: #fff;
+            box-shadow: 0 2px 1px #e6e5e5;
         }
     }
 
     &__form {
-        max-width: 470px;
         margin: 28px auto;
+        max-width: 470px;
 
         &:before, &:after {
-            content: ' ';
             display: table
+            content: ' ';
         }
 
         &:after {
@@ -41,17 +41,13 @@
         }
 
         &.error {
-            @include prefix(animation, shake .5s, webkit);
-        }
-
-        &-sign-in {
-            padding-right: 140px
+            animation: shake .5s;
         }
 
         &-small {
             margin: 15px 0;
-            font-size: 14px;
             width: 280px;
+            font-size: 14px;
 
             .cta__email {
                 width: 55%
@@ -70,9 +66,9 @@
 
     &__with {
         &-extra {
+            position: relative
             padding-right: 190px;
             max-width: 670px;
-            position: relative
         }
     }
 
@@ -97,10 +93,10 @@
     }
 
     &__up {
-        font-size: 12px;
-        font-weight: 400;
-        color: $light-grey;
         margin: 0 auto 28px
+        color: $light-grey;
+        font-weight: 400;
+        font-size: 12px;
     }
 
     &__email {
@@ -113,23 +109,23 @@
 
     &__submit {
         float: left;
+        padding-right: 0 !important
+        padding-left: 0 !important;
         width: 40% !important;
         border-top-left-radius: 0 !important;
         border-bottom-left-radius: 0 !important;
-        padding-left: 0 !important;
-        padding-right: 0 !important
     }
 
     &__desc-item {
-        color: $light-grey;
-        font-size: 12px;
         padding: 0 5px;
+        color: $light-grey;
         font-weight: 400;
+        font-size: 12px;
 
         &::before {
-            content: '•';
             position: relative;
             left: -6px
+            content: '•';
         }
 
         &:first-child {
@@ -146,14 +142,14 @@
     }
 
     &__hr {
-        border-top: 1px solid #dde5ed;
-        width: calc(100% + 100px);
         margin: 48px 0 48px -50px
+        width: calc(100% + 100px);
+        border-top: 1px solid $lightsky-blue;
     }
 
     &__video-combo {
-        max-width: 400px;
         margin: 0 auto;
+        max-width: 400px;
 
         .cta__form {
             margin: 35px auto 0
@@ -166,23 +162,21 @@
         .t__h1,
         .t__h1-bigger,
         .t__h1-big {
-            font-size: 70px;
             margin-top: -100px;
             color: $grey;
+            font-size: 70px;
 
             @include mq($until: desktop) {
-                font-size: 60px;
                 margin-top: -90px
+                font-size: 60px;
             }
-
             @include mq($until: tablet) {
-                font-size: 50px;
                 margin-top: -80px
+                font-size: 50px;
             }
-
             @include mq($until: mobile) {
-                font-size: 40px;
                 margin-top: -85px
+                font-size: 40px;
             }
         }
     }
@@ -199,8 +193,8 @@
         }
 
         &__hr {
-            width: calc(100% + 40px);
             margin-left: -20px
+            width: calc(100% + 40px);
         }
 
         &__form {
@@ -209,8 +203,7 @@
             }
 
             &-small .cta__email,
-            &-small .cta__submit,
-            &-sign-in-button {
+            &-small .cta__submit {
                 width: 100%;
             }
 
@@ -218,9 +211,6 @@
                 margin-top: 10px
             }
 
-            &-sign-in {
-                padding-right: 0
-            }
         }
 
         &__with-extra {
@@ -246,8 +236,8 @@
         }
 
         &__submit {
-            border-radius: 4px;
             margin-top: 14px !important;
+            border-radius: 4px;
         }
     }
 }
