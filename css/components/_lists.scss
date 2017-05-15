@@ -1,1 +1,10 @@
+.list {
+    &__item {
+        padding-left: 10px;
+        padding-right: 10px;
 
+        &:first-child {
+            padding-left: 0;
+        }
+    }
+}
