@@ -2,10 +2,13 @@
     &::-webkit-input-placeholder {
         @content
     }
-    &:-ms-input-placeholder {
+    &::-moz-placeholder {
         @content
     }
-    &::placeholder {
+    &:-moz-placeholder {
+        @content
+    }
+    &:-ms-input-placeholder {
         @content
     }
 }
