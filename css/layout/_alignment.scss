@@ -1,65 +1,65 @@
 .center {
-    @include flexbox;
-    @include align-items(center);
+    display: flex;
+    align-items: center;
 
     @include mq($from: wide) {
         &--xlg {
-            @include flexbox;
-            @include align-items(center);
+            display: flex;
+            align-items: center;
         }
     }
 
     @include mq($from: tablet, $until: desktop) {
         &--lg {
-            @include flexbox;
-            @include align-items(center);
+            display: flex;
+            align-items: center;
         }
     }
 
     @include mq($from: mobile, $until: tablet) {
         &--md {
-            @include flexbox;
-            @include align-items(center);
+            display: flex;
+            align-items: center;
         }
     }
 
     @include mq($until: mobile) {
         &--sm {
-            @include flexbox;
-            @include align-items(center);
+            display: flex;
+            align-items: center;
         }
     }
 
     &__hcenter {
-        @include flexbox;
-        @include align-items(center);
-        @include justify-content(center);
+        display: flex;
+        align-items: center;
+        justify-content: center;
         @include mq($until: mobile) {
             &--sm {
-                @include flexbox;
-                @include align-items(center);
-                @include justify-content(center);
+                display: flex;
+                align-items: center;
+                justify-content: center;
             }
         }
         @include mq($from: mobile, $until: tablet) {
             &--md {
-                @include flexbox;
-                @include align-items(center);
-                @include justify-content(center);
+                display: flex;
+                align-items: center;
+                justify-content: center;
             }
         }
         @include mq($from: tablet, $until: desktop) {
             &--lg {
-                @include flexbox;
-                @include align-items(center);
-                @include justify-content(center);
+                display: flex;
+                align-items: center;
+                justify-content: center;
             }
         }
         @include mq($from: wide) {
             &--xlg {
-                @include flexbox;
-                @include align-items(center);
-                @include justify-content(center);
+                display: flex;
+                align-items: center;
+                justify-content: center;
             }
         }
     }
