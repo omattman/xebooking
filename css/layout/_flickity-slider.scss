@@ -47,14 +47,12 @@
 .slider__card {
   background: white;
   border: 1px solid $lightsky-blue;
-  box-shadow: 0px 1px 7px 0px rgba(204, 209, 217, .5);
   border-radius: 2px;
   @include prefix(transition, all 0.3s cubic-bezier(.25,.8,.25,1), webkit);
 }
 
 .slider__card:hover {
-    margin-top: -4px;
-    box-shadow: 0px 4px 12px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.25)
 }
 
 .slider__info {
