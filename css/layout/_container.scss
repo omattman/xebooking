@@ -13,12 +13,13 @@
     width: 100% !important;
 
     &__legacy {
-        max-width: 1364px;
+        max-width: 1374px;
     }
 
     &__space {
         padding-left: 40px;
         padding-right: 40px;
+
         @include mq($until: desktop) {
             &__space {
                 padding-left: 20px;
