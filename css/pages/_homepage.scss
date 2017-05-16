@@ -22,7 +22,7 @@
                 margin-left: 0
             }
             &__cta-form {
-                margin-right: 0
+                margin-right: 0;
                 margin-left: 0;
             }
             &__hero-right {
@@ -32,7 +32,7 @@
         @include mq($until: tablet) {
             &-desc {
                 top: 0;
-                float: none
+                float: none;
                 margin: 0 auto;
                 padding: 0 20px;
                 max-width: none;
@@ -51,35 +51,35 @@
                 left: 0;
                 margin-top: 0;
                 width: 100%;
-                background-position: center bottom
+                background-position: center bottom;
                 background-size: 1000px 100%;
             }
             &-bg-2 {
-                bottom: -20px
+                bottom: -20px;
                 height: 350px;
                 border-top-right-radius: 0;
             }
             &-headline {
-                margin-right: auto
+                margin-right: auto;
                 margin-left: auto;
             }
             &-right {
-                margin-top: 0
+                margin-top: 0;
                 padding-left: 0;
             }
         }
         @include mq($until: mobile) {
             &-headline-1 {
-                margin: 0
+                margin: 0;
                 padding: 0;
                 max-width: 370px;
             }
             &-bg {
-                margin-top: 0
+                margin-top: 0;
                 background-size: 250%;
             }
             &-bg-1 {
-                bottom: -35px
+                bottom: -35px;
                 background-size: 255% 70%;
             }
             &-bg-2 {
@@ -93,7 +93,7 @@
         &-item {
             margin: 30px auto;
             padding: 0 20px;
-            min-height: 430px
+            min-height: 430px;
             max-width: 1200px;
         }
 
@@ -104,7 +104,7 @@
 
             &-right {
                 -ms-flex-order: 2;
-                padding-left: 40px
+                padding-left: 40px;
                 max-width: 450px;
 
                 -webkit-box-ordinal-group: 3;
@@ -118,7 +118,7 @@
             text-align: left;
 
             &-1 {
-                margin-right: -50px
+                margin-right: -50px;
                 padding: 0 0 0 50px;
                 max-width: 480px;
             }
@@ -144,7 +144,7 @@
         }
 
         &-right {
-            margin-top: -30px
+            margin-top: -30px;
             padding-left: 120px;
         }
 
@@ -195,7 +195,7 @@
             overflow: hidden;
 
             &-desc {
-                float: none
+                float: none;
                 margin-right: auto;
                 margin-left: auto;
                 max-width: 500px;
@@ -208,14 +208,14 @@
                 &-image {
                     left: 50%;
 
-                    @include prefix(transform, translate(-50%, 0), webkit);
+                    transform: translate(-50% 0);
                 }
             }
         }
 
         &-desc {
             position: relative;
-            z-index: 2
+            z-index: 2;
             max-width: 380px;
         }
 
@@ -232,13 +232,13 @@
             &-image {
                 position: absolute;
                 top: 0;
-                left: 0
+                left: 0;
                 z-index: 0;
             }
 
             &-bg {
                 padding: 35px 50px;
-                border-radius: 3px
+                border-radius: 3px;
                 background: #f1f8fe;
                 color: $blue;
             }
@@ -277,7 +277,7 @@
                 left: 0;
                 opacity: 0;
 
-                @include prefix(transition, opacity .3s, webkit);
+                transition: opacity .3s;
             }
 
             &:hover &-item {

@@ -164,13 +164,13 @@
 
         &:before {
             position: absolute;
-            left: -9px
+            left: -9px;
             content: '“';
         }
 
         &:after {
             position: absolute;
-            margin-left: 2px
+            margin-left: 2px;
             content: '”';
         }
     }
