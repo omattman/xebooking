@@ -77,10 +77,10 @@
 		                                <a href="#0">Tilbage</a>
 		                            </li>
 		                            <li class="bg__blue c__white see-all u__hidden--md u__hidden--sm">
-		                                <a href="http://localhost/xe/priser"><span>🎉 </span>Find din samlede pakkeløsning her<span class="flip-horizontal"> 🎉</span></a>
+		                                <a href="/priser"><span>🎉 </span>Find din samlede pakkeløsning her<span class="flip-horizontal"> 🎉</span></a>
 		                            </li>
 		                            <li class="nav__menu-links">
-		                                <a class="t__h5 c__blue--xlg c__blue--lg c__grey--md c__grey--sm f__left" href="/xe/musik/">Musik</a>
+		                                <a class="t__h5 c__blue--xlg c__blue--lg c__grey--md c__grey--sm f__left" href="/musik/">Musik</a>
 		                                <ul class="js-hidden">
 		                                    <li class="js-go-back">
 		                                        <a href="#0">Tilbage</a>
@@ -89,28 +89,28 @@
 		                                        <a href="/kategorier/koncertnavne/">Se al musik</a>
 		                                    </li>
 		                                    <li>
-		                                        <a href="/xe/koncertnavne/">Koncertnavne</a>
+		                                        <a href="/koncertnavne/">Koncertnavne</a>
 		                                    </li>
 											<li>
-		                                        <a href="/xe/bryllupsbands/">Bryllupsbands</a>
+		                                        <a href="/bryllupsbands/">Bryllupsbands</a>
 		                                    </li>
 		                                    <li>
-		                                        <a href="/xe/bands/">Bands</a>
+		                                        <a href="/bands/">Bands</a>
 		                                    </li>
 		                                    <li>
-		                                        <a href="/xe/djs/">DJs</a>
+		                                        <a href="/djs/">DJs</a>
 		                                    </li>
 											<li>
-		                                        <a href="/xe/solister/">Solister</a>
+		                                        <a href="/solister/">Solister</a>
 		                                    </li>
 											<li>
-		                                        <a href="/xe/receptions-musik/">Receptions musik</a>
+		                                        <a href="/receptions-musik/">Receptions musik</a>
 		                                    </li>
 		                                    <li>
-		                                        <a href="/xe/jazzlounge/">Jazz/Lounge</a>
+		                                        <a href="/jazzlounge/">Jazz/Lounge</a>
 		                                    </li>
 		                                    <li>
-		                                        <a href="/xe/musik">Se alle kategorier</a>
+		                                        <a href="/musik">Se alle kategorier</a>
 		                                    </li>
 		                                </ul>
 		                            </li>
@@ -121,47 +121,47 @@
 		                                        <a href="#0">Tilbage</a>
 		                                    </li>
 											<li class="see-all">
-		                                        <a href="/xe/underholdning/">Se al underholdning</a>
+		                                        <a href="/underholdning/">Se al underholdning</a>
 		                                    </li>
 		                                    <li>
-		                                        <a href="/xe/stand-up/">Stand-up</a>
+		                                        <a href="/stand-up/">Stand-up</a>
 		                                    </li>
 		                                    <li>
-		                                        <a href="/xe/foredragsholder/">Foredragsholder</a>
+		                                        <a href="/foredragsholder/">Foredragsholder</a>
 		                                    </li>
 		                                    <li>
-		                                        <a href="/xe/tryllekunstner/">tryllekunstner</a>
+		                                        <a href="/tryllekunstner/">tryllekunstner</a>
 		                                    </li>
 		                                    <li>
-		                                        <a href="/xe/happening/">Happening / Overraskelse</a>
+		                                        <a href="/happening/">Happening / Overraskelse</a>
 		                                    </li>
 											<li>
-		                                        <a href="/xe/underholdning-engelsk/">Underholdning (ENG)</a>
+		                                        <a href="/underholdning-engelsk/">Underholdning (ENG)</a>
 		                                    </li>
 		                                    <li>
-		                                        <a href="/xe/underholdning/">Se alle kategorier</a>
+		                                        <a href="/underholdning/">Se alle kategorier</a>
 		                                    </li>
 		                                </ul>
 		                            </li>
 		                            <li class="nav__menu-links">
-		                                <a class="t__h5 c__blue--xlg c__blue--lg c__grey--md c__grey--sm f__left" href="/xe/konferenciers-vaerter/">Konferenciers / Værter</a>
+		                                <a class="t__h5 c__blue--xlg c__blue--lg c__grey--md c__grey--sm f__left" href="/konferenciers-vaerter/">Konferenciers / Værter</a>
 		                                <ul class="js-hidden">
 		                                    <li class="js-go-back">
 		                                        <a href="#0">Tilbage</a>
 		                                    </li>
 		                                    <li class="dropdown__desc">
-		                                        <a href="/xe/konferencier/">Konferencier</a>
+		                                        <a href="/konferencier/">Konferencier</a>
 		                                    </li>
 		                                    <li>
-		                                        <a href="/xe/ordstyrer/">Ordstyrer</a>
+		                                        <a href="/ordstyrer/">Ordstyrer</a>
 		                                    </li>
 		                                    <li>
-		                                        <a href="/xe/konferencier/">Se alle kategorier</a>
+		                                        <a href="/konferencier/">Se alle kategorier</a>
 		                                    </li>
 		                                </ul>
 		                            </li>
 									<li class="nav__menu-links">
-		                                <a class="t__h5 c__blue u__hidden--md u__hidden--sm f__left" href="/xe/artister/">Artister</a>
+		                                <a class="t__h5 c__blue u__hidden--md u__hidden--sm f__left" href="/artister/">Artister</a>
 		                                <ul class="js-hidden">
 		                                    <li class="js-go-back">
 		                                        <a href="#0">Tilbage</a>
@@ -179,35 +179,35 @@
 		                                        <a href="/kategorier/sangere-solister/">Artister i særklasse</a>
 		                                    </li>
 		                                    <li>
-		                                        <a href="/xe/artister/">Se alle artister</a>
+		                                        <a href="/artister/">Se alle artister</a>
 		                                    </li>
 		                                </ul>
 		                            </li>
 									<li class="bg__blue c__white see-all u__hidden--xlg u__hidden--lg">
-										<a href="http://localhost/xe/priser">Få en samlet pakkeløsning</a>
+										<a href="/priser">Få en samlet pakkeløsning</a>
 									</li>
 		                        </ul>
 		                        </li>
 		                        <li>
-		                            <a href="http://localhost/xe/priser">Priser</a>
+		                            <a href="/priser">Priser</a>
 		                        </li>
 		                        <li>
-		                            <a href="http://localhost/xe/referencer">Referencer</a>
+		                            <a href="/referencer">Referencer</a>
 		                        </li>
 		                        <li>
-		                            <a href="http://localhost/xe/Nyheder">Nyheder</a>
+		                            <a href="/Nyheder">Nyheder</a>
 		                        </li>
 		                        <li>
-		                            <a href="http://localhost/xe/Booking">Booking</a>
+		                            <a href="/Booking">Booking</a>
 		                        </li>
 		                        <li>
-		                            <a href="http://localhost/xe/om-xe">Om XE</a>
+		                            <a href="/om-xe">Om XE</a>
 		                        </li>
 		                        <li>
-		                            <a href="http://localhost/xe/Kontakt">Kontakt</a>
+		                            <a href="/Kontakt">Kontakt</a>
 		                        </li>
 								<li class="bg__blue c__white see-all u__hidden--xlg u__hidden--lg">
-									<a href="http://localhost/xe/priser">Find pakkeløsning her</a>
+									<a href="/priser">Find pakkeløsning her</a>
 								</li>
 		                    </ul>
 		                </nav>
