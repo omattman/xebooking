@@ -616,7 +616,7 @@
 
 @include mq($from: mobile, $until: tablet) {
     .g__c6--md {
-        width: 50%
+        width: 50% !important;
     }
     .g__c6--md.g__flex {
         min-width: 50%;

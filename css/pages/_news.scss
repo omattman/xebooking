@@ -10,6 +10,10 @@
         padding-right: 45px !important;
         max-width: 1270px !important;
     }
+
+    &__inner a:hover {
+        text-decoration: none;
+    }
 }
 
 // Hero News Header styling

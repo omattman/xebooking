@@ -1,95 +1,6 @@
 .homepage {
     &__hero {
-        @include mq($from: wide) {
-            &-desc {
-                left: -50px
-            }
-        }
-        @include mq($until: desktop) {
-            &-item-2 {
-                margin-top: 30px
-            }
-            &-bg-1a {
-                margin-top: 13%
-            }
-            &-item {
-                min-height: 330px
-            }
-            &-headline-1, &-headline-2 {
-                padding: 0
-            }
-            &__cta__desc {
-                margin-left: 0
-            }
-            &__cta-form {
-                margin-right: 0;
-                margin-left: 0;
-            }
-            &__hero-right {
-                padding-left: 40px
-            }
-        }
-        @include mq($until: tablet) {
-            &-desc {
-                top: 0;
-                float: none;
-                margin: 0 auto;
-                padding: 0 20px;
-                max-width: none;
-                text-align: center;
-            }
-            &-headline {
-                margin-left: auto;
-                text-align: center
-            }
-            &-headline-1, &-headline-2 {
-                max-width: 420px
-            }
-            &-bg {
-                right: 0;
-                bottom: -20px;
-                left: 0;
-                margin-top: 0;
-                width: 100%;
-                background-position: center bottom;
-                background-size: 1000px 100%;
-            }
-            &-bg-2 {
-                bottom: -20px;
-                height: 350px;
-                border-top-right-radius: 0;
-            }
-            &-headline {
-                margin-right: auto;
-                margin-left: auto;
-            }
-            &-right {
-                margin-top: 0;
-                padding-left: 0;
-            }
-        }
-        @include mq($until: mobile) {
-            &-headline-1 {
-                margin: 0;
-                padding: 0;
-                max-width: 370px;
-            }
-            &-bg {
-                margin-top: 0;
-                background-size: 250%;
-            }
-            &-bg-1 {
-                bottom: -35px;
-                background-size: 255% 70%;
-            }
-            &-bg-2 {
-                background-size: 200% 90%
-            }
-            &-item-2 {
-                margin-bottom: 0;
-                min-height: 0
-            }
-        }
+
         &-item {
             margin: 30px auto;
             padding: 0 20px;
@@ -192,6 +103,100 @@
             left: 0;
             right: 47%;
             margin-top: 285px;
+        }
+
+        @include mq($from: wide) {
+            &-desc {
+                left: -50px
+            }
+        }
+        @include mq($until: desktop) {
+            &-item-2 {
+                margin-top: 30px
+            }
+            &-bg-1a {
+                margin-top: 13%
+            }
+            &-item {
+                min-height: 330px
+            }
+            &-headline-1, &-headline-2 {
+                padding: 0
+            }
+            &__cta__desc {
+                margin-left: 0
+            }
+            &__cta-form {
+                margin-right: 0;
+                margin-left: 0;
+            }
+            &__hero-right {
+                padding-left: 40px
+            }
+        }
+        @include mq($until: tablet) {
+            &-desc {
+                top: 0;
+                float: none;
+                margin: 0 auto;
+                padding: 0 20px;
+                max-width: none;
+                text-align: center;
+            }
+            &-headline {
+                margin-left: auto;
+            }
+            &-headline-1, &-headline-2 {
+                max-width: 420px;
+            }
+            &-bg {
+                right: 0;
+                bottom: -20px;
+                left: 0;
+                margin-top: 0;
+                width: 100%;
+                background-position: center bottom;
+                background-size: 1000px 100%;
+            }
+            &-bg-2 {
+                bottom: -20px;
+                height: 350px;
+                border-top-right-radius: 0;
+            }
+            &-headline {
+                margin-right: auto;
+                margin-left: auto;
+            }
+            &-right {
+                margin-top: 0;
+                padding: 0 40px;
+
+                img {
+                    margin: 0 auto;
+                }
+            }
+        }
+        @include mq($until: mobile) {
+            &-headline-1 {
+                margin: 0;
+                padding: 0;
+                max-width: 370px;
+            }
+            &-bg {
+                margin-top: 0;
+                background-size: 250%;
+            }
+            &-bg-1 {
+                bottom: -35px;
+                background-size: 255% 70%;
+            }
+            &-bg-2 {
+                background-size: 200% 90%
+            }
+            &-item-2 {
+                margin-bottom: 0;
+                min-height: 0
+            }
         }
     }
 

@@ -24,6 +24,7 @@ $is_page_builder_used = et_pb_is_pagebuilder_used( get_the_ID() );
 					<?php if ( ( 'off' !== $show_default_title && $is_page_builder_used ) || ! $is_page_builder_used ) { ?>
 						<div class="container">
                             <div class="article__hero">
+								<div class="sp__6"></div>
                                 <h1 class="article__hero-title"><?php the_title(); ?></h1>
                             </div>
                         </div>
@@ -31,8 +32,6 @@ $is_page_builder_used = et_pb_is_pagebuilder_used( get_the_ID() );
                         <div class="article__hero-image">
                             <?php
     							if ( ! post_password_required() ) :
-
-    								et_divi_post_meta();
 
     								$thumb = '';
 

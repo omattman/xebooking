@@ -89,28 +89,28 @@
 		                                        <a href="/kategorier/koncertnavne/">Se al musik</a>
 		                                    </li>
 		                                    <li>
-		                                        <a href="/koncertnavne/">Koncertnavne</a>
+		                                        <a href="musik/koncertnavne/">Koncertnavne</a>
 		                                    </li>
 											<li>
-		                                        <a href="/bryllupsbands/">Bryllupsbands</a>
+		                                        <a href="musik/bryllupsbands/">Bryllupsbands</a>
 		                                    </li>
 		                                    <li>
-		                                        <a href="/bands/">Bands</a>
+		                                        <a href="musik/bands/">Bands</a>
 		                                    </li>
 		                                    <li>
-		                                        <a href="/djs/">DJs</a>
+		                                        <a href="musik/djs/">DJs</a>
 		                                    </li>
 											<li>
-		                                        <a href="/solister/">Solister</a>
+		                                        <a href="musik/solister/">Solister</a>
 		                                    </li>
 											<li>
-		                                        <a href="/receptions-musik/">Receptions musik</a>
+		                                        <a href="musik/receptions-musik/">Receptions musik</a>
 		                                    </li>
 		                                    <li>
-		                                        <a href="/jazzlounge/">Jazz/Lounge</a>
+		                                        <a href="musik/jazzlounge/">Jazz/Lounge</a>
 		                                    </li>
 		                                    <li>
-		                                        <a href="/musik">Se alle kategorier</a>
+		                                        <a href="musik/musik">Se alle kategorier</a>
 		                                    </li>
 		                                </ul>
 		                            </li>
@@ -124,19 +124,19 @@
 		                                        <a href="/underholdning/">Se al underholdning</a>
 		                                    </li>
 		                                    <li>
-		                                        <a href="/stand-up/">Stand-up</a>
+		                                        <a href="/underholdning//stand-up/">Stand-up</a>
 		                                    </li>
 		                                    <li>
-		                                        <a href="/foredragsholder/">Foredragsholder</a>
+		                                        <a href="/underholdning//foredragsholder/">Foredragsholder</a>
 		                                    </li>
 		                                    <li>
-		                                        <a href="/tryllekunstner/">tryllekunstner</a>
+		                                        <a href="/underholdning//tryllekunstner/">tryllekunstner</a>
 		                                    </li>
 		                                    <li>
-		                                        <a href="/happening/">Happening / Overraskelse</a>
+		                                        <a href="/underholdning//happening/">Happening / Overraskelse</a>
 		                                    </li>
 											<li>
-		                                        <a href="/underholdning-engelsk/">Underholdning (ENG)</a>
+		                                        <a href="/underholdning//underholdning-engelsk/">Underholdning (ENG)</a>
 		                                    </li>
 		                                    <li>
 		                                        <a href="/underholdning/">Se alle kategorier</a>
