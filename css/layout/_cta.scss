@@ -146,40 +146,8 @@
         width: calc(100% + 100px);
         border-top: 1px solid $lightsky-blue;
     }
-
-    &__video-combo {
-        margin: 0 auto;
-        max-width: 400px;
-
-        .cta__form {
-            margin: 35px auto 0;
-        }
-    }
-
-    &__heading-out {
-        overflow: visible;
-
-        .t__h1,
-        .t__h1-big,
-        .t__h1-bigger {
-            margin-top: -100px;
-            color: $grey;
-            font-size: 70px;
-            @include mq($until: desktop) {
-                margin-top:-90px;
-                font-size: 60px;
-            }
-            @include mq($until: tablet) {
-                margin-top:-80px;
-                font-size: 50px;
-            }
-            @include mq($until: mobile) {
-                margin-top: -85px;
-                font-size: 40px;
-            }
-        }
-    }
 }
+
 @media (max-width: 580px) {
     .cta {
         padding: 60px 20px 40px;

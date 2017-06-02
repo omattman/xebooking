@@ -3,12 +3,26 @@
     &__recommendations {
         &__container {
             @include flexbox;
-            @include flex-wrap(nowrap);
-            @include align-items(center);
 
             @include mq($until: mobile) {
                 @include flex-wrap(wrap);
             }
+        }
+
+        &__option {
+            @include mq($until: mobile) {
+                width: 100%;
+                margin-right: 0;
+                padding-right: 0;
+                border-right: none;
+            }
+        }
+    }
+
+    &__pricing {
+        &__container {
+            flex-wrap: nowrap;
+            align-items: center;
         }
 
         &__option {
@@ -32,6 +46,53 @@
         }
     }
 
+    &__recommendations {
+
+        &__container {
+            justify-content: flex-start;
+            flex-direction: column;
+        }
+
+        &-story {
+            width: 100%;
+            padding-top: 15px;
+            border-top: 1px solid $lightsky-blue;
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            p {
+                margin-bottom: 1.65em;
+            }
+
+            @include mq($until: mobile) {
+                width: 100%;
+                margin-right: 0;
+                padding-right: 0;
+                border-right: none;
+            }
+        }
+
+        &-person {
+            font-weight: 500;
+            color: $blue;
+            text-transform: uppercase;
+            letter-spacing: .03em;
+            font-size: 13px;
+
+            p {
+                margin-bottom: 0;
+
+                &:last-of-type {
+                    margin-bottom: 1.65em;
+                }
+            }
+        }
+
+
+    }
+
     &__desc {
         @include mq($until: mobile) {
             padding: 10px;
@@ -41,6 +102,9 @@
             font-size: 20px;
             font-weight: 300;
 
+            @include mq($until: tablet) {
+                text-align: center;
+            }
             @include mq($until: mobile) {
                 font-size: 14px;
             }
@@ -82,7 +146,21 @@
             // margin-top: -575px;
             height: 200px;
             background-image: url(http://localhost/xe/wp-content/uploads/2017/04/bg-2-sm.jpg);
-            background-size: 500px 100%
+            background-size: 500px 100%;
+
+            @include mq($from: mobile, $until: tablet) {
+                position: absolute;
+                left: -430px;
+                top: -100px;
+                height: 400px;
+                background-size: 1600px 100%;
+            }
+        }
+    }
+
+    &__article {
+        p {
+            margin-bottom: 1.65em;
         }
     }
 }

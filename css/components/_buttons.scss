@@ -49,148 +49,8 @@
     x-appearance: none;
 }
 
-.btn {
-    &.disabled,
-    &.loading,
-    &:disabled {
-        cursor: default;
-        pointer-events: none;
-    }
-
-    &.disabled,
-    &:disabled {
-        opacity: 0.65;
-        cursor: not-allowed;
-    }
-
-    &.hover,
-    &:hover {
-        border-color: $light-blue;
-    }
-
-    &.loading {
-        color: transparent !important;
-
-        &:after {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            display: block;
-            margin-top: -15px;
-            margin-left: -15px;
-            width: 30px;
-            height: 30px;
-            border: 2px solid $white;
-            border-right-color: rgba($white, 0.2);
-            border-bottom-color: rgba($white, 0.2);
-            border-left-color: rgba($white, 0.2);
-            border-radius: 50%;
-            content: ' ';
-
-            @include prefix(animation, rotate 2s linear infinite, webkit);
-        }
-    }
-}
 
 .btn {
-    &__play {
-        padding-right: 20px;
-        padding-left: 20px;
-
-        &span {
-            position: relative;
-            display: inline-block;
-            padding-left: 15px;
-        }
-
-        &span:after {
-            position: absolute;
-            top: 50%;
-            left: 0;
-            display: block;
-            margin: -8px 0 0;
-            border: 6px transparent solid;
-            border-left-width: 8px;
-            border-left-color: white;
-            content: ' ';
-        }
-    }
-
-    &__white {
-        border-color: white;
-        color: white;
-
-        &-alt {
-            border: 2px solid $bright-blue;
-            background-color: white;
-            color: $bright-blue;
-
-            @include prefix(transition, background .2s, webkit);
-        }
-
-        &-alt:hover {
-            border-color: $bright-blue;
-            background-color: rgba($white, 0.9);
-        }
-    }
-
-    &__white {
-        border: 2px solid white;
-        border-width: 2px;
-        background-color: white;
-        color: $dark-blue;
-
-        &:hover {
-            border-color: rgba($white, 0.9);
-            background-color: rgba($white, 0.9);
-        }
-
-        &.loading {
-            color: transparent !important;
-        }
-
-        &.loading:after {
-            border: 2px solid $dark-blue;
-            border-right-color: rgba(46, 46, 127, 0.2);
-            border-bottom-color: rgba(46, 46, 127, 0.2);
-            border-left-color: rgba(46, 46, 127, 0.2);
-        }
-    }
-}
-@-webkit-keyframes rotate {
-    0% {
-        @include prefix(transform, rotate(0deg), webkit);
-    }
-
-    100% {
-        @include prefix(transform, rotate(360deg), webkit);
-    }
-}
-@keyframes rotate {
-    0% {
-        @include prefix(transform, rotate(0deg), webkit);
-    }
-
-    100% {
-        @include prefix(transform, rotate(360deg), webkit);
-    }
-}
-
-.btn {
-    &__triangle {
-        &-right:after {
-            position: relative;
-            left: 5px;
-            display: inline-block;
-            margin-left: 5px;
-            border: 5px transparent solid;
-            border-left-width: 7px;
-            border-left-color: white;
-            content: ' ';
-            vertical-align: middle;
-        }
-    }
-
     &__equal-width {
         display: flex;
 
@@ -207,14 +67,7 @@
     }
 }
 
-.btn__secondary.btn__triangle-right:after {
-    border-left-color: $blue;
-}
-
-.btn__secondary.btn__triangle-right:hover:after {
-    border-left-color: $mist-blue;
-}
-@media (max-width: 480px) {
+@include mq($until: mobile) {
     .btn__long-text {
         padding-right: 15px;
         padding-left: 15px;
@@ -237,13 +90,6 @@
         border-radius: 4px;
         font-size: 14px;
 
-        &.loading:after {
-            margin-top: -10px;
-            margin-left: -10px;
-            width: 20px;
-            height: 20px;
-        }
-
         &-wide {
             padding-right: 30px;
             padding-left: 30px;
@@ -255,13 +101,6 @@
         height: 26px;
         border-radius: 3px;
         font-size: 12px;
-
-        &.loading:after {
-            margin-top: -10px;
-            margin-left: -10px;
-            width: 20px;
-            height: 20px;
-        }
     }
 
     &__full-width {

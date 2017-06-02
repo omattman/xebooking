@@ -75,9 +75,7 @@
             transition: -webkit-transform .3s;
             transition: transform .3s;
             transition: transform .3s,-webkit-transform .3s;
-            -webkit-transform: scaleX(0);
             transform: scaleX(0);
-            -webkit-transform-origin: left center;
             transform-origin: left center;
         }
 

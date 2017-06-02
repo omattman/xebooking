@@ -637,7 +637,7 @@ class DS_Custom_Blog extends ET_Builder_Module {
         );
 
         if ( 'on' !== $fullwidth )
-        $output = sprintf( '<div class="g__row posts">%1$s</div>', $output );
+        $output = sprintf( '<div class="g__row g__row-negative posts">%1$s</div>', $output );
 
         return $output;
     }

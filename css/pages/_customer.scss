@@ -96,46 +96,6 @@
         }
     }
 
-    &__stats {
-        padding: 50px 0;
-        background: $mom-jeans;
-
-        &-number {
-            font-size: 40px
-        }
-    }
-
-    &__detail {
-        margin-bottom: 30px;
-        padding: 22px 30px 21px;
-        border: 1px solid $light-blue;
-        border-radius: 5px;
-        color: $light-grey;
-
-        &-icon-wrap {
-            position: relative;
-            top: 2px;
-            min-width: 25px;
-        }
-
-        &-product-name {
-            font-size: 22px
-        }
-
-        &-product {
-            transition: opacity .3s;
-
-            .customer__detail-products:hover & {
-                opacity: .4
-            }
-            .customer__detail-products:hover &:hover {
-                opacity: 1
-            }
-        }
-    }
-}
-
-.customer {
     &__article {
         max-width: 1140px;
         font-size: 18px;
@@ -219,11 +179,6 @@
         }
     }
 
-    &__explore {
-        padding: 40px 0;
-        background: $mom-jeans;
-    }
-
     &__card {
         position: relative;
         display: flex;
@@ -282,51 +237,16 @@
             }
         }
 
-        &-desc-no-hover {
-            .customer__card:hover & {
-                opacity: 0
-            }
-        }
-
         &-read {
             margin: auto 0 0
         }
 
-        &-photo {
-            transition: opacity .2s linear;
-
-            .customer__card:hover & {
-                opacity: 0
-            }
-        }
 
         &-logo {
             margin: 20px 0;
             height: 40px;
             transition: opacity .2s, transform .3s;
             transition: opacity .2s, transform .3s, -webkit-transform .3s
-        }
-
-        &-logo-hover {
-            position: absolute;
-            top: 0;
-            opacity: 0;
-            transition: opacity .2s linear;
-
-            .customer__card:hover & {
-                opacity: 1;
-                transform: translate(0, 0);
-            }
-        }
-
-        &-logo-no-hover {
-            display: flex;
-
-            align-items: center;
-
-            .customer__card:hover & {
-                opacity: 0;
-            }
         }
     }
 
@@ -342,51 +262,6 @@
             -webkit-box-orient: horizontal;
             -webkit-box-direction: normal;
             flex-wrap: wrap;
-        }
-    }
-
-    &__micro {
-        padding: 60px;
-        background-position: center center;
-        background-size: 100% 100%;
-        background-repeat: no-repeat;
-
-        flex: 1;
-        @include mq($until: desktop) {
-            padding: 40px
-        }
-        @include mq($until: tablet) {
-            padding: 20px 0
-        }
-
-        &-h5 {
-            max-width: none
-        }
-    }
-
-    &__large {
-        &-bg {
-            position: absolute;
-            right: 0;
-            left: 0;
-            z-index: 0;
-            margin-top: -500px;
-            height: 1080px;
-            background: url(http://localhost/xe/wp-content/uploads/2017/04/bg-2-xlg.jpg) no-repeat center top;
-            background-size: 2450px 100%;
-
-            @include mq($until: desktop) {
-                background-image: url(http://localhost/xe/wp-content/uploads/2017/04/bg-2-lg.jpg);
-                background-size: 1024px 100%
-            }
-            @include mq($until: tablet) {
-                background-image: url(http://localhost/xe/wp-content/uploads/2017/04/bg-2-md.jpg);
-                background-size: 767px 100%
-            }
-            @include mq($until: mobile) {
-                background-image: url(http://localhost/xe/wp-content/uploads/2017/04/bg-2-sm.jpg);
-                background-size: 820px 100%
-            }
         }
     }
 }
@@ -492,89 +367,6 @@
         &-logo {
             display: flex;
             opacity: 0.4;
-        }
-
-        &-filter {
-            margin: 3px 20px 0 0;
-            white-space: nowrap
-        }
-    }
-
-    &__quote {
-        @include mq($until: desktop) {
-            &-control-prev {
-                left: -20px
-            }
-
-            &-control-next {
-                right: -20px
-            }
-
-            &-bubble {
-                margin: 0;
-                padding: 0;
-                width: 100%;
-                height: 290px;
-                background: none
-            }
-
-            &-content {
-                margin: 0 auto;
-                padding: 0 40px;
-                min-height: 260px;
-                max-width: 700px;
-                width: 100%;
-            }
-
-            &-globe {
-                display: none
-            }
-        }
-        @include mq($until: tablet) {
-            &-bubble {
-                padding: 0;
-                width: auto;
-                height: auto;
-            }
-
-            &-content {
-                margin: 0;
-                padding: 0;
-                min-height: 0;
-                width: 100%;
-                background-size: 150px;
-
-                &:before {
-                    left: 0
-                }
-            }
-        }
-        &-content {
-            position: relative;
-            margin-left: 110px;
-            padding-top: 20px;
-            min-height: 350px;
-            max-width: 100%;
-            width: 560px;
-        }
-
-        &-control {
-            &-prev, &-next {
-                color: $light-grey;
-                font-size: 50px
-            }
-
-            &-prev:hover, &-next:hover {
-                color: $grey
-            }
-
-            &-prev {
-                left: -120px
-            }
-
-            &-next {
-                right: -120px
-            }
         }
     }
 }

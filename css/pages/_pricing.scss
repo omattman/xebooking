@@ -1,44 +1,4 @@
 .pricing {
-    &__container {
-        max-width: 1128px;
-        padding-left: 0;
-        padding-right: 0;
-
-        @include mq($until: tablet) {
-            padding: 0 40px
-        }
-        @include mq($until: mobile) {
-            padding: 0 20px
-        }
-    }
-
-    &__row {
-        margin-left: -12px;
-        margin-right: -12px;
-
-        @include mq($until: desktop) {
-            margin-left: -40px;
-            margin-right: -40px
-        }
-        @include mq($until: mobile) {
-            margin-left: -20px;
-            margin-right: -20px
-        }
-    }
-
-    &__column {
-        padding-left: 20px;
-        padding-right: 20px;
-
-        @include mq($until: tablet) {
-            margin-left: 40px;
-            margin-right: 40px
-        }
-        @include mq($until: mobile) {
-            margin-left: 20px;
-            margin-right: 20px
-        }
-    }
 
     &__option {
         background-color: white;
@@ -106,25 +66,6 @@
             align-items: flex-start
         }
     }
-
-    &__product__hero {
-        position: relative;
-        display: block
-    }
-
-    &__product__illustration {
-        display: inline-block
-    }
-
-    &__product__description {
-        display: inline-block;
-        max-width: 360px
-    }
-
-    &__all-products-icon {
-        display: inline-block;
-        margin-right: 10px
-    }
 }
 
 .bundle {
@@ -183,69 +124,6 @@
             height: 80px;
             background: url(http://localhost/xe/wp-content/uploads/2017/04/pricing-arrow-right.svg) no-repeat center top;
             background-size: 150px 50%;
-        }
-    }
-}
-
-.product {
-    &__pricing__button {
-        margin-right: 40px;
-
-        @include mq($until: desktop) {
-            margin-right: 11px
-        }
-        @include mq($from: tablet) {
-            margin-right: 0
-        }
-    }
-
-    &-icon__smaller {
-        margin-bottom: 2px;
-
-        polygon {
-            fill: #1f8ceb !important;
-        }
-    }
-}
-
-
-.pricing {
-
-    &__platform_cta {
-        font-size: 16px;
-        max-width: 792px;
-        margin-left: auto;
-        margin-right: auto
-    }
-
-    &__from__price {
-        display: inline-block;
-        padding: 0 18px;
-        background-color: $white;
-    }
-
-    &__cell__left {
-        margin-left: 12px
-    }
-
-    &__cell__right {
-        margin-right: 12px
-    }
-
-    &__system {
-        display: flex;
-        flex-wrap: wrap;
-        flex: 0 1 auto;
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-        flex-direction: row;
-
-        &-col {
-            display: flex;
-            -webkit-box-orient: horizontal;
-            -webkit-box-direction: normal;
-            flex-direction: row;
-            flex: 0 0 auto;
         }
     }
 }

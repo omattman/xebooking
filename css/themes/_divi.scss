@@ -96,3 +96,27 @@
 .et-social-icons li {
     display: inline-block;
 }
+
+.et_pb_portfolio_items {
+    display: flex;
+}
+
+.et_pb_portfolio_item {
+    padding-bottom: 5px;
+
+    .et_pb_filterable_portfolio_grid & h2 {
+        font-size: 15px;
+        font-weight: 400;
+        margin: 0;
+    }
+}
+
+.et_portfolio_image img {
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+}
+
+
+#cookie-notice {
+    border-top: 1px solid $lightsky-blue;
+}

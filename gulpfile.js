@@ -1,57 +1,47 @@
-//Gulp requirements
-var	gulp 		= require('gulp');
-var sass 		= require('gulp-ruby-sass');
-var notify 		= require("gulp-notify");
-var nano 		= require("gulp-cssnano");
-var bower 		= require('gulp-bower');
-var concat 		= require('gulp-concat');
-var imagemin 	= require('gulp-imagemin');
-var pngquant 	= require('imagemin-pngquant');
-var uglify 		= require('gulp-uglify');
-var browserSync = require('browser-sync').create();
-var sassdoc 	= require('sassdoc');
-var strip 		= require('gulp-strip-comments');
+'use strict';
 
-//build path. Change to server location
-var build = './dist';
+// Gulp requirements
+var	gulp 			= require('gulp'),
+	sass 			= require('gulp-ruby-sass'),
+	notify 			= require("gulp-notify"),
+	nano 			= require("gulp-cssnano"),
+	bower 			= require('gulp-bower'),
+	concat 			= require('gulp-concat'),
+	imagemin 		= require('gulp-imagemin'),
+	postcss      	= require('gulp-postcss'),
+	rename			= require('gulp-rename'),
+	uglify 			= require('gulp-uglify'),
+	autoprefixer 	= require('autoprefixer'),
+	pngquant 		= require('imagemin-pngquant'),
+	browserSync 	= require('browser-sync').create(),
+	strip 			= require('gulp-strip-comments');
 
-//Config paths.
+// build path. Move folder to server location on deployment
+var build = 		'./dist';
+
+// Config paths.
 var	config = {
-	bowerDir: 	'./bower_components',
-  	sassPath: 	'./css',
-  	javaPath: 	'./js',
-  	imgPath: 	'./img',
-  	fontPath: 	'./font'
+	bowerDir: 		'./bower_components',
+  	sassPath: 		'./css',
+  	javaPath: 		'./js',
+  	imgPath: 		'./img',
 };
 
-//Distination paths.
+// Destination paths.
 var dist = {
-    css: 	build,
-    js: 	build + '/js',
-    font: 	build + '/fonts',
-    img: 	build + '/img',
-    php: 	build
+    css: 			build,
+    js: 			build + '/js',
+    img: 			build + '/img',
+    php: 			build
 }
 
-//Run Bower task
+// Run Bower task
 gulp.task('bower', function() {
     return bower()
 		.pipe(gulp.dest(config.bowerDir))
 });
 
-//Icons task. Just relocates them
-gulp.task('icons', function() {
-    return gulp.src(config.bowerDir + '/font-awesome/fonts/**.*')
-        .pipe(gulp.dest(dist.font));
-});
-
-//Fonts task
-gulp.task('fonts', function(){
-    return gulp.src(config.fontPath + '/*')
-        .pipe(gulp.dest(dist.font));
-});
-
-//Image task. Optimize size
+// Image task. Optimize size with imagemin and improve with pngquant
 gulp.task('img', function(){
     return gulp.src(config.imgPath + '/**/*')
         .pipe(imagemin({
@@ -65,14 +55,15 @@ gulp.task('img', function(){
         .pipe(gulp.dest(dist.img));
 });
 
-//php Function
+// PHP Function and browserSync stream auto-inject
 gulp.task('php', function(){
     return gulp.src('*.php')
         .pipe(gulp.dest(dist.php))
-				.pipe(browserSync.stream());
+		.pipe(browserSync.stream());
 });
 
-//SASS/css function. Defines path where our sass is, for our main.scss to locate them via import.
+// SASS/css function. Defines path where our main scss file is and error handling
+// PostCSS autoprefixer to automatically render prefix latest standards for browsers
 gulp.task('css', function() {
     return sass(config.sassPath + '/style.scss', {
         precision: 6,
@@ -82,19 +73,20 @@ gulp.task('css', function() {
             './css/sass'
 			]
         })
+		.pipe(postcss([ autoprefixer() ]))
         .on("error", notify.onError(function (error) {
            return "Error: " + error.message;
         }))
         .pipe(gulp.dest(dist.css))
-			.pipe(browserSync.stream());
+		.pipe(browserSync.stream());
 });
 
-//Locations of our javascripts files.
+// Locations of our javascripts files.
 var javascript = [
     config.javaPath + '/**.*'
     ]
 
-//Javascript task
+// Javascript task
 gulp.task('js', function(){
     return gulp.src(javascript)
         .pipe(concat('main.js'))
@@ -102,7 +94,8 @@ gulp.task('js', function(){
 		.pipe(browserSync.stream());;
 });
 
-// Rerun the task when a file changes
+// Initialize browserSync. Rerun the task when a watched file changes
+// Set to ignore /wp-admin/ urls to avoid update of admin panel on save in editor
 gulp.task('watch', ['default'], function() {
 
 	browserSync.init({
@@ -115,49 +108,34 @@ gulp.task('watch', ['default'], function() {
 
     gulp.watch('*.php', ['php']);
     gulp.watch(config.sassPath + '/**/*.scss', ['css']);
-    gulp.watch('/*.js', ['js']);
+    gulp.watch(config.javaPath + '/*.js', ['js']);
 });
 
-//compress css task with gulpnano. Runs css task before executing
+// compress and minify css task with gulpnano. Runs css task before executing to build .min.css file
 gulp.task('compress-css', ['css'], function(){
-    return gulp.src(dist.css + '*.css')
+    return gulp.src(dist.css + '/**/*.css')
+		.pipe(concat('style.css'))
+		.pipe(gulp.dest(dist.css))
+		.pipe(rename('style.min.css'))
         .pipe(nano())
-        .pipe(gulp.dest(dist.css))
+        .pipe(gulp.dest(dist.css));
 });
 
-//compress javascript. Uses gulpuglify. Runs Javascript task before executing
+//compress and minify javascript task with uglify. Runs Javascript task before executing to build .min.js file
 gulp.task('compress-js', ['js'], function() {
-	return gulp.src(dist.js + '*.js')
+	return gulp.src(dist.js + '/**/*.js')
+		.pipe(concat('main.js'))
+		.pipe(gulp.dest(dist.js))
+		.pipe(rename('main.min.js'))
 	    .pipe(uglify())
 	    .pipe(gulp.dest(dist.js));
 });
 
-// SassDoc for documentation
-// http://localhost:3000/xebooking/wp-content/themes/divi-child/dist/docs/
-// gulp.task('sassdoc', function () {
-// 	var options = {
-// 	    dest: 'dist/docs',
-// 	    verbose: true,
-// 	    display: {
-// 	    	access: ['public', 'private'],
-// 	      	alias: true,
-// 	      	watermark: true,
-// 	    },
-// 	    groups: {
-// 	      	colors: 'Colors',
-// 	    },
-// 	    basePath: 'https://github.com/omattman/xebooking/tree/master/css',
-//   };
-//
-//   	return gulp.src('css/**/*.scss')
-//     	.pipe(sassdoc(options));
-// });
-
+// Don't run this task. This is incorporated into 'production' task.
 gulp.task('compress', ['compress-css', 'compress-js']);
 
 // Default task. No compressing
-// input 'sassdoc' for later documentation
-gulp.task('default', ['bower', 'icons', 'css', 'php', 'js', 'fonts']);
+gulp.task('default', ['bower', 'css', 'php', 'js']);
 
-//Production task. Use before using on live site.
+// Production task. Use before using on live site.
 gulp.task('production',['default', 'compress','img']);

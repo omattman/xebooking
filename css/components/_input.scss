@@ -13,20 +13,6 @@ textarea {
     border-radius: 6px;
     outline: none;
     box-shadow: none;
-
-    &.bright-blue {
-        color: $bright-blue;
-        border-color: $bright-blue;
-        border-width: 2px;
-
-        @include placeholder {
-            color: rgba($bright-blue, 0.7);
-        }
-    }
-
-    &.error {
-        border-color: $red;
-    }
 }
 
 [type="text"],
@@ -38,7 +24,7 @@ textarea {
 
 
 select {
-    font-family: "Akkurat Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: $grey;
 }
 

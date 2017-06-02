@@ -94,7 +94,7 @@
             margin: 30px auto;
             padding: 0 20px;
             min-height: 430px;
-            max-width: 1200px;
+            max-width: 1200px !important;
         }
 
         &-desc {
@@ -118,8 +118,6 @@
             text-align: left;
 
             &-1 {
-                margin-right: -50px;
-                padding: 0 0 0 50px;
                 max-width: 480px;
             }
 
@@ -128,20 +126,6 @@
             }
         }
 
-        &-categories {
-            display: flex;
-            margin-right: 1%;
-            margin-bottom: 1%;
-
-            flex-basis: 15%;
-            align-items: center;
-            justify-content: center;
-        }
-
-
-        &-slider {
-            max-height: 430px;
-        }
 
         &-right {
             margin-top: -30px;
@@ -171,7 +155,7 @@
             }
 
             &-2 {
-                padding-bottom: 67.5%
+                padding-bottom: 67.5%;
             }
         }
 
@@ -184,70 +168,38 @@
         &__cta__desc {
             margin-left: 0
         }
-    }
 
-    &__product {
-        margin: 30px auto;
-        padding: 0 20px;
-        max-width: 1070px;
-
-        @include mq($until: tablet) {
-            overflow: hidden;
-
-            &-desc {
-                float: none;
-                margin-right: auto;
-                margin-left: auto;
-                max-width: 500px;
-            }
-        }
-        @include mq($until: mobile) {
-            &-box {
-                padding: 40px 0 0;
-
-                &-image {
-                    left: 50%;
-
-                    transform: translate(-50% 0);
-                }
-            }
+        &-bg-right {
+            background: url(http://localhost/xe/wp-content/uploads/2017/05/bg-homepage-right.jpg) no-repeat left top;
+            background-size: 1372px 100%;
+            margin-top: -2%;
+            left: 53%;
+            right: 30%;
+            position: absolute;
+            width: 50%;
+            height: 400px;
         }
 
-        &-desc {
-            position: relative;
-            z-index: 2;
-            max-width: 380px;
-        }
-
-        &-platform {
-            max-width: 860px
-        }
-
-        &-box {
-            position: relative;
-            padding: 35px 0 0 110px;
-            text-align: left;
-            font-size: 14px;
-
-            &-image {
-                position: absolute;
-                top: 0;
-                left: 0;
-                z-index: 0;
-            }
-
-            &-bg {
-                padding: 35px 50px;
-                border-radius: 3px;
-                background: #f1f8fe;
-                color: $blue;
-            }
-
-            &-bg.o__white {
-                background: $white;
-            }
+        &-bg-left {
+            background-image: url(http://localhost/xe/wp-content/uploads/2017/05/bg-homepage-left-test.jpg);
+            background-size: 1310px 100%;
+            background-position: right top;
+            position: absolute;
+            z-index: 0;
+            height: 550px;
+            width: 54%;
+            top: 0;
+            left: 0;
+            right: 47%;
+            margin-top: 285px;
         }
     }
+
+
+    &__logos .customers__list-logo {
+        opacity: 1;
+    }
+
 
     &__prod {
         &-container {
@@ -261,27 +213,6 @@
 
             &-resolve {
                 max-width: 400px
-            }
-        }
-
-        &-hover {
-            @include mq($until: tablet) {
-                & &-item, &:hover &-item {
-                    display: none;
-                }
-            }
-            &-item {
-                position: absolute;
-                top: 0;
-                right: 0;
-                left: 0;
-                opacity: 0;
-
-                transition: opacity .3s;
-            }
-
-            &:hover &-item {
-                opacity: 1;
             }
         }
     }
@@ -305,68 +236,11 @@
             }
             @include mq($until: tablet) {
                 background-image: url(http://localhost/xe/wp-content/uploads/2017/04/bg-2-md.jpg);
-                background-size: 767px 100%
+                background-size: 1200px 100%
             }
             @include mq($until: mobile) {
                 background-image: url(http://localhost/xe/wp-content/uploads/2017/04/bg-2-sm.jpg);
                 background-size: 820px 100%
-            }
-        }
-    }
-
-    &__customers {
-        @include mq($from: wide) {
-            padding-right: 20px;
-            padding-left: 20px;
-
-            &-sidebar {
-                width: 38%
-            }
-
-            &-content {
-                width: 62%
-            }
-
-            &-headline {
-                max-width: 350px
-            }
-
-            &-subheadline {
-                max-width: 300px
-            }
-        }
-        @include mq($until: desktop) {
-            &-headline:before {
-                position: relative;
-                top: auto;
-                left: auto;
-                margin-right: 5px
-            }
-
-            &-sidebar {
-                margin-bottom: 30px;
-                padding: 0;
-                text-align: center
-            }
-
-            &-subheadline {
-                text-align: center
-            }
-
-            &-content {
-                text-align: center
-            }
-        }
-        @include mq($until: tablet) {
-            &-headline {
-                &:before, &:after {
-                    display: none
-                }
-            }
-        }
-        &-headline {
-            &-content {
-                margin-top: 0
             }
         }
     }

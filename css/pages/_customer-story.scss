@@ -1,0 +1,220 @@
+.customer {
+    &__featured {
+        &-container {
+            position: relative;
+            margin: 0 auto;
+            padding-top: 90px;
+            padding-right: 30px;
+            padding-bottom: 90px;
+            min-height: 625px;
+        }
+
+        &-inner {
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            margin: 80px auto 0 auto;
+            padding: 0;
+            position: relative;;
+
+            & .content {
+                margin: 0 auto;
+                position: relative;
+
+            }
+
+            & .logo-wrap {
+                display: flex;
+                font-size: 1.25rem;
+                align-items: center;
+                margin-bottom: 15px;
+                text-transform: uppercase;
+                color: $blue;
+                font-weight: 600;
+                letter-spacing: 1.15px;
+
+                span {
+                    line-height: normal;
+                    padding-right: 30px;
+                    margin-top: 5px;
+                }
+
+                span:after {
+                    content: ':';
+                }
+
+                img {
+                    max-width: 150px;
+                }
+            }
+
+            h1 {
+                margin: 60px 0;
+                color: $charcoal;
+                font-size: 40px;
+                font-weight: 300;
+                line-height: 1.5;
+                letter-spacing: 0.04em;
+                max-width: 60%;
+                width: 100%;
+
+                @include mq($until: desktop) {
+                    font-size: 25px;
+                    text-align: center;
+                    max-width: 100%;
+                }
+            }
+
+            & .artist-desc {
+                margin-top: 40px;
+                line-height: 1.4;
+                letter-spacing: 0.04em;
+            }
+        }
+
+        @include mq($until: desktop) {
+            &-container {
+                padding: 60px 0;
+                min-height: 0;
+            }
+
+            &-inner {
+                margin: 40px auto 0 auto;
+
+                & .logo-wrap {
+                    flex-direction: column;
+                    align-items: center;
+                }
+
+                & .logo-wrap span {
+                    padding: 0;
+                    margin-bottom: 15px;
+                }
+
+                h1 {
+                    margin: 40px 0;
+                }
+
+                & .artist-desc {
+                    margin: 0 auto;
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    &__story {
+        padding: 90px 0 20px !important;
+
+        .content {
+            width: 652px;
+            line-height: 1.7;
+
+            .quote {
+                position: relative;
+
+                &:before,
+                &:after {
+                    content: '“';
+                    position: absolute;
+                    top: -14px;
+                    left: -26px;
+                    font-size: 2.8125rem;
+                    color: $blue;
+                    font-weight: 600;
+                    font-style: normal;
+                    letter-spacing: -0.01em;
+                    z-index: 10;
+                }
+
+                &:after {
+                    content: '”';
+                    top: auto;
+                    left: auto;
+                    margin-left: 2px;
+                    margin-top: -17px;
+                    display: inline-block;
+                }
+            }
+
+            p {
+                font-size: 18px;
+            }
+
+            p,
+            blockquote {
+                margin-bottom: 13px;
+            }
+
+            h2 {
+                line-height: 1.7;
+                font-size: 30px;
+                font-weight: 300;
+                margin-bottom: 20px;
+                letter-spacing: -.015em;
+
+                &.quote {
+                    margin: 50px 0;
+                    font-weight: 300;
+                }
+            }
+
+            h3 {
+                text-transform: uppercase;
+                letter-spacing: 0.08em;
+                font-weight: 500;
+                margin: 45px 0 20px;
+            }
+        }
+
+        @include mq($until: desktop) {
+            padding: 60px 0 40px !important;
+
+            .content {
+                width: 100%;
+
+                .quote {
+                    position: relative;
+
+                    &:before,
+                    &:after {
+                        font-size: 2.1875rem;
+                    }
+
+                    &:before {
+                        left: -9px;
+                        top: -15px;
+                    }
+                }
+
+
+                h2 {
+                    font-size: 22px;
+
+                    &.quote {
+                        margin: 50px 0;
+                        font-weight: 300;
+                        font-size: 18px;
+                        padding: 0 10px;
+                    }
+                }
+
+                p {
+                    font-size: 15px;
+                }
+            }
+        }
+
+        @include mq($until: tablet) {
+            padding: 60px 40px 40px !important;
+
+            .aside {
+                margin: 50px auto 0;
+            }
+        }
+
+        @include mq($until: mobile) {
+            padding: 60px 0px 40px !important;
+        }
+    }
+}
