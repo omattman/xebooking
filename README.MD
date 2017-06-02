@@ -4,7 +4,7 @@
 
 Dette projekt blev udviklet i forbindelse med MDU's hovedopgave i foråret 2017.
 
-[Gå til hjemmesiden](www.matthiashansen.dk)
+[Gå til hjemmesiden](http://www.matthiashansen.dk)
 
 ## Instruktioner omkring indhold og setup
 
