@@ -134,6 +134,16 @@ function thumbnail_in_content_small_mobile() {
 add_shortcode('thumbnail-artist-small-mobile', 'thumbnail_in_content_small_mobile');
 
 
+function get_breadcrumb() {
+    if ( function_exists('yoast_breadcrumb') ) {
+        yoast_breadcrumb('
+        <p id="breadcrumbs">','</p>
+        ');
+    }
+}
+add_shortcode('breadcrumb', 'get_breadcrumb');
+
+
 // Only fetch title name of page and used to display artist name on artist profile page
 // Mostly used for profile description text block
 function artist_title_name( ){
@@ -147,7 +157,7 @@ function get_page_title() {
 	?>
     <div class="artist__desc f__center--sm">
         <h1 class="t__h1 t__bottom f__left--xlg c__dark-blue truncate"><?php the_title(); ?></h1>
-		<p class="artist__desc-category c__grey truncate"><?php echo get_the_term_list( get_the_ID(), 'project_category', '', ' | ' ); ?></p>
+		<p class="artist__desc-category c__grey truncate"><?php echo strip_tags(get_the_term_list( get_the_ID(), 'project_category', '', ' | ' ) ); ?></p>
     </div>
 	<?php
 	$output_string = ob_get_contents();
@@ -179,6 +189,7 @@ function DS_Custom_Modules(){
         include("featured-blog-post.php");
         include("blog-post.php");
         include("artist-filter-category.php");
+        include("artist-category.php");
     }
 }
 
@@ -191,15 +202,10 @@ function Prep_DS_Custom_Modules(){
 
     // list of admin pages where we need to load builder files
     $required_admin_pages = array( 'edit.php', 'post.php', 'post-new.php', 'admin.php', 'customize.php',    'edit-tags.php', 'admin-ajax.php', 'export.php' );
-
     $specific_filter_pages = array( 'edit.php', 'admin.php', 'edit-tags.php' );
-
     $is_edit_library_page = 'edit.php' === $pagenow && isset( $_GET['post_type'] ) && 'et_pb_layout' ===    $_GET['post_type'];
-
     $is_role_editor_page = 'admin.php' === $pagenow && isset( $_GET['page'] ) && 'et_divi_role_editor' ===  $_GET['page'];
-
     $is_import_page = 'admin.php' === $pagenow && isset( $_GET['import'] ) && 'wordpress' === $_GET['import'];
-
     $is_edit_layout_category_page = 'edit-tags.php' === $pagenow && isset( $_GET['taxonomy'] ) && 'layout_category' === $_GET['taxonomy'];
 
     if ( ! $is_admin || (
@@ -211,5 +217,36 @@ function Prep_DS_Custom_Modules(){
 }
 Prep_DS_Custom_Modules();
 
+
+function __search_by_title_only( $search, &$wp_query )
+{
+    global $wpdb;
+    if ( empty( $search ) )
+        return $search; // skip processing - no search term in query
+    $q = $wp_query->query_vars;
+    $n = ! empty( $q['exact'] ) ? '' : '%';
+    $search =
+    $searchand = '';
+    foreach ( (array) $q['search_terms'] as $term ) {
+        $term = esc_sql( like_escape( $term ) );
+        $search .= "{$searchand}($wpdb->posts.post_title LIKE '{$n}{$term}{$n}')";
+        $searchand = ' AND ';
+    }
+    if ( ! empty( $search ) ) {
+        $search = " AND ({$search}) ";
+        if ( ! is_user_logged_in() )
+            $search .= " AND ($wpdb->posts.post_password = '') ";
+    }
+    return $search;
+}
+add_filter( 'posts_search', '__search_by_title_only', 500, 2 );
+
+// function remove_posts_from_wp_search($query) {
+//   if ($query->is_search) {
+//   $query->set('post_type', 'page');
+//   }
+//   return $query;
+//   }
+// add_filter('pre_get_posts','remove_posts_from_wp_search');
 // END ENQUEUE PARENT ACTION
 ?>
