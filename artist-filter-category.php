@@ -495,7 +495,7 @@ class DS_Custom_Filterable_Portfilio_Module extends ET_Builder_Module {
 
 				?>
 				<div id="post-<?php the_ID(); ?>" <?php post_class( $main_post_class ); ?>>
-                    <div class="artist__display">
+					<div class="artist__display">
 				<?php
 					$thumb = '';
 
@@ -528,7 +528,7 @@ class DS_Custom_Filterable_Portfilio_Module extends ET_Builder_Module {
         					<p class="post-meta"><?php echo get_the_term_list( get_the_ID(), 'project_category', '', ', ' ); ?></p>
         				<?php endif; ?>
                     </div>
-                    </div>
+						</div>
 				</div><!-- .et_pb_portfolio_item -->
 				<?php
 			}
