@@ -1,0 +1,14 @@
+.label {
+  &__red {
+    color: $white;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 1;
+    padding: 3px 5px 4px;
+    background: $red;
+    border-radius: 4px;
+    font-weight: 500;
+    display: inline-block;
+  }
+}
