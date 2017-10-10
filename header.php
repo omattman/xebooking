@@ -79,7 +79,7 @@
 		                                <a href="#0">Tilbage</a>
 		                            </li>
 		                            <li class="bg__blue c__white see-all u__hidden--md u__hidden--sm">
-		                                <a href="/priser"><span>🎉 </span>Find din samlede pakkeløsning her<span class="flip-horizontal"> 🎉</span></a>
+		                                <a href="<?php echo $homeurl ?>priser"><span>🎉 </span>Find din samlede pakkeløsning her<span class="flip-horizontal"> 🎉</span></a>
 		                            </li>
 		                            <li class="nav__menu-links">
 		                                <a class="t__h5 c__blue--xlg c__blue--lg c__grey--md c__grey--sm f__left" href="<?php echo $homeurl ?>musik/">Musik</a>
@@ -200,7 +200,7 @@
 		                            <a href="<?php echo $homeurl ?>nyheder">Nyheder</a>
 		                        </li>
 		                        <li>
-		                            <a href="<?php echo esc_url( home_url( '/' ) ); ?>/Booking">Booking</a>
+		                            <a href="<?php echo esc_url( home_url( '/' ) ); ?>/forespoergsel">Booking</a>
 		                        </li>
 		                        <li>
 		                            <a href="<?php echo $homeurl ?>om-xe">Om XE</a>
