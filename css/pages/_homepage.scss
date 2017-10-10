@@ -220,6 +220,12 @@
                 max-width: 400px
             }
         }
+
+        &-hot {
+            position: relative;
+            top: -5px;
+            margin-left: 10px;
+        }
     }
 
     &__cta {
