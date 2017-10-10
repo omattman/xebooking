@@ -1,0 +1,24 @@
+.book {
+  &* {
+    box-sizing: border-box
+  }
+
+  &__description-list {
+    list-style: none !important;
+    padding-left: 0;
+    max-width: 300px;
+
+    &-item {
+      letter-spacing: normal;
+      padding-left: 10px;
+      text-indent: -11px;
+      padding-bottom: 25px;
+
+      &::before {
+        content: "•";
+        color: $blue;
+        padding-right: 5px;
+      }
+    }
+  }
+}

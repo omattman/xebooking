@@ -4,10 +4,10 @@
             height: 100px;
         }
 
-        &-subheadline {
-            max-width: 300px;
+        &-subheadline,
+        &-employee {
             margin-left: 0;
-            margin-right: 0
+            margin-right: 0;
         }
 
         &-error {
