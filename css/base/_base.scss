@@ -122,13 +122,16 @@ svg {
 img[src*="assets/blank"] {
     height: 1px;
 }
-/**
- * Basic styles for links
- */
+
 a {
     color: inherit;
 }
 
 a:hover {
     text-decoration: none;
+}
+
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
 }

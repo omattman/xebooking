@@ -91,6 +91,15 @@
         }
     }
 
+    &__h6 {
+        text-transform: uppercase;
+        color: $red;
+        letter-spacing: .1em;
+        font-size: 13px;
+        font-weight: 500;
+        margin: 0;
+    }
+
     &__bottom {
         padding-bottom: 0px;
         margin-bottom: 0px;
