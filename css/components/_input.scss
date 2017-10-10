@@ -5,7 +5,7 @@
 textarea {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     background: #fafbfc !important;
-    color: $light-grey !important;
+    color: $input-grey !important;
     border: 1px solid #dde5ed !important;
     font-size: 16px;
     padding: 16px 15px 14px !important;
@@ -22,6 +22,13 @@ textarea {
 }
 
 
+input:focus ,
+select:focus ,
+textarea:focus  {
+    border-color: $blue !important;
+}
+
+
 
 select {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -29,19 +36,19 @@ select {
 }
 
 ::-webkit-input-placeholder {
-    color: $light-grey;
-}
-
-:-moz-placeholder {
-    color: $light-grey;
-}
+    color: #bbc8d3
+  }
 
 ::-moz-placeholder {
-    color: $light-grey;
+    color: #bbc8d3
 }
 
 :-ms-input-placeholder {
-    color: $light-grey;
+    color: #bbc8d3
+}
+
+::placeholder {
+    color: #bbc8d3
 }
 
 
