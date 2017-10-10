@@ -146,17 +146,23 @@ add_shortcode('breadcrumb', 'get_breadcrumb');
 
 // Only fetch title name of page and used to display artist name on artist profile page
 // Mostly used for profile description text block
-function artist_title_name( ){
+function artist_title_name(){
    return get_the_title();
 }
 add_shortcode( 'artist-title', 'artist_title_name' );
+
+function get_website_home_url() {
+    $homeurl = esc_url( home_url( '/' ) );
+    echo $homeurl;
+}
+add_shortcode( 'home-url', 'get_home_url');
 
 // Fetch artist name and category to display both on artist profile page
 function get_page_title() {
 	ob_start();
 	?>
     <div class="artist__desc f__center--sm">
-        <h1 class="t__h1 t__bottom f__left--xlg c__dark-blue truncate"><?php the_title(); ?></h1>
+        <h1 class="t__h1 t__bottom f__left--xlg c__black truncate"><?php the_title(); ?></h1>
 		<p class="artist__desc-category c__grey truncate"><?php echo strip_tags(get_the_term_list( get_the_ID(), 'project_category', '', ' | ' ) ); ?></p>
     </div>
 	<?php
