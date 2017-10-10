@@ -10,6 +10,21 @@
 }
 
 div.wpcf7-response-output {
-    margin: 0 0 5px 0 !important;
+    margin: 5px 0 10px 0 !important;
     padding: 0px;
+}
+
+div.screen-reader-response {
+    display: none;
+}
+
+div.wpcf7-validation-errors {
+    font-size: 14px;
+    text-align: left;
+    color: white;
+    background: #e04e50;
+    border: 1px solid #d62528;
+    padding: 9px 14px;
+    border-radius: 6px;
+    margin: 20px 0 0;
 }
