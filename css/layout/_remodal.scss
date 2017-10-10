@@ -353,3 +353,13 @@ html.remodal-is-locked {
     /* Disable Anti-FOUC */
     display: inline-block;
 }
+
+.remodal__separator__hr {
+    border-top: 1px solid $lightsky-blue;
+    margin: 30px 0px;
+
+    // @include mq($until: mobile) {
+    //     margin: 30px -20px;
+    // }
+}
+

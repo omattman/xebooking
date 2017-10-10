@@ -25,6 +25,14 @@
             background-color: #fff;
             box-shadow: 0 2px 1px #e6e5e5;
         }
+
+        @include mq($until: tablet) {
+            padding: 0 15px;
+
+            &-box {
+                padding: 20px;
+            }
+        }
     }
 
     &__form {

@@ -15,4 +15,8 @@
 
 .narrow {
     max-width: 1200px !important;
+
+    &__small {
+        max-width: 1000px !important;
+    }
 }
