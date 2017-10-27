@@ -1,0 +1,26 @@
+.u {
+  &__full {
+    width: 100%;
+
+    @include mq($until: mobile) {
+      &--sm {
+        width: 100%;
+      }
+    }
+    @include mq($from: tablet, $until: desktop) {
+        &--md {
+          width: 100%;
+        }
+    }
+    @include mq($from: wide) {
+        &--lg {
+          width: 100%;
+        }
+    }
+    @include mq($from: wide) {
+        &--xlg {
+          width: 100%;
+        }
+    }
+  }
+}

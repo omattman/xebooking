@@ -84,10 +84,9 @@
 
 @include mq($until: wide) {
     .et_header_style_left #logo, .et_header_style_split #logo {
-        max-width: 90%;
+        max-width: 90% !important;
     }
 }
-
 
 .et-social-icons {
     float: none;
@@ -99,15 +98,21 @@
 
 .et_pb_portfolio_items {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .et_pb_portfolio_item {
-    padding-bottom: 5px;
+    padding-bottom: 30px;
 
-    .et_pb_filterable_portfolio_grid & h2 {
+    .et_pb_filterable_portfolio_grid & h2,
+    .et_pb_portfolio_grid & h2 {
         font-size: 15px;
         font-weight: 400;
         margin: 0;
+    }
+
+    @include mq($until: mobile) {
+        padding-bottom: 0;
     }
 }
 
@@ -119,4 +124,29 @@
 
 #cookie-notice {
     border-top: 1px solid $lightsky-blue;
+}
+
+
+// remove sidebar greyline
+#main-content .container:before {background: none;}
+
+
+// portfolio filter buttons for artist category filterable pages
+.et_pb_filterable_portfolio .et_pb_portfolio_filters li {
+    margin-bottom: 10px;
+    margin-right: 5px;
+
+    @include mq($until: mobile) {
+        width: 48% !important;
+
+        & a {
+            padding: 10px;
+        }
+    }
+}
+
+
+// remove padding from ul on booking site 
+.entry-content ul {
+    padding: 0;
 }

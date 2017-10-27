@@ -247,12 +247,26 @@ function __search_by_title_only( $search, &$wp_query )
 }
 add_filter( 'posts_search', '__search_by_title_only', 500, 2 );
 
-// function remove_posts_from_wp_search($query) {
-//   if ($query->is_search) {
-//   $query->set('post_type', 'page');
-//   }
-//   return $query;
-//   }
-// add_filter('pre_get_posts','remove_posts_from_wp_search');
-// END ENQUEUE PARENT ACTION
+// show search results from projects and pages.
+// 'post' not included to hide blog posts.
+function searchfilter($query) {
+    if ($query->is_search && !is_admin() ) {
+        $query->set('post_type',array('project','page'));
+    }
+    return $query;
+}
+add_filter('pre_get_posts','searchfilter');
+
+
+
+function user_the_categories() {
+    // get all categories for this post
+    global $cats;
+    $cats = get_the_category();
+    // echo the first category
+    echo $cats[0]->cat_name;
+    // echo the remaining categories, appending separator
+    for ($i = 1; $i < count($cats); $i++) {echo ', ' . $cats[$i]->cat_name ;}
+}
+//END ENQUEUE PARENT ACTION
 ?>

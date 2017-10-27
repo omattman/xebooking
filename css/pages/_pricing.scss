@@ -119,19 +119,19 @@
             z-index: 0;
             margin-top: -575px;
             height: 1050px;
-            background: url(http://localhost/xe/wp-content/uploads/2017/04/bg-2-xlg.jpg) no-repeat center top;
+            background: url(https://www.xe.dk/wp-content/uploads/2017/04/bg-2-xlg.jpg) no-repeat center top;
             background-size: 3500px 100%;
 
             @include mq($until: desktop) {
-                background-image: url(http://localhost/xe/wp-content/uploads/2017/04/bg-2-lg.jpg);
+                background-image: url(https://www.xe.dk/wp-content/uploads/2017/04/bg-2-lg.jpg);
                 background-size: 1024px 100%
             }
             @include mq($until: tablet) {
-                background-image: url(http://localhost/xe/wp-content/uploads/2017/04/bg-2-md.jpg);
+                background-image: url(https://www.xe.dk/wp-content/uploads/2017/04/bg-2-md.jpg);
                 background-size: 767px 100%
             }
             @include mq($until: mobile) {
-                background-image: url(http://localhost/xe/wp-content/uploads/2017/04/bg-2-sm.jpg);
+                background-image: url(https://www.xe.dk/wp-content/uploads/2017/04/bg-2-sm.jpg);
                 background-size: 820px 100%
             }
         }
@@ -143,7 +143,7 @@
             z-index: 1;
             margin-top: 175px;
             height: 80px;
-            background: url(http://localhost/xe/wp-content/uploads/2017/04/pricing-arrow-right.svg) no-repeat center top;
+            background: url(https://www.xe.dk/wp-content/uploads/2017/04/pricing-arrow-right.svg) no-repeat center top;
             background-size: 150px 50%;
         }
     }

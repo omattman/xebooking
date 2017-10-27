@@ -81,7 +81,7 @@
         }
 
         &-bg-right {
-            background: url(http://localhost/xe/wp-content/uploads/2017/05/bg-homepage-right.jpg) no-repeat left top;
+            background: url(https://www.xe.dk/wp-content/uploads/2017/05/bg-homepage-right.jpg) no-repeat left top;
             background-size: 1372px 100%;
             margin-top: -2%;
             left: 53%;
@@ -92,7 +92,7 @@
         }
 
         &-bg-left {
-            background-image: url(http://localhost/xe/wp-content/uploads/2017/05/bg-homepage-left-test.jpg);
+            background-image: url(https://www.xe.dk/wp-content/uploads/2017/05/bg-homepage-left-test.jpg);
             background-size: 1310px 100%;
             background-position: right top;
             position: absolute;
@@ -238,19 +238,19 @@
             z-index: 0;
             margin-top: 120px;
             height: 1050px;
-            background: url(http://localhost/xe/wp-content/uploads/2017/04/bg-2-xlg.jpg) no-repeat center top;
+            background: url(https://www.xe.dk/wp-content/uploads/2017/04/bg-2-xlg.jpg) no-repeat center top;
             background-size: 2450px 100%;
 
             @include mq($until: desktop) {
-                background-image: url(http://localhost/xe/wp-content/uploads/2017/04/bg-2-lg.jpg);
+                background-image: url(https://www.xe.dk/wp-content/uploads/2017/04/bg-2-lg.jpg);
                 background-size: 1024px 100%
             }
             @include mq($until: tablet) {
-                background-image: url(http://localhost/xe/wp-content/uploads/2017/04/bg-2-md.jpg);
+                background-image: url(https://www.xe.dk/wp-content/uploads/2017/04/bg-2-md.jpg);
                 background-size: 1200px 100%
             }
             @include mq($until: mobile) {
-                background-image: url(http://localhost/xe/wp-content/uploads/2017/04/bg-2-sm.jpg);
+                background-image: url(https://www.xe.dk/wp-content/uploads/2017/04/bg-2-sm.jpg);
                 background-size: 820px 100%
             }
         }

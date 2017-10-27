@@ -25,7 +25,7 @@
     }
 
     &__right {
-        float: right;
+        float: right !important;
 
         @include mq($until: mobile) {
             &--sm {

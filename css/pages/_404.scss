@@ -1,0 +1,11 @@
+.error {
+  &__column {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: stretch;
+    &-row {
+      width: 40%;
+    }
+  }
+}

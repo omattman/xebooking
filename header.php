@@ -88,7 +88,7 @@
 		                                        <a href="#0">Tilbage</a>
 		                                    </li>
 											<li class="see-all">
-		                                        <a href="<?php echo $homeurl ?>musik/koncertnavne">Se al musik</a>
+		                                        <a href="<?php echo $homeurl ?>musik">Se al musik</a>
 		                                    </li>
 		                                    <li>
 		                                        <a href="<?php echo $homeurl ?>musik/koncertnavne">Koncertnavne</a>
@@ -109,10 +109,7 @@
 		                                        <a href="<?php echo $homeurl ?>musik/receptions-musik">Receptions musik</a>
 		                                    </li>
 		                                    <li>
-		                                        <a href="<?php echo $homeurl ?>musik/jazzlounge">Jazz/Lounge</a>
-		                                    </li>
-		                                    <li>
-		                                        <a href="<?php echo $homeurl ?>musik/musik">Se alle kategorier</a>
+		                                        <a href="<?php echo $homeurl ?>musik">Se alle kategorier</a>
 		                                    </li>
 		                                </ul>
 		                            </li>
@@ -146,7 +143,7 @@
 		                                </ul>
 		                            </li>
 		                            <li class="nav__menu-links">
-		                                <a class="t__h5 c__blue--xlg c__blue--lg c__grey--md c__grey--sm f__left" href="<?php echo $homeurl ?>konferenciers-vaerter/">Konferenciers / Værter</a>
+		                                <a class="t__h5 c__blue--xlg c__blue--lg c__grey--md c__grey--sm f__left" href="<?php echo $homeurl ?>konferenciers-vaerter/konferencier">Konferenciers / Værter</a>
 		                                <ul class="js-hidden">
 		                                    <li class="js-go-back">
 		                                        <a href="#0">Tilbage</a>
@@ -178,7 +175,7 @@
 		                                        <a href="<?php echo $homeurl ?>artister/prisklasse-3">Prisklasse 3</a>
 		                                    </li>
 											<li>
-		                                        <a href="<?php echo $homeurl ?>artister-i-særklasse">Artister i særklasse</a>
+		                                        <a href="<?php echo $homeurl ?>artister-i-saerklasse">Artister i særklasse</a>
 		                                    </li>
 		                                    <li>
 		                                        <a href="<?php echo $homeurl ?>artister/">Se alle artister</a>
@@ -200,7 +197,7 @@
 		                            <a href="<?php echo $homeurl ?>nyheder">Nyheder</a>
 		                        </li>
 		                        <li>
-		                            <a href="<?php echo esc_url( home_url( '/' ) ); ?>/forespoergsel">Booking</a>
+		                            <a href="<?php echo $homeurl ?>/forespoergsel">Booking</a>
 		                        </li>
 		                        <li>
 		                            <a href="<?php echo $homeurl ?>om-xe">Om XE</a>

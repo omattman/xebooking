@@ -523,7 +523,7 @@ class DS_Custom_Blog extends ET_Builder_Module {
                                             ),
                                             (
                                                 'on' === $show_categories
-                                                ? sprintf(__('%s', 'et_builder'), '<div class="f__up f__no-und categories__link">' . get_the_category_list(', ') . '</div>' )
+                                                ? sprintf(__('%s', 'et_builder'), '<div class="f__up f__no-und categories__link">' . get_the_category_list(' | ') . '</div>' )
                                                 : ''
                                             ),
                                             (

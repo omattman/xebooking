@@ -76,7 +76,7 @@
             else
               get_template_part( 'includes/navigation', 'index' );
             else :
-              get_template_part( 'includes/no-results', 'index' );
+              get_template_part( 'no-results', 'index' );
           endif;
         ?>
         </div> <!-- et_pb_portfolio -->

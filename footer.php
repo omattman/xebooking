@@ -65,7 +65,7 @@ if ( ! is_page_template( 'page-template-blank.php' ) ) : ?>
 						<div class="footer__links">
                             <h4 class="t__h6 c__blue footer__heading">Følg os</h4>
                             <div class="footer__link"><a href="https://www.facebook.com/XEbooking/">Følg os på Facebook</a></div>
-                            <div class="footer__link"><a href="#">Tilmeld Nyhedsbrev</a></div>
+                            <div class="footer__link"><a href="<?php echo $homeurl ?>nyhedsbrev">Tilmeld Nyhedsbrev</a></div>
                         </div>
                         <div class="footer__links  footer__links-blog">
                             <h4 class="t__h6 c__blue footer__heading">Seneste Nyheder</h4>

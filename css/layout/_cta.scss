@@ -124,6 +124,15 @@
         border-bottom-left-radius: 0 !important;
     }
 
+    &__error {
+        float: left;
+        padding-right: 0 !important;
+        padding-left: 0 !important;
+        width: 25% !important;
+        border-top-left-radius: 0 !important;
+        border-bottom-left-radius: 0 !important;
+    }
+
     &__desc-item {
         padding: 0 5px;
         color: $light-grey;
@@ -195,7 +204,8 @@
 
         &__email,
         &__extra,
-        &__submit {
+        &__submit,
+        &__error {
             width: 100% !important;
             border-radius: 4px !important;
         }
@@ -206,7 +216,8 @@
             text-align: center;
         }
 
-        &__submit {
+        &__submit,
+        &__error {
             margin-top: 14px !important;
             border-radius: 4px;
         }
