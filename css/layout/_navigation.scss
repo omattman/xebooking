@@ -1,856 +1,882 @@
-
 /* ***************************************************************************
 ************************ Navigation  *****************************************
 *************************************************************************** */
 @media only screen and (max-width: 1169px) {
-    body.nav-on-left.overflow-hidden {
-        overflow: hidden;
-    }
+  body.nav-on-left.overflow-hidden {
+    overflow: hidden;
+  }
 }
 
 .main__content,
 .nav__header {
-    position: relative;
-    transition: transform .3s;
-    /* Force Hardware Acceleration in WebKit */
-    transform: translateZ(0);
+  position: relative;
+  transition: transform 0.3s;
+  /* Force Hardware Acceleration in WebKit */
+  transform: translateZ(0);
 
-    will-change: transform;
-    @include mq($until: wide) {
-        &.js-visible {
-            transform: translateX(-260px);
-        }
-
-        .nav-on-left &.js-visible {
-            transform: translateX(260px);
-        }
+  will-change: transform;
+  @include mq($until: wide) {
+    &.js-visible {
+      transform: translateX(-260px);
     }
+
+    .nav-on-left &.js-visible {
+      transform: translateX(260px);
+    }
+  }
 }
 
 .main__content {
-    z-index: 2;
-    min-height: 100vh;
+  z-index: 2;
+  min-height: 100vh;
 }
 
 .nav {
-    &__top {
-        position: relative;
-        padding-top: 15px;
-        padding-bottom: 15px;
-        height: 60px;
-
-        @include mq($until: wide) {
-            height: 50px;
-        }
-    }
-
-    &__padding {
-        padding-right: 15px;
-        padding-left: 15px;
-    }
-
-    &__header {
-        z-index: 3;
-        background: #ffffff;
-
-        @include mq($from: wide) {
-            &:after {
-                display: table;
-                clear: both;
-                content: "";
-            }
-        }
-
-        .container {
-            padding: 0 !important;
-        }
-
-        .js-nav-fixed & {
-            position: fixed;
-            top: 0;
-            right: 0;
-            left: 0;
-            z-index: 99;
-            margin: 0 auto;
-            max-width: 1404px;
-            width: 100%;
-            box-shadow: 0px 0px 0px 1px $lightsky-blue;
-        }
-    }
-
-    &__menu,
-    &__search {
-        &-trigger {
-            position: relative;
-            z-index: 3;
-            display: block;
-            overflow: hidden;
-            width: 44px;
-            height: 44px;
-            /* hide text */
-            color: transparent;
-            white-space: nowrap;
-
-            &:after,
-            &:before {
-                position: absolute;
-                /* search icon */
-                content: '';
-                transition: opacity 0.3s;
-                /* Force Hardware Acceleration in WebKit */
-                transform: translateZ(0);
-
-                backface-visibility: hidden;
-            }
-        }
-    }
-
-    &__primary,
-    &__primary ul {
-        position: fixed;
-        top: 0;
-        right: 0;
-        z-index: 3;
-        overflow: auto;
-        -webkit-overflow-scrolling: touch;
-        padding: 0;
-        width: 260px;
-        height: 100%;
-        background: #fff;
-        transition: transform 0.3s;
-        /* Force Hardware Acceleration in WebKit */
-        transform: translatZ(0);
-        transform: translatX(0);
-
-        a {
-            display: block;
-            overflow: visible;
-            padding: 0 20px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-            text-overflow: ellipsis;
-            white-space: nowrap;
-            transition: transform 0.3s, opacity 0.3s;
-            transform: translateZ(0);
-
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-            will-change: transform, opacity;
-        }
-
-        &.js-hidden {
-            transform: translateX(100%);
-        }
-
-        &.js-moves-out > li > a {
-            opacity: 0;
-            /* push the navigation items to the left - and lower down opacity - when secondary nav slides in */
-            transform: translateX(-100%);
-        }
-
-        .js-go-back a {
-            padding-left: 40px;
-
-            &:after,
-            &:before {
-                /* arrow goes on the left side - go back button */
-                left: 20px;
-                transform-origin: 1px 50%;
-            }
-        }
-    }
-
-    &__menu-trigger {
-        @include mq($from: wide) {
-            display: none;
-        }
-        span,
-        span:after,
-        span:before {
-            /* hamburger icon in CSS */
-            position: absolute;
-            display: inline-block;
-            width: 24px;
-            height: 3px;
-            background: #2e3233;
-        }
-
-        span {
-            /* line in the center */
-            // position: absolute;
-            top: 50%;
-            right: 0;
-            margin-top: -2px;
-
-            &:after,
-            &:before {
-                right: 0;
-                /* other 2 lines */
-                content: '';
-                transition: transform 0.3 0.3s;
-                /* Force Hardware Acceleration in WebKit */
-                transform: translateZ(0);
-                transform-origin: 0% 50%;
-
-                backface-visibility: hidden;
-            }
-
-            &:before {
-                /* menu icon top line */
-                top: -6px;
-            }
-
-            &:after {
-                /* menu icon bottom line */
-                top: 6px;
-            }
-        }
-
-        &.js-visible span {
-            /* hide line in the center */
-            background: rgba(46, 50, 51, 0);
-
-            &:after,
-            &:before {
-                /* keep visible other 2 lines */
-                background: #2e3233;
-            }
-
-            &:before {
-                transform: translateX(4px) translateY(-3px) rotate(45deg);
-            }
-
-            &:after {
-                transform: translateX(4px) translateY(2px) rotate(-45deg);
-            }
-        }
-    }
-
-    &__search {
-        position: absolute;
-        top: 49px;
-        left: 0;
-        z-index: 3;
-        visibility: hidden;
-        width: 100%;
-        height: 50px;
-        opacity: 0;
-        transition: opacity 0.3s 0s, visibility 0s 0.3s;
-
-        @include mq($from: wide) {
-            top: 59px;
-            height: 120px;
-
-            input {
-                padding: 0 2em;
-                font-weight: 300;
-                font-size: 3.2rem;
-            }
-        }
-
-        form {
-            width: 100%;
-            height: 100%;
-        }
-
-        input {
-            padding: 0 5%;
-            width: 100%;
-            height: 100%;
-            border: none;
-            border-radius: 0;
-            background: #ffffff;
-            box-shadow: inset 0 1px 0 #e2e3df, 0 3px 6px rgba(0, 0, 0, 0.05);
-
-            appearance: none;
-            @include placeholder {
-                color: #c9cbc4;
-            }
-
-            &:focus {
-                outline: none;
-            }
-        }
-
-        &.js-visible {
-            visibility: visible;
-            opacity: 1;
-            transition: opacity 0.3s 0s, visibility 0s 0s;
-        }
-
-        .js-nav-fixed & {
-            position: fixed;
-            right: 0;
-            left: 0;
-            margin: 0 auto;
-            max-width: 1406px;
-        }
-    }
-
-    &__search-trigger {
-        &:before {
-            /* lens */
-            top: 11px;
-            left: 11px;
-            width: 18px;
-            height: 18px;
-            border: 3px solid #2e3233;
-            border-radius: 50%;
-        }
-
-        &:after {
-            right: 11px;
-            bottom: 14px;
-            width: 8px;
-            height: 3px;
-            background: #2e3233;
-            transform: rotate(45deg);
-        }
-
-        span {
-            /* container for the X icon */
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            cursor: pointer;
-        }
-
-        span:after,
-        span:before {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            display: inline-block;
-            margin-top: -2px;
-            margin-left: -11px;
-            width: 22px;
-            height: 3px;
-            background: #2e3233;
-            /* close icon */
-            content: '';
-            opacity: 0;
-            transition: opacity .3s, transform .3s;
-            /* Force Hardware Acceleration in WebKit */
-            transform: translateZ(0);
-
-            backface-visibility: hidden;
-        }
-
-        span:before {
-            transform: rotate(45deg);
-        }
-
-        span:before {
-            transform: rotate(-45deg);
-        }
-
-        &.js-search-visible {
-            &:after,
-            &:before {
-                /* hide search icon */
-                opacity: 0;
-            }
-
-            span:after,
-            span:before {
-                /* show close icon */
-                opacity: 1
-            }
-
-            span:before {
-                transform: rotate(135deg);
-            }
-
-            span:after {
-                transform: rotate(45deg);
-            }
-        }
-    }
-
-
-    &__menu {
-        &-mobile {
-            display: flex;
-            margin: 0 0 0 auto;
-
-            align-items: center;
-        }
-
-        &-logo {
-            // position: absolute;
-            // top: 7px;
-            // left: 5%;
-            display: inline-block;
-            // height: 50px;
-            // width: 50%;
-            background-repeat: no-repeat;
-
-            @include mq($until: wide) {
-                .nav-on-left & {
-                    right: 5%;
-                    left: auto;
-                }
-            }
-            @include mq($from: wide) {
-                top: 17px;
-                left: 4em;
-            }
-        }
-
-        &-buttons {
-            display: flex;
-
-            align-items: center;
-            @include mq($until: wide) {
-                margin: 0 0 0 auto;
-
-                .nav-on-left & {
-                    right: auto;
-                    left: 5%;
-                }
-
-                .nav-on-left & li {
-                    float: right;
-                }
-            }
-            @include mq($from: wide) {
-                top: 12px;
-                right: 2.5em;
-                padding-left: 1em;
-            }
-            // position: absolute;
-            // display: inline-block;
-            // top: 3px;
-            // right: 5%;
-
-            li {
-                display: inline-block;
-            }
-        }
-
-        &-links > a {
-            padding-right: 40px;
-
-            &:after,
-            &:before {
-                /* arrow goes on the right side - children navigation */
-                right: 20px;
-
-                @include prefix(transform-origin, 9px 50%, ms webkit);
-            }
-        }
-
-        &-overlay {
-            /* shadow layer visible when navigation is active */
-            position: fixed;
-            top: 0;
-            left: 0;
-            z-index: 3;
-            visibility: hidden;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.85);
-            opacity: 0;
-            cursor: pointer;
-            transition: opacity 0.3s 0s, visibility 0s 0.3s, transform 0.3s 0s;
-
-            backface-visibility: hidden;
-            @include mq($until: wide) {
-
-                &.js-visible.search-is-visible {
-                    transform: translateX(0);
-                }
-            }
-
-            &.js-visible {
-                visibility: visible;
-                opacity: 1;
-                transition: opacity 0.3s 0s, visibility 0s 0s, transform 0.3s 0s;
-            }
-        }
-    }
+  &__top {
+    position: relative;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    height: 60px;
 
     @include mq($until: wide) {
-        &__primary {
-            /* by default .nav__primary is hidden - trick for iOS devices where you can see the navigation if you pull down */
-            visibility: hidden;
-            border-left: 1px solid lighten( $grey, 45%);
-            background: #fff;
-            transition: visbility 0s 0.3s;
-
-            ul a,
-            a {
-                padding-top: 13px;
-                padding-bottom: 13px;
-                border-bottom: 1px solid lighten( $grey, 45%);
-            }
-
-            .nav__menu-links .t__h5 {
-                margin-bottom: 0;
-                font-weight: 400;
-                font-size: 15px;
-            }
-
-            &.js-visible {
-                visibility: visible;
-                transition: visbility 0s 0s;
-            }
-
-            .nav-on-left &,
-            .nav-on-left & ul {
-                right: auto;
-                left: 0;
-            }
-        }
+      height: 50px;
     }
+
+    @include mq($from: mobile, $until: tablet) {
+      padding-top: 0px !important;
+      padding-bottom: 0px !important;
+    }
+  }
+
+  &__bottom {
+    position: relative;
+    padding: 10px 15px;
+    z-index: 2;
+
+    &-search {
+      position: relative;
+      margin-left: 5px;
+      width: 450px;
+      text-align: left;
+
+      &-icon {
+        margin-top: -2px;
+        margin-right: 5px;
+        width: 15px;
+        height: 15px;
+        opacity: 0.5;
+      }
+    }
+
+    &-search-filter {
+      border: none;
+      color: $grey;
+      min-width: 100%;
+      padding-bottom: 9px;
+    }
+  }
+
+  &__hr {
+    // width: 100%;
+    border-top: 1px solid #dde5ed;
+  }
+
+  &__padding {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  &__header {
+    z-index: 3;
+    background: #ffffff;
+
+    @include mq($from: wide) {
+      &:after {
+        display: table;
+        clear: both;
+        content: "";
+      }
+    }
+
+    .container {
+      padding: 0 !important;
+    }
+
+    .js-nav-fixed & {
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 0;
+      z-index: 99;
+      margin: 0 auto;
+      max-width: 1404px;
+      width: 100%;
+      box-shadow: 0px 0px 0px 1px $lightsky-blue;
+    }
+  }
+
+  &__menu,
+  &__search {
+    &-trigger {
+      position: relative;
+      z-index: 3;
+      display: block;
+      overflow: hidden;
+      width: 44px;
+      height: 44px;
+      /* hide text */
+      color: transparent;
+      white-space: nowrap;
+
+      &:after,
+      &:before {
+        position: absolute;
+        /* search icon */
+        content: "";
+        transition: opacity 0.3s;
+        /* Force Hardware Acceleration in WebKit */
+        transform: translateZ(0);
+
+        backface-visibility: hidden;
+      }
+    }
+  }
+
+  &__primary,
+  &__primary ul {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 3;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 0;
+    width: 260px;
+    height: 100%;
+    background: #fff;
+    transition: transform 0.3s;
+    /* Force Hardware Acceleration in WebKit */
+    transform: translatZ(0);
+    transform: translatX(0);
+
+    a {
+      display: block;
+      overflow: visible;
+      padding: 0 20px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      transition: transform 0.3s, opacity 0.3s;
+      transform: translateZ(0);
+
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      will-change: transform, opacity;
+    }
+
+    &.js-hidden {
+      transform: translateX(100%);
+    }
+
+    &.js-moves-out > li > a {
+      opacity: 0;
+      /* push the navigation items to the left - and lower down opacity - when secondary nav slides in */
+      transform: translateX(-100%);
+    }
+
+    .js-go-back a {
+      padding-left: 40px;
+
+      &:after,
+      &:before {
+        /* arrow goes on the left side - go back button */
+        left: 20px;
+        transform-origin: 1px 50%;
+      }
+    }
+  }
+
+  &__menu-trigger {
+    @include mq($from: wide) {
+      display: none;
+    }
+    span,
+    span:after,
+    span:before {
+      /* hamburger icon in CSS */
+      position: absolute;
+      display: inline-block;
+      width: 24px;
+      height: 3px;
+      background: #2e3233;
+    }
+
+    span {
+      /* line in the center */
+      // position: absolute;
+      top: 50%;
+      right: 0;
+      margin-top: -2px;
+
+      &:after,
+      &:before {
+        right: 0;
+        /* other 2 lines */
+        content: "";
+        transition: transform 0.3 0.3s;
+        /* Force Hardware Acceleration in WebKit */
+        transform: translateZ(0);
+        transform-origin: 0% 50%;
+
+        backface-visibility: hidden;
+      }
+
+      &:before {
+        /* menu icon top line */
+        top: -6px;
+      }
+
+      &:after {
+        /* menu icon bottom line */
+        top: 6px;
+      }
+    }
+
+    &.js-visible span {
+      /* hide line in the center */
+      background: rgba(46, 50, 51, 0);
+
+      &:after,
+      &:before {
+        /* keep visible other 2 lines */
+        background: #2e3233;
+      }
+
+      &:before {
+        transform: translateX(4px) translateY(-3px) rotate(45deg);
+      }
+
+      &:after {
+        transform: translateX(4px) translateY(2px) rotate(-45deg);
+      }
+    }
+  }
+
+  &__search {
+    position: absolute;
+    top: 49px;
+    left: 0;
+    z-index: 3;
+    visibility: hidden;
+    width: 100%;
+    height: 50px;
+    opacity: 0;
+    transition: opacity 0.3s 0s, visibility 0s 0.3s;
+
+    @include mq($from: wide) {
+      top: 59px;
+      height: 120px;
+
+      input {
+        padding: 0 2em;
+        font-weight: 300;
+        font-size: 3.2rem;
+      }
+    }
+
+    form {
+      width: 100%;
+      height: 100%;
+    }
+
+    input {
+      padding: 0 5%;
+      width: 100%;
+      height: 100%;
+      border: none;
+      border-radius: 0;
+      background: #ffffff;
+      box-shadow: inset 0 1px 0 #e2e3df, 0 3px 6px rgba(0, 0, 0, 0.05);
+
+      appearance: none;
+      @include placeholder {
+        color: #c9cbc4;
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    &.js-visible {
+      visibility: visible;
+      opacity: 1;
+      transition: opacity 0.3s 0s, visibility 0s 0s;
+    }
+
+    .js-nav-fixed & {
+      position: fixed;
+      z-index: 999;
+      right: 0;
+      left: 0;
+      margin: 0 auto;
+      max-width: 1406px;
+    }
+  }
+
+  &__search-trigger {
+    &:before {
+      /* lens */
+      top: 11px;
+      left: 11px;
+      width: 18px;
+      height: 18px;
+      border: 3px solid #2e3233;
+      border-radius: 50%;
+    }
+
+    &:after {
+      right: 11px;
+      bottom: 14px;
+      width: 8px;
+      height: 3px;
+      background: #2e3233;
+      transform: rotate(45deg);
+    }
+
+    span {
+      /* container for the X icon */
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+    }
+
+    span:after,
+    span:before {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      display: inline-block;
+      margin-top: -2px;
+      margin-left: -11px;
+      width: 22px;
+      height: 3px;
+      background: #2e3233;
+      /* close icon */
+      content: "";
+      opacity: 0;
+      transition: opacity 0.3s, transform 0.3s;
+      /* Force Hardware Acceleration in WebKit */
+      transform: translateZ(0);
+
+      backface-visibility: hidden;
+    }
+
+    span:before {
+      transform: rotate(45deg);
+    }
+
+    span:before {
+      transform: rotate(-45deg);
+    }
+
+    &.js-search-visible {
+      &:after,
+      &:before {
+        /* hide search icon */
+        opacity: 0;
+      }
+
+      span:after,
+      span:before {
+        /* show close icon */
+        opacity: 1;
+      }
+
+      span:before {
+        transform: rotate(135deg);
+      }
+
+      span:after {
+        transform: rotate(45deg);
+      }
+    }
+  }
+
+  &__menu {
+    &-mobile {
+      display: flex;
+      margin: 0 0 0 auto;
+
+      align-items: center;
+    }
+
+    &-logo {
+      // position: absolute;
+      // top: 7px;
+      // left: 5%;
+      display: inline-block;
+      // height: 50px;
+      // width: 50%;
+      background-repeat: no-repeat;
+
+      @include mq($until: wide) {
+        .nav-on-left & {
+          right: 5%;
+          left: auto;
+        }
+      }
+      @include mq($from: wide) {
+        top: 17px;
+        left: 4em;
+      }
+    }
+
+    &-buttons {
+      display: flex;
+
+      align-items: center;
+      @include mq($until: wide) {
+        margin: 0 0 0 auto;
+
+        .nav-on-left & {
+          right: auto;
+          left: 5%;
+        }
+
+        .nav-on-left & li {
+          float: right;
+        }
+      }
+      @include mq($from: wide) {
+        top: 12px;
+        right: 2.5em;
+        padding-left: 1em;
+      }
+      // position: absolute;
+      // display: inline-block;
+      // top: 3px;
+      // right: 5%;
+
+      li {
+        display: inline-block;
+      }
+    }
+
+    &-hr {
+      width: 100%;
+      border-top: 1px solid $lightsky-blue;
+    }
+
+    &-links > a {
+      padding-right: 40px;
+
+      &:after,
+      &:before {
+        /* arrow goes on the right side - children navigation */
+        right: 20px;
+
+        @include prefix(transform-origin, 9px 50%, ms webkit);
+      }
+    }
+
+    &-overlay {
+      /* shadow layer visible when navigation is active */
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 3;
+      visibility: hidden;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.85);
+      opacity: 0;
+      cursor: pointer;
+      transition: opacity 0.3s 0s, visibility 0s 0.3s, transform 0.3s 0s;
+
+      backface-visibility: hidden;
+      @include mq($until: wide) {
+        &.js-visible.search-is-visible {
+          transform: translateX(0);
+        }
+      }
+
+      &.js-visible {
+        visibility: visible;
+        opacity: 1;
+        transition: opacity 0.3s 0s, visibility 0s 0s, transform 0.3s 0s;
+      }
+    }
+  }
+
+  @include mq($until: wide) {
+    &__primary {
+      /* by default .nav__primary is hidden - trick for iOS devices where you can see the navigation if you pull down */
+      visibility: hidden;
+      border-left: 1px solid lighten($grey, 45%);
+      background: #fff;
+      transition: visbility 0s 0.3s;
+
+      ul a,
+      a {
+        padding-top: 13px;
+        padding-bottom: 13px;
+        border-bottom: 1px solid lighten($grey, 45%);
+      }
+
+      .nav__menu-links .t__h5 {
+        margin-bottom: 0;
+        font-weight: 400;
+        font-size: 15px;
+      }
+
+      &.js-visible {
+        visibility: visible;
+        transition: visbility 0s 0s;
+      }
+
+      .nav-on-left &,
+      .nav-on-left & ul {
+        right: auto;
+        left: 0;
+      }
+    }
+  }
 }
 
 @include mq($from: wide) {
-    .nav__primary {
-        position: static;
-        float: right;
-        overflow: visible;
-        width: auto;
-        // padding: 0 110px 0 0;
-        height: auto;
-        background: transparent;
+  .nav__primary {
+    position: static;
+    float: right;
+    overflow: visible;
+    width: auto;
+    // padding: 0 110px 0 0;
+    height: auto;
+    background: transparent;
 
-        &:after {
-            display: table;
-            clear: both;
-            content: "";
-        }
-
-        &.js-moves-out > li > a {
-            opacity: 1;
-            /* reset mobile style */
-            transform: translateX(0);
-        }
-
-        ul {
-            position: static;
-            z-index: 3;
-            overflow: visible;
-            padding: 0;
-            width: auto;
-            height: auto;
-            background: transparent;
-
-            &.js-hidden {
-                /* reset mobile style */
-                transform: translateX(0);
-            }
-
-            &.js-moves-out > li > a {
-                opacity: 1;
-                /* reset mobile style */
-                transform: translateX(0);
-            }
-        }
-
-        > li {
-            float: left;
-            margin-left: 1em;
-            list-style: none;
-
-            a {
-                /* main navigation buttons style */
-                position: relative;
-                display: inline-block;
-                // color: $grey;
-                overflow: visible;
-
-                padding: 0 2px;
-                border-bottom: none;
-                transition: color 0.3s, box-shadow 0.3s;
-            }
-
-            a:hover {
-                color: #000000;
-            }
-
-            // a.selected {
-            //     color: #000000;
-            //     box-shadow: inset 0 -2px 0 #000000;
-            // }
-        }
-
-
-        .js-go-back,
-        .see-all {
-            display: none;
-        }
-
-        .nav__secondary {
-            /* dropdown menu style */
-            position: absolute;
-            top: 59px;
-            right: -1px;
-            padding: 48px 64px 80px;
-            max-width: 1406px;
-            width: 100vw;
-            background: #ffffff;
-            box-shadow: inset 0 1px 0 #e2e3df, 0 3px 6px rgba(0, 0, 0, 0.05);
-            transition: opacity 0.3s 0s, visibility 0s 0s;
-            transform: translateX(0);
-
-            &:after {
-                display: table;
-                clear: both;
-                content: "";
-            }
-
-            &.js-hidden {
-                visibility: hidden;
-                opacity: 0;
-                transition: opacity 0.3s 0s, visibility 0s 0.3s;
-            }
-
-            > .see-all {
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                /* this is the BIG See all button at the bottom of the dropdown menu */
-                display: block;
-                overflow: hidden;
-                /* reset some inherited style */
-                margin: 0;
-                padding: 0;
-                width: 100%;
-                height: 80px;
-
-                a {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    margin: 0;
-                    padding: 0;
-                    width: 100%;
-                    height: 100%;
-                    border-top: 1px solid #e2e3df;
-                    /* reset some inherited style */
-                    border-bottom: none;
-                    text-align: center;
-                    font-weight: bold;
-                    font-size: 2.2rem;
-                    line-height: 80px;
-                    transition: color 0.2s, background 0.2s, border 0.2s;
-                }
-
-                a:hover {
-                    background: linear-gradient(to bottom, #1280e0 0%, #0675d6 100%);
-                    color: #ffffff;
-                }
-            }
-
-            > li {
-                float: left;
-                overflow: hidden;
-                overflow-x: hidden;
-                overflow-y: auto;
-                -webkit-overflow-scrolling: touch;
-                margin-right: 2.66%;
-                /* here you set the number of columns - use width percentage */
-                width: 23%;
-                /* change the height according to your needs - you can even set height: auto */
-                height: 340px;
-                border-right: 1px solid #e2e3df;
-
-                &:nth-child(4n+2) {
-                    /* +2 because we have 2 list items with display:none */
-                    margin-right: 0;
-                    border-right: none;
-                }
-            }
-
-            // a {
-			// 	height: 30px;
-			// 	line-height: 30px;
-			// 	padding: 0 18% 0 0;
-			// 	color: #000;
-			// 	border-bottom: none;
-			// 	font-size: 1.4rem;
-            //
-			// 	&:hover {
-			// 		color: #000;
-			// 	}
-			// }
-
-            ul {
-                /* Force Hardware Acceleration in WebKit */
-                transform: translateZ(0);
-            }
-
-            ul ul {
-                /* tertiary navigation */
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-
-                &.js-hidden {
-                    transform: translateX(100%);
-                }
-
-                .js-go-back {
-                    display: block;
-
-                    a {
-                        color: transparent;
-                    }
-                }
-
-                .see-all {
-                    display: block;
-                }
-            }
-
-            ul ul .js-go-back {
-                display: block;
-            }
-
-            .js-moves-out > li > a {
-                /* push the navigation items to the left - and lower down opacity - when tertiary nav slides in */
-                transform: translateX(-100%);
-            }
-        }
+    &:after {
+      display: table;
+      clear: both;
+      content: "";
     }
-}
 
+    &.js-moves-out > li > a {
+      opacity: 1;
+      /* reset mobile style */
+      transform: translateX(0);
+    }
+
+    ul {
+      position: static;
+      z-index: 3;
+      overflow: visible;
+      padding: 0;
+      width: auto;
+      height: auto;
+      background: transparent;
+
+      &.js-hidden {
+        /* reset mobile style */
+        transform: translateX(0);
+      }
+
+      &.js-moves-out > li > a {
+        opacity: 1;
+        /* reset mobile style */
+        transform: translateX(0);
+      }
+    }
+
+    > li {
+      float: left;
+      margin-left: 1em;
+      list-style: none;
+
+      a {
+        /* main navigation buttons style */
+        position: relative;
+        display: inline-block;
+        // color: $grey;
+        overflow: visible;
+
+        padding: 0 2px;
+        border-bottom: none;
+        transition: color 0.3s, box-shadow 0.3s;
+      }
+
+      a:hover {
+        color: #000000;
+      }
+
+      // a.selected {
+      //     color: #000000;
+      //     box-shadow: inset 0 -2px 0 #000000;
+      // }
+    }
+
+    .js-go-back,
+    .see-all {
+      display: none;
+    }
+
+    .nav__secondary {
+      /* dropdown menu style */
+      position: absolute;
+      top: 59px;
+      right: -1px;
+      padding: 48px 64px 80px;
+      max-width: 1406px;
+      width: 100vw;
+      background: #ffffff;
+      box-shadow: inset 0 1px 0 #e2e3df, 0 3px 6px rgba(0, 0, 0, 0.05);
+      transition: opacity 0.3s 0s, visibility 0s 0s;
+      transform: translateX(0);
+
+      &:after {
+        display: table;
+        clear: both;
+        content: "";
+      }
+
+      &.js-hidden {
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 0.3s 0s, visibility 0s 0.3s;
+      }
+
+      > .see-all {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        /* this is the BIG See all button at the bottom of the dropdown menu */
+        display: block;
+        overflow: hidden;
+        /* reset some inherited style */
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 80px;
+
+        a {
+          position: absolute;
+          top: 0;
+          left: 0;
+          margin: 0;
+          padding: 0;
+          width: 100%;
+          height: 100%;
+          border-top: 1px solid #e2e3df;
+          /* reset some inherited style */
+          border-bottom: none;
+          text-align: center;
+          font-weight: bold;
+          font-size: 2.2rem;
+          line-height: 80px;
+          transition: color 0.2s, background 0.2s, border 0.2s;
+        }
+
+        a:hover {
+          background: linear-gradient(to bottom, #1280e0 0%, #0675d6 100%);
+          color: #ffffff;
+        }
+      }
+
+      > li {
+        float: left;
+        overflow: hidden;
+        overflow-x: hidden;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        margin-right: 2.66%;
+        /* here you set the number of columns - use width percentage */
+        width: 23%;
+        /* change the height according to your needs - you can even set height: auto */
+        height: 340px;
+        border-right: 1px solid #e2e3df;
+
+        &:nth-child(3n + 2) {
+          /* +2 because we have 2 list items with display:none */
+          margin-right: 0;
+          border-right: none;
+        }
+      }
+
+      ul {
+        /* Force Hardware Acceleration in WebKit */
+        transform: translateZ(0);
+      }
+
+      ul ul {
+        /* tertiary navigation */
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        &.js-hidden {
+          transform: translateX(100%);
+        }
+
+        .js-go-back {
+          display: block;
+
+          a {
+            color: transparent;
+          }
+        }
+
+        .see-all {
+          display: block;
+        }
+      }
+
+      ul ul .js-go-back {
+        display: block;
+      }
+
+      .js-moves-out > li > a {
+        /* push the navigation items to the left - and lower down opacity - when tertiary nav slides in */
+        transform: translateX(-100%);
+      }
+    }
+  }
+}
 
 .js-go-back a,
 .nav__menu-links > a {
-    position: relative;
+  position: relative;
 
-    @include mq($from: wide) {
-        &:before,
-        &:after {
-            background: #c9cbc4;
-        }
-
-        &:hover:before,
-        &:hover:after {
-            background: #69aa6f;
-        }
-    }
-
+  @include mq($from: wide) {
     &:before,
     &:after {
-        position: absolute;
-        top: 50%;
-        display: inline-block;
-        margin-top: -1px;
-        width: 10px;
-        height: 2px;
-        background: #464c4e;
-        /* arrow icon in CSS - for element with nested unordered lists */
-        content: '';
-
-        backface-visibility: hidden;
+      background: #c9cbc4;
     }
 
-    &:before {
-        transform: rotate(45deg);
+    &:hover:before,
+    &:hover:after {
+      background: #69aa6f;
     }
+  }
 
-    &:after {
-        transform: rotate(-45deg);
-    }
+  &:before,
+  &:after {
+    position: absolute;
+    top: 50%;
+    display: inline-block;
+    margin-top: -1px;
+    width: 10px;
+    height: 2px;
+    background: #464c4e;
+    /* arrow icon in CSS - for element with nested unordered lists */
+    content: "";
+
+    backface-visibility: hidden;
+  }
+
+  &:before {
+    transform: rotate(45deg);
+  }
+
+  &:after {
+    transform: rotate(-45deg);
+  }
 }
 
 @include mq($from: wide) {
-    .nav__menu-links > a {
-        &:after,
-        &:before {
-            right: 15%;
-        }
+  .nav__menu-links > a {
+    &:after,
+    &:before {
+      right: 15%;
+    }
+  }
+
+  .nav__primary > .nav__menu-links > a {
+    /* main navigation arrows on larger devices */
+    padding-right: 30px !important;
+
+    &:before,
+    &:after {
+      width: 9px;
+      background: #c9cbc4;
+      transition: width 0.3s, transform 0.3s;
+      transform-origin: 50% 50%;
+
+      backface-visibility: hidden;
     }
 
-    .nav__primary > .nav__menu-links > a {
-        /* main navigation arrows on larger devices */
-        padding-right: 30px !important;
-
-        &:before,
-        &:after {
-            width: 9px;
-            background: #c9cbc4;
-            transition: width 0.3s, transform 0.3s;
-            transform-origin: 50% 50%;
-
-            backface-visibility: hidden;
-        }
-
-        &:before {
-            right: 12px;
-        }
-
-        &:after {
-            right: 7px;
-        }
-
-        &.selected:before,
-        &.selected:after {
-            width: 14px;
-        }
-
-        &.selected:before {
-            transform: translateX(5px) rotate(-45deg);
-		}
-
-        &.selected:after {
-			transform: rotate(45deg);
-		}
+    &:before {
+      right: 12px;
     }
 
-    .nav__secondary > .nav__menu-links > a:after,
-    .nav__secondary > .nav__menu-links > a:before {
-        /* remove arrows on secondary nav titles */
-        display: none;
+    &:after {
+      right: 7px;
     }
 
-    .nav__primary .js-go-back a {
-        padding-left: 20px;
-
-        &:after,
-        &:before {
-            left: 1px;
-        }
+    &.selected:before,
+    &.selected:after {
+      width: 14px;
     }
+
+    &.selected:before {
+      transform: translateX(5px) rotate(-45deg);
+    }
+
+    &.selected:after {
+      transform: rotate(45deg);
+    }
+  }
+
+  .nav__secondary > .nav__menu-links > a:after,
+  .nav__secondary > .nav__menu-links > a:before {
+    /* remove arrows on secondary nav titles */
+    display: none;
+  }
+
+  .nav__primary .js-go-back a {
+    padding-left: 20px;
+
+    &:after,
+    &:before {
+      left: 1px;
+    }
+  }
 }
 
 /* ***************************************************************************
 ************************ Navigation - No Javascript **************************
 *************************************************************************** */
 .no-js .nav__primary {
-    position: relative;
-    z-index: 2;
-    visibility: visible;
-    overflow: visible;
-    width: 100%;
-    height: auto;
+  position: relative;
+  z-index: 2;
+  visibility: visible;
+  overflow: visible;
+  width: 100%;
+  height: auto;
 }
 
 .no-js .nav__search {
-    position: relative;
-    top: 0;
-    visibility: visible;
-    opacity: 1;
-    filter: alpha(opacity=100);
+  position: relative;
+  top: 0;
+  visibility: visible;
+  opacity: 1;
+  filter: alpha(opacity=100);
 }
 @media only screen and (min-width: 1170px) {
-    .no-js .nav__primary {
-        position: absolute;
-        top: 0;
-        right: 150px;
-        z-index: 3;
-        display: inline-block;
-        padding: 0;
-        width: auto;
-    }
+  .no-js .nav__primary {
+    position: absolute;
+    top: 0;
+    right: 150px;
+    z-index: 3;
+    display: inline-block;
+    padding: 0;
+    width: auto;
+  }
 
-    .no-js .js-nav-fixed .nav__primary {
-        position: fixed;
-    }
+  .no-js .js-nav-fixed .nav__primary {
+    position: fixed;
+  }
 }
