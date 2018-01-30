@@ -1,173 +1,193 @@
 .artist {
-    &__pricing,
-    &__recommendations {
-        &__container {
-            @include flexbox;
+  &__pricing,
+  &__recommendations {
+    &__container {
+      @include flexbox;
 
-            @include mq($until: mobile) {
-                @include flex-wrap(wrap);
-            }
-        }
-
-        &__option {
-            @include mq($until: mobile) {
-                width: 100%;
-                margin-right: 0;
-                padding-right: 0;
-                border-right: none;
-            }
-        }
+      @include mq($until: mobile) {
+        @include flex-wrap(wrap);
+      }
     }
 
-    &__pricing {
-        &__container {
-            flex-wrap: nowrap;
-            // align-items: center;
-        }
+    &__option {
+      @include mq($until: mobile) {
+        width: 100%;
+        margin-right: 0;
+        padding-right: 0;
+        border-right: none;
+      }
+    }
+  }
 
-        &__option {
-            width: 50%;
-            padding-right: 40px;
-            border-right: 1px solid $lightsky-blue;
-
-            &:last-child {
-                margin-right: 0;
-                padding-right: 0px;
-                padding-left: 40px;
-                border-right: none;
-            }
-
-            @include mq($until: mobile) {
-                width: 100%;
-                margin-right: 0;
-                padding-right: 0;
-                border-right: none;
-            }
-        }
+  &__pricing {
+    &__container {
+      flex-wrap: nowrap;
+      // align-items: center;
     }
 
-    &__recommendations {
+    &__option {
+      width: 50%;
+      padding-right: 40px;
+      border-right: 1px solid $lightsky-blue;
 
-        &__container {
-            justify-content: flex-start;
-            flex-direction: column;
-        }
+      &:last-child {
+        margin-right: 0;
+        padding-right: 0px;
+        padding-left: 40px;
+        border-right: none;
+      }
 
-        &-story {
-            width: 100%;
-            padding-top: 15px;
-            border-top: 1px solid $lightsky-blue;
+      @include mq($until: mobile) {
+        width: 100%;
+        margin-right: 0;
+        padding-right: 0;
+        border-right: none;
+      }
+    }
+  }
 
-            &:last-child {
-                margin-right: 0;
-            }
-
-            p {
-                margin-bottom: 1.65em;
-            }
-
-            @include mq($until: mobile) {
-                width: 100%;
-                margin-right: 0;
-                padding-right: 0;
-                border-right: none;
-            }
-        }
-
-        &-person {
-            font-weight: 500;
-            color: $blue;
-            text-transform: uppercase;
-            letter-spacing: .03em;
-            font-size: 13px;
-
-            p {
-                margin-bottom: 0;
-
-                &:last-of-type {
-                    margin-bottom: 1.65em;
-                }
-            }
-        }
-
-
+  &__recommendations {
+    &__container {
+      justify-content: flex-start;
+      flex-direction: column;
     }
 
-    &__desc {
-        @include mq($until: mobile) {
-            padding: 10px;
-        }
+    &-story {
+      width: 100%;
+      padding-top: 15px;
+      border-top: 1px solid $lightsky-blue;
 
-        &-category {
-            font-size: 20px;
-            font-weight: 300;
+      &:last-child {
+        margin-right: 0;
+      }
 
-            @include mq($until: tablet) {
-                text-align: center;
-            }
-            @include mq($until: mobile) {
-                font-size: 14px;
-            }
+      p {
+        margin-bottom: 1em;
+      }
+
+      li {
+        padding-left: 10px;
+        margin-bottom: 8px;
+
+        &:before {
+          margin-left: -10px;
+          content: "– ";
         }
+      }
+
+      @include mq($until: mobile) {
+        width: 100%;
+        margin-right: 0;
+        padding-right: 0;
+        border-right: none;
+      }
     }
 
-    &__text-lead {
-        font-size: 18px;
+    &-person {
+      font-weight: 500;
+      color: $blue;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      font-size: 13px;
 
-        @include mq($until: mobile) {
-            font-size: 16px;
+      p {
+        margin-bottom: 0;
+
+        &:last-of-type {
+          margin-bottom: 1.65em;
         }
+      }
+    }
+  }
+
+  &__desc {
+    @include mq($until: mobile) {
+      padding: 10px;
     }
 
-    &__btn-equal-width {
-        display: flex;
+    &-category {
+      font-size: 20px;
+      font-weight: 300;
 
-        a {
-            flex: 1;
-            margin-right: 10px;
+      @include mq($until: tablet) {
+        text-align: center;
+      }
+      @include mq($until: mobile) {
+        font-size: 14px;
+      }
+    }
+  }
 
-            &:last-child {
-                margin-right: 0;
-            }
-        }
+  &__text-lead {
+    font-size: 18px;
+
+    @include mq($until: mobile) {
+      font-size: 16px;
+    }
+  }
+
+  &__btn-equal-width {
+    display: flex;
+
+    a {
+      flex: 1;
+      // change back to 10px if pricing buttons are included again.
+      margin-right: 0 !important;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__cta {
+    padding-top: 0;
+    border: 1px solid #dde5ed;
+    border-radius: 4px;
+
+    &-bg {
+      position: absolute;
+      left: -100px;
+      right: 0;
+      top: -50px;
+      z-index: 0;
+      // margin-top: -575px;
+      height: 200px;
+      background-image: url(https://www.xe.dk/wp-content/uploads/2017/04/bg-2-sm.jpg);
+      background-size: 500px 100%;
+
+      @include mq($from: mobile, $until: tablet) {
+        position: absolute;
+        left: -430px;
+        top: -100px;
+        height: 400px;
+        background-size: 1600px 100%;
+      }
+    }
+  }
+
+  &__contact {
+    padding: 8px 15px;
+
+    &-desc {
+      margin-left: -15px;
     }
 
-    &__cta {
-        padding-top: 0;
-        border: 1px solid #DDE5ED;
-        border-radius: 4px;
-
-        &-bg {
-            position: absolute;
-            left: -100px;
-            right: 0;
-            top: -50px;
-            z-index: 0;
-            // margin-top: -575px;
-            height: 200px;
-            background-image: url(https://www.xe.dk/wp-content/uploads/2017/04/bg-2-sm.jpg);
-            background-size: 500px 100%;
-
-            @include mq($from: mobile, $until: tablet) {
-                position: absolute;
-                left: -430px;
-                top: -100px;
-                height: 400px;
-                background-size: 1600px 100%;
-            }
-        }
+    @include mq($until: mobile) {
+      margin-left: 40px;
     }
+  }
 
-    &__article {
-        p {
-            margin-bottom: 1.65em;
-        }
+  &__article {
+    p {
+      margin-bottom: 1.65em;
     }
+  }
 }
 
 .truncator-link {
-    margin-top: 10px;
-    padding: 8px;
-    text-align: center;
-    border: 1px solid #DDE5ED;
+  margin-top: 10px;
+  padding: 8px;
+  text-align: center;
+  border: 1px solid #dde5ed;
 }
