@@ -1,4 +1,8 @@
+<?php $search_query = get_search_query(); ?>
 
+<head>
+  <title>Du søgter efter <?php printf($search_query) ?> – xe</title>
+</head>
 <?php get_header(); ?>
 
 <div id="main-content" class="clearfix">
@@ -7,7 +11,7 @@
 			<div class="et_pb_column et_pb_column_4_4  et_pb_column_0">
 				<div class="et_pb_text et_pb_module et_pb_bg_layout_light et_pb_text_align_left et_pb_text_0">
           <div class="et_pb_text_inner">
-            <div class="sp__6"></div>
+            <div class="sp__11--xlg sp__11--lg sp__7--md sp__5--sm"></div>
             <h1 class="t__h2 c__dark-blue f__left">Søgeresultater</h1>
               Søgeord: <strong><?php /* Search Count */
 							// Changed '&new' to 'new'

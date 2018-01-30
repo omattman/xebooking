@@ -24,7 +24,7 @@ $is_page_builder_used = et_pb_is_pagebuilder_used( get_the_ID() );
 					<?php if ( ( 'off' !== $show_default_title && $is_page_builder_used ) || ! $is_page_builder_used ) { ?>
 						<div class="container">
                             <div class="article__hero">
-								<div class="sp__6"></div>
+								<div class="sp__11--xlg sp__11--lg sp__7--md sp__5--sm"></div>
                                 <h1 class="article__hero-title"><?php the_title(); ?></h1>
                             </div>
                         </div>
