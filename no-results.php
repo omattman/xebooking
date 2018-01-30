@@ -1,3 +1,6 @@
+<head>
+  <title>Siden kunne ikke findes – xe</title>
+</head>
 <?php get_header(); ?>
 <?php 
   $requested_url = get_query_var('name');
