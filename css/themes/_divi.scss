@@ -1,152 +1,142 @@
 #page-container {
+  padding-top: 60px !important; // section {
+  //     padding-top: 60px;
+  // }
+  @include mq($until: mobile) {
     padding-top: 60px !important;
-
-    // section {
-    //     padding-top: 60px;
-    // }
-
-    @include mq($until: mobile) {
-        padding-top: 60px !important;
-    }
+  }
 }
 
 #main-content .container {
-    padding-top: 0px;
+  padding-top: 0px;
 }
-
-
 
 // Navigation styling
 #et-top-navigation {
-    font-weight: 400;
+  font-weight: 400;
 }
 
 #top-menu li li a {
-    padding: 0 20px;
+  padding: 0 20px;
 }
 
 @media (max-width: 980px) {
-    .et_non_fixed_nav.et_transparent_nav #main-header, .et_non_fixed_nav.et_transparent_nav #top-header, .et_fixed_nav #main-header, .et_fixed_nav #top-header {
-        height: 60px;
-        position: fixed;
-    }
-
-    .mobile_menu_bar:before {
-        top: -12px;
-    }
+  .et_non_fixed_nav.et_transparent_nav #main-header,
+  .et_non_fixed_nav.et_transparent_nav #top-header,
+  .et_fixed_nav #main-header,
+  .et_fixed_nav #top-header {
+    height: 60px;
+    position: fixed;
+  }
+  .mobile_menu_bar:before {
+    top: -12px;
+  }
 }
 
-
 .menu-item a:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .sub-menu {
-    border: 1px solid #dde5ed !important;
+  border: 1px solid #dde5ed !important;
 }
 
-
-
 .et_pb_row {
-    width: 100%;
-    padding-top: 0 !important;
-    padding-bottom: 0 !important;
+  width: 100%;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
 }
 
 // for background absolute
 .et_pb_row--extend {
-    max-width: 3000px !important;
-    width: 100%;
+  max-width: 3000px !important;
+  width: 100%;
 }
 
 .homepage .et_pb_row_2,
 .et_pb_row_4col {
-    -webkit-align-items: center;
-    align-items: center;
-    display: flex;
-    padding-top: 10px;
-    padding-bottom: 0px;
-
-    @include mq($until: tablet) {
-        display: none !important;
-    }
+  -webkit-align-items: center;
+  align-items: center;
+  display: flex;
+  padding-top: 10px;
+  padding-bottom: 0px;
+  @include mq($until: tablet) {
+    display: none !important;
+  }
 }
 
 .et_pb_column,
 .et_pb_module {
-    margin-bottom: 0px !important;
+  margin-bottom: 0px !important;
 }
 
-.et_pb_pagebuilder_layout.single.et_full_width_page #page-container .et_pb_row, .et_pb_pagebuilder_layout.single.et_full_width_portfolio_page #page-container .et_pb_row {
-    width: 100%;
+.et_pb_pagebuilder_layout.single.et_full_width_page #page-container .et_pb_row,
+.et_pb_pagebuilder_layout.single.et_full_width_portfolio_page
+  #page-container
+  .et_pb_row {
+  width: 100%;
 }
-
 
 @include mq($until: wide) {
-    .et_header_style_left #logo, .et_header_style_split #logo {
-        max-width: 90% !important;
-    }
+  .et_header_style_left #logo,
+  .et_header_style_split #logo {
+    max-width: 90% !important;
+  }
 }
 
 .et-social-icons {
-    float: none;
+  float: none;
 }
 
 .et-social-icons li {
-    display: inline-block;
+  display: inline-block;
 }
 
 .et_pb_portfolio_items {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .et_pb_portfolio_item {
-    padding-bottom: 30px;
-
-    .et_pb_filterable_portfolio_grid & h2,
-    .et_pb_portfolio_grid & h2 {
-        font-size: 15px;
-        font-weight: 400;
-        margin: 0;
-    }
-
-    @include mq($until: mobile) {
-        padding-bottom: 0;
-    }
+  padding-bottom: 30px;
+  .et_pb_filterable_portfolio_grid & h2,
+  .et_pb_portfolio_grid & h2 {
+    font-size: 15px;
+    font-weight: 400;
+    margin: 0;
+  }
+  @include mq($until: mobile) {
+    padding-bottom: 0;
+  }
 }
 
 .et_portfolio_image img {
-    border-top-right-radius: 3px;
-    border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
 }
-
 
 #cookie-notice {
-    border-top: 1px solid $lightsky-blue;
+  border-top: 1px solid $lightsky-blue;
 }
 
-
 // remove sidebar greyline
-#main-content .container:before {background: none;}
-
+#main-content .container:before {
+  background: none;
+}
 
 // portfolio filter buttons for artist category filterable pages
 .et_pb_filterable_portfolio .et_pb_portfolio_filters li {
-    margin-bottom: 10px;
-    margin-right: 5px;
-
-    @include mq($until: mobile) {
-        width: 48% !important;
-
-        & a {
-            padding: 10px;
-        }
+  margin-bottom: 10px;
+  margin-right: 5px;
+  @include mq($until: mobile) {
+    width: 48% !important;
+    & a {
+      padding: 10px;
     }
+  }
 }
 
-
-// remove padding from ul on booking site 
+// remove padding from ul on booking site
 .entry-content ul {
-    padding: 0;
+  padding: 0;
 }
