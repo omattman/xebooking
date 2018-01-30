@@ -14,7 +14,7 @@ jQuery(document).ready(function($) {
     jQuery('.js-truncate-text').readmore({
         moreLink: '<a class="truncator-link" href="#">Vis hele beskrivelsen</a>',
         lessLink: '<a class="truncator-link" href="#">Skjul beskrivelsen</a>',
-        collapsedHeight: 700,
+        collapsedHeight: 495,
         afterToggle: function(trigger, element, expanded) {
             if (!expanded) { // The "Close" link was clicked
                 jQuery('html, body').animate({
