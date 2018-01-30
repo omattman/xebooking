@@ -1,0 +1,70 @@
+.searchwp-live-search-results {
+  box-sizing: border-box;
+  background: #fff;
+  box-shadow: 0 0 2px 0 rgba(30, 30, 30, 0.4);
+  border-radius: 0px !important;
+  min-height: 175px;
+  max-height: 340px !important;
+}
+.searchwp-live-search-result {
+  & p {
+    font-size: 14px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border-bottom: none !important;
+  }
+
+  & a {
+    display: flex !important;
+    width: 100%;
+    padding: 10px !important;
+    border-bottom: 1px solid #f5f4f8;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+
+    &:after {
+      display: table;
+      clear: both;
+      content: "";
+    }
+
+    & figure {
+      min-width: 75px;
+      max-width: 75px;
+      padding-right: 10px;
+      flex: 1;
+
+      & img {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        vertical-align: middle;
+      }
+    }
+
+    & figcaption {
+      overflow: hidden;
+      margin: 0;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      flex: 2;
+    }
+
+    &-title {
+      overflow: hidden;
+      margin: 0;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
+    &-category {
+      font-size: 14px;
+      overflow: hidden;
+      margin: 0;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      color: rgba(0, 0, 0, 0.5);
+    }
+  }
+}
