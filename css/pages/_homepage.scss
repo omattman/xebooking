@@ -201,8 +201,13 @@
     }
 
 
-    &__logos .customers__list-logo {
-        opacity: 1;
+
+    &__logos {
+        padding: 20px 5px 10px !important;
+    }
+
+    &-hr {
+        border-bottom: 1px solid $lightsky-blue;
     }
 
 
@@ -252,6 +257,92 @@
             @include mq($until: mobile) {
                 background-image: url(https://www.xe.dk/wp-content/uploads/2017/04/bg-2-sm.jpg);
                 background-size: 820px 100%
+            }
+        }
+    }
+
+    &__intro {
+        &-actions {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            @include mq($until: mobile) {
+                display: block;
+                width: 100%;
+            }
+        }
+
+        &-divider {
+            display: inline-block;
+            font-size: 13px;
+            line-height: 60px;
+            margin: 0 7px;
+
+            @include mq($until: mobile) {
+                line-height: 20px;
+                margin: 0 auto;
+                width: 100%;
+            }
+        }
+
+        &-btn {
+            width: 260px;
+            height: 60px;
+            line-height: 30px;
+            font-size: 16px;
+
+            @include mq($until: mobile) {
+                width: 100%;
+            }
+        }
+
+        &-btn-primary {
+            font-weight: 600;
+        }
+
+        &-btn-secondary {
+            font-weight: 400;
+        }
+    }
+
+    &__customer {
+        display: flex;
+
+        &-story {
+            position: relative;
+            overflow: hidden;
+            padding: 30px;
+            outline: none;
+            border: 1px solid #dde5ed;
+            border-radius: 6px;
+            transition: box-shadow .5s;
+
+            &:first-of-type {
+                margin-right: 50px !important;
+            }
+
+            @include mq($until: mobile) {
+                &:first-of-type {
+                    margin-right: 0px !important;
+                }
+            }
+        }
+
+        &-person {
+            margin-top: 20px;
+            display: flex;
+            align-content: center;
+            align-items: center;
+        }
+
+        @include mq($until: mobile) {
+            &-story {
+                padding: 20px 15px;
+            }
+
+            &-image {
+                display: none;
             }
         }
     }

@@ -94,6 +94,10 @@
         &-logo {
             max-width: 50%
         }
+
+        &-buttons {
+
+        }
     }
 
     &__article {
@@ -211,6 +215,10 @@
             font-size: 14px;
             transition: opacity .2s, transform .3s;
             transition: opacity .2s, transform .3s, -webkit-transform .3s;
+
+            &:last-of-type {
+                margin-top: 15px;
+            }
         }
 
         &-desc-hover {
@@ -247,6 +255,46 @@
             height: 40px;
             transition: opacity .2s, transform .3s;
             transition: opacity .2s, transform .3s, -webkit-transform .3s
+        }
+    }
+
+    &__recommendation {
+        display: flex;
+
+        &-story {
+            position: relative;
+            overflow: hidden;
+            padding: 30px;
+            outline: none;
+            border: 1px solid #dde5ed;
+            border-radius: 6px;
+            transition: box-shadow .5s;
+            margin-bottom: 40px;
+
+            p {
+                margin-bottom: 10px;
+            }
+        }
+
+        &-person {
+            margin-top: 20px;
+            display: flex;
+            align-content: center;
+            align-items: center;
+
+            p {
+                margin-bottom: 0px;
+            }
+        }
+
+        @include mq($until: mobile) {
+            &-story {
+                padding: 20px 15px;
+            }
+
+            &-image {
+                display: none;
+            }
         }
     }
 
@@ -328,7 +376,7 @@
         &-container {
             margin-right: auto;
             margin-left: auto;
-            padding: 0 15px;
+            // padding: 0 15px;
             max-width: 1194px;
         }
 
@@ -338,8 +386,8 @@
             min-width: 33.33%;
             width: 33.33%;
             transition: opacity .3s linear;
-
             flex-basis: 33.33%;
+
             @include mq($until: desktop) {
                 padding: 40px 15px 0;
             }
@@ -364,9 +412,35 @@
             }
         }
 
+        &-person {
+            display: flex;
+            min-width: 50%;
+            width: 50%;
+            flex-basis: 50%;
+            padding: 70px 15px 0;
+            transition: opacity .3s linear;  
+        }
+
+        &-text {
+            display: flex;
+        }
+
         &-logo {
             display: flex;
-            opacity: 0.4;
+            opacity: 0.6;
+            transition: opacity 150ms cubic-bezier(.23,1,.32,1);
+            
+            &:hover {
+                opacity: 1;
+                -webkit-transform: scale(1.1);
+                transform: scale(1.1);
+            }
         }
     }
+}
+
+.homepage__logos,
+.customers__list-logo,
+.customers__list-text {
+    margin-bottom: 15px;
 }
