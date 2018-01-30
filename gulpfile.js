@@ -24,7 +24,8 @@ var	config = {
 	bowerDir: 		'./bower_components',
   	sassPath: 		'./css',
   	javaPath: 		'./js',
-  	imgPath: 		'./img',
+    imgPath: 		'./img',
+    searchwpPath:   './searchwp-live-ajax-search'
 };
 
 // Destination paths.
@@ -32,7 +33,8 @@ var dist = {
     css: 			build,
     js: 			build + '/js',
     img: 			build + '/img',
-    php: 			build
+    php: 			build,
+    searchwp:       build + '/searchwp-live-ajax-search'
 }
 
 // Run Bower task
@@ -60,6 +62,13 @@ gulp.task('php', function(){
     return gulp.src('*.php')
         .pipe(gulp.dest(dist.php))
 		.pipe(browserSync.stream());
+});
+
+// SearchWP live ajax search configuration
+gulp.task('searchwp', function(){
+    return gulp.src(config.searchwpPath + '/**/*')
+        .pipe(gulp.dest(dist.searchwp))
+        .pipe(browserSync.stream());
 });
 
 // SASS/css function. Defines path where our main scss file is and error handling
@@ -91,7 +100,7 @@ gulp.task('js', function(){
     return gulp.src(javascript)
         .pipe(concat('main.js'))
         .pipe(gulp.dest(dist.js))
-		.pipe(browserSync.stream());;
+		.pipe(browserSync.stream());
 });
 
 // Initialize browserSync. Rerun the task when a watched file changes
@@ -100,13 +109,13 @@ gulp.task('watch', ['default'], function() {
 
 	browserSync.init({
 		notify: false,
-		// proxy: "http://localhost/xe/",
 		snippetOptions: {
 			ignorePaths: "wp-admin/**"
 		}
 	});
 
     gulp.watch('*.php', ['php']);
+    gulp.watch(config.searchwpPath + '/**/*.php', ['searchwp']);
     gulp.watch(config.sassPath + '/**/*.scss', ['css']);
     gulp.watch(config.javaPath + '/*.js', ['js']);
 });
@@ -116,8 +125,12 @@ gulp.task('compress-css', ['css'], function(){
     return gulp.src(dist.css + '/**/*.css')
 		.pipe(concat('style.css'))
 		.pipe(gulp.dest(dist.css))
-		.pipe(rename('style.min.css'))
-        .pipe(nano())
+		// .pipe(rename('style.min.css'))
+        .pipe(nano({
+            normalizeUrl: {
+                stripWWW: false
+            }
+        }))
         .pipe(gulp.dest(dist.css));
 });
 
@@ -135,7 +148,7 @@ gulp.task('compress-js', ['js'], function() {
 gulp.task('compress', ['compress-css', 'compress-js']);
 
 // Default task. No compressing
-gulp.task('default', ['bower', 'css', 'php', 'js']);
+gulp.task('default', ['bower', 'css', 'php', 'searchwp', 'js']);
 
 // Production task. Use before using on live site.
 gulp.task('production',['default', 'compress','img']);
