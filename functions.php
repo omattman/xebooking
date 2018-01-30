@@ -35,6 +35,7 @@ function remove_contactform7_css(){
 }
 add_action( 'wp_enqueue_scripts', 'remove_contactform7_css' );
 
+
 // Remove script version numbers. Numbers being enabled can lead to issues with
 // caching/minification plugins, as well as helps hackers identify the website better.
 function remove_cssjs_ver( $src ) {
@@ -72,9 +73,9 @@ function remove_metaboxes() {
     remove_meta_box( 'revisionsdiv','page','normal' );
     remove_meta_box( 'revisionsdiv','project','normal' );
 
-    remove_meta_box( 'slugdiv','post','normal' );
-    remove_meta_box( 'slugdiv','page','normal' );
-    remove_meta_box( 'slugdiv','project','normal' );
+    // remove_meta_box( 'slugdiv','post','normal' );
+    // remove_meta_box( 'slugdiv','page','normal' );
+    // remove_meta_box( 'slugdiv','project','normal' );
 
     remove_meta_box( 'trackbacksdiv','post','normal' );
     remove_meta_box( 'trackbacksdiv','page','normal' );
@@ -82,11 +83,12 @@ function remove_metaboxes() {
 }
 add_action('admin_menu','remove_metaboxes');
 
-// Customize Wordpress Admin panel names to fit the company
+// Customize Wordpress Admin panel names
 function wd_admin_menu_rename() {
-     global $menu; // Global to get menu array
+     global $menu;
 
-     $menu[26][0] = 'Artister'; // Change name of posts to portfolio
+    // Change 'Projects' name to 'Artister'
+     $menu[26][0] = 'Artister';
 }
 add_action( 'admin_menu', 'wd_admin_menu_rename' );
 
@@ -104,7 +106,6 @@ add_image_size( 'featured-small-mobile', 500, 300, true );
 
 function firm_comp_in_content() {
     global $post;
-
     return get_the_post_thumbnail($post->ID, '105, 9999');
 }
 add_shortcode('thumbnail-firm', 'firm_comp_in_content');
@@ -133,17 +134,6 @@ function thumbnail_in_content_small_mobile() {
 }
 add_shortcode('thumbnail-artist-small-mobile', 'thumbnail_in_content_small_mobile');
 
-
-function get_breadcrumb() {
-    if ( function_exists('yoast_breadcrumb') ) {
-        yoast_breadcrumb('
-        <p id="breadcrumbs">','</p>
-        ');
-    }
-}
-add_shortcode('breadcrumb', 'get_breadcrumb');
-
-
 // Only fetch title name of page and used to display artist name on artist profile page
 // Mostly used for profile description text block
 function artist_title_name(){
@@ -161,10 +151,8 @@ add_shortcode( 'home-url', 'get_home_url');
 function get_page_title() {
 	ob_start();
 	?>
-    <div class="artist__desc f__center--sm">
-        <h1 class="t__h1 t__bottom f__left--xlg c__black truncate"><?php the_title(); ?></h1>
-		<p class="artist__desc-category c__grey truncate"><?php echo strip_tags(get_the_term_list( get_the_ID(), 'project_category', '', ' | ' ) ); ?></p>
-    </div>
+        <h1 class="t__h1 entry-title t__bottom f__left c__black truncate"><?php the_title(); ?></h1>
+		<p class="artist__desc-category c__grey u__hidden--md u__hidden--sm truncate"><?php echo strip_tags(get_the_term_list( get_the_ID(), 'project_category', '', ', ' ) ); ?></p>
 	<?php
 	$output_string = ob_get_contents();
 	ob_end_clean();
@@ -172,15 +160,43 @@ function get_page_title() {
 }
 add_shortcode( 'page-title', 'get_page_title' );
 
+function get_page_title_span() {
+	ob_start();
+	?>
+    <div class="artist__desc f__center--sm">
+        <span class="t__h1 entry-title t__bottom c__black truncate"><?php the_title(); ?></span>
+		<p class="artist__desc-category c__grey"><?php echo strip_tags(get_the_term_list( get_the_ID(), 'project_category', '', ', ' ) ); ?></p>
+    </div>
+	<?php
+	$output_string = ob_get_contents();
+	ob_end_clean();
+	return $output_string;
+}
+add_shortcode( 'page-title-span', 'get_page_title_span' );
+
+
 // overwrite "/project/" path to "book" for artists created under projects
 function custom_project_path () {
     return array(
         'feeds' => true,
         'slug' => 'book',
         'with_front' => false,
+        'has_archive' => false,
     );
 }
 add_filter( 'et_project_posttype_rewrite_args', 'custom_project_path' );
+
+
+function wpseo_remove_breadcrumb_link( $link_output , $link ){
+    $text_to_remove = 'Projekter';
+  
+    if( $link['text'] == $text_to_remove ) {
+      $link_output = '';
+    }
+ 
+    return $link_output;
+}
+add_filter( 'wpseo_breadcrumb_single_link' ,'wpseo_remove_breadcrumb_link', 10 ,2);
 
 // Ignore styling of Easy Forms to style Opt-In forms
 if( ! defined( YIKES_MAILCHIMP_EXCLUDE_STYLES ) ) {
@@ -256,6 +272,21 @@ function searchfilter($query) {
     return $query;
 }
 add_filter('pre_get_posts','searchfilter');
+
+
+// Derigester jQuery from header 
+if (!is_admin()) add_action('wp_enqueue_scripts', 'my_jquery_enqueue', 11);
+function my_jquery_enqueue() {
+   wp_deregister_script('jquery');
+   wp_register_script('jquery', "//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js", false, null);
+   wp_enqueue_script('jquery');
+}
+
+
+if (!is_admin()) add_action('wp_print_styles', 'my_deregister_styles', 100 );
+function my_deregister_styles() { 
+   wp_deregister_style( 'dashicons' );
+}
 
 
 
