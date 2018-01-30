@@ -1,3 +1,6 @@
+<head>
+  <title>Siden kunne ikke findes – xe</title>
+</head>
 <?php get_header(); ?>
 <?php 
   $requested_url = get_query_var('name');
@@ -10,7 +13,7 @@
       <div class="et_pb_column et_pb_column_4_4  et_pb_column_0">
         <div class="et_pb_text et_pb_module et_pb_bg_layout_light et_pb_text_align_left et_pb_text_0">
           <div class="et_pb_text_inner">
-            <div class="sp__6"></div>
+            <div class="sp__12--xlg sp__12--lg sp__7--md sp__7--sm"></div>
             <h1 class="t__h2 c__dark-blue f__left">Hovsa! Siden kunne ikke findes</h1>
           </div>
           <div class="et_pb_code et_pb_module  et_pb_code_0">
