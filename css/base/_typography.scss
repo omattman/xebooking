@@ -19,6 +19,10 @@
         @include mq($until: mobile) {
             font-size: 30px !important;
         }
+
+        &--sm {
+            font-size: 30px !important;
+        }
     }
 
     &__h2 {
@@ -137,7 +141,30 @@
     }
 
     &__regular { font-size: 16px; }
-    &__smaller { font-size: 15px; }
+    &__smaller {
+        font-size: 15px;
+
+        @include mq($from: wide) {
+            &--xlg {
+                font-size: 15px;
+            }
+        }
+        @include mq($from: tablet, $until: desktop) {
+            &--lg {
+                font-size: 15px;
+            }
+        }
+        @include mq($from: mobile, $until: tablet) {
+            &--md {
+                font-size: 15px;
+            }
+        }
+        @include mq($until: mobile) {
+            &--sm {
+                font-size: 15px !important;
+            }
+        }
+    }
     &__small {
         font-size: 14px;
 
@@ -158,7 +185,7 @@
         }
         @include mq($until: mobile) {
             &--sm {
-                font-size: 14px;
+                font-size: 14px !important;
             }
         }
     }

@@ -1,174 +1,171 @@
-
 .c {
-    // `Grey Tones`
-    // ==========================================================================
-    &__black {
+  // `Grey Tones`
+  // ==========================================================================
+  &__black {
+    color: $black;
+
+    @include mq($until: mobile) {
+      &--sm {
         color: $black;
+      }
+    }
+    @include mq($from: mobile, $until: tablet) {
+      &--md {
+        color: $black;
+      }
+    }
+    @include mq($from: tablet, $until: desktop) {
+      &--lg {
+        color: $black;
+      }
+    }
+    @include mq($from: wide) {
+      &--xlg {
+        color: $black;
+      }
+    }
+  }
 
-        @include mq($until: mobile) {
-            &--sm {
-                color: $black;
-            }
-        }
-        @include mq($from: mobile, $until: tablet) {
-            &--md {
-                color: $black;
-            }
-        }
-        @include mq($from: tablet, $until: desktop) {
-            &--lg {
-                color: $black;
-            }
-        }
-        @include mq($from: wide) {
-            &--xlg {
-                color: $black;
-            }
-        }
-    }
+  &__dark-grey {
+    color: $dark-grey;
+  }
+  &__hazy-grey {
+    color: $hazy-grey;
+  }
+  &__grey {
+    color: $grey;
 
-    &__dark-grey {
-        color: $dark-grey;
-    }
-    &__hazy-grey {
-        color: $hazy-grey;
-    }
-    &__grey {
+    @include mq($until: mobile) {
+      &--sm {
         color: $grey;
+      }
+    }
+    @include mq($from: mobile, $until: tablet) {
+      &--md {
+        color: $grey;
+      }
+    }
+    @include mq($from: tablet, $until: desktop) {
+      &--lg {
+        color: $grey;
+      }
+    }
+    @include mq($from: wide) {
+      &--xlg {
+        color: $grey;
+      }
+    }
+  }
+  &__light-fog {
+    color: $light-fog;
+  }
+  &__light-grey {
+    color: $light-grey;
+  }
+  &__gray-mist {
+    color: $gray-mist;
+  }
 
-        @include mq($until: mobile) {
-            &--sm {
-                color: $grey;
-            }
-        }
-        @include mq($from: mobile, $until: tablet) {
-            &--md {
-                color: $grey;
-            }
-        }
-        @include mq($from: tablet, $until: desktop) {
-            &--lg {
-                color: $grey;
-            }
-        }
-        @include mq($from: wide) {
-            &--xlg {
-                color: $grey;
-            }
-        }
-    }
-    &__light-fog {
-        color: $light-fog;
-    }
-    &__light-grey {
-        color: $light-grey;
-    }
-    &__gray-mist {
-        color: $gray-mist;
-    }
+  // `White Tones`
+  // ==========================================================================
+  &__mom-jeans {
+    color: $mom-jeans;
+  }
+  &__white {
+    color: $white;
+  }
 
+  // `White Tones`
+  // ==========================================================================
+  &__red {
+    color: $red;
+  }
+  &__purple {
+    color: $purple;
 
-    // `White Tones`
-    // ==========================================================================
-    &__mom-jeans {
-        color: $mom-jeans;
-    }
-    &__white {
-        color: $white;
-    }
-
-
-    // `White Tones`
-    // ==========================================================================
-    &__red {
-        color: $red;
-    }
-    &__purple {
+    @include mq($until: mobile) {
+      &--sm {
         color: $purple;
-
-        @include mq($until: mobile) {
-            &--sm {
-                color: $purple;
-            }
-        }
-        @include mq($from: mobile, $until: tablet) {
-            &--md {
-                color: $purple;
-            }
-        }
-        @include mq($from: tablet, $until: desktop) {
-            &--lg {
-                color: $purple;
-            }
-        }
-        @include mq($from: wide) {
-            &--xlg {
-                color: $purple;
-            }
-        }
+      }
     }
-
-    // `Blue Tones`
-    // ==========================================================================
-    &__bright-blue {
-        color: $bright-blue;
+    @include mq($from: mobile, $until: tablet) {
+      &--md {
+        color: $purple;
+      }
     }
-    &__dark-blue {
+    @include mq($from: tablet, $until: desktop) {
+      &--lg {
+        color: $purple;
+      }
+    }
+    @include mq($from: wide) {
+      &--xlg {
+        color: $purple;
+      }
+    }
+  }
+
+  // `Blue Tones`
+  // ==========================================================================
+  &__bright-blue {
+    color: $bright-blue;
+  }
+  &__dark-blue {
+    color: $dark-blue;
+
+    @include mq($until: mobile) {
+      &--sm {
         color: $dark-blue;
-
-        @include mq($until: mobile) {
-            &--sm {
-                color: $dark-blue;
-            }
-        }
-        @include mq($from: mobile, $until: tablet) {
-            &--md {
-                color: $dark-blue;
-            }
-        }
-        @include mq($from: tablet, $until: desktop) {
-            &--lg {
-                color: $dark-blue;
-            }
-        }
-        @include mq($from: wide) {
-            &--xlg {
-                color: $dark-blue;
-            }
-        }
+      }
     }
+    @include mq($from: mobile, $until: tablet) {
+      &--md {
+        color: $dark-blue;
+      }
+    }
+    @include mq($from: tablet, $until: desktop) {
+      &--lg {
+        color: $dark-blue;
+      }
+    }
+    @include mq($from: wide) {
+      &--xlg {
+        color: $dark-blue;
+      }
+    }
+  }
 
-    &__blue {
+  &__blue {
+    color: $blue;
+
+    // @include mq($until: mobile) {
+    //     &--sm {
+    //         color: $blue;
+    //     }
+    // }
+    @include mq($from: mobile, $until: tablet) {
+      &--md {
         color: $blue;
-
-        @include mq($until: mobile) {
-            &--sm {
-                color: $blue;
-            }
-        }
-        @include mq($from: mobile, $until: tablet) {
-            &--md {
-                color: $blue;
-            }
-        }
-        @include mq($from: tablet, $until: desktop) {
-            &--lg {
-                color: $blue;
-            }
-        }
-        @include mq($from: wide) {
-            &--xlg {
-                color: $blue;
-            }
-        }
+      }
     }
-    &__cs2-blue {
-        color: $cs2-blue;
+    @include mq($from: tablet, $until: desktop) {
+      &--lg {
+        color: $blue;
+      }
     }
-    &__sky-blue {
-        color: $sky-blue;
+    @include mq($from: wide) {
+      &--xlg {
+        color: $blue;
+      }
     }
-    &__light-blue {
-        color: $light-blue;
-    }
+  }
+  &__cs2-blue {
+    color: $cs2-blue;
+  }
+  &__sky-blue {
+    color: $sky-blue;
+  }
+  &__light-blue {
+    color: $light-blue;
+  }
 }

@@ -3,28 +3,28 @@
 // -----------------------------------------------------------------------------
 
 html {
-    color: #222;
-    font-size: 15px;
-    line-height: 1.4;
+  color: #222;
+  font-size: 15px;
+  line-height: 1.4;
 }
 
 ::-moz-selection {
-    background: #b3d4fc;
-    text-shadow: none;
+  background: #b3d4fc;
+  text-shadow: none;
 }
 
 ::selection {
-    background: #b3d4fc;
-    text-shadow: none;
+  background: #b3d4fc;
+  text-shadow: none;
 }
 
 hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
-    padding: 0;
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
 }
 
 audio,
@@ -33,38 +33,42 @@ iframe,
 img,
 svg,
 video {
-    vertical-align: middle;
+  vertical-align: middle;
 }
 
 button,
 input,
 select,
 textarea {
-    font-size: 100%;
-    margin: 0;
-    vertical-align: baseline;
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
 }
 
 fieldset {
-    border: 0;
-    margin: 0;
-    padding: 0;
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+figure {
+  margin: 0;
 }
 
 textarea {
-    resize: vertical;
+  resize: vertical;
 }
 /**
  * Set up a decent box model on the root element
  */
 html {
-    font-family: sans-serif;
-    -ms-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;
-    box-sizing: border-box;
-    height: 100%;
-    min-height: 100%;
-    -ms-overflow-x: hidden;
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  box-sizing: border-box;
+  height: 100%;
+  min-height: 100%;
+  -ms-overflow-x: hidden;
 }
 /**
  * Make all elements from the DOM inherit from the parent box-sizing
@@ -75,63 +79,65 @@ html {
 html *,
 html *:after,
 html *:before {
-    box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "myriad-pro", sans-serif;
-    font-size: 15px;
-    line-height: 1.6;
-    color: $grey;
-    font-weight: 400;
-    background: white;
-    -webkit-font-smoothing: antialiased;
-    -webkit-text-size-adjust: 100%;
-    -moz-osx-font-smoothing: grayscale;
-    margin: 0;
-    min-height: 100%;
-    min-height: 100%;
-    overflow-x: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, "myriad-pro", sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  color: $grey;
+  font-weight: 400;
+  background: white;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  min-height: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
 }
 
-p { padding-bottom: 0px; }
+p {
+  padding-bottom: 0px;
+}
 
 h1,
 h2,
 h3,
 h4,
 h5 {
-    color: inherit;
-    line-height: inherit;
-    padding-bottom: 0px;
+  color: inherit;
+  line-height: inherit;
+  padding-bottom: 0px;
 }
 
 img,
 svg {
-    max-width: 100%;
+  max-width: 100%;
 }
 
 .svg {
-    height: auto;
+  height: auto;
 }
 
 .video {
-    max-width: 100%;
+  max-width: 100%;
 }
 
 img[src*="assets/blank"] {
-    height: 1px;
+  height: 1px;
 }
 
 a {
-    color: inherit;
+  color: inherit;
 }
 
 a:hover {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 li {
-    display: list-item;
-    text-align: -webkit-match-parent;
+  display: list-item;
+  text-align: -webkit-match-parent;
 }
