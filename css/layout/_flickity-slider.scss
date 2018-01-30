@@ -5,11 +5,16 @@
     @include mq($from: footerAd, $until: desktop) {
         padding: 2% 20%;
     }
+
+    @include mq($until: slicker-sm) {
+        padding: 1% !important;
+    }
 }
 
 
 .carousell-cell {
-    width: 13%;
+    width: 14.3%;
+    transition: transform .2s,-webkit-transform .2s;
 
     @include mq($until: desktop) {
         width: 15%;
@@ -21,14 +26,19 @@
         width: 20%;
     }
     @include mq($until: slicker-sm) {
-        width: 40%;
+        width: 50%;
+    }
+
+    &:hover {
+        -webkit-transform: translateY(-5px);
+        transform: translateY(-5px);
     }
 }
 
 .slider .carousell-cell-image {
     padding-bottom: 80%;
-    border-top-left-radius: 2px;
-    border-top-right-radius: 2px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -43,9 +53,10 @@
 
 .slider__card {
   border: 1px solid $lightsky-blue;
-  border-radius: 2px;
+  border-radius: 4px;
   background: white;
   transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  box-shadow: 0 1px 6px rgba(0,0,0,.15);
 }
 
 .slider__card:hover {
