@@ -51,7 +51,7 @@ if ( ! is_page_template( 'page-template-blank.php' ) ) : ?>
                             <div class="footer__link">Solhøjvej 24</div>
 							<div class="footer__link">8210 Aarhus V</div>
                             <div class="footer__link">Tlf. +45 7021 7025</div>
-                            <div class="footer__link"><a href="mailto:xe@xe.dk">xe@xe.dk</a></div>
+                            <div class="footer__link"><a href="mailto:niels@xe.dk">niels@xe.dk</a></div>
 							<div class="footer__link">CVR: 27962491</div>
                         </div>
 						<div class="footer__links">

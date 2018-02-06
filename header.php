@@ -235,7 +235,7 @@
 							);
 						?>
 					</form>
-					<p class="u__inline-block t__small">Ring til os på <a class="c__blue f__und" href="tel:+4570217025">+45 7021 7025</a> ️eller <a class="c__blue f__und" href="//www.xe.dk/forespoergsel/">send din forespørgsel</a> her</p>
+					<p class="u__inline-block t__small">Ring til os på <a class="c__blue f__und" href="tel:+4570217025">+45 7021 7025</a><span> eller </span><a class="c__blue f__und" href="//www.xe.dk/forespoergsel/">send din forespørgsel</a> her</p>
 				</div>
 				</div>
              </header>
