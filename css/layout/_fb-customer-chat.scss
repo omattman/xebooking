@@ -1,0 +1,7 @@
+.fb {
+  &_dialog,
+  &_reset {
+    position: fixed !important;
+    z-index: 10000 !important;
+  }
+}

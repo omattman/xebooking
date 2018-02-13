@@ -1,216 +1,214 @@
-
 // Typography style for copy heading texts
 .t {
-    &__h1 {
-        color: $blue;
-        font-weight: 300;
-        font-size: 40px;
-        text-align: center;
-        line-height: 1.3;
-        letter-spacing: -.015em;
-        margin: -10px auto 17px;
+  &__h1 {
+    color: $blue;
+    font-weight: 700;
+    font-size: 40px;
+    text-align: center;
+    line-height: 1.3;
+    letter-spacing: -0.015em;
+    margin: -10px auto 17px;
 
-        @include mq($until: tablet) {
-            font-size: 44px;
-        }
-        @include mq($until: desktop) {
-            font-size: 36px;
-        }
-        @include mq($until: mobile) {
-            font-size: 30px !important;
-        }
-
-        &--sm {
-            font-size: 30px !important;
-        }
+    @include mq($until: tablet) {
+      font-size: 44px;
+    }
+    @include mq($until: desktop) {
+      font-size: 36px;
+    }
+    @include mq($until: mobile) {
+      font-size: 30px !important;
     }
 
-    &__h2 {
-        font-size: 30px;
-        font-weight: 300;
-        margin-bottom: 20px;
-        letter-spacing: -.015em;
-        line-height: 1.3;
-        @include mq($until: desktop) {
-            font-size: 27px;
-        }
-        @include mq($until: tablet) {
-            font-size: 25px;
-        }
-        @include mq($until: mobile) {
-            font-size: 22px;
-        }
+    &--sm {
+      font-size: 30px !important;
+    }
+  }
+
+  &__h2 {
+    font-size: 30px;
+    font-weight: 300;
+    margin-bottom: 20px;
+    letter-spacing: -0.015em;
+    line-height: 1.3;
+    @include mq($until: desktop) {
+      font-size: 27px;
+    }
+    @include mq($until: tablet) {
+      font-size: 25px;
+    }
+    @include mq($until: mobile) {
+      font-size: 22px;
+    }
+  }
+
+  &__h3 {
+    font-weight: 300;
+    font-size: 26px;
+    text-align: center;
+    line-height: 1.5;
+    letter-spacing: -0.01em;
+    margin: 0 auto 20px;
+    @include mq($until: tablet) {
+      font-size: 23px;
+    }
+    @include mq($until: mobile) {
+      font-size: 20px;
+    }
+  }
+
+  &__h4 {
+    font-weight: 300;
+    font-size: 24px;
+    text-align: center;
+    line-height: 1.5;
+    letter-spacing: -0.01em;
+    margin: 0 auto 20px;
+    color: $light-fog;
+    @include mq($until: tablet) {
+      font-size: 21px;
+    }
+    @include mq($until: mobile) {
+      font-size: 18px;
+    }
+  }
+
+  &__h5 {
+    font-weight: 300;
+    font-size: 20px;
+    text-align: center;
+    margin: 0 auto 20px;
+    letter-spacing: -0.01em;
+    @include mq($until: tablet) {
+      font-size: 18px;
     }
 
-    &__h3 {
-        font-weight: 300;
-        font-size: 26px;
-        text-align: center;
-        line-height: 1.5;
-        letter-spacing: -.01em;
-        margin: 0 auto 20px;
-        @include mq($until: tablet) {
-            font-size: 23px;
-        }
-        @include mq($until: mobile) {
-            font-size: 20px;
-        }
+    @include mq($until: mobile) {
+      font-size: 17px;
     }
 
-    &__h4 {
-        font-weight: 300;
-        font-size: 24px;
-        text-align: center;
-        line-height: 1.5;
-        letter-spacing: -.01em;
-        margin: 0 auto 20px;
-        color: $light-fog;
-        @include mq($until: tablet) {
-            font-size: 21px;
-        }
-        @include mq($until: mobile) {
-            font-size: 18px;
-        }
+    &-small {
+      font-size: 18px;
+      @include mq($until: tablet) {
+        font-size: 17px;
+      }
     }
+  }
 
-    &__h5 {
-        font-weight: 300;
-        font-size: 20px;
-        text-align: center;
-        margin: 0 auto 20px;
-        letter-spacing: -.01em;
-        @include mq($until: tablet) {
-            font-size: 18px;
-        }
+  &__h6 {
+    text-transform: uppercase;
+    color: $red;
+    letter-spacing: 0.1em;
+    font-size: 13px;
+    font-weight: 500;
+    margin: 0;
+  }
 
-        @include mq($until: mobile) {
-            font-size: 17px;
-        }
-
-        &-small {
-            font-size: 18px;
-            @include mq($until: tablet) {
-                font-size: 17px;
-            }
-        }
-    }
-
-    &__h6 {
-        text-transform: uppercase;
-        color: $red;
-        letter-spacing: .1em;
-        font-size: 13px;
-        font-weight: 500;
-        margin: 0;
-    }
-
-    &__bottom {
-        padding-bottom: 0px;
-        margin-bottom: 0px;
-    }
-
+  &__bottom {
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+  }
 }
-
 
 // Typography style for manipulating with smaller/bigger body text
 .t {
+  &__larger {
+    font-size: 18px;
 
-    &__larger {
+    @include mq($from: wide) {
+      &--xlg {
         font-size: 18px;
-
-        @include mq($from: wide) {
-            &--xlg {
-                font-size: 18px;
-            }
-        }
-        @include mq($from: tablet, $until: desktop) {
-            &--lg {
-                font-size: 18px;
-            }
-        }
-        @include mq($from: mobile, $until: tablet)  {
-            &--md {
-                font-size: 18px;
-            }
-        }
-        @include mq($until: mobile) {
-            &--sm {
-                font-size: 18px;
-            }
-        }
+      }
     }
+    @include mq($from: tablet, $until: desktop) {
+      &--lg {
+        font-size: 18px;
+      }
+    }
+    @include mq($from: mobile, $until: tablet) {
+      &--md {
+        font-size: 18px;
+      }
+    }
+    @include mq($until: mobile) {
+      &--sm {
+        font-size: 18px;
+      }
+    }
+  }
 
-    &__regular { font-size: 16px; }
-    &__smaller {
+  &__regular {
+    font-size: 16px;
+  }
+  &__smaller {
+    font-size: 15px;
+
+    @include mq($from: wide) {
+      &--xlg {
         font-size: 15px;
-
-        @include mq($from: wide) {
-            &--xlg {
-                font-size: 15px;
-            }
-        }
-        @include mq($from: tablet, $until: desktop) {
-            &--lg {
-                font-size: 15px;
-            }
-        }
-        @include mq($from: mobile, $until: tablet) {
-            &--md {
-                font-size: 15px;
-            }
-        }
-        @include mq($until: mobile) {
-            &--sm {
-                font-size: 15px !important;
-            }
-        }
+      }
     }
-    &__small {
+    @include mq($from: tablet, $until: desktop) {
+      &--lg {
+        font-size: 15px;
+      }
+    }
+    @include mq($from: mobile, $until: tablet) {
+      &--md {
+        font-size: 15px;
+      }
+    }
+    @include mq($until: mobile) {
+      &--sm {
+        font-size: 15px !important;
+      }
+    }
+  }
+  &__small {
+    font-size: 14px;
+
+    @include mq($from: wide) {
+      &--xlg {
         font-size: 14px;
-
-        @include mq($from: wide) {
-            &--xlg {
-                font-size: 14px;
-            }
-        }
-        @include mq($from: tablet, $until: desktop) {
-            &--lg {
-                font-size: 14px;
-            }
-        }
-        @include mq($from: mobile, $until: tablet) {
-            &--md {
-                font-size: 14px;
-            }
-        }
-        @include mq($until: mobile) {
-            &--sm {
-                font-size: 14px !important;
-            }
-        }
+      }
     }
+    @include mq($from: tablet, $until: desktop) {
+      &--lg {
+        font-size: 14px;
+      }
+    }
+    @include mq($from: mobile, $until: tablet) {
+      &--md {
+        font-size: 14px;
+      }
+    }
+    @include mq($until: mobile) {
+      &--sm {
+        font-size: 14px !important;
+      }
+    }
+  }
 
-    &__smallest {
+  &__smallest {
+    font-size: 12px;
+    @include mq($from: wide) {
+      &--xlg {
         font-size: 12px;
-        @include mq($from: wide) {
-            &--xlg {
-                font-size: 12px;
-            }
-        }
-        @include mq($from: tablet, $until: desktop) {
-            &--lg {
-                font-size: 12px;
-            }
-        }
-        @include mq($from: mobile, $until: tablet) {
-            &--md {
-                font-size: 12px;
-            }
-        }
-        @include mq($until: mobile) {
-            &--sm {
-                font-size: 12px;
-            }
-        }
+      }
     }
+    @include mq($from: tablet, $until: desktop) {
+      &--lg {
+        font-size: 12px;
+      }
+    }
+    @include mq($from: mobile, $until: tablet) {
+      &--md {
+        font-size: 12px;
+      }
+    }
+    @include mq($until: mobile) {
+      &--sm {
+        font-size: 12px;
+      }
+    }
+  }
 }

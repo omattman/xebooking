@@ -1,3 +1,8 @@
 {
+  "files.exclude": {
+    "dist": true,
+    "node_modules": true,
+    ".vscode": true
+  },
   "git.ignoreLimitWarning": true
 }
