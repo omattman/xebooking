@@ -59,7 +59,18 @@
 	$et_slide_header = 'slide' === et_get_option( 'header_style', 'left' ) || 'fullscreen' === et_get_option( 'header_style', 'left' ) ? true : false;
 ?>
             <header class="nav__header">
-				<div class="container">
+				<div class="nav__detail nav__detail-wrapper u__hidden--md u__hidden--sm">
+					<div class="container narrow">
+						<div class="g__flex nav__padding">
+							<div class="nav__detail-wrapper">
+								<span class="nav__detail-text"><a href="//www.xe.dk/kontakt/"><font color="#FF6900">Gratis</font> professionel rådgivning</a></span>
+								<span class="nav__detail-text"><a href="tel:+4570217025">Ring direkte <font color="#FF6900">+45 7021 7025</font></a></span>
+								<span class="nav__detail-text"><a href="//www.xe.dk/kontakt/"><font color="#FF6900">+25 års</font> erfaring og <font color="#FF6900">+100</font> anbefalinger</a></span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="container narrow">
 					<div class="nav__top nav__padding center">
 		                <?php
 		    				$logo = ( $user_logo = et_get_option( 'divi_logo' ) ) && '' != $user_logo
@@ -70,140 +81,62 @@
 		                    <img src="<?php echo esc_attr( $logo ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" id="logo" data-height-percentage="<?php echo esc_attr( et_get_option( 'logo_height', '54' ) ); ?>" />
 		                </a>
 		                <nav class="nav__menu-mobile"><ul id="nav__primary" class="nav__primary is-fixed">
-		                    <li>
+							<li class="u__hidden--xlg u__hidden--lg">
 		                        <a href="<?php echo esc_url( home_url( '/' ) ); ?>">Forside</a>
 		                    </li>
-		                    <li class="nav__menu-links">
-		                        <a href="#0">Find artist</a>
-		                        <ul class="nav__secondary js-hidden">
-		                            <li class="js-go-back">
-		                                <a href="#0">Tilbage</a>
-		                            </li>
-		                            <li class="bg__blue c__white see-all u__hidden--md u__hidden--sm">
-		                                <a href="//www.xe.dk/priser/"><span>🎉 </span>Find din samlede pakkeløsning her<span class="flip-horizontal"> 🎉</span></a>
-		                            </li>
-		                            <li class="nav__menu-links">
-		                                <a class="t__h5 c__blue--xlg c__blue--lg c__grey--md c__grey--sm f__left" href="//www.xe.dk/musik/">Musik</a>
-		                                <ul class="js-hidden">
-		                                    <li class="js-go-back">
-		                                        <a href="#0">Tilbage</a>
-		                                    </li>
-											<li class="see-all">
-		                                        <a href="//www.xe.dk/musik/">Se al musik</a>
-											</li>
-											<li>
-		                                        <a href="//www.xe.dk/musik/djs/">DJs</a>
-		                                    </li>
-											<li>
-		                                        <a href="//www.xe.dk/musik/solister/">Solister</a>
-											</li>
-											<li>
-		                                        <a href="//www.xe.dk/musik/bands/">Bands</a>
-		                                    </li>
-											<li>
-		                                        <a href="//www.xe.dk/musik/bryllupsbands/">Bryllupsbands</a>
-		                                    </li>
-											<li>
-		                                        <a href="//www.xe.dk/musik/musik-til-reception/">Receptionsmusik</a>
-		                                    </li>
-		                                    <li>
-		                                        <a href="//www.xe.dk/musik/">Se alle kategorier</a>
-											</li>
-		                                </ul>
-		                            </li>
-		                            <li class="nav__menu-links">
-		                                <a class="t__h5 c__blue--xlg c__blue--lg c__grey--md c__grey--sm f__left" href="//www.xe.dk/underholdning/">Underholdning</a>
-		                                <ul class="js-hidden">
-		                                    <li class="js-go-back">
-		                                        <a href="#0">Tilbage</a>
-		                                    </li>
-											<li class="see-all">
-												<a href="//www.xe.dk/underholdning/">Se al underholdning</a>
-		                                    </li>
-		                                    <li>
-		                                        <a href="//www.xe.dk/underholdning/stand-up/">Stand-up</a>
-		                                    </li>
-		                                    <li>
-		                                        <a href="//www.xe.dk/underholdning/foredragsholder/">Foredragsholder</a>
-		                                    </li>
-		                                    <li>
-		                                        <a href="//www.xe.dk/underholdning/tryllekunstner/">Tryllekunstner</a>
-		                                    </li>
-		                                    <li>
-		                                        <a href="//www.xe.dk/underholdning/happening/">Happening / Overraskelse</a>
-		                                    </li>
-											<li>
-		                                        <a href="//www.xe.dk/underholdning/entertainer/">Entertainer</a>
-		                                    </li>
-											<li>
-												<a href="//www.xe.dk/underholdning/entertainer-engelsk/">Entertainer (ENG)</a>
-		                                    </li>
-		                                    <li>
-		                                        <a href="//www.xe.dk/underholdning/">Se alle kategorier</a>
-		                                    </li>
-		                                </ul>
-		                            </li>
-		                            <li class="nav__menu-links">
-		                                <a class="t__h5 c__blue--xlg c__blue--lg c__grey--md c__grey--sm f__left" href="//www.xe.dk/konferenciers-vaerter/konferencier/">Konferenciers / Værter</a>
-		                                <ul class="js-hidden">
-		                                    <li class="js-go-back">
-		                                        <a href="#0">Tilbage</a>
-		                                    </li>
-		                                    <li class="dropdown__desc">
-		                                        <a href="//www.xe.dk/konferenciers-vaerter/konferencier/">Konferencier</a>
-		                                    </li>
-		                                    <li>
-		                                        <a href="//www.xe.dk/konferenciers-vaerter/ordstyrer/">Ordstyrer</a>
-		                                    </li>
-		                                    <li>
-		                                        <a href="//www.xe.dk/konferenciers-vaerter/konferencier/">Se alle kategorier</a>
-		                                    </li>
-		                                </ul>
-		                            </li>
-									<li class="nav__menu-links">
-		                                <a class="t__h5 c__blue u__hidden--md u__hidden--sm f__left" href="//www.xe.dk/artister/">Artister</a>
-		                                <ul class="js-hidden">
-		                                    <li class="js-go-back">
-		                                        <a href="#0">Tilbage</a>
-		                                    </li>
-		                                    <li>
-		                                        <a href="//www.xe.dk/artister/prisklasse-1/">Prisklasse 1</a>
-		                                    </li>
-		                                    <li class="dropdown__desc">
-		                                        <a href="//www.xe.dk/artister/prisklasse-2/">Prisklasse 2</a>
-		                                    </li>
-		                                    <li>
-		                                        <a href="//www.xe.dk/artister/prisklasse-3/">Prisklasse 3</a>
-		                                    </li>
-											<li>
-		                                        <a href="//www.xe.dk/artister-i-saerklasse/">Artister i særklasse</a>
-		                                    </li>
-		                                    <li>
-		                                        <a href="//www.xe.dk/artister/">Se alle artister</a>
-		                                    </li>
-		                                </ul>
-		                            </li>
-									<li class="bg__blue c__white see-all u__hidden--xlg u__hidden--lg">
-										<a href="//www.xe.dk/priser/">Få en samlet pakkeløsning</a>
+							<li class="nav__menu-links">
+								<a class="nav__menu-category" href="#0">Musik</a>
+								<ul class="nav__secondary js-hidden">
+									<li class="js-go-back">
+										<a href="#0">Tilbage</a>
 									</li>
-		                        </ul>
-		                        </li>
-		                        <li>
+									<a class="u__hidden--xlg u__hidden--lg" href="//www.xe.dk/musik/">Se al musik</a>
+									<a href="//www.xe.dk/musik/djs/">DJs</a>
+									<a href="//www.xe.dk/musik/solister/">Solister</a>
+									<a href="//www.xe.dk/musik/bands/">Bands</a>
+									<a href="//www.xe.dk/musik/bryllupsbands/">Bryllupsbands</a>
+									<a href="//www.xe.dk/musik/musik-til-reception/">Receptionsmusik</a>
+									<a href="//www.xe.dk/musik/">Se alle kategorier</a>
+								</ul>
+								<a class="nav__menu-category" href="#0">Underholdning</a>
+								<ul class="nav__secondary js-hidden">
+									<li class="js-go-back">
+										<a href="#0">Tilbage</a>
+									</li>
+									<a class="u__hidden--xlg u__hidden--lg" href="//www.xe.dk/underholdning/">Se al underholdning</a>
+									<a href="//www.xe.dk/underholdning/stand-up/">Stand-up</a>
+									<a href="//www.xe.dk/underholdning/foredragsholder/">Foredragsholder</a>
+									<a href="//www.xe.dk/underholdning/tryllekunstner/">Tryllekunstner</a>
+									<a href="//www.xe.dk/underholdning/entertainer/">Entertainer</a>
+									<a href="//www.xe.dk/underholdning/entertainer-engelsk/">Entertainer (ENG)</a>
+									<a href="//www.xe.dk/underholdning/">S	e alle kategorier</a>
+								</ul>
+								<a class="nav__menu-category" href="#0">Konferenciers</a>
+								<ul class="nav__secondary js-hidden">
+									<li class="js-go-back">
+										<a href="#0">Tilbage</a>
+									</li>
+									<a class="u__hidden--xlg u__hidden--lg" href="//www.xe.dk/konferenciers-vaerter/">Se alle værter</a>
+									<a href="//www.xe.dk/konferenciers-vaerter/konferencier/">Konferencier</a>
+									<a href="//www.xe.dk/konferenciers-vaerter/ordstyrer/">Ordstyrer</a>
+									<a href="//www.xe.dk/konferenciers-vaerter/">Se alle kategorier</a>
+								</ul>
+		                        <li class="u__hidden--xlg u__hidden--lg">
 		                            <a href="//www.xe.dk/priser/">Priser</a>
 		                        </li>
-		                        <li>
+		                        <li class="u__hidden--xlg u__hidden--lg">
 		                            <a href="//www.xe.dk/referencer/">Referencer</a>
 		                        </li>
-		                        <li>
+		                        <li class="u__hidden--xlg u__hidden--lg">
 		                            <a href="//www.xe.dk/nyheder/">Nyheder</a>
 		                        </li>
-		                        <li>
+		                        <li class="u__hidden--xlg u__hidden--lg">
 		                            <a href="//www.xe.dk/forespoergsel/">Booking</a>
 		                        </li>
-		                        <li>
+		                        <li class="u__hidden--xlg u__hidden--lg">
 		                            <a href="//www.xe.dk/om-xe/">Om XE</a>
 		                        </li>
-		                        <li>
+		                        <li class="u__hidden--xlg u__hidden--lg">
 		                            <a href="//www.xe.dk/kontakt/">Kontakt</a>
 		                        </li>
 								<li class="bg__blue c__white see-all u__hidden--xlg u__hidden--lg">
@@ -212,37 +145,58 @@
 		                    </ul>
 		                </nav>
 		                <ul class="nav__menu-buttons">
-		                    <li>
+		                    <!-- <li>
 		                        <a class="nav__search-trigger" title="Søg blandt vores artister">
 		                            <span></span>
 		                        </a>
-		                    </li>
+		                    </li> -->
 		                    <li>
 		                        <a class="nav__menu-trigger" title="Åben menu"> <span></span>
 		                        </a>
 		                    </li>
 						</ul>
 					</div>
-					<div class="nav__bottom nav__hr f__right u__hidden--md u__hidden--sm">
-					<span class="u__left nav__bottom-search-icon"><img src="https://www.xe.dk/wp-content/uploads/2017/12/search-icon.svg" alt="Søgeikon"></span>
-					<p class="u__left u__inline-block">Find artist |</p>
-					<form class="nav__bottom-search u__left u__inline-block" role="search" method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>">
-						<?php
-							printf( '<input type="search" class="nav__bottom-search-filter et-search-field" placeholder="Søg på artist..." value="%2$s" name="s" title="%3$s" data-swplive="true"/>',
-								esc_attr__( 'Search &hellip;', 'Divi' ),
-								get_search_query(),
-								esc_attr__( 'Search for:', 'Divi' )
-							);
-						?>
-					</form>
-					<p class="u__inline-block t__small">Ring til os på <a class="c__blue f__und" href="tel:+4570217025">+45 7021 7025</a><span> eller </span><a class="c__blue f__und" href="//www.xe.dk/forespoergsel/">send din forespørgsel</a> her</p>
+					<div class="nav__bottom u__hidden--md u__hidden--sm">
+						<ul class="nav__bottom-category u__reset f__left">
+							<li class="nav__bottom-category-element u__inline-block">
+								<a href="//www.xe.dk">Priser</a>
+							</li>
+							<li class="nav__bottom-category-element u__inline-block">
+								<a href="//www.xe.dk">Referencer</a>
+							</li>
+							<li class="nav__bottom-category-element u__inline-block">
+								<a href="//www.xe.dk">Nyheder</a>
+							</li>
+							<li class="nav__bottom-category-element u__inline-block">
+								<a href="//www.xe.dk">Om XE</a>
+							</li>
+							<li class="nav__bottom-category-element u__inline-block">
+								<a href="//www.xe.dk">Kontakt</a>
+							</li>
+							<li class="nav__bottom-category-element u__inline-block">
+								<a class="c__orange" href="//www.xe.dk">Booking</a>
+							</li>
+						</ul>
+						<div class="nav__bottom-search">
+							<form class="nav__bottom-search-form" role="search" method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+							<span class="nav__bottom-search-icon"><svg width="26" height="26" viewBox="0 0 26 26"><<svg id="icon_svg-search-semi-bold" viewBox="0 0 26 26" width="100%" height="100%"><path d="M16.979 17.314a6.181 6.181 0 0 1-4.474 1.506c-3.508-.23-6.198-3.314-6.024-6.888.175-3.583 3.163-6.312 6.68-6.081 3.506.23 6.196 3.314 6.022 6.887a6.484 6.484 0 0 1-1.194 3.466l4.199 3.703-.992 1.125-4.217-3.718zm-4.376.009c-2.683-.176-4.759-2.554-4.624-5.318.135-2.753 2.411-4.832 5.083-4.658 2.682.177 4.757 2.555 4.623 5.318-.134 2.754-2.41 4.833-5.082 4.658z" fill="currentColor" fill-rule="evenodd"></path></svg></svg></span>
+								<?php
+									printf( '<input type="search" class="nav__bottom-search-filter et-search-field" placeholder="Søg efter artist ..." value="%2$s" name="s" title="%3$s" data-swplive="true"/>',
+										esc_attr__( 'Search &hellip;', 'Divi' ),
+										get_search_query(),
+										esc_attr__( 'Search for:', 'Divi' )
+									);
+								?>
+							</form>
+						</div>
+					</div>
 				</div>
 				</div>
              </header>
 
 
 
-        <div class="nav__menu-overlay"></div>
+        <!-- <div class="nav__menu-overlay"></div> -->
         <div id="nav__search" class="nav__search">
             <form role="search" method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>">
             <?php
