@@ -144,6 +144,7 @@ if ( ! function_exists( 'et_pb_register_posttypes' ) ) :
             'show_ui'           => true,
             'show_admin_column' => true,
             'query_var'         => true,
+            'show_in_rest'      => true
         ) );
     
         $labels = array(
@@ -188,9 +189,8 @@ add_action( 'admin_menu', 'wd_admin_menu_rename' );
  *
 */
 add_image_size( 'featured-large', 1404, 500, true );
+add_image_size( 'featured-header', 1170, 400, true );
 add_image_size( 'featured-medium', 740, 500, true);
-add_image_size( 'featured-small', 300, 300, true );
-add_image_size( 'featured-small-mobile', 500, 300, true );
 
 function firm_comp_in_content() {
     global $post;
@@ -198,69 +198,11 @@ function firm_comp_in_content() {
 }
 add_shortcode('thumbnail-firm', 'firm_comp_in_content');
 
-function thumbnail_in_content() {
-    global $post;
-    return get_the_post_thumbnail($post->ID, 'featured-large');
-}
-add_shortcode('thumbnail-artist', 'thumbnail_in_content');
-
-function thumbnail_in_content_medium() {
-    global $post;
-    return get_the_post_thumbnail($post->ID, 'featured-medium');
-}
-add_shortcode('thumbnail-artist-medium', 'thumbnail_in_content_medium');
-
-function thumbnail_in_content_small() {
-    global $post;
-    return get_the_post_thumbnail($post->ID, 'featured-small');
-}
-add_shortcode('thumbnail-artist-small', 'thumbnail_in_content_small');
-
-function thumbnail_in_content_small_mobile() {
-    global $post;
-    return get_the_post_thumbnail($post->ID, 'featured-small-mobile');
-}
-add_shortcode('thumbnail-artist-small-mobile', 'thumbnail_in_content_small_mobile');
-
-// Only fetch title name of page and used to display artist name on artist profile page
-// Mostly used for profile description text block
-function artist_title_name(){
-   return get_the_title();
-}
-add_shortcode( 'artist-title', 'artist_title_name' );
-
 function get_website_home_url() {
     $homeurl = esc_url( home_url( '/' ) );
     echo $homeurl;
 }
 add_shortcode( 'home-url', 'get_home_url');
-
-// Fetch artist name and category to display both on artist profile page
-function get_page_title() {
-	ob_start();
-	?>
-        <h1 class="t__h1 entry-title t__bottom f__left c__black truncate"><?php the_title(); ?></h1>
-		<p class="artist__desc-category c__grey u__hidden--md u__hidden--sm truncate"><?php echo strip_tags(get_the_term_list( get_the_ID(), 'project_category', '', ', ' ) ); ?></p>
-	<?php
-	$output_string = ob_get_contents();
-	ob_end_clean();
-	return $output_string;
-}
-add_shortcode( 'page-title', 'get_page_title' );
-
-function get_page_title_span() {
-	ob_start();
-	?>
-    <div class="artist__desc f__center--sm">
-        <span class="t__h1 entry-title t__bottom c__black truncate"><?php the_title(); ?></span>
-		<p class="artist__desc-category c__grey"><?php echo strip_tags(get_the_term_list( get_the_ID(), 'project_category', '', ', ' ) ); ?></p>
-    </div>
-	<?php
-	$output_string = ob_get_contents();
-	ob_end_clean();
-	return $output_string;
-}
-add_shortcode( 'page-title-span', 'get_page_title_span' );
 
 
 // overwrite "/project/" path to "book" for artists created under projects
@@ -389,7 +331,6 @@ function user_the_categories() {
     // echo the remaining categories, appending separator
     for ($i = 1; $i < count($cats); $i++) {echo ', ' . $cats[$i]->cat_name ;}
 }
-
 
 //END ENQUEUE PARENT ACTION
 ?>

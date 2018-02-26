@@ -1,0 +1,15 @@
+.p {
+  &__left-m {
+    padding-left: 16px;
+  }
+
+  @include mq($from: mobile) {
+    &__left-none {
+      padding-left: 0px !important;
+    }
+  }
+
+  &__top-m {
+    padding-top: 16px;
+  }
+}

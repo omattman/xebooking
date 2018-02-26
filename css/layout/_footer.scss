@@ -1,8 +1,8 @@
 .footer {
   &__wrap {
-    background-color: white;
+    background-color: #ECEAEB;
     padding: 55px 0;
-    color: $blue;
+    margin-top: 100px;
     font-size: 15px;
     overflow: hidden;
     position: relative;
@@ -47,10 +47,9 @@
 
   &__addon,
   &__link {
-    color: $grey;
 
     & a:hover {
-      color: $blue;
+      text-decoration: underline;
     }
   }
 

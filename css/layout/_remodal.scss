@@ -21,7 +21,7 @@
 }
 /* Default theme styles of the overlay */
 .remodal-overlay {
-    background: rgba(43, 46, 56, 0.9);
+    background: rgba(242, 242, 242, 0.85);
 
     &.remodal-is-opening,
     &.remodal-is-closing {
@@ -271,7 +271,7 @@
 /* IE8
    ========================================================================== */
 .lt-ie9 .remodal-overlay {
-    background: #2b2e38;
+    background: rgba(242, 242, 242, 0.85);
 }
 
 .lt-ie9 .remodal {

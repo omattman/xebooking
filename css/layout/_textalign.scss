@@ -93,14 +93,28 @@
 .f {
     &__up {
         text-transform: uppercase;
-        letter-spacing: .1em
     }
 
     &__und {
-        text-decoration: underline;
+        display: inline-block;
+        position: relative;
 
-        &:hover {
-            text-decoration: none
+        body &::after {
+            position: absolute;
+            left: 50%;
+            -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+            content: "";
+            display: block;
+            width: 100%;
+            height: 2px;
+            bottom: 0;
+            background-color: #1a1a1a;
+            transition: width .15s cubic-bezier(.25,.46,.45,.94);
+        }
+
+        &:hover::after {
+            width: 106%;
         }
     }
 
@@ -127,7 +141,7 @@
     }
 
     &__bold {
-        font-weight: 500
+        font-weight: 700
     }
 
     &__lower {

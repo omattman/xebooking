@@ -4,13 +4,13 @@
 [type="number"],
 textarea {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    background: #fafbfc !important;
-    color: $input-grey !important;
-    border: 1px solid #dde5ed !important;
+    // background: #fafbfc !important;
+    color: $black !important;
+    border: 1px solid #999999 !important;
     font-size: 16px;
     padding: 16px 15px 14px !important;
     margin: 0;
-    border-radius: 6px;
+    // border-radius: 6px;
     outline: none;
     box-shadow: none;
 }
@@ -20,15 +20,6 @@ textarea {
 [type="number"] {
     height: 52px;
 }
-
-
-input:focus ,
-select:focus ,
-textarea:focus  {
-    border-color: $blue !important;
-}
-
-
 
 select {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;

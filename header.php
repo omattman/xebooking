@@ -72,18 +72,18 @@
 				</div>
 				<div class="container narrow">
 					<div class="nav__top nav__padding center">
-		                <?php
-		    				$logo = ( $user_logo = et_get_option( 'divi_logo' ) ) && '' != $user_logo
-		    					? $user_logo
-		    					: $template_directory_uri . '/images/logo.png';
-		    			?>
-		                <a class="nav__menu-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>">
-		                    <img src="<?php echo esc_attr( $logo ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" id="logo" data-height-percentage="<?php echo esc_attr( et_get_option( 'logo_height', '54' ) ); ?>" />
-		                </a>
-		                <nav class="nav__menu-mobile"><ul id="nav__primary" class="nav__primary is-fixed">
+						<?php
+						$logo = ( $user_logo = et_get_option( 'divi_logo' ) ) && '' != $user_logo
+							? $user_logo
+							: $template_directory_uri . '/images/logo.png';
+						?>
+						<a class="nav__menu-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>">
+							<img src="<?php echo esc_attr( $logo ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" id="logo" data-height-percentage="<?php echo esc_attr( et_get_option( 'logo_height', '54' ) ); ?>" />
+						</a>
+						<nav class="nav__menu-mobile"><ul id="nav__primary" class="nav__primary is-fixed">
 							<li class="u__hidden--xlg u__hidden--lg">
-		                        <a href="<?php echo esc_url( home_url( '/' ) ); ?>">Forside</a>
-		                    </li>
+								<a href="<?php echo esc_url( home_url( '/' ) ); ?>">Forside</a>
+							</li>
 							<li class="nav__menu-links">
 								<a class="nav__menu-category" href="#0">Musik</a>
 								<ul class="nav__secondary js-hidden">
@@ -121,39 +121,38 @@
 									<a href="//www.xe.dk/konferenciers-vaerter/ordstyrer/">Ordstyrer</a>
 									<a href="//www.xe.dk/konferenciers-vaerter/">Se alle kategorier</a>
 								</ul>
-		                        <li class="u__hidden--xlg u__hidden--lg">
-		                            <a href="//www.xe.dk/priser/">Priser</a>
-		                        </li>
-		                        <li class="u__hidden--xlg u__hidden--lg">
-		                            <a href="//www.xe.dk/referencer/">Referencer</a>
-		                        </li>
-		                        <li class="u__hidden--xlg u__hidden--lg">
-		                            <a href="//www.xe.dk/nyheder/">Nyheder</a>
-		                        </li>
-		                        <li class="u__hidden--xlg u__hidden--lg">
-		                            <a href="//www.xe.dk/forespoergsel/">Booking</a>
-		                        </li>
-		                        <li class="u__hidden--xlg u__hidden--lg">
-		                            <a href="//www.xe.dk/om-xe/">Om XE</a>
-		                        </li>
-		                        <li class="u__hidden--xlg u__hidden--lg">
-		                            <a href="//www.xe.dk/kontakt/">Kontakt</a>
-		                        </li>
+								<li class="u__hidden--xlg u__hidden--lg">
+										<a href="//www.xe.dk/priser/">Priser</a>
+								</li>
+								<li class="u__hidden--xlg u__hidden--lg">
+										<a href="//www.xe.dk/referencer/">Referencer</a>
+								</li>
+								<li class="u__hidden--xlg u__hidden--lg">
+										<a href="//www.xe.dk/nyheder/">Nyheder</a>
+								</li>
+								<li class="u__hidden--xlg u__hidden--lg">
+										<a href="//www.xe.dk/forespoergsel/">Booking</a>
+								</li>
+								<li class="u__hidden--xlg u__hidden--lg">
+										<a href="//www.xe.dk/om-xe/">Om XE</a>
+								</li>
+								<li class="u__hidden--xlg u__hidden--lg">
+										<a href="//www.xe.dk/kontakt/">Kontakt</a>
+								</li>
 								<li class="bg__blue c__white see-all u__hidden--xlg u__hidden--lg">
 									<a href="//www.xe.dk/priser/">Find pakkeløsning her</a>
 								</li>
-		                    </ul>
-		                </nav>
-		                <ul class="nav__menu-buttons">
-		                    <!-- <li>
-		                        <a class="nav__search-trigger" title="Søg blandt vores artister">
-		                            <span></span>
-		                        </a>
-		                    </li> -->
-		                    <li>
-		                        <a class="nav__menu-trigger" title="Åben menu"> <span></span>
-		                        </a>
-		                    </li>
+							</ul>
+						</nav>
+						<ul class="nav__menu-buttons">
+							<li>
+								<a class="nav__search-trigger u__hidden--xlg u__hidden--lg" title="Søg blandt vores artister">
+									<span></span>
+								</a>
+							</li>
+							<li>
+								<a class="nav__menu-trigger" title="Åben menu"><span></span</a>
+							</li>
 						</ul>
 					</div>
 					<div class="nav__bottom u__hidden--md u__hidden--sm">
@@ -180,33 +179,30 @@
 						<div class="nav__bottom-search">
 							<form class="nav__bottom-search-form" role="search" method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>">
 							<span class="nav__bottom-search-icon"><svg width="26" height="26" viewBox="0 0 26 26"><<svg id="icon_svg-search-semi-bold" viewBox="0 0 26 26" width="100%" height="100%"><path d="M16.979 17.314a6.181 6.181 0 0 1-4.474 1.506c-3.508-.23-6.198-3.314-6.024-6.888.175-3.583 3.163-6.312 6.68-6.081 3.506.23 6.196 3.314 6.022 6.887a6.484 6.484 0 0 1-1.194 3.466l4.199 3.703-.992 1.125-4.217-3.718zm-4.376.009c-2.683-.176-4.759-2.554-4.624-5.318.135-2.753 2.411-4.832 5.083-4.658 2.682.177 4.757 2.555 4.623 5.318-.134 2.754-2.41 4.833-5.082 4.658z" fill="currentColor" fill-rule="evenodd"></path></svg></svg></span>
-								<?php
-									printf( '<input type="search" class="nav__bottom-search-filter et-search-field" placeholder="Søg efter artist ..." value="%2$s" name="s" title="%3$s" data-swplive="true"/>',
-										esc_attr__( 'Search &hellip;', 'Divi' ),
-										get_search_query(),
-										esc_attr__( 'Search for:', 'Divi' )
-									);
-								?>
+							<?php
+								printf( '<input type="search" class="nav__bottom-search-filter et-search-field" placeholder="Søg efter artist ..." value="%2$s" name="s" title="%3$s" data-swplive="true"/>',
+									esc_attr__( 'Search &hellip;', 'Divi' ),
+									get_search_query(),
+									esc_attr__( 'Search for:', 'Divi' )
+								);
+							?>
 							</form>
 						</div>
 					</div>
 				</div>
-				</div>
-             </header>
+			</div>
+		</header>
+		<div class="nav__menu-overlay"></div>
 
-
-
-        <!-- <div class="nav__menu-overlay"></div> -->
-        <div id="nav__search" class="nav__search">
-            <form role="search" method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>">
-            <?php
-                printf( '<input type="search" class="et-search-field" placeholder="Søg efter artist..." value="%2$s" name="s" title="%3$s" data-swplive="true"/>',
-                    esc_attr__( 'Search &hellip;', 'Divi' ),
-                    get_search_query(),
-                    esc_attr__( 'Search for:', 'Divi' )
-                );
-            ?>
-            </form>
-    	</div>
-
-		<main id="et-main-area" class="main__content">
+		<div id="nav__search" class="nav__search">
+			<form role="search" method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+			<?php
+			printf( '<input type="search" class="et-search-field" placeholder="Søg efter artist..." value="%2$s" name="s" title="%3$s" data-swplive="true"/>',
+				esc_attr__( 'Search &hellip;', 'Divi' ),
+				get_search_query(),
+				esc_attr__( 'Search for:', 'Divi' )
+			);
+			?>
+			</form>
+	</div>
+<main id="et-main-area" class="main__content">

@@ -168,4 +168,29 @@
   &__light-blue {
     color: $light-blue;
   }
+
+  &__orange {
+    color: $orange;
+
+    @include mq($until: mobile) {
+      &--sm {
+        color: $orange;
+      }
+    }
+    @include mq($from: mobile, $until: tablet) {
+      &--md {
+        color: $orange;
+      }
+    }
+    @include mq($from: tablet, $until: desktop) {
+      &--lg {
+        color: $orange;
+      }
+    }
+    @include mq($from: wide) {
+      &--xlg {
+        color: $orange;
+      }
+    }
+  }
 }

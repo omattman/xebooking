@@ -2,13 +2,12 @@
 
 
 jQuery(document).ready(function($) {
-    $(".slider").flickity({
-        cellSelector: '.carousell-cell',
-        contain: true,
-        pageDots: false,
-        cellAlign: 'left',
-        imagesLoaded: true,
-        autoPlay: 5000,
-        pauseAutoPlayOnHover: true
-    });
+  $(".slider").flickity({
+      cellSelector: '.carousell-cell',
+      contain: true,
+      cellAlign: 'left',
+      imagesLoaded: true,
+      pageDots: false,
+      groupCells: '100%'
+  });
 });

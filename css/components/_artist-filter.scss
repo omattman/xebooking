@@ -1,38 +1,38 @@
-.artist {
+// .artist {
 
-    &__display {
-        border: 1px solid #dde5ed;
-        border-radius: 3px;
-        box-sizing: border-box;
-        transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+//     &__display {
+//         border: 1px solid #dde5ed;
+//         border-radius: 3px;
+//         box-sizing: border-box;
+//         transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 
-        &:hover {
-            box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.25);
-        }
+//         &:hover {
+//             box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.25);
+//         }
 
-        &-box {
-            padding: 8px;
-        }
-    }
+//         &-box {
+//             padding: 8px;
+//         }
+//     }
 
-    &__category {
-        border: 1px solid #dde5ed;
-        border-radius: 9px;
-        box-sizing: border-box;
-        transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-        margin-bottom: 30px;
+//     &__category {
+//         border: 1px solid #dde5ed;
+//         border-radius: 9px;
+//         box-sizing: border-box;
+//         transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+//         margin-bottom: 30px;
 
-        &:hover {
-            box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.25);
-        }
+//         &:hover {
+//             box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.25);
+//         }
 
-        &-box {
-            padding: 8px;
-        }
+//         &-box {
+//             padding: 8px;
+//         }
 
-        .et_portfolio_image img {
-            border-top-right-radius: 9px;
-            border-top-left-radius: 9px;
-        }
-    }
-}
+//         .et_portfolio_image img {
+//             border-top-right-radius: 9px;
+//             border-top-left-radius: 9px;
+//         }
+//     }
+// }

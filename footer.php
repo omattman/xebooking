@@ -30,7 +30,7 @@ if ( ! is_page_template( 'page-template-blank.php' ) ) : ?>
 				<div class="container narrow">
                     <div class="footer__row">
                         <div class="footer__links">
-                            <h4 class="t__h6 c__blue footer__heading">Artister</h4>
+                            <h4 class="t__h6 footer__heading">Artister</h4>
                             <div class="footer__link"><a href="//www.xe.dk/musik/">Musikalske</a></div>
                             <div class="footer__link"><a href="//www.xe.dk/underholdning/">Underholdning</a></div>
                             <div class="footer__link"><a href="//www.xe.dk/konferenciers-vaerter/konferencier/">Konferencier</a></div>
@@ -39,7 +39,7 @@ if ( ! is_page_template( 'page-template-blank.php' ) ) : ?>
                             <div class="footer__link"><a href="//www.xe.dk/artister-i-saerklasse/">Artister i særklasse</a></div>
                         </div>
                         <div class="footer__links">
-                            <h4 class="t__h6 c__blue footer__heading">Bureauet</h4>
+                            <h4 class="t__h6 footer__heading">Bureauet</h4>
                             <div class="footer__link"><a href="//www.xe.dk/om-xe/">Om XE</a></div>
                             <div class="footer__link"><a href="//www.xe.dk/referencer/">Referencer</a></div>
                             <div class="footer__link"><a href="//www.xe.dk/nyheder/">Nyheder</a></div>
@@ -47,7 +47,7 @@ if ( ! is_page_template( 'page-template-blank.php' ) ) : ?>
                             <div class="footer__link"><a href="//www.xe.dk/kontakt/">Kontakt os</a></div>
                         </div>
                         <div class="footer__links">
-                            <h4 class="t__h6 c__blue footer__heading">Kontakt</h4>
+                            <h4 class="t__h6 footer__heading">Kontakt</h4>
                             <div class="footer__link">Solhøjvej 24</div>
 							<div class="footer__link">8210 Aarhus V</div>
                             <div class="footer__link">Tlf. +45 7021 7025</div>
@@ -55,12 +55,12 @@ if ( ! is_page_template( 'page-template-blank.php' ) ) : ?>
 							<div class="footer__link">CVR: 27962491</div>
                         </div>
 						<div class="footer__links">
-                            <h4 class="t__h6 c__blue footer__heading">Følg os</h4>
+                            <h4 class="t__h6 footer__heading">Følg os</h4>
                             <div class="footer__link"><a href="https://www.facebook.com/XEbooking/">Følg os på Facebook</a></div>
                             <div class="footer__link"><a href="//www.xe.dk/nyhedsbrev/">Tilmeld Nyhedsbrev</a></div>
                         </div>
                         <div class="footer__links  footer__links-blog">
-                            <h4 class="t__h6 c__blue footer__heading">Seneste Nyheder</h4>
+                            <h4 class="t__h6 footer__heading">Seneste Nyheder</h4>
                             <div class="footer__hr"></div>
                             <?php
                                 $args = array( 
@@ -74,7 +74,7 @@ if ( ! is_page_template( 'page-template-blank.php' ) ) : ?>
                                     wp_reset_query();
                              ?>
                             <div class="sp__2"></div>
-                            <a class="c__blue f__no-und" href="//www.xe.dk/nyheder/">Læs mere</a><span class="t__small c__blue">&nbsp;→</span>
+                            <a class="c__orange f__no-und" href="//www.xe.dk/nyheder/">Læs mere</a><span class="t__small c__orange">&nbsp;→</span>
                         </div>
                     </div>
 					<div class="u__hidden--sm u__hidden--md">

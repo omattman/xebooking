@@ -1,0 +1,93 @@
+.category {
+  &__item {
+    &-footer {
+      margin: 10px;
+      font-size: 12px;
+      text-align: center;
+      letter-spacing: 1px;
+    }
+  }
+
+  &__header {
+    &-main {
+      margin: 0 100px 23px;
+
+      &:first-of-type {
+        margin-top: 20px !important;
+      }
+
+      @include mq($until: tablet) {
+        margin: 0 0 12px;
+      }
+
+      h1,
+      h2 {
+        margin-top: 18px;
+        font-size: 18px;
+        font-weight: 700;
+      }
+
+      h3 {
+        margin-top: 12px;
+        font-size: 15px;
+        font-weight: 500;
+      }
+
+      p {
+        margin-bottom: 1em;
+      }
+    }
+
+    &-sub {
+      margin: 0 100px 23px;
+
+      @include mq($until: tablet) {
+        margin: 0 0 23px;
+      }
+    }
+
+    &-title {
+      font-size: 52px;
+      font-weight: 700;
+      line-height: 1.12;
+      letter-spacing: 2px;
+
+      @include mq($until: tablet) {
+
+      }
+
+      @include mq($until: mobile) {
+        font-size: 34px;
+        font-weight: 700;
+        line-height: 1.12;
+        letter-spacing: 1px;
+      }
+    }
+
+    &-title2 {
+      font-size: 34px;
+      font-weight: 700;
+      line-height: 1.12;
+      letter-spacing: 1px;
+
+      @include mq($until: mobile) {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 1.25;
+        letter-spacing: .5px;
+      }
+    }
+
+    &-byline {
+      font-size: 16px;
+      line-height: 1.5;
+      letter-spacing: .5px;
+    }
+
+    &-image {
+      display: inline-block;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+}

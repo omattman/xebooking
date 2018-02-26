@@ -35,7 +35,28 @@
   &__menu-category {
     text-decoration: none;
     line-height: 18px;
-    color: $black;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    span {
+      font-size: 10px;
+      font-weight: 400;
+      margin: 0 12px;
+      padding: 0 0 4px;
+      letter-spacing: .7px;
+      border-bottom: 2px solid transparent;
+
+      @include mq($from: wide) {
+        font-size: 12px;
+        margin: 0 24px;
+      }
+    }
   }
 
   &__detail {
@@ -181,15 +202,21 @@
   }
 
   &__header {
-    z-index: 3;
+    z-index: 100;
     background: #ffffff;
 
-    @include mq($from: wide) {
-      &:after {
-        display: table;
-        clear: both;
-        content: "";
-      }
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 0;
+      // top: 100px;
+      background: linear-gradient(180deg,rgba(0,0,16,.05) 0,hsla(0,0%,100%,0));
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+      height: 15px;
+      width: 100%;
+      transition: opacity .2s ease-in-out;
     }
   }
 
@@ -376,6 +403,7 @@
   }
 
   &__search-trigger {
+    
     &:before {
       /* lens */
       top: 11px;
@@ -544,7 +572,7 @@
       visibility: hidden;
       width: 100%;
       height: 100%;
-      background: rgba(0, 0, 0, 0.85);
+      background: rgba(242, 242, 242, 0.85);
       opacity: 0;
       cursor: pointer;
       transition: opacity 0.3s 0s, visibility 0s 0.3s, transform 0.3s 0s;
@@ -804,105 +832,107 @@
   }
 }
 
-.js-go-back a,
-.nav__menu-links > a {
-  position: relative;
-
-  @include mq($from: wide) {
-    &:before,
-    &:after {
-      background: #c9cbc4;
-    }
-
-    &:hover:before,
-    &:hover:after {
-      background: #69aa6f;
-    }
-  }
-
-  &:before,
-  &:after {
-    position: absolute;
-    top: 50%;
-    display: inline-block;
-    margin-top: -1px;
-    width: 10px;
-    height: 2px;
-    background: #464c4e;
-    /* arrow icon in CSS - for element with nested unordered lists */
-    content: "";
-
-    backface-visibility: hidden;
-  }
-
-  &:before {
-    transform: rotate(45deg);
-  }
-
-  &:after {
-    transform: rotate(-45deg);
-  }
-}
-
-@include mq($from: wide) {
+@include mq($until: wide) {
+  .js-go-back a,
   .nav__menu-links > a {
-    &:after,
-    &:before {
-      right: 15%;
-    }
-  }
+    position: relative;
 
-  .nav__primary > .nav__menu-links > a {
-    /* main navigation arrows on larger devices */
-    padding-right: 30px !important;
+    @include mq($from: wide) {
+      &:before,
+      &:after {
+        background: #c9cbc4;
+      }
+
+      &:hover:before,
+      &:hover:after {
+        background: #69aa6f;
+      }
+    }
 
     &:before,
     &:after {
-      width: 9px;
-      background: #c9cbc4;
-      transition: width 0.3s, transform 0.3s;
-      transform-origin: 50% 50%;
+      position: absolute;
+      top: 50%;
+      display: inline-block;
+      margin-top: -1px;
+      width: 10px;
+      height: 2px;
+      background: #464c4e;
+      /* arrow icon in CSS - for element with nested unordered lists */
+      content: "";
 
       backface-visibility: hidden;
     }
 
     &:before {
-      right: 12px;
+      transform: rotate(45deg);
     }
 
     &:after {
-      right: 7px;
-    }
-
-    &.selected:before,
-    &.selected:after {
-      width: 14px;
-    }
-
-    &.selected:before {
-      transform: translateX(5px) rotate(-45deg);
-    }
-
-    &.selected:after {
-      transform: rotate(45deg);
-    }
-  }
-
-  .nav__secondary > .nav__menu-links > a:after,
-  .nav__secondary > .nav__menu-links > a:before {
-    /* remove arrows on secondary nav titles */
-    display: none;
-  }
-
-  .nav__primary .js-go-back a {
-    padding-left: 20px;
-
-    &:after,
-    &:before {
-      left: 1px;
+      transform: rotate(-45deg);
     }
   }
 }
+
+// @include mq($until: wide) {
+//   .nav__menu-links > a {
+//     &:after,
+//     &:before {
+//       right: 15%;
+//     }
+//   }
+
+//   .nav__primary > .nav__menu-links > a {
+//     /* main navigation arrows on larger devices */
+//     padding-right: 30px !important;
+
+//     &:before,
+//     &:after {
+//       width: 9px;
+//       background: #c9cbc4;
+//       transition: width 0.3s, transform 0.3s;
+//       transform-origin: 50% 50%;
+
+//       backface-visibility: hidden;
+//     }
+
+//     &:before {
+//       right: 12px;
+//     }
+
+//     &:after {
+//       right: 7px;
+//     }
+
+//     &.selected:before,
+//     &.selected:after {
+//       width: 14px;
+//     }
+
+//     &.selected:before {
+//       transform: translateX(5px) rotate(-45deg);
+//     }
+
+//     &.selected:after {
+//       transform: rotate(45deg);
+//     }
+//   }
+
+//   .nav__secondary > .nav__menu-links > a:after,
+//   .nav__secondary > .nav__menu-links > a:before {
+//     /* remove arrows on secondary nav titles */
+//     display: none;
+//   }
+
+//   .nav__primary .js-go-back a {
+//     padding-left: 20px;
+
+//     &:after,
+//     &:before {
+//       left: 1px;
+//     }
+//   }
+// }
 
 /* ***************************************************************************
 ************************ Navigation - No Javascript **************************

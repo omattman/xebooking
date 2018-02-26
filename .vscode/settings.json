@@ -4,5 +4,9 @@
     "node_modules": true,
     ".vscode": true
   },
-  "git.ignoreLimitWarning": true
+  "editor.wordWrap": "true",
+  "git.ignoreLimitWarning": true,
+  "editor.fontSize": 16,
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true
 }

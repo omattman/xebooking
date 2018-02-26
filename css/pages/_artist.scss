@@ -47,6 +47,12 @@
   }
 
   &__recommendations {
+
+    @include mq($until: mobile) {
+      .t__h2 {
+        font-size: 16px;
+      }
+    }
     &__container {
       justify-content: flex-start;
       flex-direction: column;
@@ -84,8 +90,7 @@
     }
 
     &-person {
-      font-weight: 500;
-      color: $blue;
+      font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.03em;
       font-size: 13px;
@@ -120,6 +125,7 @@
 
   &__text-lead {
     font-size: 18px;
+    line-height: 1.35;
 
     @include mq($until: mobile) {
       font-size: 16px;
@@ -140,32 +146,6 @@
     }
   }
 
-  &__cta {
-    padding-top: 0;
-    border: 1px solid #dde5ed;
-    border-radius: 4px;
-
-    &-bg {
-      position: absolute;
-      left: -100px;
-      right: 0;
-      top: -50px;
-      z-index: 0;
-      // margin-top: -575px;
-      height: 200px;
-      background-image: url(https://www.xe.dk/wp-content/uploads/2017/04/bg-2-sm.jpg);
-      background-size: 500px 100%;
-
-      @include mq($from: mobile, $until: tablet) {
-        position: absolute;
-        left: -430px;
-        top: -100px;
-        height: 400px;
-        background-size: 1600px 100%;
-      }
-    }
-  }
-
   &__contact {
     padding: 8px 15px;
 
@@ -181,6 +161,106 @@
   &__article {
     p {
       margin-bottom: 1.65em;
+    }
+  }
+
+  // NEW STYLINGS v2
+  // Insert below
+
+  &__left-gutter {
+    margin-left: 6%;
+
+    @include mq($until: mobile) {
+      margin-left: 0;
+    }
+  }
+
+  &__description {
+    padding: 32px 52px;
+    background: rgb(243, 243, 243);
+    min-height: 680px;
+
+    @include mq($until: mobile) {
+      padding: 0;
+      background: none;
+      min-height: auto;
+    }
+
+    p {
+      margin-bottom: 10px;
+      font-size: 14px;
+      letter-spacing: .2px;
+      line-height: 1.5;
+
+      &:last-of-type {
+        margin-bottom: 0px;
+      }
+    }
+  }
+  
+  &__category {
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    width: 100%;
+
+    span {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    &-button a {
+      display: inline-block;
+      width: auto;
+      padding: 14px 20px;
+      box-shadow: 0 4px 8px 0 rgba(26, 26, 26, 0.07);
+      border-radius: 34px;
+      transition: box-shadow .3s;
+      margin-right: 10px;
+      margin: 0 10px 10px 0;
+
+      &:hover {
+        box-shadow: 0 6px 12px 0 rgba(26,26,26,.1);
+      }
+    }
+  }
+
+  &__cta {
+
+    span {
+      margin-bottom: 8px;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+
+    .detail {
+      margin-right: 5px;
+    }
+
+    &-formular {
+      padding-top: 30px;
+      border-top: 1px solid $black;
+
+      @include mq($until: mobile) {
+        padding-top: 20px;
+      }
+      
+      label {
+        font-size: 12px;
+      }
+    }
+  }
+
+  &__embed {
+    iframe {
+      min-width: 100%;
+      min-height: 510px !important;
+
+      @include mq($until:tablet) {
+        min-height: auto !important;
+      }
     }
   }
 }
