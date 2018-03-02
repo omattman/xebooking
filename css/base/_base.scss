@@ -62,7 +62,7 @@ textarea {
  * Set up a decent box model on the root element
  */
 html {
-  font-family: sans-serif;
+  font-family: Arial, sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   box-sizing: border-box;
@@ -83,7 +83,7 @@ html *:before {
 }
 
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; 
+  font-family: Arial, sans-serif;
   font-size: 14px !important;
   line-height: 1.6;
   color: $black;
