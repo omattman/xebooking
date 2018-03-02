@@ -489,7 +489,7 @@ class DS_Custom_Filterable_Portfilio_Module extends ET_Builder_Module {
 
 				$main_post_class = sprintf(
 					'et_pb_portfolio_item%1$s %2$s',
-					( 'on' !== $fullwidth ? ' g__c2--xlg g__c3--lg g__c3--md g__c6--sm g__flex artist__item' : '' ),
+					( 'on' !== $fullwidth ? ' g__c4--xlg g__c--lg g__c3--md g__c6--sm g__flex artist__item' : '' ),
 					$category_classes
 				);
 
@@ -502,7 +502,7 @@ class DS_Custom_Filterable_Portfilio_Module extends ET_Builder_Module {
 					$width = 'on' === $fullwidth ?  1080 : 400;
 					$width = (int) apply_filters( 'et_pb_portfolio_image_width', $width );
 
-					$height = 'on' === $fullwidth ?  9999 : 284;
+					$height = 'on' === $fullwidth ?  9999 : 437;
 					$height = (int) apply_filters( 'et_pb_portfolio_image_height', $height );
 					$classtext = 'on' === $fullwidth ? 'et_pb_post_main_image' : '';
 					$titletext = get_the_title();
