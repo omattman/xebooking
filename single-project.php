@@ -62,7 +62,7 @@ $show_navigation = get_post_meta( get_the_ID(), '_et_pb_project_nav', true ); ?>
 									<a class="btn btn__primary u__full" data-remodal-target="modal-foresporgsel">Forespøg på artist</a>
 								</div>
 
-								<? else : ?>
+								<?php else : ?>
 
 								<div class="g__c8--xlg g__c12--sm">
 									<a class="btn btn__primary u__full" data-remodal-target="modal-foresporgsel">Forespøg på artist</a>
