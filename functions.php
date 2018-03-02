@@ -230,12 +230,6 @@ function wpseo_remove_breadcrumb_link( $link_output , $link ){
 }
 add_filter( 'wpseo_breadcrumb_single_link' ,'wpseo_remove_breadcrumb_link', 10 ,2);
 
-// Ignore styling of Easy Forms to style Opt-In forms
-if( ! defined( YIKES_MAILCHIMP_EXCLUDE_STYLES ) ) {
-   define( YIKES_MAILCHIMP_EXCLUDE_STYLES, true );
-}
-
-
 // Load custom modules into Divi Builder to show modules
 function DS_Custom_Modules(){
     if(class_exists("ET_Builder_Module")){
@@ -243,7 +237,7 @@ function DS_Custom_Modules(){
         include("featured-blog-post.php");
         include("blog-post.php");
         include("artist-filter-category.php");
-        include("artist-category.php");
+        include("artist-single-category.php");
     }
 }
 
@@ -272,7 +266,7 @@ function Prep_DS_Custom_Modules(){
 Prep_DS_Custom_Modules();
 
 
-function __search_by_title_only( $search, &$wp_query )
+function __search_by_title_only( $search, $wp_query )
 {
     global $wpdb;
     if ( empty( $search ) )
