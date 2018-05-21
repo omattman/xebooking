@@ -6,6 +6,13 @@
   min-height: 175px;
   max-height: 340px !important;
 }
+
+@include mq($until: navigation) {
+  .searchwp-live-search-results-showing {
+    top: 99px !important;
+  }
+}
+
 .searchwp-live-search-result {
   & p {
     font-size: 14px !important;
@@ -13,7 +20,6 @@
     margin: 0 !important;
     border-bottom: none !important;
   }
-
   & a {
     display: flex !important;
     width: 100%;
@@ -22,19 +28,16 @@
     align-items: center;
     flex-wrap: nowrap;
     justify-content: flex-start;
-
     &:after {
       display: table;
       clear: both;
       content: "";
     }
-
     & figure {
       min-width: 75px;
       max-width: 75px;
       padding-right: 10px;
       flex: 1;
-
       & img {
         width: 100%;
         height: auto;
@@ -42,7 +45,6 @@
         vertical-align: middle;
       }
     }
-
     & figcaption {
       overflow: hidden;
       margin: 0;
@@ -50,14 +52,12 @@
       text-overflow: ellipsis;
       flex: 2;
     }
-
     &-title {
       overflow: hidden;
       margin: 0;
       white-space: nowrap;
       text-overflow: ellipsis;
     }
-
     &-category {
       font-size: 14px;
       overflow: hidden;

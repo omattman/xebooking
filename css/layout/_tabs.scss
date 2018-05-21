@@ -1,10 +1,7 @@
 ul.tabs {
 	margin-bottom: 20px;
 	padding: 0;
-	// float: left;
 	list-style: none;
-	// height: 32px;
-	// width: 100%;
 }
 
 .tabs {
@@ -18,12 +15,10 @@ ul.tabs {
 		transition: border-bottom .1s;
 		cursor: pointer;
 	}
-
 	&__item.active {
 		display: block;
 		border-bottom: 2px solid $orange;
 	}
-
 	&__collapsedlabel-icon {
 		position: absolute;
 		right: 30px;
@@ -33,9 +28,9 @@ ul.tabs {
 	}
 }
 
-.d_active {};
+.d_active {}
 
-
+;
 .tab_container {
 	width: 100%;
 	overflow: auto;
@@ -45,23 +40,22 @@ ul.tabs {
 	display: none;
 }
 
-.tab_drawer_heading { display: none; }
+.tab_drawer_heading {
+	display: none;
+}
 
 @media screen and (max-width: 480px) {
 	.d_active {
 		border-bottom: 2px solid $orange;
 		transition: border-bottom .1s;
 	}
-
 	.tabs {
-		display: none;
+		display: none !important;
 	}
-
 	.tab_content {
 		margin-top: 20px;
 		margin-bottom: 10px;
 	}
-
 	.tab_drawer_heading {
 		padding: 18px 0;
 		display: block;
@@ -70,7 +64,6 @@ ul.tabs {
 		line-height: 1.5;
 		user-select: none;
 	}
-
 	.tab_drawer_heading.d_active .tabs__collapsedlabel-icon {
 		transform: rotate(90deg);
 		margin-top: 8px;

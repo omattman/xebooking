@@ -1,14 +1,13 @@
-
 .slider {
     padding-left: 12px;
     margin-left: -17px;
-    margin-right: -22px;
+    /* margin-right: -22px; */
+    margin-right: 0;
     max-width: 1195px;
 }
 
 #content-area .slider .flickity-viewport {
     height: 410px !important;
-
     @include mq($until: slicker-sm) {
         height: 275px !important;
     }
@@ -18,48 +17,40 @@
     background: none !important;
     height: 100%;
     padding: 00;
-    transition: width .3s ease,right .3s ease,left .3s ease,opacity .15s ease;
+    transition: width .3s ease, right .3s ease, left .3s ease, opacity .15s ease;
     border-radius: 0px;
-
+    svg {
+        top: 15%;
+    }
     &.next {
-        right: -35px;
-
+        right: -45px;
         &:hover {
-            right: -45px;
+            right: -55px;
         }
     }
-
     &.previous {
-        left: -23px;
-
+        left: -33px;
         &:hover {
-            left: -33px;
+            left: -43px;
         }
     }
 }
 
-
 .slider {
-
-    position: relative;
-    // padding-left: 16px;
+    position: relative; // padding-left: 16px;
     padding-top: 15px;
     padding-bottom: 25px;
     margin-top: -30px;
     margin-bottom: -25px;
-    
     .carousell-cell {
-    padding: 0.5% !important;
-
+        padding: 0.5% !important;
         @include mq($from: footerAd, $until: desktop) {
             padding: 2% 20%;
         }
-
         @include mq($until: slicker-sm) {
             padding: 1% !important;
         }
     }
-
     .carousell-cell-image {
         padding-bottom: 80%;
         border-top-left-radius: 4px;
@@ -70,17 +61,15 @@
     }
 }
 
-
 .carousell {
     &-cell {
         width: 25%;
-        transition: transform .2s,-webkit-transform .2s;
-
+        transition: transform .2s, -webkit-transform .2s;
         @include mq($until: desktop) {
             width: 15%;
         }
         @include mq($from: slicker-md, $until: slicker-lg) {
-            width: 17%;
+            width: 25%;
         }
         @include mq($from: slicker-sm, $until: slicker-md) {
             width: 20%;
@@ -88,12 +77,10 @@
         @include mq($until: slicker-sm) {
             width: 46.5%;
         }
-
         &-image {
             max-width: 100%;
             width: 100%;
             height: 300px;
-        
             @include mq($until: slicker-sm) {
                 height: 190px;
             }
@@ -103,44 +90,37 @@
 
 .slider {
     &__card {
-        border-radius: 4px; 
+        border-radius: 4px;
         background: white;
-        transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-        box-shadow: 0 5px 20px -1px rgba(0,0,0,.06);
+        transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+        box-shadow: 0 5px 20px -1px rgba(0, 0, 0, .06);
     }
-
     &__info {
         padding: 16px 24px;
-      
         @include mq($until: slicker-sm) {
             padding: 12px 18px;
         }
     }
-
     &__category {
         // padding-bottom: 5px;
         width: 100%;
-        font-size: 10px;
+        font-size: 11px;
         letter-spacing: .2px;
         line-height: 1.5;
         font-weight: 500;
     }
-
     &__title {
         padding-bottom: 5px;
         width: 100%;
-        font-size: 14px;
+        font-size: 14px !important;
         letter-spacing: .2px;
         line-height: 1.5;
         font-weight: 700;
-      
         @include mq($until: slicker-sm) {
-         font-size: 12px;
+            font-size: 12px !important;
         }
     }
 }
-
-
 
 @include mq($until: mobile) {
     .flickity-prev-next-button.previous,
@@ -148,7 +128,6 @@
         display: none;
     }
 }
-
 
 .truncate {
     overflow: hidden;

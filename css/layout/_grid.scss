@@ -5,7 +5,7 @@
     }
 
     &__flex {
-        display: flex;
+        display: flex !important;
         flex-direction: row;
 
         &-a-end {
@@ -45,9 +45,11 @@
 }
 
 .g__row {
-    display: block;
-    margin-left: -15px;
-    margin-right: -15px;
+    display: flex;
+    flex: 0 1 auto;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: 0 -15px;
 
     @include mq($until: tablet) {
         width: calc(100% + 30px) !important;
@@ -74,7 +76,6 @@
             margin-right: -15px;
         }
     }
-    
 
     &-tight {
         margin-left: -5px;
