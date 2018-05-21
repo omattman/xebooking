@@ -2,7 +2,7 @@
   <title>Siden kunne ikke findes – xe</title>
 </head>
 <?php get_header(); ?>
-<?php 
+<?php
   $requested_url = get_query_var('name');
 ?>
 
@@ -13,34 +13,40 @@
       <div class="">
         <h2 class="category__header-byline f__up">Hov! Der er sket en fejl...</h2>
         <h1 class="category__header-title">Siden kunne ikke findes</h1>
-              <div class="sp__4"></div>
-              <form role="search" method="get" action="<?php echo $homeurl; ?>">
-                <div>
-                  <input type="text" value="" name="s" class="et_pb_s cta__email" placeholder="Søg efter artist her..." style="padding-right: 52.0208px;">
-                  <input type="submit" value="Søg" class="btn btn__primary cta__error">
-                </div>
-              </form>
-            </div>
+        <div class="sp__4"></div>
+        <div class="g__row">
+          <div class="g__c7--xlg g__c7--lg g__12--md g__c12--sm">
+            <p class="t__larger">Din efterspurge side på xe.dk kunne desværre ikke findes.</p>
+            <p class="t__larger">Prøv at søge igen på formularen nedenfor, gå tilbage til <a class="f__und" href="//www.xe.dk/">forsiden</a> eller se <a class="f__und" href="//www.xe.dk/artister/">alle vores artister</a>. Den side, du leder efter, er ikke tilgængelig, da linket til den efterspurgte side muligvis er forældet eller forkert.</p>
+            <div class="sp__4--xlg sp__4--lg sp__2--md sp__1--sm"></div>
+            <form role="search" method="get" action="//www.xe.dk/">
+              <div>
+                <input type="text" value="" name="s" class="et_pb_s cta__email" placeholder="Søg efter artist her..." style="padding-right: 52.0208px;">
+                <input type="submit" value="Søg" class="btn btn__primary cta__error">
+              </div>
+            </form>
+          </div>
           <div class="g__c2--xlg g__c2--lg g__row"></div>
           <div class="sp__4--sm"></div>
             <div class="g__c3--xlg g__c3--lg g__c12--md g__12--sm g__row clearfix">
               <div class="banner">
-                <h4>Nyttige links</h4>
-                <a class="c__blue f__no-und u__block" href="<?php echo $homeurl; ?>">Forside</a>
-                <a class="c__blue f__no-und u__block" href="<?php echo $homeurl; ?>musik">Musik artister</a>
-                <a class="c__blue f__no-und u__block" href="<?php echo $homeurl; ?>underholdning">Underholdnings artister</a>
-                <a class="c__blue f__no-und u__block" href="<?php echo $homeurl; ?>konferenciers-vaerter/konferencier/">Værter og konferenciers</a>
-                <a class="c__blue f__no-und u__block" href="<?php echo $homeurl; ?>priser">Priser og pakkeløsninger</a>
-                <a class="c__blue f__no-und u__block" href="<?php echo $homeurl; ?>referencer">Referencer</a>
-                <a class="c__blue f__no-und u__block" href="<?php echo $homeurl; ?>nyheder">Nyheder</a>
-                <a class="c__blue f__no-und u__block" href="<?php echo $homeurl; ?>kontak">Kontakt</a>
+                <div class="banner__company">
+                  <h4>Nyttige links</h4>
+                  <a class="f__no-und u__block" href="//www.xe.dk/">Forside</a>
+                  <a class="f__no-und u__block" href="//www.xe.dk/musik/">Musik artister</a>
+                  <a class="f__no-und u__block" href="//www.xe.dk/underholdning/">Underholdnings artister</a>
+                  <a class="f__no-und u__block" href="//www.xe.dk/vaerter/konferencier/">Værter og konferenciers</a>
+                  <a class="f__no-und u__block" href="//www.xe.dk/priser/">Priser og pakkeløsninger</a>
+                  <a class="f__no-und u__block" href="//www.xe.dk/referencer/">Referencer</a>
+                  <a class="f__no-und u__block" href="//www.xe.dk/nyheder/">Nyheder</a>
+                  <a class="f__no-und u__block" href="//www.xe.dk/kontak/">Kontakt</a>
+                </div>
               </div>
             </div>
-          </div><!--End if no results are found-->
-        </div> <!-- et_pb_portfolio -->
-      </div> <!-- .et_pb_column -->
-    </section> <!-- container -->
-  </div>  <!-- .et_pb_section -->
+        </div>
+      </div>
+    </div>
+  </section>
 </div>
- 
+
 <?php get_footer(); ?>
