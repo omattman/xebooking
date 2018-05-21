@@ -1,115 +1,13 @@
-jQuery(document).ready(function($) {
+(function ($) {
+
     //if you change this breakpoint in the style.css file (or _layout.scss if you use SASS), don't forget to update this value as well
-    var MqL = 1025;
+    var MqL = 818;
     //move nav element position according to window width
     moveNavigation();
-    jQuery(window).on('resize', function() {
-        (!window.requestAnimationFrame)
-            ? setTimeout(moveNavigation, 300)
-            : window.requestAnimationFrame(moveNavigation);
+    $(window).on('resize', function () {
+        (!window.requestAnimationFrame) ?
+        setTimeout(moveNavigation, 300): window.requestAnimationFrame(moveNavigation);
     });
-
-    //mobile - open lateral menu clicking on the menu icon
-    jQuery('.nav__menu-trigger').on('click', function(event) {
-        event.preventDefault();
-        if (jQuery('.main__content').hasClass('js-visible')) {
-            closeNav();
-            jQuery('.nav__menu-overlay').removeClass('js-visible');
-        } else {
-            jQuery(this).addClass('js-visible');
-            jQuery('.nav__primary').addClass('js-visible');
-            jQuery('.nav__header').addClass('js-visible');
-            jQuery('.main__content').addClass('js-visible').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function() {
-                jQuery('body').addClass('overflow-hidden');
-            });
-            toggleSearch('close');
-            jQuery('.nav__menu-overlay').addClass('js-visible');
-        }
-    });
-
-    //open search form
-    jQuery('.nav__search-trigger').on('click', function(event) {
-        event.preventDefault();
-        toggleSearch();
-        closeNav();
-    });
-
-    //close lateral menu on mobile
-    jQuery('.nav__menu-overlay').on('swiperight', function() {
-        if (jQuery('.nav__primary').hasClass('js-visible')) {
-            closeNav();
-            jQuery('.nav__menu-overlay').removeClass('js-visible');
-        }
-    });
-    jQuery('.nav-on-left .nav__menu-overlay').on('swipeleft', function() {
-        if (jQuery('.nav__primary').hasClass('js-visible')) {
-            closeNav();
-            jQuery('.nav__menu-overlay').removeClass('js-visible');
-        }
-    });
-    jQuery('.nav__menu-overlay').on('click', function() {
-        closeNav();
-        toggleSearch('close')
-        jQuery('.nav__menu-overlay').removeClass('js-visible');
-    });
-
-    //prevent default clicking on direct children of .nav__primary
-    jQuery('.nav__primary').children('.nav__menu-links').children('a').on('click', function(event) {
-        event.preventDefault();
-    });
-    //open submenu
-    jQuery('.nav__menu-links').children('a').on('click', function(event) {
-        if (!checkWindowWidth())
-            event.preventDefault();
-        var selected = jQuery(this);
-        if (selected.next('ul').hasClass('js-hidden')) {
-            //desktop version only
-            selected.addClass('selected').next('ul').removeClass('js-hidden').end().parent('.nav__menu-links').parent('ul').addClass('js-moves-out');
-            selected.parent('.nav__menu-links').siblings('.nav__menu-links').children('ul').addClass('js-hidden').end().children('a').removeClass('selected');
-            jQuery('.nav__menu-overlay').addClass('js-visible');
-        } else {
-            selected.removeClass('selected').next('ul').addClass('js-hidden').end().parent('.nav__menu-links').parent('ul').removeClass('js-moves-out');
-            jQuery('.nav__menu-overlay').removeClass('js-visible');
-        }
-        toggleSearch('close');
-    });
-
-    //submenu items - go back link
-    jQuery('.js-go-back').on('click', function() {
-        jQuery(this).parent('ul').addClass('js-hidden').parent('.nav__menu-links').parent('ul').removeClass('js-moves-out');
-    });
-
-    function closeNav() {
-        jQuery('.nav__menu-trigger').removeClass('js-visible');
-        jQuery('.nav__header').removeClass('js-visible');
-        jQuery('.nav__primary').removeClass('js-visible');
-        jQuery('.nav__menu-links ul').addClass('js-hidden');
-        jQuery('.nav__menu-links a').removeClass('selected');
-        jQuery('.js-moves-out').removeClass('js-moves-out');
-        jQuery('.main__content').removeClass('js-visible').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function() {
-            jQuery('body').removeClass('overflow-hidden');
-        });
-    }
-
-    function toggleSearch(type) {
-        if (type == "close") {
-            //close serach
-            jQuery('.nav__search').removeClass('js-visible');
-            jQuery('.nav__search-trigger').removeClass('js-search-visible');
-            jQuery('.nav__menu-overlay').removeClass('js-search-visible');
-        } else {
-            //toggle search visibility
-            jQuery('.nav__search').toggleClass('js-visible');
-            jQuery('.nav__search-trigger').toggleClass('js-search-visible');
-            jQuery('.nav__menu-overlay').toggleClass('js-search-visible');
-            if (jQuery(window).width() > MqL && jQuery('.nav__search').hasClass('js-visible'))
-                jQuery('.nav__search').find('input[type="search"]').focus();
-
-            (jQuery('.nav__search').hasClass('js-visible'))
-                ? jQuery('.nav__menu-overlay').addClass('js-visible')
-                : jQuery('.nav__menu-overlay').removeClass('js-visible');
-        }
-    }
 
     function checkWindowWidth() {
         //check window width (scrollbar included)
@@ -126,6 +24,92 @@ jQuery(document).ready(function($) {
         }
     }
 
+    //open search form
+    $('.nav__search-trigger').on('click', function (event) {
+        event.preventDefault();
+        toggleSearch();
+        closeNav();
+    });
+
+    //open submenu
+    if ($(window).width() < 818) {
+        //mobile - open lateral menu clicking on the menu icon
+        $('.nav__menu-trigger, .nav__close-button').on('click', function (event) {
+            alert("specific button clicked");
+            //event.preventDefault();
+            if ($('.main__content').hasClass('js-visible')) {
+                closeNav();
+                $('.nav__menu-overlay').removeClass('js-visible');
+                $('body').css('overflow', 'visible');
+            } else {
+                $('.main__content').addClass('js-visible');
+                $('.nav__primary').addClass('js-visible');
+                $('body').css('overflow', 'hidden');
+                $('.nav__header').addClass('js-visible');
+                //$('.main__content').addClass('js-visible').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend');
+                toggleSearch('close');
+                $('.nav__menu-overlay').addClass('js-visible');
+            }
+        });
+
+        //prevent default clicking on direct children of .nav__primary
+        $('.nav__primary').children('.nav__menu-links').children('a').on('click', function (event) {
+            event.preventDefault();
+        });
+
+        $('.nav__menu-links').children('a').on('click', function (event) {
+            /*if (!checkWindowWidth())
+                event.preventDefault(); */
+            var selected = $(this);
+            if (selected.next('ul').hasClass('js-hidden')) {
+                //desktop version only
+                selected.addClass('selected').next('ul').removeClass('js-hidden').end().parent('.nav__menu-links').parent('ul').addClass('js-moves-out');
+                selected.parent('.nav__menu-links').siblings('.nav__menu-links').children('ul').addClass('js-hidden').end().children('a').removeClass('selected');
+                $('.nav__menu-overlay').addClass('js-visible');
+            } else {
+                selected.removeClass('selected').next('ul').addClass('js-hidden').end().parent('.nav__menu-links').parent('ul').removeClass('js-moves-out');
+                $('.nav__menu-overlay').removeClass('js-visible');
+            }
+            toggleSearch('close');
+        });
+
+        //submenu items - go back link
+        $('.js-go-back').on('click', function () {
+            $(this).parent('ul').addClass('js-hidden').parent('.nav__menu-links').parent('ul').removeClass('js-moves-out');
+        });
+
+        function closeNav() {
+            $('.nav__menu-trigger').removeClass('js-visible');
+            $('.nav__header').removeClass('js-visible');
+            $('.nav__primary').removeClass('js-visible');
+            $('.nav__menu-links ul').addClass('js-hidden');
+            $('.nav__menu-links a').removeClass('selected');
+            $('.js-moves-out').removeClass('js-moves-out');
+            $('.main__content').removeClass('js-visible').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function () {
+                $('body').removeClass('overflow-hidden');
+            });
+        }
+    }
+
+
+    function toggleSearch(type) {
+        if (type == "close") {
+            //close serach
+            $('.nav__search').removeClass('js-visible');
+            $('.nav__search-trigger').removeClass('js-search-visible');
+            $('.nav__menu-overlay').removeClass('js-search-visible');
+        } else {
+            //toggle search visibility
+            $('.nav__search').toggleClass('js-visible');
+            $('.nav__search-trigger').toggleClass('js-search-visible');
+            $('.nav__menu-overlay').toggleClass('js-search-visible');
+            if ($(window).width() > MqL && $('.nav__search').hasClass('js-visible'))
+                $('.nav__search').find('input[type="search"]').focus();
+            ($('.nav__search').hasClass('js-visible')) ?
+            $('.nav__menu-overlay').addClass('js-visible'): $('.nav__menu-overlay').removeClass('js-visible');
+        }
+    }
+
     function moveNavigation() {
         var navigation = jQuery('.nav__menu-mobile');
         var desktop = checkWindowWidth();
@@ -137,4 +121,4 @@ jQuery(document).ready(function($) {
             navigation.insertAfter('.main__content');
         }
     }
-});
+})(jQuery);
