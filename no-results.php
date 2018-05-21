@@ -2,50 +2,61 @@
   <title>Siden kunne ikke findes – xe</title>
 </head>
 <?php get_header(); ?>
-<?php 
+<?php
   $requested_url = get_query_var('name');
   $homeurl = esc_url( home_url( '/' ) );
 ?>
 
-<section class="container narrow et_pb_row et_pb_row_0">
-  <div class="et_pb_column et_pb_column_4_4  et_pb_column_0">
-    <div class="et_pb_text et_pb_module et_pb_bg_layout_light et_pb_text_align_left et_pb_text_0">
-      <div class="g__c7 g__row clearfix">
-        <div class="entry">
-          <!--If no results are found-->
-          <p class="t__h4 f__left c__grey u__reset">Din efterspurge side på xe.dk kunne desværre ikke findes.</p>
-          <p class="t__h4 f__left c__grey">Du kan prøve at søge igen på formularen under, gå tilbage til forsiden <a class="c__blue f__no-und" href="<?php echo $homeurl ?>">xe.dk</a> eller se <a class="c__blue f__no-und" href="<?php echo $homeurl ?>artister">alle vores artister</a>.</p>
-          <p>Den side, du leder efter, er ikke tilgængelig, da linket til den efterspurgte side muligvis er forældet eller forkert.</p>
-          <div class="sp__4"></div>
-          <form role="search" method="get" action="<?php echo $homeurl; ?>">
-            <div>
-              <input type="text" value="" name="s" class="et_pb_s cta__email" placeholder="Søg efter artist her..." style="padding-right: 52.0208px;">
-              <input type="submit" value="Søg" class="btn btn__primary cta__error">
-            </div>
-          </form>
-        </div>
-      </div> 
-      <div class="g__c2 g__row"></div>
-      <div class="g__c3 g__row clearfix">
-      <div class="sp__4--sm"></div>
-        <div id="banner__company" class="et_pb_code et_pb_module  et_pb_code_0">
-          <div class="banner">
-            <h4>Nyttige links</h4>
-            <a class="c__blue f__no-und u__block" href="<?php echo $homeurl; ?>">Forside</a>
-            <a class="c__blue f__no-und u__block" href="<?php echo $homeurl; ?>musik">Musik artister</a>
-            <a class="c__blue f__no-und u__block" href="<?php echo $homeurl; ?>underholdning">Underholdnings artister</a>
-            <a class="c__blue f__no-und u__block" href="<?php echo $homeurl; ?>konferenciers-vaerter/konferencier/">Værter og konferenciers</a>
-            <a class="c__blue f__no-und u__block" href="<?php echo $homeurl; ?>priser">Priser og pakkeløsninger</a>
-            <a class="c__blue f__no-und u__block" href="<?php echo $homeurl; ?>referencer">Referencer</a>
-            <a class="c__blue f__no-und u__block" href="<?php echo $homeurl; ?>nyheder">Nyheder</a>
-            <a class="c__blue f__no-und u__block" href="<?php echo $homeurl; ?>kontak">Kontakt</a>
+<div class="sp__10--xlg sp__10--lg sp_6--md sp__3--sm"></div>
+  <section class="container narrow">
+    <div class="category__header-main g__flex g__flex-a-end g__flex-space-between">
+      <div class="">
+        <h2 class="category__header-byline f__up">Du har søgt efter:</h2>
+        <h1 class="category__header-title">
+        <?php
+          /* Search Count */
+          // Changed '&new' to 'new'
+          $allsearch = new WP_Query("s=$s&showposts=-1");
+          $key = wp_specialchars($s, 1);
+          $count = $allsearch->post_count;
+          _e('');
+          _e('<span class="search-terms">'); echo $key; _e('</span>'); wp_reset_query();
+        ?>
+        </h1>
+        <div class="sp__4"></div>
+        <div class="g__row">
+          <div class="g__c7--xlg g__c7--lg g__12--md g__c12--sm">
+            <p class="t__larger">Din efterspurge side på xe.dk kunne desværre ikke findes.</p>
+            <p class="t__larger">Prøv at søge igen på formularen nedenfor, gå tilbage til <a class="f__und" href="//www.xe.dk/">forsiden</a> eller se <a class="f__und" href="//www.xe.dk/artister/">alle vores artister</a>. Den side, du leder efter, er ikke tilgængelig, da linket til den efterspurgte side muligvis er forældet eller forkert.</p>
+            <div class="sp__4--xlg sp__4--lg sp__2--md sp__1--sm"></div>
+            <form role="search" method="get" action="//www.xe.dk/">
+              <div>
+                <input type="text" value="" name="s" class="et_pb_s cta__email" placeholder="Søg efter artist her..." style="padding-right: 52.0208px;">
+                <input type="submit" value="Søg" class="btn btn__primary cta__error">
+              </div>
+            </form>
           </div>
+          <div class="g__c2--xlg g__c2--lg g__row"></div>
+          <div class="sp__4--sm"></div>
+            <div class="g__c3--xlg g__c3--lg g__c12--md g__12--sm g__row clearfix">
+              <div class="banner">
+                <div class="banner__company">
+                  <h4>Nyttige links</h4>
+                  <a class="f__no-und u__block" href="//www.xe.dk/">Forside</a>
+                  <a class="f__no-und u__block" href="//www.xe.dk/musik/">Musik artister</a>
+                  <a class="f__no-und u__block" href="//www.xe.dk/underholdning/">Underholdnings artister</a>
+                  <a class="f__no-und u__block" href="//www.xe.dk/vaerter/konferencier/">Værter og konferenciers</a>
+                  <a class="f__no-und u__block" href="//www.xe.dk/priser/">Priser og pakkeløsninger</a>
+                  <a class="f__no-und u__block" href="//www.xe.dk/referencer/">Referencer</a>
+                  <a class="f__no-und u__block" href="//www.xe.dk/nyheder/">Nyheder</a>
+                  <a class="f__no-und u__block" href="//www.xe.dk/kontak/">Kontakt</a>
+                </div>
+              </div>
+            </div>
         </div>
-      </div><!--End if no results are found-->
-    </div> <!-- et_pb_portfolio -->
-  </div> <!-- .et_pb_column -->
-</section> <!-- container -->
+      </div>
+    </div>
 <div class="sp__5"></div>
 
- 
+
 <?php get_footer(); ?>
