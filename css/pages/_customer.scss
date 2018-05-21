@@ -190,7 +190,7 @@
         box-sizing: border-box;
         padding: 30px;
         outline: none;
-        border: 1px solid $lightsky-blue;
+        box-shadow: 0 2px 4px 0 hsla(0,0%,87%,.6);
         border-radius: 6px;
         background: #fefeff;
         text-decoration: none;
@@ -211,13 +211,13 @@
         }
 
         &-desc {
-            margin: 0;
+            margin-top: 15px;
             font-size: 14px;
             transition: opacity .2s, transform .3s;
             transition: opacity .2s, transform .3s, -webkit-transform .3s;
 
             &:last-of-type {
-                margin-top: 15px;
+                
             }
         }
 
@@ -266,7 +266,8 @@
             overflow: hidden;
             padding: 30px;
             outline: none;
-            border: 1px solid #dde5ed;
+            box-shadow: 0 2px 4px 0 hsla(0,0%,87%,.6);
+            background-color: hsla(0,0%,95%,.1);
             border-radius: 6px;
             transition: box-shadow .5s;
             margin-bottom: 40px;

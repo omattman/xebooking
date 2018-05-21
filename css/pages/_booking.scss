@@ -15,8 +15,7 @@
       padding-bottom: 25px;
 
       &::before {
-        content: "•";
-        color: $blue;
+        content: "-";
         padding-right: 5px;
       }
     }

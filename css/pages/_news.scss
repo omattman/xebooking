@@ -8,8 +8,10 @@
     padding-left: 45px !important;
     padding-right: 45px !important;
     max-width: 1270px !important;
+    @include mq($until: mobile) {
+      display: block !important;
+    }
   }
-
   &__inner a:hover {
     text-decoration: none;
   }
@@ -22,8 +24,12 @@
     z-index: 1;
     max-width: 1404px;
     margin: auto;
+    &:hover {
+      & .hero__inner:after {
+        @include prefix(transform, scaleX(1), webkit);
+      }
+    }
   }
-
   &__inner {
     background: $white;
     margin-top: -13%;
@@ -31,18 +37,30 @@
     padding: 30px 50px 20px;
     border-bottom: 1px solid $lightsky-blue;
     z-index: 2;
-
     .post__media-wrap {
       min-height: 0;
     }
+    &:after {
+      content: " ";
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      width: 100%;
+      display: block;
+      border-bottom: 8px solid $orange;
+      z-index: 2;
+      transition: -webkit-transform 0.4s;
+      transition: transform 0.4s;
+      transition: transform 0.4s, -webkit-transform 0.4s;
+      @include prefix(transform, scaleX(0), webkit);
+      @include prefix(transform-origin, left center, webkit);
+    }
   }
-
   &__title {
     margin: 0;
     font-size: 56px;
     line-height: 1.3;
   }
-
   &__image {
     max-width: 1404px;
     margin: 0 auto;
@@ -50,7 +68,6 @@
     text-align: center;
     position: relative;
   }
-
   &__desc {
     margin: 5px 0 0;
     font-size: 18px;
@@ -67,7 +84,7 @@
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     @include flex-direction(column);
-
+    display: flex;
     &:after,
     &:before {
       content: " ";
@@ -76,7 +93,7 @@
       left: 0;
       width: 100%;
       display: block;
-      border-bottom: 8px solid $bright-blue;
+      border-bottom: 8px solid $orange;
       z-index: 2;
       transition: -webkit-transform 0.3s;
       transition: transform 0.3s;
@@ -84,20 +101,17 @@
       transform: scaleX(0);
       transform-origin: left center;
     }
-
     &:before {
       border-bottom: 1px solid #dde5ed;
       bottom: 0;
       z-index: 3;
     }
-
     &:before,
     &:hover:after {
       -webkit-transform: scaleX(1);
       transform: scaleX(1);
     }
   }
-
   &__inner {
     margin-top: -8%;
     margin-right: 15px;
@@ -106,26 +120,24 @@
     position: relative;
     background: #fff;
     z-index: 2;
-
+    @include mq($until: mobile) {}
     .post__media-wrap {
       min-height: 0;
     }
   }
-
   &__title {
     font-size: 40px;
     margin: 2px 0 0;
     line-height: 1.3;
   }
-
   &__desc {
     font-size: 18px;
     margin: 5px 0 3px;
     letter-spacing: 0.02em;
   }
-
   &__sidebar {
-    border: 8px solid #001ce8;
+    //border: 8px solid #eee;
+    background-color: #eee;
     width: 330px !important;
     min-width: 330px;
     margin-left: auto !important;
@@ -137,25 +149,23 @@
 .email {
   &__newsletter {
     &-inner {
-      height: 100%;
       padding: 20px;
-      background: #fff;
       position: relative;
       z-index: 10;
       font-size: 14px;
+      @include mq($until: mobile) {
+        padding: 50px 15px;
+      }
     }
-
     &-headline {
       font-size: 24px;
       margin: 0;
-      font-weight: 500;
       max-width: 300px;
     }
-
     &-hr {
       width: 80%;
       margin: 40px auto;
-      border-top: 2px solid $bright-blue;
+      border-top: 2px solid $orange;
     }
   }
 }
@@ -166,7 +176,6 @@
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   @include flex-direction(column);
-
   &:after,
   &:before {
     content: " ";
@@ -177,12 +186,11 @@
     display: block;
     border-bottom: 1px solid $lightsky-blue;
   }
-
   &:hover:before {
     @include prefix(transform, scaleX(1), webkit);
   }
   &:before {
-    border-bottom: 8px solid $bright-blue;
+    border-bottom: 8px solid $orange;
     z-index: 1;
     bottom: -8px;
     transition: -webkit-transform 0.3s;
@@ -198,13 +206,11 @@
   &__wrap {
     @include flexbox;
   }
-
   &__media {
     &-wrap {
       width: 100% !important;
       display: block;
     }
-
     &-content {
       line-height: 1;
       min-height: 35px;
@@ -212,12 +218,10 @@
       @include align-items(flex-end);
     }
   }
-
   &__image {
     padding-bottom: 41%;
     height: 0;
   }
-
   &__inner {
     background: $white;
     position: relative;
@@ -231,12 +235,10 @@
     @include flex-direction(column);
     @include flex(1);
   }
-
   &__title {
     font-size: 22px;
     margin: 8px 0 10px;
   }
-
   &__desc {
     margin: 3px 0 5px;
     letter-spacing: 0.02em;
@@ -248,38 +250,15 @@
   &__text {
     color: $charcoal;
     font-size: 12px;
-    font-weight: 500;
+    font-weight: 700;
     text-transform: uppercase;
     line-height: 1;
     display: inline-block;
   }
-
   &__separator {
     color: $charcoal;
     font-size: 12px;
     font-weight: 500;
-  }
-}
-
-.hero__inner {
-  &:hover:after {
-    @include prefix(transform, scaleX(1), webkit);
-  }
-
-  &:after {
-    content: " ";
-    position: absolute;
-    bottom: -8px;
-    left: 0;
-    width: 100%;
-    display: block;
-    border-bottom: 8px solid $bright-blue;
-    z-index: 2;
-    transition: -webkit-transform 0.4s;
-    transition: transform 0.4s;
-    transition: transform 0.4s, -webkit-transform 0.4s;
-    @include prefix(transform, scaleX(0), webkit);
-    @include prefix(transform-origin, left center, webkit);
   }
 }
 
@@ -291,16 +270,13 @@
       padding-left: 15px !important;
       padding-right: 15px !important;
     }
-
     &__image {
       min-height: 0;
     }
-
     &__desc {
       display: none;
     }
   }
-
   .hero {
     &__inner {
       margin-top: -8%;
@@ -311,35 +287,29 @@
       margin-top: 5px;
     }
   }
-
   .featured {
     &__sidebar {
-      width: 100% !important;
+      width: 100%;
       min-width: 100%;
     }
-
     &__news {
       width: calc(100% + 30px);
       margin-left: -15px;
       margin-right: -15px;
     }
-
     &__inner {
       padding: 15px 20px 25px;
     }
-
     &__title {
       font-size: 22px;
       margin-top: 10px;
     }
-
     &__news:after,
     &__news:before {
       left: 15px;
       width: calc(100% - 30px);
     }
   }
-
   .post {
     &__inner {
       margin-top: 0;
@@ -348,7 +318,6 @@
     &__media-wrap {
       min-height: 0;
     }
-
     &__title {
       font-size: 22px;
       margin-top: 5px;
@@ -357,7 +326,6 @@
       padding-bottom: 40%;
       height: 0;
     }
-
     &:after,
     &:before {
       left: 15px;
@@ -368,7 +336,7 @@
 }
 
 // target first div in blog to equal column heights depending on content
-.et_pb_blog_4_0:first-child > div {
+.et_pb_blog_4_0:first-child>div {
   display: flex;
   flex-wrap: wrap;
 }

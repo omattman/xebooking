@@ -3,12 +3,10 @@
   &__recommendations {
     &__container {
       @include flexbox;
-
       @include mq($until: mobile) {
         @include flex-wrap(wrap);
       }
     }
-
     &__option {
       @include mq($until: mobile) {
         width: 100%;
@@ -18,25 +16,20 @@
       }
     }
   }
-
   &__pricing {
     &__container {
-      flex-wrap: nowrap;
-      // align-items: center;
+      flex-wrap: nowrap; // align-items: center;
     }
-
     &__option {
       width: 50%;
       padding-right: 40px;
       border-right: 1px solid $lightsky-blue;
-
       &:last-child {
         margin-right: 0;
         padding-right: 0px;
         padding-left: 40px;
         border-right: none;
       }
-
       @include mq($until: mobile) {
         width: 100%;
         margin-right: 0;
@@ -45,9 +38,7 @@
       }
     }
   }
-
   &__recommendations {
-
     @include mq($until: mobile) {
       .t__h2 {
         font-size: 16px;
@@ -57,30 +48,24 @@
       justify-content: flex-start;
       flex-direction: column;
     }
-
     &-story {
       width: 100%;
       padding-top: 15px;
       border-top: 1px solid $lightsky-blue;
-
       &:last-child {
         margin-right: 0;
       }
-
       p {
         margin-bottom: 1em;
       }
-
       li {
         padding-left: 10px;
         margin-bottom: 8px;
-
         &:before {
           margin-left: -10px;
-          content: "– ";
+          content: "- ";
         }
       }
-
       @include mq($until: mobile) {
         width: 100%;
         margin-right: 0;
@@ -88,32 +73,26 @@
         border-right: none;
       }
     }
-
     &-person {
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.03em;
       font-size: 13px;
-
       p {
         margin-bottom: 0;
-
         &:last-of-type {
           margin-bottom: 1.65em;
         }
       }
     }
   }
-
   &__desc {
     @include mq($until: mobile) {
       padding: 10px;
     }
-
     &-category {
       font-size: 20px;
       font-weight: 300;
-
       @include mq($until: tablet) {
         text-align: center;
       }
@@ -122,93 +101,72 @@
       }
     }
   }
-
   &__text-lead {
     font-size: 18px;
     line-height: 1.35;
-
     @include mq($until: mobile) {
       font-size: 16px;
     }
   }
-
   &__btn-equal-width {
     display: flex;
-
     a {
-      flex: 1;
-      // change back to 10px if pricing buttons are included again.
+      flex: 1; // change back to 10px if pricing buttons are included again.
       margin-right: 0 !important;
-
       &:last-child {
         margin-right: 0;
       }
     }
   }
-
   &__contact {
     padding: 8px 15px;
-
     &-desc {
       margin-left: -15px;
     }
-
     @include mq($until: mobile) {
       margin-left: 40px;
     }
   }
-
   &__article {
     p {
       margin-bottom: 1.65em;
     }
-  }
-
-  // NEW STYLINGS v2
+  } // NEW STYLINGS v2
   // Insert below
-
   &__left-gutter {
     margin-left: 6%;
-
     @include mq($until: mobile) {
       margin-left: 0;
     }
   }
-
   &__description {
     padding: 32px 52px;
     background: rgb(243, 243, 243);
     min-height: 680px;
-
     @include mq($until: mobile) {
       padding: 0;
       background: none;
       min-height: auto;
     }
-
     p {
       margin-bottom: 10px;
       font-size: 14px;
       letter-spacing: .2px;
       line-height: 1.5;
-
       &:last-of-type {
         margin-bottom: 0px;
       }
     }
   }
-  
   &__category {
     font-size: 13px;
     font-weight: 700;
     text-transform: uppercase;
     width: 100%;
-
     span {
       display: block;
       margin-bottom: 10px;
     }
-
     &-button a {
       display: inline-block;
       width: auto;
@@ -218,48 +176,38 @@
       transition: box-shadow .3s;
       margin-right: 10px;
       margin: 0 10px 10px 0;
-
       &:hover {
-        box-shadow: 0 6px 12px 0 rgba(26,26,26,.1);
+        box-shadow: 0 6px 12px 0 rgba(26, 26, 26, .1);
       }
     }
   }
-
   &__cta {
-
     span {
       margin-bottom: 8px;
-
       &:last-of-type {
         margin-bottom: 0;
       }
     }
-
     .detail {
       margin-right: 5px;
     }
-
     &-formular {
       padding-top: 30px;
       border-top: 1px solid $black;
-
       @include mq($until: mobile) {
         padding-top: 20px;
       }
-      
       label {
         font-size: 12px;
       }
     }
   }
-
   &__embed {
     iframe {
       min-width: 100%;
-      min-height: 510px !important;
-
-      @include mq($until:tablet) {
-        min-height: auto !important;
+      min-height: 650px !important;
+      @include mq($until: tablet) {
+        min-height: 360px !important;
       }
     }
   }
