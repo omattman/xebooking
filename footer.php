@@ -33,37 +33,34 @@ if ( ! is_page_template( 'page-template-blank.php' ) ) : ?>
                             <h4 class="t__h6 footer__heading">Artister</h4>
                             <div class="footer__link"><a href="//www.xe.dk/musik/">Musikalske</a></div>
                             <div class="footer__link"><a href="//www.xe.dk/underholdning/">Underholdning</a></div>
-                            <div class="footer__link"><a href="//www.xe.dk/konferenciers-vaerter/konferencier/">Konferencier</a></div>
+                            <div class="footer__link"><a href="//www.xe.dk/vaerter/">Værter</a></div>
                             <div class="footer__hr"></div>
                             <div class="footer__link"><a href="//www.xe.dk/priser/">Se Priser</a></div>
-                            <div class="footer__link"><a href="//www.xe.dk/artister-i-saerklasse/">Artister i særklasse</a></div>
                         </div>
                         <div class="footer__links">
                             <h4 class="t__h6 footer__heading">Bureauet</h4>
                             <div class="footer__link"><a href="//www.xe.dk/om-xe/">Om XE</a></div>
                             <div class="footer__link"><a href="//www.xe.dk/referencer/">Referencer</a></div>
                             <div class="footer__link"><a href="//www.xe.dk/nyheder/">Nyheder</a></div>
-                            <div class="footer__link"><a href="//www.xe.dk/nyhedsbrev/">Tilmeld Nyhedsbrev</a></div>
                             <div class="footer__link"><a href="//www.xe.dk/kontakt/">Kontakt os</a></div>
                         </div>
                         <div class="footer__links">
                             <h4 class="t__h6 footer__heading">Kontakt</h4>
                             <div class="footer__link">Solhøjvej 24</div>
 							<div class="footer__link">8210 Aarhus V</div>
-                            <div class="footer__link">Tlf. +45 7021 7025</div>
+                            <div class="footer__link"><a href="tel:+4570217025">Tlf. +45 7021 7025</a></div>
                             <div class="footer__link"><a href="mailto:niels@xe.dk">niels@xe.dk</a></div>
 							<div class="footer__link">CVR: 27962491</div>
                         </div>
 						<div class="footer__links">
                             <h4 class="t__h6 footer__heading">Følg os</h4>
                             <div class="footer__link"><a href="https://www.facebook.com/XEbooking/">Følg os på Facebook</a></div>
-                            <div class="footer__link"><a href="//www.xe.dk/nyhedsbrev/">Tilmeld Nyhedsbrev</a></div>
                         </div>
                         <div class="footer__links  footer__links-blog">
                             <h4 class="t__h6 footer__heading">Seneste Nyheder</h4>
                             <div class="footer__hr"></div>
                             <?php
-                                $args = array( 
+                                $args = array(
 									'numberposts' => '3',
 									'post_status' => 'publish'
 								);
