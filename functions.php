@@ -12,7 +12,9 @@ if ( !function_exists( 'chld_thm_cfg_parent_css' ) ):
 endif;
 add_action( 'wp_enqueue_scripts', 'chld_thm_cfg_parent_css', 10 );
 
-// Add readmore_script to server to fold text on profiles
+/**
+ * Add main.js file to enable child theme javascript
+ */
 function add_main_js() {
     wp_enqueue_script(
         'main-js',
@@ -22,22 +24,72 @@ function add_main_js() {
 }
 add_action( 'wp_enqueue_scripts', 'add_main_js' );
 
-// Remove divi Google fonts API CSS
-function wpse_dequeue_google_fonts() {
+/**
+ * Remove files from Divi, which wasent needed
+ */
+function deregister_script() {
+    $is_page_builder_used = et_pb_is_pagebuilder_used( get_the_ID() );
+
+        if( !$is_page_builder_used ) {
+            wp_dequeue_script('et-builder-modules-global-functions-script');
+            wp_dequeue_script('google-maps-api');
+            //wp_dequeue_script('divi-fitvids');
+            wp_dequeue_script('waypoints');
+            wp_dequeue_script('magnific-popup');
+
+            wp_dequeue_script('hashchange');
+            wp_dequeue_script('salvattore');
+            wp_dequeue_script('easypiechart');
+
+            wp_dequeue_script('et-jquery-visible-viewport');
+
+            wp_dequeue_script('magnific-popup');
+            wp_dequeue_script('et-jquery-touch-mobile');
+            wp_dequeue_script('et-builder-modules-script');
+            wp_dequeue_script('shortcodes_responsive');
+        }
+}
+add_action( 'wp_print_scripts', 'deregister_script', 100 );
+
+
+function deregister_styles() {
+    $is_page_builder_used = et_pb_is_pagebuilder_used( get_the_ID() );
+
+    if( !$is_page_builder_used ) {
+        wp_dequeue_style('et-builder-modules-style');
+        wp_dequeue_style('divi-style');
+        wp_dequeue_style('magnific-popup');
+        wp_dequeue_style('shortcodes_responsive');
+        wp_dequeue_style('et_google_fonts_style');
+
+        wp_enqueue_style( 'style', get_stylesheet_uri());
+    }
+}
+add_action( 'wp_enqueue_scripts', 'deregister_styles', 20 );
+
+/**
+ * Remove divi Google fonts API CSS
+ */
+function disable_open_sans_divi() {
     wp_dequeue_style( 'divi-fonts' );
 }
-add_action( 'wp_enqueue_scripts', 'wpse_dequeue_google_fonts', 20 );
+add_action( 'wp_enqueue_scripts', 'disable_open_sans_divi', 20 );
 
-# Restrict Contact form 7 scripts and styles
+/**
+ * Restrict Contact form 7 scripts and styles
+ */
 function remove_contactform7_css(){
     wp_dequeue_style('contact-form-7'); # Dequeue css.
     wp_dequeue_style('contact-form-7-multi-step-module'); # Dequeue css.
 }
 add_action( 'wp_enqueue_scripts', 'remove_contactform7_css' );
 
-
-// Remove script version numbers. Numbers being enabled can lead to issues with
-// caching/minification plugins, as well as helps hackers identify the website better.
+/**
+ * Remove script version numbers.
+ *
+ * Numbers being enabled can lead to issues with caching/minification plugins,
+ * as well as helps hackers identify the website better.
+ */
 function remove_cssjs_ver( $src ) {
 		if( strpos( $src, '?ver=' ) )
 			$src = remove_query_arg( 'ver', $src );
@@ -47,7 +99,9 @@ add_filter( 'style_loader_src', 'remove_cssjs_ver', 1000 );
 add_filter( 'script_loader_src', 'remove_cssjs_ver', 1000 );
 add_filter( 'the_generator', '__return_null' );
 
-// Remove meta boxes from post, page and project edit page
+/**
+ * Remove meta boxes from post, page and project edit page
+ */
 function remove_metaboxes() {
     remove_meta_box( 'authordiv','post','normal' );
     remove_meta_box( 'authordiv','page','normal' );
@@ -83,95 +137,6 @@ function remove_metaboxes() {
 }
 add_action('admin_menu','remove_metaboxes');
 
-
-if ( ! function_exists( 'et_pb_register_posttypes' ) ) :
-    function et_pb_register_posttypes() {
-        $labels = array(
-            'name'               => esc_html__( 'Projects', 'et_builder' ),
-            'singular_name'      => esc_html__( 'Project', 'et_builder' ),
-            'add_new'            => esc_html__( 'Add New', 'et_builder' ),
-            'add_new_item'       => esc_html__( 'Add New Project', 'et_builder' ),
-            'edit_item'          => esc_html__( 'Edit Project', 'et_builder' ),
-            'new_item'           => esc_html__( 'New Project', 'et_builder' ),
-            'all_items'          => esc_html__( 'All Projects', 'et_builder' ),
-            'view_item'          => esc_html__( 'View Project', 'et_builder' ),
-            'search_items'       => esc_html__( 'Search Projects', 'et_builder' ),
-            'not_found'          => esc_html__( 'Nothing found', 'et_builder' ),
-            'not_found_in_trash' => esc_html__( 'Nothing found in Trash', 'et_builder' ),
-            'parent_item_colon'  => '',
-        );
-    
-        $args = array(
-            'labels'             => $labels,
-            'public'             => true,
-            'publicly_queryable' => true,
-            'show_ui'            => true,
-            'can_export'         => true,
-            'show_in_nav_menus'  => true,
-            'show_in_rest'       => true,
-            'query_var'          => true,
-            'has_archive'        => true,
-            'rewrite'            => apply_filters( 'et_project_posttype_rewrite_args', array(
-                'feeds'      => true,
-                'slug'       => 'project',
-                'with_front' => false,
-            ) ),
-            'capability_type'    => 'post',
-            'hierarchical'       => false,
-            'menu_position'      => null,
-            'supports'           => array( 'title', 'author', 'editor', 'thumbnail', 'excerpt', 'comments', 'revisions', 'custom-fields' ),
-        );
-    
-        register_post_type( 'project', apply_filters( 'et_project_posttype_args', $args ) );
-    
-        $labels = array(
-            'name'              => esc_html__( 'Project Categories', 'et_builder' ),
-            'singular_name'     => esc_html__( 'Project Category', 'et_builder' ),
-            'search_items'      => esc_html__( 'Search Categories', 'et_builder' ),
-            'all_items'         => esc_html__( 'All Categories', 'et_builder' ),
-            'parent_item'       => esc_html__( 'Parent Category', 'et_builder' ),
-            'parent_item_colon' => esc_html__( 'Parent Category:', 'et_builder' ),
-            'edit_item'         => esc_html__( 'Edit Category', 'et_builder' ),
-            'update_item'       => esc_html__( 'Update Category', 'et_builder' ),
-            'add_new_item'      => esc_html__( 'Add New Category', 'et_builder' ),
-            'new_item_name'     => esc_html__( 'New Category Name', 'et_builder' ),
-            'menu_name'         => esc_html__( 'Categories', 'et_builder' ),
-        );
-    
-        register_taxonomy( 'project_category', array( 'project' ), array(
-            'hierarchical'      => true,
-            'labels'            => $labels,
-            'show_ui'           => true,
-            'show_admin_column' => true,
-            'query_var'         => true,
-            'show_in_rest'      => true
-        ) );
-    
-        $labels = array(
-            'name'              => esc_html__( 'Project Tags', 'et_builder' ),
-            'singular_name'     => esc_html__( 'Project Tag', 'et_builder' ),
-            'search_items'      => esc_html__( 'Search Tags', 'et_builder' ),
-            'all_items'         => esc_html__( 'All Tags', 'et_builder' ),
-            'parent_item'       => esc_html__( 'Parent Tag', 'et_builder' ),
-            'parent_item_colon' => esc_html__( 'Parent Tag:', 'et_builder' ),
-            'edit_item'         => esc_html__( 'Edit Tag', 'et_builder' ),
-            'update_item'       => esc_html__( 'Update Tag', 'et_builder' ),
-            'add_new_item'      => esc_html__( 'Add New Tag', 'et_builder' ),
-            'new_item_name'     => esc_html__( 'New Tag Name', 'et_builder' ),
-            'menu_name'         => esc_html__( 'Tags', 'et_builder' ),
-        );
-    
-        register_taxonomy( 'project_tag', array( 'project' ), array(
-            'hierarchical'      => false,
-            'labels'            => $labels,
-            'show_ui'           => true,
-            'show_admin_column' => true,
-            'query_var'         => true,
-        ) );
-    }
-    endif;
-
-
 // Customize Wordpress Admin panel names
 function wd_admin_menu_rename() {
      global $menu;
@@ -191,6 +156,7 @@ add_action( 'admin_menu', 'wd_admin_menu_rename' );
 add_image_size( 'featured-large', 1404, 500, true );
 add_image_size( 'featured-header', 1170, 400, true );
 add_image_size( 'featured-medium', 740, 500, true);
+add_image_size( 'popular-categories', 240, 290, true);
 
 function firm_comp_in_content() {
     global $post;
@@ -203,7 +169,6 @@ function get_website_home_url() {
     echo $homeurl;
 }
 add_shortcode( 'home-url', 'get_home_url');
-
 
 // overwrite "/project/" path to "book" for artists created under projects
 function custom_project_path () {
@@ -218,14 +183,13 @@ function custom_project_path () {
 add_filter( 'et_project_posttype_rewrite_args', 'custom_project_path' );
 
 
-
 function wpseo_remove_breadcrumb_link( $link_output , $link ){
     $text_to_remove = 'Projekter';
-  
+
     if( $link['text'] == $text_to_remove ) {
       $link_output = '';
     }
- 
+
     return $link_output;
 }
 add_filter( 'wpseo_breadcrumb_single_link' ,'wpseo_remove_breadcrumb_link', 10 ,2);
@@ -300,7 +264,7 @@ function searchfilter($query) {
 add_filter('pre_get_posts','searchfilter');
 
 
-// Derigester jQuery from header 
+// Derigester jQuery from header
 if (!is_admin()) add_action('wp_enqueue_scripts', 'my_jquery_enqueue', 11);
 function my_jquery_enqueue() {
    wp_deregister_script('jquery');
@@ -310,7 +274,7 @@ function my_jquery_enqueue() {
 
 
 if (!is_admin()) add_action('wp_print_styles', 'my_deregister_styles', 100 );
-function my_deregister_styles() { 
+function my_deregister_styles() {
    wp_deregister_style( 'dashicons' );
 }
 
