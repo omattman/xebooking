@@ -22,19 +22,19 @@
 <?php if ( have_posts() ) : ?>
 	<?php while ( have_posts() ) : the_post(); ?>
 		<?php $post_type = get_post_type_object( get_post_type() ); ?>
-		<div class="searchwp-live-search-result">	
+		<div class="searchwp-live-search-result">
 			<a class="searchwp-live-search-item" href="<?php echo esc_url( get_permalink() ); ?>">
 				<figure><?php echo get_the_post_thumbnail( $page->ID, array(75, 75) ); ?></figure>
 				<figcaption>
-					<p class="searchwp-live-search-artist-title c__blue"><?php the_title(); ?></p>
-					<p class="searchwp-live-search-artist-category"><?php echo strip_tags(get_the_term_list( get_the_ID(), 'project_category', '', ' | ' ) ); ?></p>
+					<p class="searchwp-live-search-artist-title f__up f__bold"><?php the_title(); ?></p>
+					<p class="searchwp-live-search-artist-category truncate"><?php echo strip_tags(get_the_term_list( get_the_ID(), 'project_category', '', ' | ' ) ); ?></p>
 				</figcaption>
 			</a>
 		</div>
 	<?php endwhile; ?>
 <?php else : ?>
-	<p class="searchwp-live-search-no-results">
-		<p class="f__center"><?php _ex( 'Desværre, vi kunne ikke finde nogen resultater.', 'swplas' ); ?></p>
-		<p class="f__center">Ring <a class="c__blue" href="tel:+457017025">+45 7021 7025</a> for professionel vejledning og booking.</p>
-	</p>
+	<div class="searchwp-live-search-no-results" style="padding: 10px;">
+		<p class="f__left"><?php _ex( 'Desværre, vi kunne ikke finde nogen resultater.', 'swplas' ); ?></p>
+		<p class="f__left">Ring <a class="c__orange" href="tel:+457017025">+45 7021 7025</a> for professionel vejledning og booking.</p>
+	</div>
 <?php endif; ?>
