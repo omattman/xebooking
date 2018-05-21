@@ -1,27 +1,28 @@
 .banner {
-    background: #f9fafb;
-    padding: 30px;
-    border: 1px solid #dde5ed;
-    box-sizing: border-box;
-
-    a {
-        margin-top: 10px;
-        position: relative;
-        display: block;
+    @include mq($until: mobile) {
+        margin: 0 auto;
     }
-
-    p {
-        margin-bottom: 20px;
-    }
-
-    h4 {
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        margin: 0 0 5px 0;
-        font-weight: 600;
-    }
-
-    &__artists {
-        margin-top: 30px;
+    &__company {
+        background: #f9fafb;
+        padding: 30px;
+        border: 1px solid #dde5ed;
+        box-sizing: border-box;
+        a {
+            margin-top: 10px;
+            position: relative;
+            display: inline-block;
+        }
+        p {
+            margin-bottom: 20px;
+        }
+        h4 {
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin: 0 0 5px 0;
+            font-weight: 600;
+        }
+        &__artists {
+            margin-top: 30px;
+        }
     }
 }

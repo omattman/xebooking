@@ -1,14 +1,10 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the button component.
 // -----------------------------------------------------------------------------
-
 .btn {
     position: relative;
-
     height: 46px;
-    min-width: 80px;
-    // padding: 14px 30px;
-
+    min-width: 80px; // padding: 14px 30px;
     cursor: pointer;
     user-select: none;
     text-align: center;
@@ -17,18 +13,15 @@
     text-decoration: none;
     letter-spacing: .2px;
     text-transform: uppercase;
-
     border-width: 0px;
     border-radius: 2px;
     outline: none;
     background: transparent;
     box-shadow: none;
-
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 13px;
     font-weight: 700;
     line-height: 40px;
-
     touch-action: manipulation;
     -webkit-font-smoothing: antialiased;
 }
@@ -43,21 +36,16 @@
     font-weight: 500;
     font-size: 16px;
     cursor: pointer;
-
     x-appearance: none;
 }
-
 
 .btn {
     &__equal-width {
         display: flex;
-
         a,
         label {
             margin-right: 10px;
-
             flex: 1;
-
             &:last-child {
                 margin-right: 0;
             }
@@ -81,30 +69,25 @@
         border-radius: 3px;
         font-size: 14px;
     }
-
     &__small {
         padding: 6px 10px;
         height: 32px;
         border-radius: 4px;
         font-size: 14px;
-
         &-wide {
             padding-right: 30px;
             padding-left: 30px;
         }
     }
-
     &__smallest {
         padding: 2px 8px 0;
         height: 26px;
         border-radius: 3px;
         font-size: 12px;
     }
-
     &__full-width {
         width: 100%;
     }
-
     &__primary {
         display: flex;
         flex-wrap: nowrap;
@@ -113,14 +96,12 @@
         color: white;
         background-color: $orange;
         border-color: $orange;
-
         &.hover,
         &:hover {
             background-color: #c50;
             border-color: #c50;
         }
     }
-
     &__secondary {
         display: flex;
         flex-wrap: nowrap;
@@ -130,47 +111,40 @@
         color: $black;
         box-shadow: 0 4px 8px 0 rgba(26, 26, 26, 0.07);
         transition: box-shadow .3s;
-
         &:hover {
-            box-shadow: 0 6px 12px 0 rgba(26,26,26,.1);
+            box-shadow: 0 6px 12px 0 rgba(26, 26, 26, .1);
         }
-
-        &:hover .arrow {
+        &:hover .star {
             margin: 0 10px 0 8px;
         }
-
-        .arrow {
-            font-size: 20px;
-            margin: 0 15px 0 10px;
+        .star {
+            height: 20px;
+            width: 20px;
+            margin: 0 15px 5px 10px;
             position: absolute;
             right: 0;
-            bottom: 5px;
+            top: 0px;
             transition: all .2s;
         }
-
         &-bigger {
             height: 42px;
         }
     }
-
     &__blue {
         border: 2px solid $bright-blue;
         background-color: $bright-blue;
         color: white;
-
         &.hover,
         &:hover {
             border-color: #3f40ff;
             background-color: #3f40ff;
         }
     }
-
     &__grey {
         border: 1px solid #E8E8E8;
         background-color: lighten($grey, 60%);
         color: $grey;
         text-transform: none;
-
         &.hover,
         &:hover {
             border: 1px solid #E8E8E8;
@@ -179,21 +153,19 @@
     }
     &__green {
         background: #3dbe8b;
-        background: -webkit-linear-gradient(#43c692,#39b885);
-        background: linear-gradient(#43c692,#39b885);
+        background: -webkit-linear-gradient(#43c692, #39b885);
+        background: linear-gradient(#43c692, #39b885);
         border: 1px solid #1f7c57;
         box-shadow: inset #4fd3aa 0 1px;
         color: white;
         position: relative;
         text-decoration: none;
-        text-shadow: #1c8f3d 0 1px 0;
-        // text-transform: uppercase;
+        text-shadow: #1c8f3d 0 1px 0; // text-transform: uppercase;
         transition: background 150ms;
-
         &:hover {
             background: #2baa78;
-            background: -webkit-linear-gradient(#33B481,#23A06E);
-            background: linear-gradient(#33B481,#23A06E);
+            background: -webkit-linear-gradient(#33B481, #23A06E);
+            background: linear-gradient(#33B481, #23A06E);
         }
     }
 }

@@ -1,38 +1,110 @@
-// .artist {
-
-//     &__display {
-//         border: 1px solid #dde5ed;
-//         border-radius: 3px;
-//         box-sizing: border-box;
-//         transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-
-//         &:hover {
-//             box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.25);
-//         }
-
-//         &-box {
-//             padding: 8px;
-//         }
-//     }
-
-//     &__category {
-//         border: 1px solid #dde5ed;
-//         border-radius: 9px;
-//         box-sizing: border-box;
-//         transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-//         margin-bottom: 30px;
-
-//         &:hover {
-//             box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.25);
-//         }
-
-//         &-box {
-//             padding: 8px;
-//         }
-
-//         .et_portfolio_image img {
-//             border-top-right-radius: 9px;
-//             border-top-left-radius: 9px;
-//         }
-//     }
-// }
+.artist {
+  &__item {
+    @include mq($until: mobile) {
+      &:first-of-type {
+        width: 49.6% !important;
+      }
+      &:nth-child(odd) {
+        padding-right: 7.5px !important;
+        margin-right: 0px;
+      }
+      &:nth-child(even) {
+        padding-left: 7.5px !important;
+        margin-left: 0px;
+      }
+    }
+    &-selector {
+      margin-bottom: 15px;
+      padding-left: 0px;
+      &:first-child a,
+      &:last-child a {
+        border-radius: 0px !important;
+      }
+      @include mq($until: mobile) {
+        &:nth-child(odd) {
+          padding-left: 0px;
+          padding-right: 7.5px;
+        }
+        &:nth-child(even) {
+          padding-left: 7.5px;
+        }
+      }
+      & a {
+        color: $black !important;
+        &:hover {
+          border-color: $black !important;
+          background-color: transparent !important;
+        }
+        body &.active {
+          color: $black !important;
+          border-color: $black;
+          background-color: #fff !important;
+        }
+      }
+    }
+  }
+  &__display {
+    width: 100%;
+    @include mq($from: mobile) {
+      &-box, &-flag {
+        transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+      }
+      &:hover &-box {
+        margin-top: -30px !important;
+      }
+      &:hover &-flag {
+        margin-bottom: 42px;
+      }
+    }
+    &-box {
+      padding: 8px 12px 4px;
+      position: relative;
+      background: #fff;
+      line-height: 18px;
+      @include mq($until: mobile) {
+        padding: 8px;
+      }
+    }
+    &-flag {
+      position: absolute;
+      bottom: 19%;
+      margin: 0 0 12px 12px;
+      display: flex;
+      flex-wrap: wrap;
+      @include mq($until: mobile) {
+        bottom: 18%;
+        margin: 0 0 0px 8px;
+      }
+    }
+    &-flags {
+      padding: 6px 0 9px;
+      margin-right: 5px;
+      background: #fff;
+      border-radius: 50px;
+      height: 35px;
+      width: 35px;
+      position: relative;
+      z-index: 30;
+      text-align: center;
+      &-hearth svg {
+        height: 20px;
+        width: 20px;
+        margin-left: -0.08px;
+        position: relative;
+        top: -0.1px;
+      }
+      &-sound svg {
+        height: 24px;
+        width: 24px;
+      }
+    }
+    &-title {
+      font-weight: 700 !important;
+      color: #333;
+      font-size: 12px !important;
+      @include mq($until: mobile) {
+        margin-top: 0px !important;
+      }
+    }
+  }
+}
