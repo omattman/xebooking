@@ -83,7 +83,7 @@ class DS_Custom_Filterable_Portfilio_Module extends ET_Builder_Module {
 			),
 			'border' => array(
 				'css' => array(
-					'main' => "{$this->main_css_element} .et_pb_portfolio_item",
+					'main' => "{$this->main_css_element}",
 				),
 			),
 		);
@@ -343,14 +343,6 @@ class DS_Custom_Filterable_Portfilio_Module extends ET_Builder_Module {
 		// Get portfolio query
 		$query = new WP_Query( $query_args );
 
-		// Format portfolio output, and add supplementary data
-		$width     = 'on' === $args['fullwidth'] ?  1080 : 400;
-		$width     = (int) apply_filters( 'et_pb_portfolio_image_width', $width );
-		$height    = 'on' === $args['fullwidth'] ?  9999 : 284;
-		$height    = (int) apply_filters( 'et_pb_portfolio_image_height', $height );
-		$classtext = 'on' === $args['fullwidth'] ? 'et_pb_post_main_image' : '';
-		$titletext = get_the_title();
-
 		// Loop portfolio item and add supplementary data
 		if( $query->have_posts() ) {
 			$post_index = 0;
@@ -362,7 +354,7 @@ class DS_Custom_Filterable_Portfilio_Module extends ET_Builder_Module {
 				$category_classes = array( 'et_pb_portfolio_item' );
 
 				if ( 'on' !== $args['fullwidth'] ) {
-					$category_classes[] = 'g__c2--xlg g__c3--md g__c6--sm g__flex artist__item';
+					$category_classes[] = 'g__c3--xlg g__c3--lg g__c3--md g__c6--sm g__flex artist__item';
 				}
 
 				$categories_object = get_the_terms( get_the_ID(), 'project_category' );
@@ -489,46 +481,60 @@ class DS_Custom_Filterable_Portfilio_Module extends ET_Builder_Module {
 
 				$main_post_class = sprintf(
 					'et_pb_portfolio_item%1$s %2$s',
-					( 'on' !== $fullwidth ? ' g__c4--xlg g__c--lg g__c3--md g__c6--sm g__flex artist__item' : '' ),
+					( 'on' !== $fullwidth ? ' g__c3--xlg g__c3--lg g__c6--md g__c6--sm g__flex artist__item' : '' ),
 					$category_classes
 				);
 
 				?>
 				<div id="post-<?php the_ID(); ?>" <?php post_class( $main_post_class ); ?>>
 					<div class="artist__display">
-				<?php
-					$thumb = '';
+					<?php
+						$thumb = '';
 
-					$width = 'on' === $fullwidth ?  1080 : 400;
-					$width = (int) apply_filters( 'et_pb_portfolio_image_width', $width );
+						// Format portfolio output, and add supplementary data
+						$width = 'on' === $fullwidth ?  1080 : 303;
+						$width = (int) apply_filters( 'et_pb_portfolio_image_width', $width );
+						$height = 'on' === $fullwidth ?  9999 : 412;
+						$height = (int) apply_filters( 'et_pb_portfolio_image_height', $height );
+						$classtext = 'on' === $fullwidth ? 'et_pb_post_main_image' : '';
+						$titletext = get_the_title();
+						$thumbnail = get_thumbnail( $width, $height, $classtext, $titletext,$titletext, false, 'Blogimage' );
+						$thumb = $thumbnail["thumb"];
+						?>
 
-					$height = 'on' === $fullwidth ?  9999 : 437;
-					$height = (int) apply_filters( 'et_pb_portfolio_image_height', $height );
-					$classtext = 'on' === $fullwidth ? 'et_pb_post_main_image' : '';
-					$titletext = get_the_title();
-					$thumbnail = get_thumbnail( $width, $height, $classtext, $titletext, $titletext, false, 'Blogimage' );
-					$thumb = $thumbnail["thumb"];
-
-                    if ( '' !== $thumb ) : ?>
 						<a href="<?php esc_url( the_permalink() ); ?>">
-						<?php if ( 'on' !== $fullwidth ) : ?>
-							<span class="et_portfolio_image">
-						<?php endif; ?>
+							<span class="artist__display-image">
 								<?php print_thumbnail( $thumb, $thumbnail["use_timthumb"], $titletext, $width, $height ); ?>
 							</span>
-						<?php endif; ?>
+							<div class="artist__display-flag">
+								<?php if( have_rows('anbefalinger') ): ?>
+									<div class="artist__display-flags">
+										<span class="artist__display-flags-hearth">
+										<svg class="svg-icon" viewBox="0 1 19 20">
+											<path fill="#000000" d="M16.85,7.275l-3.967-0.577l-1.773-3.593c-0.208-0.423-0.639-0.69-1.11-0.69s-0.902,0.267-1.11,0.69L7.116,6.699L3.148,7.275c-0.466,0.068-0.854,0.394-1,0.842c-0.145,0.448-0.023,0.941,0.314,1.27l2.871,2.799l-0.677,3.951c-0.08,0.464,0.112,0.934,0.493,1.211c0.217,0.156,0.472,0.236,0.728,0.236c0.197,0,0.396-0.048,0.577-0.143l3.547-1.864l3.548,1.864c0.18,0.095,0.381,0.143,0.576,0.143c0.256,0,0.512-0.08,0.729-0.236c0.381-0.277,0.572-0.747,0.492-1.211l-0.678-3.951l2.871-2.799c0.338-0.329,0.459-0.821,0.314-1.27C17.705,7.669,17.316,7.343,16.85,7.275z M13.336,11.754l0.787,4.591l-4.124-2.167l-4.124,2.167l0.788-4.591L3.326,8.5l4.612-0.67l2.062-4.177l2.062,4.177l4.613,0.67L13.336,11.754z"></path>
+										</svg>
+										</span>
+									</div>
+								<?php endif; ?>
+								<?php if( get_field('embed_url') ): ?>
+									<div class="artist__display-flags">
+										<span class="artist__display-flags-sound">
+										<svg class="svg-icon" viewBox="0 0 20 20">
+											<path fill="#000000" d="M9.394,4.925L5.743,6.953H2.575c-0.24,0-0.435,0.195-0.435,0.435v5.06c0,0.24,0.194,0.436,0.435,0.436h3.168l3.651,2.027c0.066,0.037,0.138,0.055,0.211,0.055c0.077,0,0.152-0.02,0.221-0.061c0.132-0.078,0.214-0.221,0.214-0.373V5.305c0-0.154-0.082-0.296-0.214-0.375C9.694,4.853,9.528,4.85,9.394,4.925z M9.171,13.791l-3.104-1.725c-0.064-0.035-0.138-0.055-0.212-0.055H3.01V7.822h2.845c0.074,0,0.147-0.019,0.212-0.055l3.104-1.723V13.791z"></path>
+											<path fill="#000000" d="M15.332,4.923c-0.166,0.174-0.16,0.449,0.014,0.615c0.037,0.036,3.707,3.648-0.057,8.988c-0.137,0.197-0.09,0.467,0.107,0.605c0.074,0.055,0.162,0.08,0.25,0.08c0.135,0,0.27-0.064,0.355-0.186c4.188-5.943-0.014-10.075-0.055-10.116C15.773,4.744,15.496,4.75,15.332,4.923z"></path>
+											<path fill="#000000" d="M12.479,6.811c-0.166,0.174-0.158,0.449,0.014,0.614c0.088,0.084,2.137,2.102-0.055,5.211c-0.139,0.197-0.09,0.469,0.105,0.607c0.076,0.053,0.164,0.078,0.25,0.078c0.135,0,0.271-0.064,0.355-0.184c2.617-3.716-0.027-6.316-0.055-6.341C12.922,6.631,12.643,6.639,12.479,6.811z"></path>
+											</svg>
+										</span>
+									</div>
+								<?php endif; ?>
+							</div>
+							<div class="artist__display-box">
+								<h2 class="artist__display-title truncate">
+									<a href="<?php esc_url( the_permalink() ); ?>"><?php the_title(); ?></a>
+								</h2>
+							</div>
 						</a>
-
-                    <div class="artist__display-box">
-                        <?php if ( 'on' === $show_title ) : ?>
-        					<h2 class="f__center truncate"><a href="<?php esc_url( the_permalink() ); ?>"><?php the_title(); ?></a></h2>
-        				<?php endif; ?>
-
-        				<?php if ( 'on' === $show_categories ) : ?>
-        					<p class="post-meta"><?php echo get_the_term_list( get_the_ID(), 'project_category', '', ', ' ); ?></p>
-        				<?php endif; ?>
-                    </div>
-						</div>
+					</div>
 				</div><!-- .et_pb_portfolio_item -->
 				<?php
 			}
@@ -547,11 +553,11 @@ class DS_Custom_Filterable_Portfilio_Module extends ET_Builder_Module {
 		$terms = get_terms( 'project_category', $terms_args );
 
 		$category_filters = '<ul class="clearfix">';
-		$category_filters .= sprintf( '<li class="et_pb_portfolio_filter et_pb_portfolio_filter_all"><a href="#" class="active" data-category-slug="all">%1$s</a></li>',
+		$category_filters .= sprintf( '<li class="et_pb_portfolio_filter artist__item-selector g__c6--sm et_pb_portfolio_filter_all"><a href="#" class="active" data-category-slug="all">%1$s</a></li>',
 			esc_html__( 'Se alle', 'et_builder' )
 		);
 		foreach ( $terms as $term  ) {
-			$category_filters .= sprintf( '<li class="et_pb_portfolio_filter"><a href="#" data-category-slug="%1$s">%2$s</a></li>',
+			$category_filters .= sprintf( '<li class="et_pb_portfolio_filter artist__item-selector g__c6--sm"><a href="#" data-category-slug="%1$s">%2$s</a></li>',
 				esc_attr( urldecode( $term->slug ) ),
 				esc_html( $term->name )
 			);
@@ -569,7 +575,7 @@ class DS_Custom_Filterable_Portfilio_Module extends ET_Builder_Module {
 				</div>
 				%9$s
 			</div> <!-- .et_pb_filterable_portfolio -->',
-			( 'on' === $fullwidth ? 'et_pb_filterable_portfolio_fullwidth' : 'et_pb_filterable_portfolio_grid clearfix' ),
+			( 'on' === $fullwidth ? 'et_pb_filterable_portfolio_fullwidth' : 'clearfix' ),
 			$category_filters,
 			$posts,
 			esc_attr( $class ),
