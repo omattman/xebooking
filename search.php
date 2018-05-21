@@ -6,40 +6,40 @@
 <?php get_header(); ?>
 
 <div id="main-content" class="clearfix">
-	<div class="et_pb_section section et_pb_section_0 et_section_regular">
-		<section class="container narrow et_pb_row et_pb_row_0">
-			<div class="et_pb_column et_pb_column_4_4  et_pb_column_0">
-				<div class="et_pb_text et_pb_module et_pb_bg_layout_light et_pb_text_align_left et_pb_text_0">
-          <div class="et_pb_text_inner">
-            <div class="sp__11--xlg sp__11--lg sp__7--md sp__5--sm"></div>
-            <h1 class="t__h2 c__dark-blue f__left">Søgeresultater</h1>
-              Søgeord: <strong><?php /* Search Count */
-							// Changed '&new' to 'new'
-							$allsearch = new WP_Query("s=$s&showposts=-1");
-							$key = wp_specialchars($s, 1);
-							$count = $allsearch->post_count;
-							_e('');
-							_e('<span class="search-terms">'); echo $key; _e('</span>'); wp_reset_query(); ?> </strong>
-          </div>
-          <div class="et_pb_code et_pb_module  et_pb_code_0">
-            <div class="line__horizontal"></div>
-          </div>
+  <?php
+  if ( have_posts() ) : ?>
+    <div class="sp__10--xlg sp__10--lg sp_6--md sp__3--sm"></div>
+    <section class="container narrow">
+      <div class="category__header-main g__flex g__flex-a-end g__flex-space-between">
+        <div class="">
+          <h2 class="category__header-byline f__up">Du har søgt efter:</h2>
+          <h1 class="category__header-title">
+          <?php
+            /* Search Count */
+            // Changed '&new' to 'new'
+            $allsearch = new WP_Query("s=$s&showposts=-1");
+            $key = wp_specialchars($s, 1);
+            $count = $allsearch->post_count;
+            _e('');
+            _e('<span class="search-terms">'); echo $key; _e('</span>'); wp_reset_query();
+          ?>
+          </h1>
+          <div class="sp__4"></div>
         </div>
+      </div>
+      <div class="category__header-main">
         <div class="et_pb_portfolio_grid g__row clearfix et_pb_module">
-				<?php
-        if ( have_posts() ) :
-          while ( have_posts() ) : the_post();
-            $post_format = et_pb_post_format(); ?>
-
+        <?php while ( have_posts() ) : the_post();
+          $post_format = et_pb_post_format(); ?>
             <article id="post-<?php the_ID(); ?>" <?php post_class( 'et_pb_post et_pb_portfolio_item g__c3--xlg g__c3--lg g__c3--md g__c6--sm g__flex artist__item' ); ?>>
-              <div class="artist__display">
+              <div class="artist__display et_pb_portfolio_item">
 
                 <?php
                   $thumb = '';
 
-                  $width = (int) apply_filters( 'et_pb_index_blog_image_width', 1080 );
+                  $width = (int) apply_filters( 'et_pb_index_blog_image_width', 303 );
 
-                  $height = (int) apply_filters( 'et_pb_index_blog_image_height', 675 );
+                  $height = (int) apply_filters( 'et_pb_index_blog_image_height', 412 );
                   $classtext = 'et_pb_post_main_image';
                   $titletext = get_the_title();
                   $thumbnail = get_thumbnail( $width, $height, $classtext, $titletext, $titletext, false, 'Blogimage' );
@@ -66,7 +66,7 @@
                   <div class="artist__display-box">
                     <?php if ( ! in_array( $post_format, array( 'link', 'audio', 'quote' ) ) ) : ?>
                       <?php if ( ! in_array( $post_format, array( 'link', 'audio' ) ) ) : ?>
-                      <h3 class="f__center truncate"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                      <h2 class="artist__display-title truncate"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
                       <?php endif; ?>
                     <?php endif; ?>
                   </div>
@@ -83,10 +83,9 @@
               get_template_part( 'no-results', 'index' );
           endif;
         ?>
-        </div> <!-- et_pb_portfolio -->
-			</div> <!-- .et_pb_column -->
-		</section> <!-- container -->
-	</div>  <!-- .et_pb_section -->
-</div> <!-- #main-content -->
+      </div>
+    </div> <!-- #main-content -->
+  </div> <!-- et_pb_portfolio -->
+</section> <!-- container -->
 
 <?php get_footer(); ?>
