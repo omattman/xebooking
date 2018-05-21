@@ -6,6 +6,22 @@ $show_default_title = get_post_meta( get_the_ID(), '_et_pb_show_title', true );
 
 $is_page_builder_used = et_pb_is_pagebuilder_used( get_the_ID() );
 
+// estimated read time
+function reading_time() {
+	$content = get_post_field( 'post_content', $post->ID );
+	$word_count = str_word_count( strip_tags( $content ) );
+	$readingtime = ceil($word_count / 200);
+
+	if ($readingtime == 1) {
+		$timer = " minuts læsning";
+	} else {
+		$timer = " minutters læsning";
+	}
+	$totalreadingtime = $readingtime . $timer;
+
+	return $totalreadingtime;
+}
+
 ?>
 
 <div id="main-content">
@@ -13,129 +29,134 @@ $is_page_builder_used = et_pb_is_pagebuilder_used( get_the_ID() );
 		<div id="content-area" class="clearfix">
 			<div id="left-area">
 			<?php while ( have_posts() ) : the_post(); ?>
-				<?php if (et_get_option('divi_integration_single_top') <> '' && et_get_option('divi_integrate_singletop_enable') == 'on') echo(et_get_option('divi_integration_single_top')); ?>
-
-				<?php
-					$et_pb_has_comments_module = has_shortcode( get_the_content(), 'et_pb_comments' );
-					$additional_class = $et_pb_has_comments_module ? ' et_pb_no_comments_section' : '';
-				?>
-
 				<article id="post-<?php the_ID(); ?>" <?php post_class( '' . $additional_class ); ?>>
 					<?php if ( ( 'off' !== $show_default_title && $is_page_builder_used ) || ! $is_page_builder_used ) { ?>
 						<div class="container">
-                            <div class="article__hero">
-								<div class="sp__11--xlg sp__11--lg sp__7--md sp__5--sm"></div>
-                                <h1 class="article__hero-title"><?php the_title(); ?></h1>
-                            </div>
-                        </div>
-
-                        <div class="article__hero-image">
-                            <?php
-    							if ( ! post_password_required() ) :
-
-    								$thumb = '';
-
-    								$width = (int) apply_filters( 'et_pb_index_blog_image_width', 1404 );
-
-    								$height = (int) apply_filters( 'et_pb_index_blog_image_height', 669 );
-    								$classtext = 'hero__image';
-    								$titletext = get_the_title();
-    								$thumbnail = get_thumbnail( $width, $height, $classtext, $titletext, $titletext, false, 'Blogimage' );
-    								$thumb = $thumbnail["thumb"];
-
-    								$post_format = et_pb_post_format();
-
-    								if ( 'video' === $post_format && false !== ( $first_video = et_get_first_video() ) ) {
-    									printf(
-    										'<div class="et_main_video_container">
-    											%1$s
-    										</div>',
-    										$first_video
-    									);
-    								} else if ( ! in_array( $post_format, array( 'gallery', 'link', 'quote' ) ) && 'on' === et_get_option( 'divi_thumbnails', 'on' ) && '' !== $thumb ) {
-    									print_thumbnail( $thumb, $thumbnail["use_timthumb"], $titletext, $width, $height );
-    								} else if ( 'gallery' === $post_format ) {
-    									et_pb_gallery_images();
-    								}
-    							?>
-
-    							<?php
-    								$text_color_class = et_divi_get_post_text_color();
-
-    								$inline_style = et_divi_get_post_bg_inline_style();
-
-    								switch ( $post_format ) {
-    									case 'audio' :
-    										printf(
-    											'<div class="et_audio_content%1$s"%2$s>
-    												%3$s
-    											</div>',
-    											esc_attr( $text_color_class ),
-    											$inline_style,
-    											et_pb_get_audio_player()
-    										);
-
-    										break;
-    									case 'quote' :
-    										printf(
-    											'<div class="et_quote_content%2$s"%3$s>
-    												%1$s
-    											</div> <!-- .et_quote_content -->',
-    											et_get_blockquote_in_content(),
-    											esc_attr( $text_color_class ),
-    											$inline_style
-    										);
-
-    										break;
-    									case 'link' :
-    										printf(
-    											'<div class="et_link_content%3$s"%4$s>
-    												<a href="%1$s" class="et_link_main_url">%2$s</a>
-    											</div> <!-- .et_link_content -->',
-    											esc_url( et_get_link_url() ),
-    											esc_html( et_get_link_url() ),
-    											esc_attr( $text_color_class ),
-    											$inline_style
-    										);
-
-    										break;
-    								}
-
-    							endif;
-    						?>
-                        </div>
-					</div> <!-- .et_post_meta_wrapper -->
-				<?php  } ?>
+							<div class="article__hero">
+								<div class="category__link f__up u__inline-block"><?php echo strip_tags( get_the_category_list() ); ?> |</div>
+								<div class="category__text f__up u__inline-block"><?php echo reading_time(); ?></div>
+								<h1 class="article__hero-title"><?php the_title(); ?></h1>
+							</div>
+						</div>
+						<div class="article__hero-image">
+								<?php the_post_thumbnail(); ?>
+						</div>
+					<?php  } ?>
 
 					<div class="container narrow">
-					<?php
-						do_action( 'et_before_content' );
+						<div class="article__wrap g__row g__flex">
+							<div class="article__team g__c12">
+								<div class="article__team-container">
+									<div class="article__team-image">
+										<img src="https://www.xe.dk/wp-content/uploads/2017/12/niels-kontakt.png" alt="Niels Winther">
+									</div>
+									<div class="article__team-image">
+										<img src="https://www.xe.dk/wp-content/uploads/2017/09/maiken-headshot.png" alt="Maiken Dannesboe">
+									</div>
+									<div class="f__up">
+										<span>
+											Vi tilbyder over 25 års erfaring med Danmarks absolut bedste artister
+										</span>
+									</div>
+									<div class="sp__1"></div>
+									<a href="tel:+4570217025" class="c__orange f__up u__hidden--md u__hidden--sm">Ring +45 7021 7025 og book nu</a>
+									<div class="u__hidden--xlg u__hidden--lg" style="max-width: 200px; margin: 0 auto;">
+										<a href="#cta__news-article" class="btn btn__primary btn__full-width">Send forespørgsel</a>
+									</div>
+								</div>
+								<?php if ( get_field('billede_ophavsrettigheder') ): ?>
+									<div class="article__credit">
+									Foto: <?php the_field('billede_ophavsrettigheder'); ?>
+									</div>
+								<?php endif; ?>
+							</div>
+							<div class="g__c12">
+								<div class="sp__4"></div>
+							</div>
+							<div class="article__inner g__c7--xlg g__c7--lg g__12--md g__12--sm">
+								<?php the_content(); ?>
+							</div>
+							<div class="g__c1"></div>
+							<div class="g__c4--xlg g__c4--lg g__c12--md g__c12--sm">
+								<div class="sp__1"></div>
+								<div class="sp__03"></div>
+								<div id="cta__news-article" class="cta__lead">
+									<div class="t__h3 f__center">Send forespørgsel</div>
+									<div class="artist__cta-formular u__relative u__o-hidden">
+										<p>Send din forespørgsel eller kontakt os nu på tlf. <a href="tel:+4570217025" class="c__orange">+45 7021 7025</a>.</p>
+										<div class="sp__1"></div>
+										<p><span class="f__bold">Husk:</span> Det koster ikke noget at spørge...</p>
+										<div class="sp__2--xlg sp__2--lg sp__1--md sp__1--sm"></div>
+										<?php echo do_shortcode('[contact-form-7 html_id="nyhedsartikel__forespoergsel-cta" id="6768" title="Nyheds Artikel Formular"]'); ?>
+										<div class="sp__3"></div>
+										<p class="f__center" style="text-decoration: underline";>NB: Din forespørgsel forpligter ikke før nærmere aftale.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
 
-						the_content();
+					<div class="sp__5--xlg sp__5--lg sp__3--md sp__01--sm"></div>
 
-						wp_link_pages( array( 'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'Divi' ), 'after' => '</div>' ) );
-					?>
-					</div> <!-- .entry-content -->
-					<div class="et_post_meta_wrapper">
-					<?php
-					if ( et_get_option('divi_468_enable') == 'on' ){
-						echo '<div class="et-single-post-ad">';
-						if ( et_get_option('divi_468_adsense') <> '' ) echo( et_get_option('divi_468_adsense') );
-						else { ?>
-							<a href="<?php echo esc_url(et_get_option('divi_468_url')); ?>"><img src="<?php echo esc_attr(et_get_option('divi_468_image')); ?>" alt="468" class="foursixeight" /></a>
-				<?php 	}
-						echo '</div> <!-- .et-single-post-ad -->';
-					}
-				?>
+					<div class="container narrow f__center">
+					<h4 class="t__h4 f__up f__und" style="font-size: 18px; font-weight: 500;">Relaterede nyheder</h4>
+					</div>
+					<div class="post__container g__flex">
+						<div class="g__row g__row-negative posts">
+						<?php
+							$args = array(
+								'numberposts' => 3,
+								'orderby' => 'rand',
+								'post_status' => 'publish',
+								'offset' => 1,
+								'post__not_in' => array ($post->ID),
+							);
+							$rand_posts = get_posts( $args );
+							foreach( $rand_posts as $post ) : ?>
+								<article id="post-<?php the_ID(); ?>" class="g__col blog">
+								<div class="post__image">
+									<a href="<?php the_permalink(); ?>" class="f__no-und">
+										<?php
+										if ( has_post_thumbnail() ) {
+											the_post_thumbnail();
+										}
+										?>
+									</a>
+								</div>
+								<div class="post__inner">
+									<div class="post__media-wrap">
+										<div class="post__media">
+											<div class="post__media-content">
+												<div>
+													<div class="f__up categories__link">
+													<?php echo strip_tags( get_the_category_list() ); ?> |
+													</div>
+													<div class="f__up categories__link">
+														<?php echo reading_time(); ?>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<h2 class="post__title c__black">
+										<a href="<?php the_permalink(); ?>" class="f__no-und"><?php the_title(); ?></a>
+									</h2>
+									<div class="post__desc">
+									<?php
+										if ( has_excerpt() ) {
+												the_excerpt();
+										} else {
+												truncate_post( 120 );
+										}
+									?>
+									</div>
+								</div>
+							</article>
+							<?php endforeach; ?>
+						</div>
+					</div>
 
-					<?php if (et_get_option('divi_integration_single_bottom') <> '' && et_get_option('divi_integrate_singlebottom_enable') == 'on') echo(et_get_option('divi_integration_single_bottom')); ?>
 
-					<?php
-						if ( ( comments_open() || get_comments_number() ) && 'on' == et_get_option( 'divi_show_postcomments', 'on' ) && ! $et_pb_has_comments_module ) {
-							comments_template( '', true );
-						}
-					?>
-					</div> <!-- .et_post_meta_wrapper -->
 				</article> <!-- .et_pb_post -->
 
 			<?php endwhile; ?>
@@ -147,3 +168,5 @@ $is_page_builder_used = et_pb_is_pagebuilder_used( get_the_ID() );
 </div> <!-- #main-content -->
 
 <?php get_footer(); ?>
+
+<?php ini_set("memory_limit", -1); ?>
