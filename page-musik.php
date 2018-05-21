@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 /* Template Name: Musik */
 
@@ -21,18 +21,18 @@ $bryllupsbands_billede = get_field('bryllupsbands_billede');
 				<article id="post-<?php the_ID(); ?>" <?php post_class( 'et_pb_post' ); ?>>
 					<div class="category__header-main g__flex g__flex-a-end g__flex-space-between f__up">
 						<div class="">
-							<div class="category__header-byline">Kendte DJs</div>
-							<div class="category__header-title"><?php the_field( 'kendte_djs_titel' ); ?></div>
+							<h2 class="category__header-byline">Kendte DJs</h2>
+							<h3 class="category__header-title"><?php the_field( 'kendte_djs_titel' ); ?></h3>
 						</div>
 					</div>
-					<a class="category__header-image" href="<? the_field('kendte_djs_link'); ?>">
+					<a class="category__header-image" href="<?php the_field('kendte_djs_link'); ?>">
 						<img src="<?php echo $kendte_djs_billede['url']; ?>" alt="<?php echo $kendte_djs_billede['alt']; ?>" />
 					</a>
 					<div class="sp__5--xlg sp__5--lg sp__3--md sp__2--sm"></div>
 					<div class="category__header-sub g__flex g__flex-a-end g__flex-space-between f__up">
 						<div class="">
-							<div class="category__header-byline">Solister, bands og reception</div>
-							<div class="category__header-title2"><?php the_field('blandet_musik_titel'); ?></div>
+							<h2 class="category__header-byline">Solister, bands og reception</h2>
+							<h3 class="category__header-title2"><?php the_field('blandet_musik_titel'); ?></>
 						</div>
 					</div>
 					<div class="category__header-main u__hidden--sm">
@@ -49,7 +49,9 @@ $bryllupsbands_billede = get_field('bryllupsbands_billede');
 									<a href="<?php echo $kategori_link?>">
 										<img src="<?php echo $kategori_billede['url']; ?>" alt="<?php echo $kategori_billede['alt']; ?>" />
 									</a>
-									<div class="category__item-footer f__und f__bold"><a href="<?php echo $kategori_link?>"><?php echo $kategori_titel ?></a></div>
+									<h2 class="category__item-footer f__und f__bold">
+										<a href="<?php echo $kategori_link?>"><?php echo $kategori_titel ?></a>
+									</h2>
 								</div>
 							<?php endwhile;
 							else :
@@ -72,12 +74,12 @@ $bryllupsbands_billede = get_field('bryllupsbands_billede');
 											<a href="<?php echo $kategori_link?>">
 												<figure class="carousell-cell-image" style="background-image:url('<?php echo $kategori_billede['url']; ?>')"></figure>
 												<div class="slider__info f__center">
-													<div class="slider__title truncate"><a href="<?php echo $kategori_link?>"><?php echo $kategori_titel ?></a></div>
+													<h2 class="slider__title truncate"><a href="<?php echo $kategori_link?>"><?php echo $kategori_titel ?></a></>
 												</div>
 											</a>
 										</div>
 									</div>
-								<?php 
+								<?php
 								endwhile;
 							endif;
 							?>
@@ -86,23 +88,23 @@ $bryllupsbands_billede = get_field('bryllupsbands_billede');
 					<div class="sp__5--xlg sp__5--lg"></div>
 					<div class="category__header-main g__flex g__flex-a-end g__flex-space-between f__up">
 						<div class="">
-							<div class="category__header-byline">Bryllupsbands</div>
-							<div class="category__header-title"><?php the_field( 'bryllupsbands_titel' ); ?></div>
+							<h2 class="category__header-byline">Bryllupsbands</h2>
+							<h3 class="category__header-title"><?php the_field( 'bryllupsbands_titel' ); ?></>
 						</div>
 					</div>
-					<a class="category__header-image" href="<? the_field('bryllupsbands_link'); ?>">
+					<a class="category__header-image" href="<?php the_field('bryllupsbands_link'); ?>">
 						<img src="<?php echo $bryllupsbands_billede['url']; ?>" alt="<?php echo $bryllupsbands_billede['alt']; ?>" />
 					</a>
 					<div class="sp__8"></div>
-					<div class="category__header-main">
+					<div class="category__header-main category__header-text">
 						<?php
 						if( have_rows('titel_og_indhold') ):
 							while ( have_rows('titel_og_indhold') ) : the_row();
 							?>
 							<h1 class="t__larger f__bold"><?php echo get_sub_field('titel'); ?></h1>
 							<?php echo get_sub_field('indhold'); ?>
-							
-							<?php 
+
+							<?php
 							endwhile;
 						endif;
 						if( have_rows('resterende_indhold') ):
@@ -110,8 +112,8 @@ $bryllupsbands_billede = get_field('bryllupsbands_billede');
 							?>
 							<h2 class="t__larger f__bold"><?php echo get_sub_field('undertitel'); ?></h2>
 							<?php echo get_sub_field('indhold'); ?>
-							
-							<?php 
+
+							<?php
 							endwhile;
 						endif;
 						?>

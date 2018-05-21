@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 /* Template Name: Underholdning */
 
@@ -21,18 +21,18 @@ $foredragsholder_billede = get_field('foredragsholder_billede');
 				<article id="post-<?php the_ID(); ?>" <?php post_class( 'et_pb_post' ); ?>>
 					<div class="category__header-main g__flex g__flex-a-end g__flex-space-between f__up">
 						<div class="">
-							<div class="category__header-byline">Stand-up / Comedy</div>
-							<div class="category__header-title"><?php the_field( 'stand_up_titel' ); ?></div>
+							<h2 class="category__header-byline">Stand-up / Comedy</h2>
+							<h3 class="category__header-title"><?php the_field( 'stand_up_titel' ); ?></h3>
 						</div>
 					</div>
-					<a class="category__header-image" href="<? the_field('stand_up_link'); ?>">
+					<a class="category__header-image" href="<?php the_field('stand_up_link'); ?>">
 						<img src="<?php echo $stand_up_billede['url']; ?>" alt="<?php echo $stand_up_billede['alt']; ?>" />
 					</a>
 					<div class="sp__5--xlg sp__5--lg sp__3--md sp__2--sm"></div>
 					<div class="category__header-sub g__flex g__flex-a-end g__flex-space-between f__up">
 						<div class="">
-							<div class="category__header-byline">Entertainere, Tryllekunst og dinner</div>
-							<div class="category__header-title2"><?php the_field('blandet_underholdning_titel'); ?></div>
+							<h2 class="category__header-byline">Entertainere, Tryllekunst og dinner</h2>
+							<h3 class="category__header-title2"><?php the_field('blandet_underholdning_titel'); ?></>
 						</div>
 					</div>
 					<div class="category__header-main u__hidden--sm">
@@ -49,7 +49,9 @@ $foredragsholder_billede = get_field('foredragsholder_billede');
 									<a href="<?php echo $kategori_link?>">
 										<img src="<?php echo $kategori_billede['url']; ?>" alt="<?php echo $kategori_billede['alt']; ?>" />
 									</a>
-									<div class="category__item-footer f__und f__bold"><a href="<?php echo $kategori_link?>"><?php echo $kategori_titel ?></a></div>
+									<h2 class="category__item-footer f__und f__bold">
+										<a href="<?php echo $kategori_link?>"><?php echo $kategori_titel ?></a>
+									</h2>
 								</div>
 							<?php endwhile;
 							else :
@@ -72,12 +74,12 @@ $foredragsholder_billede = get_field('foredragsholder_billede');
 											<a href="<?php echo $kategori_link?>">
 												<figure class="carousell-cell-image" style="background-image:url('<?php echo $kategori_billede['url']; ?>')"></figure>
 												<div class="slider__info f__center">
-													<div class="slider__title truncate"><a href="<?php echo $kategori_link?>"><?php echo $kategori_titel ?></a></div>
+													<h2 class="slider__title truncate"><a href="<?php echo $kategori_link?>"><?php echo $kategori_titel ?></a></h2>
 												</div>
 											</a>
 										</div>
 									</div>
-								<?php 
+								<?php
 								endwhile;
 							endif;
 							?>
@@ -86,11 +88,11 @@ $foredragsholder_billede = get_field('foredragsholder_billede');
 					<div class="sp__5--xlg sp__5--lg"></div>
 					<div class="category__header-main g__flex g__flex-a-end g__flex-space-between f__up">
 						<div class="">
-							<div class="category__header-byline">Foredragsholdere</div>
-							<div class="category__header-title"><?php the_field( 'foredragsholder_titel' ); ?></div>
+							<h2 class="category__header-byline">Foredragsholdere</h2>
+							<h3 class="category__header-title"><?php echo the_field( 'foredragsholder_titel' ); ?></>
 						</div>
 					</div>
-					<a class="category__header-image" href="<? the_field('foredragsholder_link'); ?>">
+					<a class="category__header-image" href="<?php echo the_field('foredragsholder_link'); ?>">
 						<img src="<?php echo $foredragsholder_billede['url']; ?>" alt="<?php echo $foredragsholder_billede['alt']; ?>" />
 					</a>
 					<div class="sp__8"></div>
@@ -101,8 +103,8 @@ $foredragsholder_billede = get_field('foredragsholder_billede');
 							?>
 							<h1 class="t__larger f__bold"><?php echo get_sub_field('titel'); ?></h1>
 							<?php echo get_sub_field('indhold'); ?>
-							
-							<?php 
+
+							<?php
 							endwhile;
 						endif;
 						if( have_rows('resterende_indhold') ):
@@ -110,8 +112,8 @@ $foredragsholder_billede = get_field('foredragsholder_billede');
 							?>
 							<h2 class="t__larger f__bold"><?php echo get_sub_field('undertitel'); ?></h2>
 							<?php echo get_sub_field('indhold'); ?>
-							
-							<?php 
+
+							<?php
 							endwhile;
 						endif;
 						?>
