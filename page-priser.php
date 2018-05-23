@@ -82,7 +82,7 @@ $pris_byline = get_field('pris_byline');
               </div>
               <div class="g__c6--xlg g__c6--lg g__c12--md g__c12--sm f__right f__center--xlg f__center--lg f__center--md f__center--sm">
                 <div class="sp__1--xlg sp__2--md sp__3--sm"></div>
-                <div class="t__h2 cta__lead__h2"><a href="tel:+4570217025">Ring <span class="c__orange">+45 7021 7025</span></a></div>
+                <div class="t__h2 cta__lead__h2"><a href="tel:+4570217025">Ring nu <span class="c__orange">+45 7021 7025</span></a></div>
               </div>
             </div>
           </div>

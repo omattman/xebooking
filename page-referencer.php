@@ -75,7 +75,7 @@ $case_billede = get_field('case_billede');
                     <div class="container">
                       <div class="g__row g__flex g__flex-middle">
                         <div class="g__c6--xlg g__c6--lg g__c12--md g__c12--sm f__center--md f__center--sm">
-                          <div class="t__h2 cta__lead__h2">Gratis vejledning</div>
+                          <div class="t__h2 cta__lead__h2">Få et succesfuldt event</div>
                           <div class="t__smaller">
                             <div style="max-width: 420px;">
                               <strong>Hvor skal jeg starte?</strong> Gør som andre og ring for professionel vejledning. Det koster ikke noget at spørge...
