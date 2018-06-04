@@ -290,5 +290,29 @@ function user_the_categories() {
     for ($i = 1; $i < count($cats); $i++) {echo ', ' . $cats[$i]->cat_name ;}
 }
 
+// More Concise Usage - 1 callback for all filters
+add_filter('wp_pagenavi_class_previouspostslink', 'theme_pagination_class');
+add_filter('wp_pagenavi_class_nextpostslink', 'theme_pagination_class');
+add_filter('wp_pagenavi_class_page', 'theme_pagination_class');
+add_filter('wp_pagenavi_class_current', 'theme_pagination_class');
+
+function theme_pagination_class($class_name) {
+  switch($class_name) {
+    case 'previouspostslink':
+      $class_name = 'page__number--previous';
+      break;
+    case 'nextpostslink':
+      $class_name = 'page__number--next';
+      break;
+    case 'page':
+      $class_name = 'page__number';
+      break;
+    case 'current':
+      $class_name = 'page__number--current';
+      break;
+  }
+  return $class_name;
+}
+
 //END ENQUEUE PARENT ACTION
 ?>
