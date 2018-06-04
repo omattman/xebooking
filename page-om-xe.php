@@ -101,8 +101,7 @@ get_header();
               <?php echo the_field('laer_mere_beskrivelse_2') ?>
             </div>
           </div>
-            </div>
-          </div>
+        </div>
       <div class="sp__2--xlg sp__2--lg sp__3--md sp__01--sm"></div>
     </div>
 	</div> <!-- .container -->
