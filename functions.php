@@ -61,6 +61,8 @@ function deregister_styles() {
         wp_dequeue_style('magnific-popup');
         wp_dequeue_style('shortcodes_responsive');
         wp_dequeue_style('et_google_fonts_style');
+        wp_dequeue_style('divi-style');
+        wp_enqueue_style( 'divi-style', get_stylesheet_directory_uri() . '/style' . $style_suffix . '.css', array(), $theme_version );
 
         wp_enqueue_style( 'style', get_stylesheet_uri());
     }
@@ -313,6 +315,19 @@ function theme_pagination_class($class_name) {
   }
   return $class_name;
 }
+
+
+function wpse_217881_remove_scripts() {
+
+    // Check for the page you want to target
+    if ( is_page( 'nyheder' ) ) {
+
+        // Remove Styles
+        wp_dequeue_style( 'divi-style' );
+        wp_deregister_style( 'divi-style' );
+    }
+}
+add_action( 'wp_enqueue_scripts', 'wpse_217881_remove_scripts' );
 
 //END ENQUEUE PARENT ACTION
 ?>
