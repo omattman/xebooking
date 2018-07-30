@@ -35,7 +35,6 @@
     if ($(window).width() < 818) {
         //mobile - open lateral menu clicking on the menu icon
         $('.nav__menu-trigger, .nav__close-button').on('click', function (event) {
-            alert("specific button clicked");
             //event.preventDefault();
             if ($('.main__content').hasClass('js-visible')) {
                 closeNav();
