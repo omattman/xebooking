@@ -47,7 +47,32 @@ $show_navigation = get_post_meta( get_the_ID(), '_et_pb_project_nav', true ); ?>
 							?>
 							<div class="sp__3--xlg sp__3--lg sp__2--md sp__2--sm"></div>
 							<h1 class="entry-title f__left t__h1 c__black"><?php the_title(); ?></h1>
-							<p class="artist__text-lead"><?php the_field('teaser'); ?></p>
+							<ul class="tabs g__flex g__flex-start g__flex-wrap">
+							<?php
+								if( have_rows('beskrivelse') ):
+									$i = 1;
+									while ( have_rows('beskrivelse' ) ) : the_row();
+										echo '<li class="tabs__item f__up f__bold" rel="tab' . $i . '">' . get_sub_field( "titel-label" ) . '</li>';
+										$i++;
+									endwhile;
+									echo '</ul>';
+									echo '<span class="target"></span>';
+									echo '<div class="tab_container">';
+									$i = 1;
+									while ( have_rows('beskrivelse') ) : the_row();
+										echo '<span class="tab_drawer_heading f__up f__bold" rel="tab' . $i . '">' . get_sub_field( "titel-label" ) . '<svg class="tabs__collapsedlabel-icon" focusable="false" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" style="margin-bottom: -0.15em;"><path d="M17.437 12.207L9.165 4l-1.16 1.17 7.101 7.048L8 19.38l1.17 1.16z"></path></svg></span>';
+										echo '<div id="tab' . $i . '" class="tab_content">';
+										echo '<h2 class="t__h5">' . get_sub_field( "titel" ) . '</h2>';
+										echo get_sub_field( "indhold" );
+										echo '</div>';
+										$i++;
+									endwhile;
+									echo '</div>';
+									else :
+											// no rows found
+								endif;
+							?>
+							<!--<p class="artist__text-lead"><?php the_field('teaser'); ?></p>-->
 							<div class="sp__7--xlg sp__7--lg sp__3--md sp__3--sm"></div>
 							<div class="g__row artist__cta">
 								<?php
@@ -66,13 +91,13 @@ $show_navigation = get_post_meta( get_the_ID(), '_et_pb_project_nav', true ); ?>
 									<div class="sp__1--sm"></div>
 								</div>
 								<div class="g__c6--xlg g__c12--sm p__left-none">
-									<a class="btn btn__primary u__full" data-remodal-target="modal-foresporgsel">Forespøg på artist</a>
+									<a href="#artist__cta" class="btn btn__primary u__full">Forespøg på artist</a>
 								</div>
 
 								<?php else : ?>
 
 								<div class="g__c8--xlg g__c12--sm">
-									<a class="btn btn__primary u__full" data-remodal-target="modal-foresporgsel">Forespøg på artist</a>
+									<a href="#artist__cta" class="btn btn__primary u__full">Forespøg på artist</a>
 								</div>
 
 								<?php endif; ?>
@@ -104,33 +129,17 @@ $show_navigation = get_post_meta( get_the_ID(), '_et_pb_project_nav', true ); ?>
 								<span class="artist__category-button"><?php echo get_the_term_list( get_the_ID(), 'project_category', '' ); ?></span>
 							</div>
 						</div>
-						<div class="g__c-artist-custom g__c12--md g__c12--sm artist__left-gutter">
+						<div id="artist__cta" class="g__c-artist-custom g__c12--md g__c12--sm artist__left-gutter">
 							<div class="artist__description">
-								<ul class="tabs g__flex g__flex-start g__flex-wrap">
-								<?php
-								if( have_rows('beskrivelse') ):
-									$i = 1;
-									while ( have_rows('beskrivelse' ) ) : the_row();
-										echo '<li class="tabs__item f__up f__bold" rel="tab' . $i . '">' . get_sub_field( "titel-label" ) . '</li>';
-										$i++;
-									endwhile;
-									echo '</ul>';
-									echo '<span class="target"></span>';
-									echo '<div class="tab_container">';
-									$i = 1;
-									while ( have_rows('beskrivelse') ) : the_row();
-										echo '<span class="tab_drawer_heading f__up f__bold" rel="tab' . $i . '">' . get_sub_field( "titel-label" ) . '<svg class="tabs__collapsedlabel-icon" focusable="false" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" style="margin-bottom: -0.15em;"><path d="M17.437 12.207L9.165 4l-1.16 1.17 7.101 7.048L8 19.38l1.17 1.16z"></path></svg></span>';
-										echo '<div id="tab' . $i . '" class="tab_content">';
-										echo '<h2 class="t__h5">' . get_sub_field( "titel" ) . '</h2>';
-										echo get_sub_field( "indhold" );
-										echo '</div>';
-										$i++;
-									endwhile;
-									echo '</div>';
-									else :
-											// no rows found
-								endif;
-								?>
+								<div class="artist__cta-formular u__relative u__o-hidden">
+									<p>Send din forespørgsel eller kontakt os nu på tlf. <a href="tel:+4570217025" class="c__orange">+45 7021 7025</a>.</p>
+									<div class="sp__1"></div>
+									<p><span class="f__bold">Husk:</span> Det koster ikke noget at spørge...</p>
+									<div class="sp__2--xlg sp__2--lg sp__1--md sp__1--sm"></div>
+									<?php echo do_shortcode('[contact-form-7 html_id="artist__forespoergsel-cta" id="817" title="Artist Profil Formular"]'); ?>
+									<div class="sp__3"></div>
+									<p class="f__center" style="text-decoration: underline";>NB: Din forespørgsel forpligter ikke før nærmere aftale.</p>
+								</div>
 							</div>
 						</div>
 					</div>

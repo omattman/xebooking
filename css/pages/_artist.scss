@@ -192,13 +192,16 @@
       margin-right: 5px;
     }
     &-formular {
-      padding-top: 30px;
-      border-top: 1px solid $black;
+      //padding-top: 30px;
+      //border-top: 1px solid $black;
       @include mq($until: mobile) {
         padding-top: 20px;
       }
       label {
         font-size: 12px;
+      }
+      &-input {
+        width: 48%;
       }
     }
   }
