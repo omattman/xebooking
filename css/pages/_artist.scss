@@ -137,10 +137,23 @@
     margin-left: 6%;
     @include mq($until: mobile) {
       margin-left: 0;
+      padding: 30px 15px;
+      background: #f3f3f3;
+    }
+  }
+  &__content {
+    p {
+      margin-bottom: 10px;
+      font-size: 14px;
+      letter-spacing: .2px;
+      line-height: 1.5;
+      &:last-of-type {
+        margin-bottom: 0px;
+      }
     }
   }
   &__description {
-    padding: 32px 52px;
+    padding: 52px;
     background: rgb(243, 243, 243);
     min-height: 680px;
     @include mq($until: mobile) {
@@ -202,6 +215,10 @@
       }
       &-input {
         width: 48%;
+
+        @include mq($until: mobile) {
+          width: 100%;
+        }
       }
     }
   }

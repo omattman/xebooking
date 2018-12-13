@@ -1,25 +1,25 @@
-.u {
+div.u {
     &__inline-block {
-        display: inline-block;
+        display: inline-block !important;
 
         @include mq($until: mobile) {
             &--sm {
-                display: inline-block;
+                display: inline-block !important;
             }
         }
         @include mq($from: mobile, $until: tablet) {
             &--md {
-                display: inline-block;
+                display: inline-block !important;
             }
         }
         @include mq($from: tablet, $until: desktop) {
             &--lg {
-                display: inline-block;
+                display: inline-block !important;
             }
         }
         @include mq($from: wide) {
             &--xlg {
-                display: inline-block;
+                display: inline-block !important;
             }
         }
     }
