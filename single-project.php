@@ -10,7 +10,7 @@ $show_navigation = get_post_meta( get_the_ID(), '_et_pb_project_nav', true ); ?>
 
 <?php if ( ! $is_page_builder_used ) : ?>
 
-	<div class="container narrow">
+	<div class="container narrow narrow__profile">
 		<div class="sp__2"></div>
 		<div id="content-area" class="clearfix">
 
@@ -36,7 +36,7 @@ $show_navigation = get_post_meta( get_the_ID(), '_et_pb_project_nav', true ); ?>
 					</div>
 					<div class="sp__4--xlg sp__4--lg sp__3--md sp__2--sm"></div>
 					<div class="sp__08"></div>
-					<div class="g__row">
+					<div class="g__row g__row-slim">
 						<div class="g__c5--xlg g__c5--lg g__c12--md g__c12--sm">
 							<?php
 								if ( function_exists('yoast_breadcrumb') ) {
@@ -129,7 +129,7 @@ $show_navigation = get_post_meta( get_the_ID(), '_et_pb_project_nav', true ); ?>
 							</div>
 							<!--<p class="artist__text-lead"><?php the_field('teaser'); ?></p>-->
 							<div class="sp__3--xlg sp__7--lg"></div>
-							<div class="g__row artist__cta u__hiddden--md u__hidden--sm">
+							<div class="g__row artist__cta u__hidden--md u__hidden--sm">
 								<?php
 								// if 'anbefalinger' is available, show both buttons layout
 								if( have_rows('anbefalinger') ): ?>
@@ -154,12 +154,12 @@ $show_navigation = get_post_meta( get_the_ID(), '_et_pb_project_nav', true ); ?>
 								<?php endif; ?>
 							</div>
 							<div class="sp__6--xlg sp__6--lg sp__5--md sp__5--sm"></div>
-							<div class="artist__category u__hidden--sm">
+							<div class="artist__category u__hidden--md u__hidden--sm">
 								<span>Kan bookes som:</span>
 								<span class="artist__category-button"><?php echo get_the_term_list( get_the_ID(), 'project_category', '' ); ?></span>
 							</div>
 						</div>
-						<div id="artist__cta" class="g__c-artist-custom g__c12--md g__c12--sm artist__left-gutter">
+						<div id="artist__cta" class="artist__href g__c-artist-custom g__c12--md g__c12--sm artist__left-gutter">
 							<div class="artist__description">
 								<div class="artist__cta-formular u__relative u__o-hidden">
 									<h3 class="t__h2 c__black">Send forespørgsel</h3>

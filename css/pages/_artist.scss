@@ -135,7 +135,7 @@
   // Insert below
   &__left-gutter {
     margin-left: 6%;
-    @include mq($until: mobile) {
+    @include mq($until: tablet) {
       margin-left: 0;
       padding: 30px 15px;
       background: #f3f3f3;
