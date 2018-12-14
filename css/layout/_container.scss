@@ -19,4 +19,11 @@
     &__small {
         max-width: 1000px !important;
     }
+
+    &__profile {
+        @include mq($from: tablet, $until: desktop) {
+            padding-left: 40px !important;
+            padding-right: 40px !important;
+        }
+    }
 }
